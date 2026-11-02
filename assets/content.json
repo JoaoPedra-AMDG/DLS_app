@@ -1,0 +1,4000 @@
+{
+  "subjects": [
+    {
+      "id": "maths",
+      "name": "Maths",
+      "subtitle": "Find your formula for success",
+      "color": "6654D9",
+      "light": "EEEAFE",
+      "icon": "calculate"
+    },
+    {
+      "id": "ap",
+      "name": "AP Maths",
+      "subtitle": "A little further. A little brighter.",
+      "color": "CB702E",
+      "light": "FFF0DB",
+      "icon": "functions"
+    },
+    {
+      "id": "physical",
+      "name": "Physical Science",
+      "subtitle": "Big ideas. Real-world discoveries.",
+      "color": "287FA5",
+      "light": "E5F4FE",
+      "icon": "science"
+    },
+    {
+      "id": "life",
+      "name": "Life Science",
+      "subtitle": "Explore the extraordinary in life",
+      "color": "30836A",
+      "light": "E5F5EC",
+      "icon": "eco"
+    },
+    {
+      "id": "sports",
+      "name": "Sports Science",
+      "subtitle": "The science behind your best",
+      "color": "C65378",
+      "light": "FDE9EF",
+      "icon": "sports"
+    }
+  ],
+  "papers": [
+    {
+      "id": "1",
+      "subject": "maths",
+      "year": 2024,
+      "title": "November Paper 1 · 2024",
+      "kind": "paper",
+      "memo": "16",
+      "note": "",
+      "file": "maths-2024-november-paper-1-paper.pdf",
+      "pages": 15,
+      "sha256": "9a32ee2b30e0f065df54fabae2d15057e566a76fa9730f3d50bf1a15722685c1",
+      "originals": [
+        "1.pdf",
+        "15.pdf"
+      ]
+    },
+    {
+      "id": "2",
+      "subject": "maths",
+      "year": 2021,
+      "title": "July Paper 1 · 2021",
+      "kind": "paper",
+      "memo": "3",
+      "note": "",
+      "file": "maths-2021-july-paper-1-paper.pdf",
+      "pages": 13,
+      "sha256": "93a15c123b1be10f84ff7a71ac601aca64caa995476c68d94e87756b309ec709",
+      "originals": [
+        "2.pdf"
+      ]
+    },
+    {
+      "id": "3",
+      "subject": "maths",
+      "year": 2021,
+      "title": "July Paper 1 · 2021",
+      "kind": "memo",
+      "memo": null,
+      "note": "Handwritten marking guidelines",
+      "file": "maths-2021-july-paper-1-memo.pdf",
+      "pages": 13,
+      "sha256": "4b4b7142357c3a3cf1858e7faf957c81a5f04270b9fe4e8f9dede382d2845ee3",
+      "originals": [
+        "3.pdf"
+      ]
+    },
+    {
+      "id": "4",
+      "subject": "maths",
+      "year": null,
+      "title": "Blank upload 4 · Year not stated",
+      "kind": "unavailable",
+      "memo": null,
+      "note": "All pages are blank; no title or year can be verified",
+      "file": "maths-year-unknown-blank-upload-4-unavailable.pdf",
+      "pages": 13,
+      "sha256": "ba2658c2dbb629d6bef94aad3dc983fb89afdd9bae717daa7680f6b119ecbbed",
+      "originals": [
+        "4.pdf"
+      ]
+    },
+    {
+      "id": "5",
+      "subject": "maths",
+      "year": 2021,
+      "title": "July Paper 2 · 2021",
+      "kind": "paper",
+      "memo": null,
+      "note": "",
+      "file": "maths-2021-july-paper-2-paper.pdf",
+      "pages": 9,
+      "sha256": "6c189f324f4f805b11c0a75b78557f93e9fa657b8e883fd404df5a11cba5d29a",
+      "originals": [
+        "5.pdf"
+      ]
+    },
+    {
+      "id": "6",
+      "subject": "maths",
+      "year": 2021,
+      "title": "November Paper 1 · 2021",
+      "kind": "paper",
+      "memo": "8",
+      "note": "",
+      "file": "maths-2021-november-paper-1-paper.pdf",
+      "pages": 12,
+      "sha256": "35924e409681192fca50084271ebe5777e34df423884d39cc269f65b90389ca9",
+      "originals": [
+        "6.pdf"
+      ]
+    },
+    {
+      "id": "7",
+      "subject": "maths",
+      "year": null,
+      "title": "Blank upload 7 · Year not stated",
+      "kind": "unavailable",
+      "memo": null,
+      "note": "All pages are blank; no title or year can be verified",
+      "file": "maths-year-unknown-blank-upload-7-unavailable.pdf",
+      "pages": 12,
+      "sha256": "b077413cd8819b1dcc0576e50df3079d1c70d8c47d6205a0e8aa6616ab2aa139",
+      "originals": [
+        "7.pdf"
+      ]
+    },
+    {
+      "id": "8",
+      "subject": "maths",
+      "year": 2021,
+      "title": "November Paper 1 · 2021",
+      "kind": "memo",
+      "memo": null,
+      "note": "Scanned handwritten marking guidelines",
+      "file": "maths-2021-november-paper-1-memo.pdf",
+      "pages": 12,
+      "sha256": "5e80327257e58e30500d4222b11092f1a3e27123f5a242295a8b304d69235854",
+      "originals": [
+        "8.pdf"
+      ]
+    },
+    {
+      "id": "9",
+      "subject": "maths",
+      "year": 2021,
+      "title": "November Paper 2 · 2021",
+      "kind": "paper",
+      "memo": "10",
+      "note": "",
+      "file": "maths-2021-november-paper-2-paper.pdf",
+      "pages": 18,
+      "sha256": "81a426a4c6db96c4a6d1d75ac1eca2fcbd5f26447f6ad9d45dd780daa6a2236c",
+      "originals": [
+        "9.pdf"
+      ]
+    },
+    {
+      "id": "10",
+      "subject": "maths",
+      "year": 2021,
+      "title": "November Paper 2 · 2021",
+      "kind": "memo",
+      "memo": null,
+      "note": "Handwritten marking guidelines",
+      "file": "maths-2021-november-paper-2-memo.pdf",
+      "pages": 18,
+      "sha256": "8a1c3cb7720f1a77350be2f5a45b364985d5355509ea0e13e0cb6538b4a426bc",
+      "originals": [
+        "10.pdf"
+      ]
+    },
+    {
+      "id": "11",
+      "subject": "maths",
+      "year": 2023,
+      "title": "November Paper 1 · 2023",
+      "kind": "paper",
+      "memo": null,
+      "note": "",
+      "file": "maths-2023-november-paper-1-paper.pdf",
+      "pages": 20,
+      "sha256": "5b553b84b535f9e2e277801d8683ae797a93c284dc4b31ab3dc7a95fac6ae60b",
+      "originals": [
+        "11.pdf",
+        "12.pdf"
+      ]
+    },
+    {
+      "id": "13",
+      "subject": "maths",
+      "year": 2023,
+      "title": "November Paper 2 · 2023",
+      "kind": "paper",
+      "memo": "14",
+      "note": "",
+      "file": "maths-2023-november-paper-2-paper.pdf",
+      "pages": 16,
+      "sha256": "ab92ba046714984041b2f72eb6957a1262b16928d6d9d8a62c665214ec6e5a7f",
+      "originals": [
+        "13.pdf"
+      ]
+    },
+    {
+      "id": "14",
+      "subject": "maths",
+      "year": 2023,
+      "title": "November Paper 2 · 2023",
+      "kind": "memo",
+      "memo": null,
+      "note": "Scanned handwritten marking guidelines",
+      "file": "maths-2023-november-paper-2-memo.pdf",
+      "pages": 15,
+      "sha256": "ecc9c410ffad51f0655606a51a0d11a70df893a5c38f716763942a753ad74543",
+      "originals": [
+        "14.pdf"
+      ]
+    },
+    {
+      "id": "16",
+      "subject": "maths",
+      "year": 2024,
+      "title": "November Paper 1 · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "Partial scanned memo; pages are not in exam order. Use printed question numbers.",
+      "file": "maths-2024-november-paper-1-memo.pdf",
+      "pages": 14,
+      "sha256": "09eb9e6da8fbb8076ee51981c9a4e913d085f753ee2e2897ebff92c5d80f280e",
+      "originals": [
+        "16.pdf"
+      ]
+    },
+    {
+      "id": "17",
+      "subject": "maths",
+      "year": 2024,
+      "title": "November Paper 2 · 2024",
+      "kind": "paper",
+      "memo": "18",
+      "note": "",
+      "file": "maths-2024-november-paper-2-paper.pdf",
+      "pages": 20,
+      "sha256": "2480443122a9961e020c188965cc1a42744c5b1ef4e697d26ec0af912cd71480",
+      "originals": [
+        "17.pdf"
+      ]
+    },
+    {
+      "id": "18",
+      "subject": "maths",
+      "year": 2024,
+      "title": "November Paper 2 · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "Post-marking guidelines; annotations retained",
+      "file": "maths-2024-november-paper-2-memo.pdf",
+      "pages": 20,
+      "sha256": "fa09b737de9e3680f18fa1744e89f58b4efce6440630eeb33de177b7cc5221c5",
+      "originals": [
+        "18.pdf"
+      ]
+    },
+    {
+      "id": "19",
+      "subject": "life",
+      "year": 2020,
+      "title": "November Paper 1 · 2020",
+      "kind": "paper",
+      "memo": null,
+      "note": "",
+      "file": "life-2020-november-paper-1-paper.pdf",
+      "pages": 12,
+      "sha256": "b46df0f59be6370b430479d19d8a11c14db6771794c4b16a9da82a6731cb2b90",
+      "originals": [
+        "19.pdf"
+      ]
+    },
+    {
+      "id": "20",
+      "subject": "life",
+      "year": null,
+      "title": "November Practical · Year not stated",
+      "kind": "paper",
+      "memo": null,
+      "note": "The document does not state a year",
+      "file": "life-year-unknown-november-practical-paper.pdf",
+      "pages": 8,
+      "sha256": "55b62f7913d207d66875ab9b21fbb79d073855565b7dd0b27afc968cf9f99aa5",
+      "originals": [
+        "20.pdf"
+      ]
+    },
+    {
+      "id": "21",
+      "subject": "life",
+      "year": 2020,
+      "title": "November Paper 2 · 2020",
+      "kind": "paper",
+      "memo": null,
+      "note": "References a separate source booklet that was not supplied",
+      "file": "life-2020-november-paper-2-paper.pdf",
+      "pages": 2,
+      "sha256": "e6daae058f4590c66be3a03978488990531fb1657e8967f1665a5d584c8807d8",
+      "originals": [
+        "21.pdf"
+      ]
+    },
+    {
+      "id": "22",
+      "subject": "life",
+      "year": 2022,
+      "title": "November Theory Section B · 2022",
+      "kind": "paper",
+      "memo": "24",
+      "note": "",
+      "file": "life-2022-november-theory-section-b-paper.pdf",
+      "pages": 9,
+      "sha256": "657e2d5d95c51f626cec1fe9ead59c375530e5b55c052b562ccbc91ee9c2b2d7",
+      "originals": [
+        "22.pdf"
+      ]
+    },
+    {
+      "id": "23",
+      "subject": "life",
+      "year": 2022,
+      "title": "November Section A Answer Booklet · 2022",
+      "kind": "supplement",
+      "memo": null,
+      "note": "Contains Section A questions; this is not a marking memo",
+      "file": "life-2022-november-section-a-answer-booklet-supplement.pdf",
+      "pages": 6,
+      "sha256": "24b1ac3f07e5468b9ae1257f52a201a1862ecb69af08f7615eb9a67e904d6c22",
+      "originals": [
+        "23.pdf"
+      ]
+    },
+    {
+      "id": "24",
+      "subject": "life",
+      "year": 2022,
+      "title": "November Theory Section B · 2022",
+      "kind": "memo",
+      "memo": null,
+      "note": "Year inferred from matching questions in the 2022 paper; no year on memo cover",
+      "file": "life-2022-november-theory-section-b-memo.pdf",
+      "pages": 4,
+      "sha256": "f3685ed25029d6c8b03fc1f796e8ae5d2c330e4d0f72683d7ded6374cbc8b207",
+      "originals": [
+        "24.pdf"
+      ]
+    },
+    {
+      "id": "25",
+      "subject": "life",
+      "year": 2023,
+      "title": "November Practical · 2023",
+      "kind": "paper",
+      "memo": null,
+      "note": "Scanned practical examination",
+      "file": "life-2023-november-practical-paper.pdf",
+      "pages": 10,
+      "sha256": "7106496fb38378934762eb61d8cbe186b5ebee2b237f6843d3bedf9e1610d3ec",
+      "originals": [
+        "25.pdf"
+      ]
+    },
+    {
+      "id": "26",
+      "subject": "life",
+      "year": 2023,
+      "title": "November Paper 2 · 2023",
+      "kind": "paper",
+      "memo": "28",
+      "note": "",
+      "file": "life-2023-november-paper-2-paper.pdf",
+      "pages": 8,
+      "sha256": "a15838b72622e4831cb5cf3c875a63ee5f5cf7b9d1425e20aeee62f765f00a3d",
+      "originals": [
+        "26.pdf",
+        "27.pdf"
+      ]
+    },
+    {
+      "id": "28",
+      "subject": "life",
+      "year": 2023,
+      "title": "November Paper 2 Essay · 2023",
+      "kind": "memo",
+      "memo": null,
+      "note": "Year inferred from matching the climate-change essay in the 2023 paper",
+      "file": "life-2023-november-paper-2-essay-memo.pdf",
+      "pages": 2,
+      "sha256": "775913de9347c94c159c30dd69ec907bd2c5dd5d75a8d29f7998c324528d50be",
+      "originals": [
+        "28.pdf"
+      ]
+    },
+    {
+      "id": "29",
+      "subject": "life",
+      "year": 2024,
+      "title": "November Paper 1 · 2024",
+      "kind": "paper",
+      "memo": "30",
+      "note": "",
+      "file": "life-2024-november-paper-1-paper.pdf",
+      "pages": 24,
+      "sha256": "a9bfd711ec5f37b2886536acb863e06adcdd4c60e6587a0f9afaf1f40c5441b8",
+      "originals": [
+        "29.pdf"
+      ]
+    },
+    {
+      "id": "30",
+      "subject": "life",
+      "year": 2024,
+      "title": "November Paper 1 · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "Some source memo explanations are imprecise. Revision notes use standard scientific explanations.",
+      "file": "life-2024-november-paper-1-memo.pdf",
+      "pages": 22,
+      "sha256": "79cc8acab509c460e24f6f70b7334f983ef0260b1e27281eaac1e6a6b1cc593d",
+      "originals": [
+        "30.pdf"
+      ]
+    },
+    {
+      "id": "31",
+      "subject": "physical",
+      "year": 2021,
+      "title": "November Paper 1 Physics · 2021",
+      "kind": "paper",
+      "memo": "32",
+      "note": "",
+      "file": "physical-2021-november-paper-1-physics-paper.pdf",
+      "pages": 12,
+      "sha256": "97ea4f84d1601b7ebd18abe8084cbfd443d0d3121e72ddb235a631a002d21092",
+      "originals": [
+        "31.pdf"
+      ]
+    },
+    {
+      "id": "32",
+      "subject": "physical",
+      "year": 2021,
+      "title": "November Paper 1 Physics · 2021",
+      "kind": "memo",
+      "memo": null,
+      "note": "",
+      "file": "physical-2021-november-paper-1-physics-memo.pdf",
+      "pages": 5,
+      "sha256": "23a04db639367e2cc94b73d7198f581a77d30917a9cae0a45868bb25a5acbcff",
+      "originals": [
+        "32.pdf"
+      ]
+    },
+    {
+      "id": "33",
+      "subject": "physical",
+      "year": 2021,
+      "title": "November Paper 2 Chemistry · 2021",
+      "kind": "paper",
+      "memo": "34",
+      "note": "",
+      "file": "physical-2021-november-paper-2-chemistry-paper.pdf",
+      "pages": 14,
+      "sha256": "00292f0b566622d4c7c8e69923076f4dd72bda946a82c692620946e084c6deaa",
+      "originals": [
+        "33.pdf"
+      ]
+    },
+    {
+      "id": "34",
+      "subject": "physical",
+      "year": 2021,
+      "title": "November Paper 2 Chemistry · 2021",
+      "kind": "memo",
+      "memo": null,
+      "note": "",
+      "file": "physical-2021-november-paper-2-chemistry-memo.pdf",
+      "pages": 5,
+      "sha256": "115e879e9c92156acd5cd506700fa2b7205927f3e5f5555ddca34b92bbf5769b",
+      "originals": [
+        "34.pdf"
+      ]
+    },
+    {
+      "id": "35",
+      "subject": "physical",
+      "year": 2024,
+      "title": "November Paper 1 Physics · 2024",
+      "kind": "paper",
+      "memo": "36",
+      "note": "",
+      "file": "physical-2024-november-paper-1-physics-paper.pdf",
+      "pages": 20,
+      "sha256": "479d674010ceace69740f218a95f27b5125d21eb8590e6268a4d7fd330ed0cd5",
+      "originals": [
+        "35.pdf"
+      ]
+    },
+    {
+      "id": "36",
+      "subject": "physical",
+      "year": 2024,
+      "title": "November Paper 1 Physics · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "",
+      "file": "physical-2024-november-paper-1-physics-memo.pdf",
+      "pages": 9,
+      "sha256": "6e0ac29e48f3cebe65192c69a8794fd662468f1fe435bb37ade91d7b6cd98692",
+      "originals": [
+        "36.pdf",
+        "38.pdf"
+      ]
+    },
+    {
+      "id": "37",
+      "subject": "physical",
+      "year": 2024,
+      "title": "November Paper 2 Chemistry · 2024",
+      "kind": "paper",
+      "memo": null,
+      "note": "A 2024 Chemistry memo was not supplied. Upload 38 duplicates the Physics memo.",
+      "file": "physical-2024-november-paper-2-chemistry-paper.pdf",
+      "pages": 20,
+      "sha256": "e517adc47424bf711fe63481226a1f06c1b0107e3739404451a7db7e74c4745e",
+      "originals": [
+        "37.pdf"
+      ]
+    },
+    {
+      "id": "39",
+      "subject": "ap",
+      "year": 2023,
+      "title": "November Further Studies Mathematics · 2023",
+      "kind": "paper",
+      "memo": "40",
+      "note": "",
+      "file": "ap-2023-november-further-studies-mathematics-paper.pdf",
+      "pages": 20,
+      "sha256": "0e67603ab226d1e0e7b2f76864cc48ec4793a3adeb0db16c448b342948f45c27",
+      "originals": [
+        "39.pdf"
+      ]
+    },
+    {
+      "id": "40",
+      "subject": "ap",
+      "year": 2023,
+      "title": "November Further Studies Mathematics · 2023",
+      "kind": "memo",
+      "memo": null,
+      "note": "Scanned handwritten marking guidelines",
+      "file": "ap-2023-november-further-studies-mathematics-memo.pdf",
+      "pages": 20,
+      "sha256": "f8616fd00a4d4fd5148dcef93f46abe62b0a8df3b5c83e0276b1c6c40f750b7f",
+      "originals": [
+        "40.pdf"
+      ]
+    },
+    {
+      "id": "41",
+      "subject": "ap",
+      "year": 2024,
+      "title": "November Probability Statistics and Algebra · 2024",
+      "kind": "paper",
+      "memo": "42",
+      "note": "",
+      "file": "ap-2024-november-probability-statistics-and-algebra-paper.pdf",
+      "pages": 20,
+      "sha256": "414b3658e323c861708ddf4ca22f9fe6cd183ac3b68337611396f740607f847a",
+      "originals": [
+        "41.pdf"
+      ]
+    },
+    {
+      "id": "42",
+      "subject": "ap",
+      "year": 2024,
+      "title": "November Probability Statistics and Algebra · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "Scanned handwritten marking guidelines",
+      "file": "ap-2024-november-probability-statistics-and-algebra-memo.pdf",
+      "pages": 20,
+      "sha256": "e8d7225b79ffb001539bbce5e85153b0f8638dc6da6f4306c81ed77b555340c6",
+      "originals": [
+        "42.pdf"
+      ]
+    },
+    {
+      "id": "43",
+      "subject": "sports",
+      "year": 2024,
+      "title": "November Sport and Exercise Science · 2024",
+      "kind": "paper",
+      "memo": "44",
+      "note": "",
+      "file": "sports-2024-november-sport-and-exercise-science-paper.pdf",
+      "pages": 29,
+      "sha256": "b2a750aedb7dea9493a8129f944a48f9f4dea358f7cfc8ba436c54a75fb4e3d5",
+      "originals": [
+        "43.pdf"
+      ]
+    },
+    {
+      "id": "44",
+      "subject": "sports",
+      "year": 2024,
+      "title": "November Sport and Exercise Science · 2024",
+      "kind": "memo",
+      "memo": null,
+      "note": "Question numbering and pagination differ from the paper; match by question text",
+      "file": "sports-2024-november-sport-and-exercise-science-memo.pdf",
+      "pages": 31,
+      "sha256": "8d5b82e1d961da4647eb9addf591318d82df1064a33e7fa714dd176cd106be81",
+      "originals": [
+        "44.pdf"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "subject": "maths",
+      "title": "Numbers, surds & intervals",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 3,
+          "label": "Question 1: number representation",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "2",
+          "page": 2,
+          "label": "Question 1(a): types of numbers",
+          "memoPage": 2,
+          "memo": "3"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What makes a number rational?",
+          "body": "A rational number is a ratio of integers with a non-zero denominator. Its decimal expansion terminates or repeats. An irrational number has a non-terminating, non-repeating decimal."
+        },
+        {
+          "heading": "How do you simplify a surd?",
+          "body": "Take square factors outside the root: √72 = √(36 × 2) = 6√2. Add only like surds, such as 3√2 + 2√2 = 5√2."
+        },
+        {
+          "heading": "What do interval brackets mean?",
+          "body": "A square bracket includes an endpoint; a round bracket excludes it. Infinity always takes a round bracket. For example, −2 < x ≤ 5 is (−2; 5]."
+        }
+      ],
+      "formula": "√(a²b) = |a|√b  •  b ≥ 0",
+      "practice": [
+        {
+          "question": "Simplify √50 + √8.",
+          "answer": "√50 = 5√2 and √8 = 2√2. Add like surds: 5√2 + 2√2 = 7√2."
+        },
+        {
+          "question": "Write −3 ≤ x < 4 in interval notation. Is √7 rational?",
+          "answer": "The interval is [−3; 4). Since 7 is not a perfect square, √7 is irrational. It lies between 2 and 3 because 4 < 7 < 9."
+        }
+      ],
+      "visual": "numberline",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-numbers-surds-intervals",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What makes a number rational?",
+          "back": "A rational number is a ratio of integers with a non-zero denominator. Its decimal expansion terminates or repeats. An irrational number has a non-terminating, non-repeating decimal."
+        },
+        {
+          "front": "How do you simplify a surd?",
+          "back": "Take square factors outside the root: √72 = √(36 × 2) = 6√2. Add only like surds, such as 3√2 + 2√2 = 5√2."
+        },
+        {
+          "front": "What do interval brackets mean?",
+          "back": "A square bracket includes an endpoint; a round bracket excludes it. Infinity always takes a round bracket. For example, −2 < x ≤ 5 is (−2; 5]."
+        },
+        {
+          "front": "Simplify √50 + √8.",
+          "back": "√50 = 5√2 and √8 = 2√2. Add like surds: 5√2 + 2√2 = 7√2."
+        },
+        {
+          "front": "Write −3 ≤ x < 4 in interval notation. Is √7 rational?",
+          "back": "The interval is [−3; 4). Since 7 is not a perfect square, √7 is irrational. It lies between 2 and 3 because 4 < 7 < 9."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Algebra & equations",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 4,
+          "label": "Question 2: solve equations",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "1",
+          "page": 9,
+          "label": "Question 6: factorisation",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "6",
+          "page": 2,
+          "label": "Question 1: algebraic simplification",
+          "memoPage": 2,
+          "memo": "8"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "Why factorise first?",
+          "body": "Look for a common factor, difference of squares, or a trinomial. Factoring reveals zeros and can simplify fractions. Cancel factors, never separate terms across a sum."
+        },
+        {
+          "heading": "How do you solve a quadratic?",
+          "body": "Move everything to one side, factorise and use the zero-product rule. If ab = 0, then a = 0 or b = 0. Check each root in the original equation."
+        },
+        {
+          "heading": "What restrictions matter?",
+          "body": "A denominator cannot equal zero. Multiplying by an expression containing x can create invalid solutions, so record excluded values before simplifying."
+        }
+      ],
+      "formula": "a² − b² = (a − b)(a + b)",
+      "practice": [
+        {
+          "question": "Solve x² − 5x + 6 = 0.",
+          "answer": "Find two numbers with product 6 and sum −5: −2 and −3. (x − 2)(x − 3) = 0, so x = 2 or x = 3."
+        },
+        {
+          "question": "Simplify (x² − 9)/(x² + 3x), including restrictions.",
+          "answer": "Factorise: (x − 3)(x + 3)/[x(x + 3)] = (x − 3)/x. The original denominator excludes x = 0 and x = −3."
+        }
+      ],
+      "visual": "flow",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-algebra-equations",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "Why factorise first?",
+          "back": "Look for a common factor, difference of squares, or a trinomial. Factoring reveals zeros and can simplify fractions. Cancel factors, never separate terms across a sum."
+        },
+        {
+          "front": "How do you solve a quadratic?",
+          "back": "Move everything to one side, factorise and use the zero-product rule. If ab = 0, then a = 0 or b = 0. Check each root in the original equation."
+        },
+        {
+          "front": "What restrictions matter?",
+          "back": "A denominator cannot equal zero. Multiplying by an expression containing x can create invalid solutions, so record excluded values before simplifying."
+        },
+        {
+          "front": "Solve x² − 5x + 6 = 0.",
+          "back": "Find two numbers with product 6 and sum −5: −2 and −3. (x − 2)(x − 3) = 0, so x = 2 or x = 3."
+        },
+        {
+          "front": "Simplify (x² − 9)/(x² + 3x), including restrictions.",
+          "back": "Factorise: (x − 3)(x + 3)/[x(x + 3)] = (x − 3)/x. The original denominator excludes x = 0 and x = −3."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Exponents & number patterns",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 8,
+          "label": "Question 5: linear sequences",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "1",
+          "page": 9,
+          "label": "Question 6(c): exponent laws",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "6",
+          "page": 2,
+          "label": "Question 1.1: exponent laws",
+          "memoPage": 2,
+          "memo": "8"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do exponent laws work?",
+          "body": "Multiply powers of the same base by adding exponents; divide by subtracting exponents. A power raised to another power multiplies exponents. A negative exponent indicates a reciprocal."
+        },
+        {
+          "heading": "How do you recognise an arithmetic sequence?",
+          "body": "Successive terms have a constant difference d. Subtract each term from the next to find d. The first term is a."
+        },
+        {
+          "heading": "How do you find a term position?",
+          "body": "Use Tₙ = a + (n − 1)d, substitute the target term and solve for n. A valid position must be a positive integer."
+        }
+      ],
+      "formula": "Tₙ = a + (n − 1)d  •  aᵐaⁿ = aᵐ⁺ⁿ",
+      "practice": [
+        {
+          "question": "For 5, 9, 13, … find Tₙ and T₂₀.",
+          "answer": "a = 5 and d = 4. Tₙ = 5 + 4(n − 1) = 4n + 1. T₂₀ = 81."
+        },
+        {
+          "question": "Simplify (2³ × 2⁻¹)/2².",
+          "answer": "Use the common base 2: 2^(3 − 1 − 2) = 2⁰ = 1."
+        }
+      ],
+      "visual": "sequence",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-exponents-number-patterns",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do exponent laws work?",
+          "back": "Multiply powers of the same base by adding exponents; divide by subtracting exponents. A power raised to another power multiplies exponents. A negative exponent indicates a reciprocal."
+        },
+        {
+          "front": "How do you recognise an arithmetic sequence?",
+          "back": "Successive terms have a constant difference d. Subtract each term from the next to find d. The first term is a."
+        },
+        {
+          "front": "How do you find a term position?",
+          "back": "Use Tₙ = a + (n − 1)d, substitute the target term and solve for n. A valid position must be a positive integer."
+        },
+        {
+          "front": "For 5, 9, 13, … find Tₙ and T₂₀.",
+          "back": "a = 5 and d = 4. Tₙ = 5 + 4(n − 1) = 4n + 1. T₂₀ = 81."
+        },
+        {
+          "front": "Simplify (2³ × 2⁻¹)/2².",
+          "back": "Use the common base 2: 2^(3 − 1 − 2) = 2⁰ = 1."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Functions & transformations",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 6,
+          "label": "Question 4: sketch functions",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "1",
+          "page": 10,
+          "label": "Question 7: function features",
+          "memoPage": null,
+          "memo": "16"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "Which features belong on a graph?",
+          "body": "Label the axes, intercepts, turning point for a parabola and asymptotes for a hyperbola. Use the equation to calculate features rather than estimating them."
+        },
+        {
+          "heading": "How do vertical transformations work?",
+          "body": "Adding q to f(x) shifts a graph up by q. Multiplying the entire function by −1 reflects it in the x-axis. These changes affect y-values."
+        },
+        {
+          "heading": "What are domain and range?",
+          "body": "Domain means allowed inputs x; range means possible outputs y. For y = a/x + q, x ≠ 0 and y ≠ q. For y = x² + q, the range is y ≥ q."
+        }
+      ],
+      "formula": "y = ax² + q  •  y = a/x + q",
+      "practice": [
+        {
+          "question": "State the turning point and range of y = 2x² − 3.",
+          "answer": "The turning point is (0; −3). The parabola opens upwards because a = 2 > 0. Therefore the range is y ≥ −3."
+        },
+        {
+          "question": "Reflect f(x) = 3/x + 2 in the x-axis, then move it down 1.",
+          "answer": "Reflection gives −f(x) = −3/x − 2. Moving down 1 gives y = −3/x − 3. Its asymptotes are x = 0 and y = −3."
+        }
+      ],
+      "visual": "parabola",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-functions-transformations",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "Which features belong on a graph?",
+          "back": "Label the axes, intercepts, turning point for a parabola and asymptotes for a hyperbola. Use the equation to calculate features rather than estimating them."
+        },
+        {
+          "front": "How do vertical transformations work?",
+          "back": "Adding q to f(x) shifts a graph up by q. Multiplying the entire function by −1 reflects it in the x-axis. These changes affect y-values."
+        },
+        {
+          "front": "What are domain and range?",
+          "back": "Domain means allowed inputs x; range means possible outputs y. For y = a/x + q, x ≠ 0 and y ≠ q. For y = x² + q, the range is y ≥ q."
+        },
+        {
+          "front": "State the turning point and range of y = 2x² − 3.",
+          "back": "The turning point is (0; −3). The parabola opens upwards because a = 2 > 0. Therefore the range is y ≥ −3."
+        },
+        {
+          "front": "Reflect f(x) = 3/x + 2 in the x-axis, then move it down 1.",
+          "back": "Reflection gives −f(x) = −3/x − 2. Moving down 1 gives y = −3/x − 3. Its asymptotes are x = 0 and y = −3."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Financial maths",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 12,
+          "label": "Question 8: interest growth",
+          "memoPage": null,
+          "memo": "16"
+        },
+        {
+          "paper": "11",
+          "page": 6,
+          "label": "Question 4: simple interest and inflation",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How does simple interest grow?",
+          "body": "Simple interest is calculated on the original principal only. It adds the same monetary amount each year at a fixed rate."
+        },
+        {
+          "heading": "How does compound interest grow?",
+          "body": "Compound interest is calculated on the updated balance. Interest earns further interest, producing exponential growth. Convert a percentage to a decimal before substitution."
+        },
+        {
+          "heading": "What do the symbols mean?",
+          "body": "P is the original amount; A is the final amount; i is the rate per period as a decimal; n is the number of matching periods. Keep intermediate values unrounded."
+        }
+      ],
+      "formula": "Simple: A = P(1 + in)  •  Compound: A = P(1 + i)ⁿ",
+      "practice": [
+        {
+          "question": "R2 000 earns 6% simple interest yearly for 3 years. Find the balance.",
+          "answer": "A = 2 000(1 + 0.06 × 3) = 2 000 × 1.18 = R2 360.00. Interest earned is R360.00."
+        },
+        {
+          "question": "R2 000 earns 6% compound interest yearly for 3 years. Find the balance.",
+          "answer": "A = 2 000(1.06)³ = R2 382.03 to the nearest cent. This exceeds simple interest because interest is earned on earlier interest."
+        }
+      ],
+      "visual": "growth",
+      "tip": "Use the rate and period stated in the question. This is school mathematics, not an investment recommendation.",
+      "id": "maths-financial-maths",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How does simple interest grow?",
+          "back": "Simple interest is calculated on the original principal only. It adds the same monetary amount each year at a fixed rate."
+        },
+        {
+          "front": "How does compound interest grow?",
+          "back": "Compound interest is calculated on the updated balance. Interest earns further interest, producing exponential growth. Convert a percentage to a decimal before substitution."
+        },
+        {
+          "front": "What do the symbols mean?",
+          "back": "P is the original amount; A is the final amount; i is the rate per period as a decimal; n is the number of matching periods. Keep intermediate values unrounded."
+        },
+        {
+          "front": "R2 000 earns 6% simple interest yearly for 3 years. Find the balance.",
+          "back": "A = 2 000(1 + 0.06 × 3) = 2 000 × 1.18 = R2 360.00. Interest earned is R360.00."
+        },
+        {
+          "front": "R2 000 earns 6% compound interest yearly for 3 years. Find the balance.",
+          "back": "A = 2 000(1.06)³ = R2 382.03 to the nearest cent. This exceeds simple interest because interest is earned on earlier interest."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Probability & Venn diagrams",
+      "group": "Paper 1",
+      "sources": [
+        {
+          "paper": "1",
+          "page": 13,
+          "label": "Question 9: sibling survey",
+          "memoPage": 2,
+          "memo": "16"
+        },
+        {
+          "paper": "6",
+          "page": 10,
+          "label": "Question 5.2: probability",
+          "memoPage": 10,
+          "memo": "8"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What goes in a Venn overlap?",
+          "body": "The overlap contains outcomes in both A and B. Place the overlap first, then subtract it from each set total to get the exclusive regions."
+        },
+        {
+          "heading": "How do you calculate a union?",
+          "body": "Add P(A) and P(B), then subtract their overlap once to avoid double counting. The outside region is 1 − P(A ∪ B)."
+        },
+        {
+          "heading": "What are complementary events?",
+          "body": "A and its complement cover all outcomes and cannot occur together. Their probabilities sum to 1. Mutually exclusive events have no overlap."
+        }
+      ],
+      "formula": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+      "practice": [
+        {
+          "question": "Of 60 learners, 32 play football, 25 swim, and 12 do both. How many do neither?",
+          "answer": "Football only = 32 − 12 = 20; swimming only = 25 − 12 = 13. At least one = 20 + 12 + 13 = 45. Neither = 60 − 45 = 15."
+        },
+        {
+          "question": "P(A) = 0.4, P(B) = 0.35 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+          "answer": "P(A ∪ B) = 0.4 + 0.35 − 0.1 = 0.65. The probability of neither is 1 − 0.65 = 0.35."
+        }
+      ],
+      "visual": "venn",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-probability-venn-diagrams",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What goes in a Venn overlap?",
+          "back": "The overlap contains outcomes in both A and B. Place the overlap first, then subtract it from each set total to get the exclusive regions."
+        },
+        {
+          "front": "How do you calculate a union?",
+          "back": "Add P(A) and P(B), then subtract their overlap once to avoid double counting. The outside region is 1 − P(A ∪ B)."
+        },
+        {
+          "front": "What are complementary events?",
+          "back": "A and its complement cover all outcomes and cannot occur together. Their probabilities sum to 1. Mutually exclusive events have no overlap."
+        },
+        {
+          "front": "Of 60 learners, 32 play football, 25 swim, and 12 do both. How many do neither?",
+          "back": "Football only = 32 − 12 = 20; swimming only = 25 − 12 = 13. At least one = 20 + 12 + 13 = 45. Neither = 60 − 45 = 15."
+        },
+        {
+          "front": "P(A) = 0.4, P(B) = 0.35 and P(A ∩ B) = 0.1. Find P(A ∪ B).",
+          "back": "P(A ∪ B) = 0.4 + 0.35 − 0.1 = 0.65. The probability of neither is 1 − 0.65 = 0.35."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Trigonometry & trig graphs",
+      "group": "Paper 2",
+      "sources": [
+        {
+          "paper": "17",
+          "page": 4,
+          "label": "Question 2: right-triangle ratios",
+          "memoPage": 4,
+          "memo": "18"
+        },
+        {
+          "paper": "17",
+          "page": 7,
+          "label": "Question 4: angles of depression",
+          "memoPage": 7,
+          "memo": "18"
+        },
+        {
+          "paper": "17",
+          "page": 8,
+          "label": "Question 5: trig graphs",
+          "memoPage": 8,
+          "memo": "18"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do you choose a trig ratio?",
+          "body": "Relative to the chosen angle, label opposite, adjacent and hypotenuse. Use sine for opposite/hypotenuse, cosine for adjacent/hypotenuse and tangent for opposite/adjacent."
+        },
+        {
+          "heading": "How do trig graphs repeat?",
+          "body": "Sine and cosine repeat every 360°; tangent every 180°. For a sin(x) or a cos(x), amplitude is |a|. A vertical shift changes the midline, not the amplitude."
+        },
+        {
+          "heading": "How do angles of depression work?",
+          "body": "The angle from a horizontal line down to an object equals the angle of elevation from the object when the horizontal lines are parallel. Draw the triangle first."
+        }
+      ],
+      "formula": "sin θ = O/H  •  cos θ = A/H  •  tan θ = O/A",
+      "practice": [
+        {
+          "question": "A ladder is 10 m long and makes 60° with the ground. Find its vertical height.",
+          "answer": "The ladder is the hypotenuse. h = 10 sin 60° = 5√3 ≈ 8.66 m."
+        },
+        {
+          "question": "State the amplitude, period and range of y = 3 sin x + 1.",
+          "answer": "Amplitude = 3; period = 360°. The midline is y = 1 and the output extends 3 above and below it, so −2 ≤ y ≤ 4."
+        }
+      ],
+      "visual": "wave",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-trigonometry-trig-graphs",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do you choose a trig ratio?",
+          "back": "Relative to the chosen angle, label opposite, adjacent and hypotenuse. Use sine for opposite/hypotenuse, cosine for adjacent/hypotenuse and tangent for opposite/adjacent."
+        },
+        {
+          "front": "How do trig graphs repeat?",
+          "back": "Sine and cosine repeat every 360°; tangent every 180°. For a sin(x) or a cos(x), amplitude is |a|. A vertical shift changes the midline, not the amplitude."
+        },
+        {
+          "front": "How do angles of depression work?",
+          "back": "The angle from a horizontal line down to an object equals the angle of elevation from the object when the horizontal lines are parallel. Draw the triangle first."
+        },
+        {
+          "front": "A ladder is 10 m long and makes 60° with the ground. Find its vertical height.",
+          "back": "The ladder is the hypotenuse. h = 10 sin 60° = 5√3 ≈ 8.66 m."
+        },
+        {
+          "front": "State the amplitude, period and range of y = 3 sin x + 1.",
+          "back": "Amplitude = 3; period = 360°. The midline is y = 1 and the output extends 3 above and below it, so −2 ≤ y ≤ 4."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Analytical geometry",
+      "group": "Paper 2",
+      "sources": [
+        {
+          "paper": "17",
+          "page": 10,
+          "label": "Question 6: coordinates and triangles",
+          "memoPage": 10,
+          "memo": "18"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do you find distance and midpoint?",
+          "body": "Distance comes from Pythagoras using coordinate differences. Midpoint is the average of each coordinate. Keep exact square roots until the final answer."
+        },
+        {
+          "heading": "How do gradients describe lines?",
+          "body": "Gradient is change in y divided by change in x. Parallel non-vertical lines have equal gradients; perpendicular non-vertical lines have gradients with product −1."
+        },
+        {
+          "heading": "How can you prove a shape analytically?",
+          "body": "Use distances to prove equal sides, gradients to prove parallel or perpendicular sides, and midpoints to prove diagonals bisect each other. State the geometric conclusion."
+        }
+      ],
+      "formula": "m = (y₂ − y₁)/(x₂ − x₁)  •  d² = Δx² + Δy²",
+      "practice": [
+        {
+          "question": "Find the midpoint and length of AB, where A(−2; 1) and B(4; 9).",
+          "answer": "Midpoint = ((−2 + 4)/2; (1 + 9)/2) = (1; 5). Length = √(6² + 8²) = √100 = 10 units."
+        },
+        {
+          "question": "Find the equation through (2; 3) with gradient −2.",
+          "answer": "Use y − 3 = −2(x − 2). Expand: y − 3 = −2x + 4, hence y = −2x + 7."
+        }
+      ],
+      "visual": "triangle",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-analytical-geometry",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do you find distance and midpoint?",
+          "back": "Distance comes from Pythagoras using coordinate differences. Midpoint is the average of each coordinate. Keep exact square roots until the final answer."
+        },
+        {
+          "front": "How do gradients describe lines?",
+          "back": "Gradient is change in y divided by change in x. Parallel non-vertical lines have equal gradients; perpendicular non-vertical lines have gradients with product −1."
+        },
+        {
+          "front": "How can you prove a shape analytically?",
+          "back": "Use distances to prove equal sides, gradients to prove parallel or perpendicular sides, and midpoints to prove diagonals bisect each other. State the geometric conclusion."
+        },
+        {
+          "front": "Find the midpoint and length of AB, where A(−2; 1) and B(4; 9).",
+          "back": "Midpoint = ((−2 + 4)/2; (1 + 9)/2) = (1; 5). Length = √(6² + 8²) = √100 = 10 units."
+        },
+        {
+          "front": "Find the equation through (2; 3) with gradient −2.",
+          "back": "Use y − 3 = −2(x − 2). Expand: y − 3 = −2x + 4, hence y = −2x + 7."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Euclidean geometry & measurement",
+      "group": "Paper 2",
+      "sources": [
+        {
+          "paper": "17",
+          "page": 6,
+          "label": "Question 3: midpoint theorem",
+          "memoPage": 6,
+          "memo": "18"
+        },
+        {
+          "paper": "17",
+          "page": 14,
+          "label": "Question 7: volume and area",
+          "memoPage": 14,
+          "memo": "18"
+        },
+        {
+          "paper": "17",
+          "page": 18,
+          "label": "Question 10: geometric proofs",
+          "memoPage": 18,
+          "memo": "18"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does the midpoint theorem say?",
+          "body": "The segment joining the midpoints of two sides of a triangle is parallel to the third side and half its length. Both midpoint conditions must be established."
+        },
+        {
+          "heading": "How do you prove a parallelogram?",
+          "body": "Show both pairs of opposite sides parallel, both pairs equal, one opposite pair equal and parallel, or diagonals bisecting each other. Give a reason for every proof step."
+        },
+        {
+          "heading": "How do you handle composite solids?",
+          "body": "Split the object into known shapes and add or subtract their volumes. For surface area, include only exposed surfaces and identify whether a cone base is included."
+        }
+      ],
+      "formula": "Vcone = ⅓πr²h  •  Vsphere = ⁴⁄₃πr³  •  Atriangle = ½bh",
+      "practice": [
+        {
+          "question": "Two sides of a triangle have midpoints M and N. The third side is 18 cm. Find MN.",
+          "answer": "By the midpoint theorem, MN is parallel to the third side and half its length. MN = 18/2 = 9 cm."
+        },
+        {
+          "question": "A cone has radius 3 cm and height 8 cm. Find its volume.",
+          "answer": "V = ⅓πr²h = ⅓π × 9 × 8 = 24π ≈ 75.40 cm³. The radius, not diameter, must be used."
+        }
+      ],
+      "visual": "triangle",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-euclidean-geometry-measurement",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does the midpoint theorem say?",
+          "back": "The segment joining the midpoints of two sides of a triangle is parallel to the third side and half its length. Both midpoint conditions must be established."
+        },
+        {
+          "front": "How do you prove a parallelogram?",
+          "back": "Show both pairs of opposite sides parallel, both pairs equal, one opposite pair equal and parallel, or diagonals bisecting each other. Give a reason for every proof step."
+        },
+        {
+          "front": "How do you handle composite solids?",
+          "back": "Split the object into known shapes and add or subtract their volumes. For surface area, include only exposed surfaces and identify whether a cone base is included."
+        },
+        {
+          "front": "Two sides of a triangle have midpoints M and N. The third side is 18 cm. Find MN.",
+          "back": "By the midpoint theorem, MN is parallel to the third side and half its length. MN = 18/2 = 9 cm."
+        },
+        {
+          "front": "A cone has radius 3 cm and height 8 cm. Find its volume.",
+          "back": "V = ⅓πr²h = ⅓π × 9 × 8 = 24π ≈ 75.40 cm³. The radius, not diameter, must be used."
+        }
+      ]
+    },
+    {
+      "subject": "maths",
+      "title": "Statistics & data handling",
+      "group": "Paper 2",
+      "sources": [
+        {
+          "paper": "17",
+          "page": 16,
+          "label": "Question 8: box plots",
+          "memoPage": 16,
+          "memo": "18"
+        },
+        {
+          "paper": "17",
+          "page": 17,
+          "label": "Question 9: grouped frequencies",
+          "memoPage": 17,
+          "memo": "18"
+        },
+        {
+          "paper": "9",
+          "page": 2,
+          "label": "Question 1: class marks",
+          "memoPage": 2,
+          "memo": "10"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What do centre and spread tell you?",
+          "body": "Mean is total divided by count; median is the middle of sorted data; mode is the most frequent value. Range is maximum minus minimum. IQR = Q₃ − Q₁ describes the middle 50%."
+        },
+        {
+          "heading": "How do you estimate a grouped mean?",
+          "body": "Multiply each class midpoint by its frequency, add the products and divide by the total frequency. It is an estimate because actual individual values are unknown."
+        },
+        {
+          "heading": "How do you interpret a box plot?",
+          "body": "The five-number summary is minimum, Q₁, median, Q₃ and maximum. Compare median for typical performance and IQR for consistency. A small IQR means less spread."
+        }
+      ],
+      "formula": "Estimated mean = Σ(f × midpoint)/Σf",
+      "practice": [
+        {
+          "question": "Find the mean, median and range of 2, 4, 4, 6, 9.",
+          "answer": "Mean = 25/5 = 5. The middle sorted value is 4, so median = 4. Range = 9 − 2 = 7."
+        },
+        {
+          "question": "A grouped table has midpoints 5 and 15 with frequencies 3 and 7. Estimate the mean.",
+          "answer": "Σfx = 5 × 3 + 15 × 7 = 120. Σf = 10. Estimated mean = 120/10 = 12."
+        }
+      ],
+      "visual": "bars",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "maths-statistics-data-handling",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What do centre and spread tell you?",
+          "back": "Mean is total divided by count; median is the middle of sorted data; mode is the most frequent value. Range is maximum minus minimum. IQR = Q₃ − Q₁ describes the middle 50%."
+        },
+        {
+          "front": "How do you estimate a grouped mean?",
+          "back": "Multiply each class midpoint by its frequency, add the products and divide by the total frequency. It is an estimate because actual individual values are unknown."
+        },
+        {
+          "front": "How do you interpret a box plot?",
+          "back": "The five-number summary is minimum, Q₁, median, Q₃ and maximum. Compare median for typical performance and IQR for consistency. A small IQR means less spread."
+        },
+        {
+          "front": "Find the mean, median and range of 2, 4, 4, 6, 9.",
+          "back": "Mean = 25/5 = 5. The middle sorted value is 4, so median = 4. Range = 9 − 2 = 7."
+        },
+        {
+          "front": "A grouped table has midpoints 5 and 15 with frequencies 3 and 7. Estimate the mean.",
+          "back": "Σfx = 5 × 3 + 15 × 7 = 120. Σf = 10. Estimated mean = 120/10 = 12."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Advanced algebra & binomial expansion",
+      "group": "Algebra",
+      "sources": [
+        {
+          "paper": "39",
+          "page": 11,
+          "label": "Question 7: algebraic expansion",
+          "memoPage": 11,
+          "memo": "40"
+        },
+        {
+          "paper": "41",
+          "page": 6,
+          "label": "Question 3: algebra",
+          "memoPage": 6,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How does the binomial pattern work?",
+          "body": "In (a + b)ⁿ the powers of a decrease while the powers of b increase. Coefficients come from Pascal’s triangle or combinations. Every term has total degree n."
+        },
+        {
+          "heading": "How do you compare coefficients?",
+          "body": "Expand and collect like powers, then equate coefficients of matching powers on the two sides. An identity must hold for every permitted x."
+        },
+        {
+          "heading": "How do you simplify compound fractions?",
+          "body": "Factor every numerator and denominator, find a common denominator inside the fraction, then multiply by the reciprocal of the divisor. Record all original restrictions."
+        }
+      ],
+      "formula": "(a + b)³ = a³ + 3a²b + 3ab² + b³",
+      "practice": [
+        {
+          "question": "Expand (x + 2)³.",
+          "answer": "Use coefficients 1, 3, 3, 1: x³ + 3x²(2) + 3x(2²) + 2³ = x³ + 6x² + 12x + 8."
+        },
+        {
+          "question": "If (x + a)² = x² + 10x + b for all x, find a and b.",
+          "answer": "Expansion gives x² + 2ax + a². Comparing coefficients: 2a = 10, so a = 5. Then b = a² = 25."
+        }
+      ],
+      "visual": "sequence",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-advanced-algebra-binomial-expansion",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How does the binomial pattern work?",
+          "back": "In (a + b)ⁿ the powers of a decrease while the powers of b increase. Coefficients come from Pascal’s triangle or combinations. Every term has total degree n."
+        },
+        {
+          "front": "How do you compare coefficients?",
+          "back": "Expand and collect like powers, then equate coefficients of matching powers on the two sides. An identity must hold for every permitted x."
+        },
+        {
+          "front": "How do you simplify compound fractions?",
+          "back": "Factor every numerator and denominator, find a common denominator inside the fraction, then multiply by the reciprocal of the divisor. Record all original restrictions."
+        },
+        {
+          "front": "Expand (x + 2)³.",
+          "back": "Use coefficients 1, 3, 3, 1: x³ + 3x²(2) + 3x(2²) + 2³ = x³ + 6x² + 12x + 8."
+        },
+        {
+          "front": "If (x + a)² = x² + 10x + b for all x, find a and b.",
+          "back": "Expansion gives x² + 2ax + a². Comparing coefficients: 2a = 10, so a = 5. Then b = a² = 25."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Polynomials & nature of roots",
+      "group": "Algebra",
+      "sources": [
+        {
+          "paper": "39",
+          "page": 14,
+          "label": "Question 8: factorisation and roots",
+          "memoPage": 14,
+          "memo": "40"
+        },
+        {
+          "paper": "39",
+          "page": 16,
+          "label": "Question 9: discriminants",
+          "memoPage": 16,
+          "memo": "40"
+        },
+        {
+          "paper": "41",
+          "page": 5,
+          "label": "Question 2(c): nature of quadratic roots",
+          "memoPage": 5,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does the factor theorem say?",
+          "body": "If f(k) = 0, then (x − k) is a factor of polynomial f(x). After finding a factor, divide to reduce the degree and solve the remaining polynomial."
+        },
+        {
+          "heading": "How does the discriminant classify roots?",
+          "body": "For ax² + bx + c = 0, Δ = b² − 4ac. Positive Δ gives two distinct real roots; zero gives equal real roots; negative Δ gives non-real roots."
+        },
+        {
+          "heading": "How do parameter questions work?",
+          "body": "Write the appropriate discriminant inequality, substitute coefficients and solve for the parameter. Check that the leading coefficient is non-zero before using quadratic rules."
+        }
+      ],
+      "formula": "Δ = b² − 4ac  •  x = (−b ± √Δ)/(2a)",
+      "practice": [
+        {
+          "question": "Classify the roots of x² + 4x + 7 = 0.",
+          "answer": "Δ = 4² − 4(1)(7) = −12. Since Δ < 0, the roots are non-real (a complex conjugate pair)."
+        },
+        {
+          "question": "Show x − 2 is a factor of x³ − 3x² − 4x + 12 and solve the equation.",
+          "answer": "f(2) = 8 − 12 − 8 + 12 = 0. Factorisation gives (x − 2)(x² − x − 6) = (x − 2)(x − 3)(x + 2). Roots: 2, 3 and −2."
+        }
+      ],
+      "visual": "parabola",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-polynomials-nature-of-roots",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does the factor theorem say?",
+          "back": "If f(k) = 0, then (x − k) is a factor of polynomial f(x). After finding a factor, divide to reduce the degree and solve the remaining polynomial."
+        },
+        {
+          "front": "How does the discriminant classify roots?",
+          "back": "For ax² + bx + c = 0, Δ = b² − 4ac. Positive Δ gives two distinct real roots; zero gives equal real roots; negative Δ gives non-real roots."
+        },
+        {
+          "front": "How do parameter questions work?",
+          "back": "Write the appropriate discriminant inequality, substitute coefficients and solve for the parameter. Check that the leading coefficient is non-zero before using quadratic rules."
+        },
+        {
+          "front": "Classify the roots of x² + 4x + 7 = 0.",
+          "back": "Δ = 4² − 4(1)(7) = −12. Since Δ < 0, the roots are non-real (a complex conjugate pair)."
+        },
+        {
+          "front": "Show x − 2 is a factor of x³ − 3x² − 4x + 12 and solve the equation.",
+          "back": "f(2) = 8 − 12 − 8 + 12 = 0. Factorisation gives (x − 2)(x² − x − 6) = (x − 2)(x − 3)(x + 2). Roots: 2, 3 and −2."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Functions, modulus & area estimates",
+      "group": "Functions",
+      "sources": [
+        {
+          "paper": "39",
+          "page": 18,
+          "label": "Question 10: function graph",
+          "memoPage": 18,
+          "memo": "40"
+        },
+        {
+          "paper": "39",
+          "page": 19,
+          "label": "Question 11: left-endpoint approximation",
+          "memoPage": 19,
+          "memo": "40"
+        },
+        {
+          "paper": "41",
+          "page": 8,
+          "label": "Question 4(c): modulus transformation",
+          "memoPage": 8,
+          "memo": "42"
+        },
+        {
+          "paper": "41",
+          "page": 9,
+          "label": "Question 5: endpoint approximation",
+          "memoPage": 9,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How does absolute value work?",
+          "body": "|u| is the distance of u from zero, so it is never negative. |x − h| + k has a V-shaped graph with vertex (h; k). Solve modulus equations by considering both signs."
+        },
+        {
+          "heading": "What is an endpoint approximation?",
+          "body": "Split an interval into equal widths Δx. At each left endpoint calculate a rectangle height f(x). Add height × width for all rectangles. This estimates signed area."
+        },
+        {
+          "heading": "How can you judge the estimate?",
+          "body": "For an increasing positive function, left rectangles underestimate the area. Smaller partitions usually improve accuracy. Include a sketch and the interval limits."
+        }
+      ],
+      "formula": "Left sum = Δx[f(x₀) + … + f(xₙ₋₁)]",
+      "practice": [
+        {
+          "question": "Solve |x − 3| = 5 and state the vertex of y = |x − 3|.",
+          "answer": "x − 3 = 5 or x − 3 = −5, so x = 8 or x = −2. The graph vertex is (3; 0)."
+        },
+        {
+          "question": "Use left rectangles of width 1 to estimate the area under y = x² from x = 0 to 3.",
+          "answer": "Left endpoints are 0, 1 and 2. Sum = 1(0² + 1² + 2²) = 5 square units. Since x² increases on this interval, this is an underestimate."
+        }
+      ],
+      "visual": "bars",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-functions-modulus-area-estimates",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How does absolute value work?",
+          "back": "|u| is the distance of u from zero, so it is never negative. |x − h| + k has a V-shaped graph with vertex (h; k). Solve modulus equations by considering both signs."
+        },
+        {
+          "front": "What is an endpoint approximation?",
+          "back": "Split an interval into equal widths Δx. At each left endpoint calculate a rectangle height f(x). Add height × width for all rectangles. This estimates signed area."
+        },
+        {
+          "front": "How can you judge the estimate?",
+          "back": "For an increasing positive function, left rectangles underestimate the area. Smaller partitions usually improve accuracy. Include a sketch and the interval limits."
+        },
+        {
+          "front": "Solve |x − 3| = 5 and state the vertex of y = |x − 3|.",
+          "back": "x − 3 = 5 or x − 3 = −5, so x = 8 or x = −2. The graph vertex is (3; 0)."
+        },
+        {
+          "front": "Use left rectangles of width 1 to estimate the area under y = x² from x = 0 to 3.",
+          "back": "Left endpoints are 0, 1 and 2. Sum = 1(0² + 1² + 2²) = 5 square units. Since x² increases on this interval, this is an underestimate."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Conditional probability & tree diagrams",
+      "group": "Probability",
+      "sources": [
+        {
+          "paper": "41",
+          "page": 12,
+          "label": "Question 6: airport screening tree",
+          "memoPage": 12,
+          "memo": "42"
+        },
+        {
+          "paper": "39",
+          "page": 3,
+          "label": "Question 1: contingency table",
+          "memoPage": 3,
+          "memo": "40"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What changes with conditional probability?",
+          "body": "Given B restricts the sample space to B. Divide the probability of both A and B by the probability of B, provided P(B) > 0."
+        },
+        {
+          "heading": "How do you use a tree diagram?",
+          "body": "Branch probabilities leaving one node sum to 1. Multiply along a path for a joint probability. Add disjoint paths to obtain the total probability of an event."
+        },
+        {
+          "heading": "Why is a positive test not certainty?",
+          "body": "A positive result can come from a true positive or a false positive. The prior probability matters, so use all positive paths in the denominator."
+        }
+      ],
+      "formula": "P(A | B) = P(A ∩ B)/P(B)",
+      "practice": [
+        {
+          "question": "10% of bags contain an item. A scanner detects 90% of these and flags 5% of other bags. Find P(flag).",
+          "answer": "P(flag) = 0.10 × 0.90 + 0.90 × 0.05 = 0.09 + 0.045 = 0.135, or 13.5%."
+        },
+        {
+          "question": "Using the same scanner data, find P(item | flag).",
+          "answer": "P(item and flag) = 0.09. P(flag) = 0.135. Therefore P(item | flag) = 0.09/0.135 = 2/3 ≈ 66.7%."
+        }
+      ],
+      "visual": "tree",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-conditional-probability-tree-diagrams",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What changes with conditional probability?",
+          "back": "Given B restricts the sample space to B. Divide the probability of both A and B by the probability of B, provided P(B) > 0."
+        },
+        {
+          "front": "How do you use a tree diagram?",
+          "back": "Branch probabilities leaving one node sum to 1. Multiply along a path for a joint probability. Add disjoint paths to obtain the total probability of an event."
+        },
+        {
+          "front": "Why is a positive test not certainty?",
+          "back": "A positive result can come from a true positive or a false positive. The prior probability matters, so use all positive paths in the denominator."
+        },
+        {
+          "front": "10% of bags contain an item. A scanner detects 90% of these and flags 5% of other bags. Find P(flag).",
+          "back": "P(flag) = 0.10 × 0.90 + 0.90 × 0.05 = 0.09 + 0.045 = 0.135, or 13.5%."
+        },
+        {
+          "front": "Using the same scanner data, find P(item | flag).",
+          "back": "P(item and flag) = 0.09. P(flag) = 0.135. Therefore P(item | flag) = 0.09/0.135 = 2/3 ≈ 66.7%."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Counting & permutations",
+      "group": "Probability",
+      "sources": [
+        {
+          "paper": "41",
+          "page": 14,
+          "label": "Question 8: codes and seating",
+          "memoPage": 14,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "When do you multiply choices?",
+          "body": "For a sequence of decisions, multiply the number of available choices at each step. State whether repetition is allowed, and whether order matters."
+        },
+        {
+          "heading": "What is a factorial?",
+          "body": "n! counts arrangements of n distinct objects: n(n − 1)…1. If a position is fixed, arrange only the objects left over. Treat a required adjacent pair as a block."
+        },
+        {
+          "heading": "How do restrictions affect seating?",
+          "body": "Place the most restricted group first, then count the remaining choices. For alternating groups, identify valid patterns before arranging people in each group."
+        }
+      ],
+      "formula": "n! = n(n − 1)…1  •  0! = 1",
+      "practice": [
+        {
+          "question": "How many three-digit PINs use digits 0–5 if repetition is allowed?",
+          "answer": "Each of the three positions has 6 choices, including an initial zero because this is a PIN. Total = 6³ = 216."
+        },
+        {
+          "question": "Five different pupils sit in a row. Two named pupils must occupy the first two seats in either order. How many arrangements?",
+          "answer": "The two named pupils have 2! orders. The remaining three have 3! orders. Total = 2! × 3! = 2 × 6 = 12."
+        }
+      ],
+      "visual": "tree",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-counting-permutations",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "When do you multiply choices?",
+          "back": "For a sequence of decisions, multiply the number of available choices at each step. State whether repetition is allowed, and whether order matters."
+        },
+        {
+          "front": "What is a factorial?",
+          "back": "n! counts arrangements of n distinct objects: n(n − 1)…1. If a position is fixed, arrange only the objects left over. Treat a required adjacent pair as a block."
+        },
+        {
+          "front": "How do restrictions affect seating?",
+          "back": "Place the most restricted group first, then count the remaining choices. For alternating groups, identify valid patterns before arranging people in each group."
+        },
+        {
+          "front": "How many three-digit PINs use digits 0–5 if repetition is allowed?",
+          "back": "Each of the three positions has 6 choices, including an initial zero because this is a PIN. Total = 6³ = 216."
+        },
+        {
+          "front": "Five different pupils sit in a row. Two named pupils must occupy the first two seats in either order. How many arrangements?",
+          "back": "The two named pupils have 2! orders. The remaining three have 3! orders. Total = 2! × 3! = 2 × 6 = 12."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Independence & multi-way data",
+      "group": "Probability",
+      "sources": [
+        {
+          "paper": "41",
+          "page": 13,
+          "label": "Question 7: independent events",
+          "memoPage": 13,
+          "memo": "42"
+        },
+        {
+          "paper": "41",
+          "page": 16,
+          "label": "Question 9: employee data",
+          "memoPage": 16,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does independence mean?",
+          "body": "Knowing one event occurred does not change the probability of the other. Test P(A ∩ B) = P(A)P(B), or compare conditional and unconditional probabilities."
+        },
+        {
+          "heading": "How do tables give probabilities?",
+          "body": "For an unconditional probability divide the requested cell or total by the grand total. For a conditional probability divide by the total of the group named after given."
+        },
+        {
+          "heading": "Are independent events mutually exclusive?",
+          "body": "These are different ideas. Mutually exclusive events cannot happen together. Two events with positive probabilities cannot be both mutually exclusive and independent."
+        }
+      ],
+      "formula": "Independent: P(A ∩ B) = P(A)P(B)",
+      "practice": [
+        {
+          "question": "P(A) = 0.4, P(B) = 0.5 and P(A ∩ B) = 0.2. Are A and B independent?",
+          "answer": "P(A)P(B) = 0.4 × 0.5 = 0.2, equal to P(A ∩ B). Therefore the events are independent."
+        },
+        {
+          "question": "A class has 12 swimmers, 8 of whom cycle. Among the other 18 learners, 6 cycle. Find P(cycle | swimmer).",
+          "answer": "Restrict the denominator to the 12 swimmers. P(cycle | swimmer) = 8/12 = 2/3. The 6 other cyclists do not belong in this conditional numerator."
+        }
+      ],
+      "visual": "venn",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-independence-multi-way-data",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does independence mean?",
+          "back": "Knowing one event occurred does not change the probability of the other. Test P(A ∩ B) = P(A)P(B), or compare conditional and unconditional probabilities."
+        },
+        {
+          "front": "How do tables give probabilities?",
+          "back": "For an unconditional probability divide the requested cell or total by the grand total. For a conditional probability divide by the total of the group named after given."
+        },
+        {
+          "front": "Are independent events mutually exclusive?",
+          "back": "These are different ideas. Mutually exclusive events cannot happen together. Two events with positive probabilities cannot be both mutually exclusive and independent."
+        },
+        {
+          "front": "P(A) = 0.4, P(B) = 0.5 and P(A ∩ B) = 0.2. Are A and B independent?",
+          "back": "P(A)P(B) = 0.4 × 0.5 = 0.2, equal to P(A ∩ B). Therefore the events are independent."
+        },
+        {
+          "front": "A class has 12 swimmers, 8 of whom cycle. Among the other 18 learners, 6 cycle. Find P(cycle | swimmer).",
+          "back": "Restrict the denominator to the 12 swimmers. P(cycle | swimmer) = 8/12 = 2/3. The 6 other cyclists do not belong in this conditional numerator."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Complex numbers & the Argand plane",
+      "group": "Algebra",
+      "sources": [
+        {
+          "paper": "39",
+          "page": 10,
+          "label": "Question 6: complex product, modulus and argument",
+          "memoPage": 10,
+          "memo": "40"
+        },
+        {
+          "paper": "41",
+          "page": 7,
+          "label": "Question 4: complex division and coefficients",
+          "memoPage": 7,
+          "memo": "42"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What is a complex number?",
+          "body": "A complex number has the form a + bi where a and b are real and i² = −1. On an Argand diagram, the horizontal axis is the real part and the vertical axis is the imaginary part."
+        },
+        {
+          "heading": "How do conjugates help division?",
+          "body": "The conjugate of a + bi is a − bi. Multiply the numerator and denominator by the denominator’s conjugate. Their product a² + b² is real, making division easier."
+        },
+        {
+          "heading": "How do modulus and argument work?",
+          "body": "The modulus is the distance from the origin: |a + bi| = √(a² + b²). The argument is the angle from the positive real axis. Use the quadrant to choose the correct angle, not just the inverse-tangent value."
+        }
+      ],
+      "formula": "i² = −1  •  |a + bi| = √(a² + b²)",
+      "practice": [
+        {
+          "question": "Simplify (2 + 3i)(1 − 2i).",
+          "answer": "Expand: 2 − 4i + 3i − 6i². Since i² = −1, this equals 2 − i + 6 = 8 − i."
+        },
+        {
+          "question": "Write (3 + i)/(1 − i) in the form a + bi.",
+          "answer": "Multiply top and bottom by 1 + i: [(3 + i)(1 + i)]/[(1 − i)(1 + i)] = (2 + 4i)/2 = 1 + 2i."
+        }
+      ],
+      "visual": "complex",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-complex-numbers-the-argand-plane",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What is a complex number?",
+          "back": "A complex number has the form a + bi where a and b are real and i² = −1. On an Argand diagram, the horizontal axis is the real part and the vertical axis is the imaginary part."
+        },
+        {
+          "front": "How do conjugates help division?",
+          "back": "The conjugate of a + bi is a − bi. Multiply the numerator and denominator by the denominator’s conjugate. Their product a² + b² is real, making division easier."
+        },
+        {
+          "front": "How do modulus and argument work?",
+          "back": "The modulus is the distance from the origin: |a + bi| = √(a² + b²). The argument is the angle from the positive real axis. Use the quadrant to choose the correct angle, not just the inverse-tangent value."
+        },
+        {
+          "front": "Simplify (2 + 3i)(1 − 2i).",
+          "back": "Expand: 2 − 4i + 3i − 6i². Since i² = −1, this equals 2 − i + 6 = 8 − i."
+        },
+        {
+          "front": "Write (3 + i)/(1 − i) in the form a + bi.",
+          "back": "Multiply top and bottom by 1 + i: [(3 + i)(1 + i)]/[(1 − i)(1 + i)] = (2 + 4i)/2 = 1 + 2i."
+        }
+      ]
+    },
+    {
+      "subject": "ap",
+      "title": "Standard deviation & statistical intervals",
+      "group": "Statistics",
+      "sources": [
+        {
+          "paper": "39",
+          "page": 8,
+          "label": "Question 5: one and two standard-deviation intervals",
+          "memoPage": 8,
+          "memo": "40"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does standard deviation measure?",
+          "body": "Standard deviation measures spread around the mean in the same units as the data. A smaller standard deviation indicates values are more closely clustered around the mean."
+        },
+        {
+          "heading": "How do symmetric intervals work?",
+          "body": "An interval within one standard deviation has endpoints μ − σ and μ + σ. The mean is the midpoint of the interval and σ is its half-width. For two standard deviations the half-width is 2σ."
+        },
+        {
+          "heading": "When can percentage rules be used?",
+          "body": "The familiar approximate 68%, 95%, 99.7% rule describes normally distributed data. Do not apply it to every data set without an assumption about its distribution."
+        }
+      ],
+      "formula": "One σ: [μ − σ; μ + σ]  •  Two σ: [μ − 2σ; μ + 2σ]",
+      "practice": [
+        {
+          "question": "The interval within one standard deviation of the mean is [12; 20]. Find μ and σ.",
+          "answer": "The mean is the midpoint: μ = (12 + 20)/2 = 16. Half the width is σ = (20 − 12)/2 = 4."
+        },
+        {
+          "question": "A set has μ = 50 and σ = 6. State the interval within two standard deviations.",
+          "answer": "Two standard deviations = 2 × 6 = 12. The interval is [50 − 12; 50 + 12] = [38; 62]. No percentage claim follows unless a distribution is specified."
+        }
+      ],
+      "visual": "distribution",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "ap-standard-deviation-statistical-intervals",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does standard deviation measure?",
+          "back": "Standard deviation measures spread around the mean in the same units as the data. A smaller standard deviation indicates values are more closely clustered around the mean."
+        },
+        {
+          "front": "How do symmetric intervals work?",
+          "back": "An interval within one standard deviation has endpoints μ − σ and μ + σ. The mean is the midpoint of the interval and σ is its half-width. For two standard deviations the half-width is 2σ."
+        },
+        {
+          "front": "When can percentage rules be used?",
+          "back": "The familiar approximate 68%, 95%, 99.7% rule describes normally distributed data. Do not apply it to every data set without an assumption about its distribution."
+        },
+        {
+          "front": "The interval within one standard deviation of the mean is [12; 20]. Find μ and σ.",
+          "back": "The mean is the midpoint: μ = (12 + 20)/2 = 16. Half the width is σ = (20 − 12)/2 = 4."
+        },
+        {
+          "front": "A set has μ = 50 and σ = 6. State the interval within two standard deviations.",
+          "back": "Two standard deviations = 2 × 6 = 12. The interval is [50 − 12; 50 + 12] = [38; 62]. No percentage claim follows unless a distribution is specified."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Waves, sound & superposition",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 6,
+          "label": "Question 2: wave properties",
+          "memoPage": 2,
+          "memo": "36"
+        },
+        {
+          "paper": "31",
+          "page": 5,
+          "label": "Question 2.1: sound waves",
+          "memoPage": 2,
+          "memo": "32"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What do amplitude and wavelength measure?",
+          "body": "Amplitude is maximum displacement from equilibrium. Wavelength is the distance between nearest points in phase, such as consecutive crests. Frequency counts complete oscillations per second."
+        },
+        {
+          "heading": "How does superposition work?",
+          "body": "When pulses overlap, their displacements add algebraically. Same-side pulses reinforce; opposite-side pulses partially or fully cancel. After passing, ideal pulses continue with their original shape."
+        },
+        {
+          "heading": "What controls pitch and loudness?",
+          "body": "A higher frequency produces a higher pitch. Greater amplitude generally means louder sound. Sound is a longitudinal mechanical wave and requires a medium."
+        }
+      ],
+      "formula": "v = fλ  •  T = 1/f",
+      "practice": [
+        {
+          "question": "A wave has frequency 5 Hz and wavelength 0.8 m. Find speed and period.",
+          "answer": "v = fλ = 5 × 0.8 = 4 m/s. T = 1/f = 1/5 = 0.2 s."
+        },
+        {
+          "question": "A +4 cm pulse overlaps a −1.5 cm pulse. What is the resultant displacement at the overlap?",
+          "answer": "Add signed displacements: 4 + (−1.5) = +2.5 cm. This is partial destructive interference."
+        }
+      ],
+      "visual": "wave",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-waves-sound-superposition",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What do amplitude and wavelength measure?",
+          "back": "Amplitude is maximum displacement from equilibrium. Wavelength is the distance between nearest points in phase, such as consecutive crests. Frequency counts complete oscillations per second."
+        },
+        {
+          "front": "How does superposition work?",
+          "back": "When pulses overlap, their displacements add algebraically. Same-side pulses reinforce; opposite-side pulses partially or fully cancel. After passing, ideal pulses continue with their original shape."
+        },
+        {
+          "front": "What controls pitch and loudness?",
+          "back": "A higher frequency produces a higher pitch. Greater amplitude generally means louder sound. Sound is a longitudinal mechanical wave and requires a medium."
+        },
+        {
+          "front": "A wave has frequency 5 Hz and wavelength 0.8 m. Find speed and period.",
+          "back": "v = fλ = 5 × 0.8 = 4 m/s. T = 1/f = 1/5 = 0.2 s."
+        },
+        {
+          "front": "A +4 cm pulse overlaps a −1.5 cm pulse. What is the resultant displacement at the overlap?",
+          "back": "Add signed displacements: 4 + (−1.5) = +2.5 cm. This is partial destructive interference."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Electromagnetic radiation",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 8,
+          "label": "Question 3: spectrum and photons",
+          "memoPage": 4,
+          "memo": "36"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How are EM waves different?",
+          "body": "Electromagnetic waves consist of changing electric and magnetic fields. They can travel through a vacuum at c ≈ 3.0 × 10⁸ m/s and are transverse."
+        },
+        {
+          "heading": "How is the spectrum ordered?",
+          "body": "From low to high frequency: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays. Wavelength decreases as frequency increases."
+        },
+        {
+          "heading": "What is a photon?",
+          "body": "A photon is a quantum of electromagnetic radiation with energy E = hf. Higher frequency means more energy per photon; a larger wave amplitude is a different property."
+        }
+      ],
+      "formula": "c = fλ  •  E = hf  •  h = 6.63 × 10⁻³⁴ J·s",
+      "practice": [
+        {
+          "question": "Find the frequency of radiation with wavelength 6.0 × 10⁻⁷ m in vacuum.",
+          "answer": "f = c/λ = (3.0 × 10⁸)/(6.0 × 10⁻⁷) = 5.0 × 10¹⁴ Hz."
+        },
+        {
+          "question": "Find the energy of a photon with frequency 5.0 × 10¹⁴ Hz.",
+          "answer": "E = hf = (6.63 × 10⁻³⁴)(5.0 × 10¹⁴) = 3.315 × 10⁻¹⁹ J ≈ 3.32 × 10⁻¹⁹ J."
+        }
+      ],
+      "visual": "wave",
+      "tip": "Convert nm to metres before substitution. The supplied 2024 paper calls 7.8 nm visible light; that wavelength is outside the visible spectrum.",
+      "id": "physical-electromagnetic-radiation",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How are EM waves different?",
+          "back": "Electromagnetic waves consist of changing electric and magnetic fields. They can travel through a vacuum at c ≈ 3.0 × 10⁸ m/s and are transverse."
+        },
+        {
+          "front": "How is the spectrum ordered?",
+          "back": "From low to high frequency: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma rays. Wavelength decreases as frequency increases."
+        },
+        {
+          "front": "What is a photon?",
+          "back": "A photon is a quantum of electromagnetic radiation with energy E = hf. Higher frequency means more energy per photon; a larger wave amplitude is a different property."
+        },
+        {
+          "front": "Find the frequency of radiation with wavelength 6.0 × 10⁻⁷ m in vacuum.",
+          "back": "f = c/λ = (3.0 × 10⁸)/(6.0 × 10⁻⁷) = 5.0 × 10¹⁴ Hz."
+        },
+        {
+          "front": "Find the energy of a photon with frequency 5.0 × 10¹⁴ Hz.",
+          "back": "E = hf = (6.63 × 10⁻³⁴)(5.0 × 10¹⁴) = 3.315 × 10⁻¹⁹ J ≈ 3.32 × 10⁻¹⁹ J."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Magnetism & electrostatics",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 9,
+          "label": "Question 4: fields and charge investigation",
+          "memoPage": 5,
+          "memo": "36"
+        },
+        {
+          "paper": "35",
+          "page": 3,
+          "label": "Questions 1.3–1.5: charge and magnets",
+          "memoPage": 1,
+          "memo": "36"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does a field show?",
+          "body": "A magnetic field describes the region where magnetic forces can act. Outside a bar magnet field lines run north to south; closer lines indicate a stronger field. Electric current produces a magnetic field."
+        },
+        {
+          "heading": "How is charge transferred?",
+          "body": "Electrons move between objects; protons remain bound in nuclei in ordinary charging. Like charges repel and unlike charges attract. Total charge is conserved."
+        },
+        {
+          "heading": "How do you interpret a charge experiment?",
+          "body": "Identify the changed variable, the measured variable and what is held constant. A neutral conductor can be attracted to a charged object by redistribution of charge without gaining net charge."
+        }
+      ],
+      "formula": "|Q| = n e  •  e = 1.60 × 10⁻¹⁹ C",
+      "practice": [
+        {
+          "question": "An object has charge −4.8 × 10⁻¹⁹ C. How many excess electrons are present?",
+          "answer": "n = |Q|/e = (4.8 × 10⁻¹⁹)/(1.6 × 10⁻¹⁹) = 3. The negative sign means three excess electrons."
+        },
+        {
+          "question": "Two identical metal spheres with +6 nC and −2 nC touch, then separate. Find the final charge on each.",
+          "answer": "Total charge = +6 − 2 = +4 nC. Identical spheres share it equally, giving +2 nC each. Charge is conserved."
+        }
+      ],
+      "visual": "charges",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-magnetism-electrostatics",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does a field show?",
+          "back": "A magnetic field describes the region where magnetic forces can act. Outside a bar magnet field lines run north to south; closer lines indicate a stronger field. Electric current produces a magnetic field."
+        },
+        {
+          "front": "How is charge transferred?",
+          "back": "Electrons move between objects; protons remain bound in nuclei in ordinary charging. Like charges repel and unlike charges attract. Total charge is conserved."
+        },
+        {
+          "front": "How do you interpret a charge experiment?",
+          "back": "Identify the changed variable, the measured variable and what is held constant. A neutral conductor can be attracted to a charged object by redistribution of charge without gaining net charge."
+        },
+        {
+          "front": "An object has charge −4.8 × 10⁻¹⁹ C. How many excess electrons are present?",
+          "back": "n = |Q|/e = (4.8 × 10⁻¹⁹)/(1.6 × 10⁻¹⁹) = 3. The negative sign means three excess electrons."
+        },
+        {
+          "front": "Two identical metal spheres with +6 nC and −2 nC touch, then separate. Find the final charge on each.",
+          "back": "Total charge = +6 − 2 = +4 nC. Identical spheres share it equally, giving +2 nC each. Charge is conserved."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Electric circuits",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 12,
+          "label": "Question 5: circuit and Ohm’s law",
+          "memoPage": 6,
+          "memo": "36"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What are current, voltage and resistance?",
+          "body": "Current is charge flow per unit time. Potential difference is energy transferred per unit charge. Resistance is the ratio V/I for a component at the stated operating conditions."
+        },
+        {
+          "heading": "How do series circuits combine?",
+          "body": "Current is the same through series components. Resistances add and the supply voltage is shared. An ammeter is connected in series."
+        },
+        {
+          "heading": "How do parallel circuits combine?",
+          "body": "Parallel branches share the same potential difference. Branch currents add at a junction. For resistors, reciprocals of resistance add. A voltmeter is connected across a component."
+        }
+      ],
+      "formula": "V = IR  •  Q = It  •  1/Rparallel = 1/R₁ + 1/R₂",
+      "practice": [
+        {
+          "question": "A 12 V battery is connected across a 6 Ω resistor. Find the current and charge passing in 30 s.",
+          "answer": "I = V/R = 12/6 = 2 A. Q = It = 2 × 30 = 60 C."
+        },
+        {
+          "question": "Find the total resistance of 6 Ω and 3 Ω connected in parallel.",
+          "answer": "1/R = 1/6 + 1/3 = 3/6 = 1/2, so R = 2 Ω. It is smaller than either individual resistance."
+        }
+      ],
+      "visual": "circuit",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-electric-circuits",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What are current, voltage and resistance?",
+          "back": "Current is charge flow per unit time. Potential difference is energy transferred per unit charge. Resistance is the ratio V/I for a component at the stated operating conditions."
+        },
+        {
+          "front": "How do series circuits combine?",
+          "back": "Current is the same through series components. Resistances add and the supply voltage is shared. An ammeter is connected in series."
+        },
+        {
+          "front": "How do parallel circuits combine?",
+          "back": "Parallel branches share the same potential difference. Branch currents add at a junction. For resistors, reciprocals of resistance add. A voltmeter is connected across a component."
+        },
+        {
+          "front": "A 12 V battery is connected across a 6 Ω resistor. Find the current and charge passing in 30 s.",
+          "back": "I = V/R = 12/6 = 2 A. Q = It = 2 × 30 = 60 C."
+        },
+        {
+          "front": "Find the total resistance of 6 Ω and 3 Ω connected in parallel.",
+          "back": "1/R = 1/6 + 1/3 = 3/6 = 1/2, so R = 2 Ω. It is smaller than either individual resistance."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Vectors & motion graphs",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 14,
+          "label": "Question 6: resultant and equilibrant",
+          "memoPage": 7,
+          "memo": "36"
+        },
+        {
+          "paper": "35",
+          "page": 15,
+          "label": "Question 7: velocity-time graph",
+          "memoPage": 8,
+          "memo": "36"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What makes a quantity a vector?",
+          "body": "A vector has both magnitude and direction. Displacement, velocity and force are vectors; distance, speed and energy are scalars. Choose a positive direction before calculating."
+        },
+        {
+          "heading": "How do you add perpendicular vectors?",
+          "body": "Draw a head-to-tail diagram. Use Pythagoras for the resultant magnitude and trigonometry for its direction. The equilibrant has equal magnitude and opposite direction."
+        },
+        {
+          "heading": "How do you read motion graphs?",
+          "body": "Gradient of displacement-time gives velocity. Gradient of velocity-time gives acceleration. Signed area under velocity-time gives displacement; add absolute areas for distance."
+        }
+      ],
+      "formula": "a = Δv/Δt  •  vaverage = displacement/time",
+      "practice": [
+        {
+          "question": "Forces of 6 N east and 8 N north act together. Find the resultant.",
+          "answer": "Magnitude = √(6² + 8²) = 10 N. Direction θ = tan⁻¹(8/6) = 53.13° north of east."
+        },
+        {
+          "question": "A velocity-time graph rises uniformly from 0 to 12 m/s in 4 s. Find acceleration and displacement.",
+          "answer": "a = (12 − 0)/4 = 3 m/s². Displacement is the triangular area: ½ × 4 × 12 = 24 m in the positive direction."
+        }
+      ],
+      "visual": "motion",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-vectors-motion-graphs",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What makes a quantity a vector?",
+          "back": "A vector has both magnitude and direction. Displacement, velocity and force are vectors; distance, speed and energy are scalars. Choose a positive direction before calculating."
+        },
+        {
+          "front": "How do you add perpendicular vectors?",
+          "back": "Draw a head-to-tail diagram. Use Pythagoras for the resultant magnitude and trigonometry for its direction. The equilibrant has equal magnitude and opposite direction."
+        },
+        {
+          "front": "How do you read motion graphs?",
+          "back": "Gradient of displacement-time gives velocity. Gradient of velocity-time gives acceleration. Signed area under velocity-time gives displacement; add absolute areas for distance."
+        },
+        {
+          "front": "Forces of 6 N east and 8 N north act together. Find the resultant.",
+          "back": "Magnitude = √(6² + 8²) = 10 N. Direction θ = tan⁻¹(8/6) = 53.13° north of east."
+        },
+        {
+          "front": "A velocity-time graph rises uniformly from 0 to 12 m/s in 4 s. Find acceleration and displacement.",
+          "back": "a = (12 − 0)/4 = 3 m/s². Displacement is the triangular area: ½ × 4 × 12 = 24 m in the positive direction."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Energy & conservation",
+      "group": "Physics",
+      "sources": [
+        {
+          "paper": "35",
+          "page": 18,
+          "label": "Question 8: mechanical energy",
+          "memoPage": 9,
+          "memo": "36"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "Where is mechanical energy stored?",
+          "body": "Kinetic energy is associated with motion. Gravitational potential energy depends on mass, field strength and height relative to a chosen reference level."
+        },
+        {
+          "heading": "When is mechanical energy conserved?",
+          "body": "If only conservative forces do work, total kinetic plus potential energy stays constant. With friction, mechanical energy can become thermal energy, while total energy is still conserved."
+        },
+        {
+          "heading": "How does speed affect kinetic energy?",
+          "body": "Kinetic energy depends on speed squared. Doubling speed at constant mass quadruples kinetic energy. Always convert grams to kilograms and use metres and seconds."
+        }
+      ],
+      "formula": "Eₖ = ½mv²  •  Eₚ = mgh  •  g = 9.8 m/s²",
+      "practice": [
+        {
+          "question": "A 2 kg object moves at 3 m/s. Find its kinetic energy.",
+          "answer": "Eₖ = ½ × 2 × 3² = 9 J."
+        },
+        {
+          "question": "An object falls from rest through 5 m with no air resistance. Find its speed just before reaching the bottom.",
+          "answer": "mgh = ½mv², so v = √(2gh) = √(2 × 9.8 × 5) = √98 ≈ 9.90 m/s downward."
+        }
+      ],
+      "visual": "energy",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-energy-conservation",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "Where is mechanical energy stored?",
+          "back": "Kinetic energy is associated with motion. Gravitational potential energy depends on mass, field strength and height relative to a chosen reference level."
+        },
+        {
+          "front": "When is mechanical energy conserved?",
+          "back": "If only conservative forces do work, total kinetic plus potential energy stays constant. With friction, mechanical energy can become thermal energy, while total energy is still conserved."
+        },
+        {
+          "front": "How does speed affect kinetic energy?",
+          "back": "Kinetic energy depends on speed squared. Doubling speed at constant mass quadruples kinetic energy. Always convert grams to kilograms and use metres and seconds."
+        },
+        {
+          "front": "A 2 kg object moves at 3 m/s. Find its kinetic energy.",
+          "back": "Eₖ = ½ × 2 × 3² = 9 J."
+        },
+        {
+          "front": "An object falls from rest through 5 m with no air resistance. Find its speed just before reaching the bottom.",
+          "back": "mgh = ½mv², so v = √(2gh) = √(2 × 9.8 × 5) = √98 ≈ 9.90 m/s downward."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Atomic structure & periodicity",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "33",
+          "page": 4,
+          "label": "Question 2: isotopes and atomic structure",
+          "memoPage": 1,
+          "memo": "34"
+        },
+        {
+          "paper": "37",
+          "page": 6,
+          "label": "Question 2: atomic structure",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do you count particles?",
+          "body": "Atomic number Z counts protons; mass number A counts protons plus neutrons. A neutral atom has Z electrons. Ions form when electrons are lost or gained."
+        },
+        {
+          "heading": "What are isotopes?",
+          "body": "Isotopes are atoms of the same element with different neutron counts. They have the same Z but different A. Relative atomic mass is a weighted mean of isotope masses."
+        },
+        {
+          "heading": "How does the periodic table help?",
+          "body": "For main-group elements, similar valence-electron arrangements produce similar chemical properties. Across a period, valence patterns change systematically."
+        }
+      ],
+      "formula": "neutrons = A − Z  •  Ar = Σ(isotope mass × fraction)",
+      "practice": [
+        {
+          "question": "A neutral atom has Z = 12 and A = 24. State its proton, neutron and electron numbers.",
+          "answer": "Protons = 12; neutrons = 24 − 12 = 12; electrons = 12. Its 2+ ion would have 10 electrons."
+        },
+        {
+          "question": "An element has 75% isotope of mass 35 and 25% isotope of mass 37. Find the weighted atomic mass.",
+          "answer": "Ar = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5."
+        }
+      ],
+      "visual": "atom",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-atomic-structure-periodicity",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do you count particles?",
+          "back": "Atomic number Z counts protons; mass number A counts protons plus neutrons. A neutral atom has Z electrons. Ions form when electrons are lost or gained."
+        },
+        {
+          "front": "What are isotopes?",
+          "back": "Isotopes are atoms of the same element with different neutron counts. They have the same Z but different A. Relative atomic mass is a weighted mean of isotope masses."
+        },
+        {
+          "front": "How does the periodic table help?",
+          "back": "For main-group elements, similar valence-electron arrangements produce similar chemical properties. Across a period, valence patterns change systematically."
+        },
+        {
+          "front": "A neutral atom has Z = 12 and A = 24. State its proton, neutron and electron numbers.",
+          "back": "Protons = 12; neutrons = 24 − 12 = 12; electrons = 12. Its 2+ ion would have 10 electrons."
+        },
+        {
+          "front": "An element has 75% isotope of mass 35 and 25% isotope of mass 37. Find the weighted atomic mass.",
+          "back": "Ar = 0.75 × 35 + 0.25 × 37 = 26.25 + 9.25 = 35.5."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Bonding & chemical formulae",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "37",
+          "page": 8,
+          "label": "Question 3: bonding and formulae",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "33",
+          "page": 7,
+          "label": "Question 5: electronegativity and bonding",
+          "memoPage": 4,
+          "memo": "34"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do ionic and covalent bonds differ?",
+          "body": "Ionic bonding is electrostatic attraction between oppositely charged ions after electron transfer. Covalent bonding involves shared electron pairs between atoms."
+        },
+        {
+          "heading": "How do you write an ionic formula?",
+          "body": "Balance positive and negative charges to make an electrically neutral formula unit. Reduce to the lowest whole-number ratio. Use brackets for repeated polyatomic ions."
+        },
+        {
+          "heading": "What does a Lewis diagram show?",
+          "body": "Show valence electrons as dots or crosses, paired bonding electrons and lone pairs. Distinguish molecules from ionic lattices; a solid ionic compound is not made of separate molecules."
+        }
+      ],
+      "formula": "Total positive charge + total negative charge = 0",
+      "practice": [
+        {
+          "question": "Write the formula for the compound formed by Mg²⁺ and Cl⁻.",
+          "answer": "One Mg²⁺ requires two Cl⁻ ions to balance charge: MgCl₂. The net charge is +2 + 2(−1) = 0."
+        },
+        {
+          "question": "How many bonding pairs and lone pairs are around oxygen in H₂O?",
+          "answer": "Oxygen has 6 valence electrons. It shares one pair with each of two hydrogens, giving 2 bonding pairs and leaving 2 lone pairs on oxygen."
+        }
+      ],
+      "visual": "atom",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-bonding-chemical-formulae",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do ionic and covalent bonds differ?",
+          "back": "Ionic bonding is electrostatic attraction between oppositely charged ions after electron transfer. Covalent bonding involves shared electron pairs between atoms."
+        },
+        {
+          "front": "How do you write an ionic formula?",
+          "back": "Balance positive and negative charges to make an electrically neutral formula unit. Reduce to the lowest whole-number ratio. Use brackets for repeated polyatomic ions."
+        },
+        {
+          "front": "What does a Lewis diagram show?",
+          "back": "Show valence electrons as dots or crosses, paired bonding electrons and lone pairs. Distinguish molecules from ionic lattices; a solid ionic compound is not made of separate molecules."
+        },
+        {
+          "front": "Write the formula for the compound formed by Mg²⁺ and Cl⁻.",
+          "back": "One Mg²⁺ requires two Cl⁻ ions to balance charge: MgCl₂. The net charge is +2 + 2(−1) = 0."
+        },
+        {
+          "front": "How many bonding pairs and lone pairs are around oxygen in H₂O?",
+          "back": "Oxygen has 6 valence electrons. It shares one pair with each of two hydrogens, giving 2 bonding pairs and leaving 2 lone pairs on oxygen."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Chemical reactions & redox",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "37",
+          "page": 11,
+          "label": "Question 4: equations and redox",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "33",
+          "page": 6,
+          "label": "Question 3: reaction investigation",
+          "memoPage": 2,
+          "memo": "34"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "Why must equations be balanced?",
+          "body": "Atoms and total charge are conserved. Change coefficients in front of formulae, never subscripts inside a chemical formula. Check every element after balancing."
+        },
+        {
+          "heading": "How do you recognise redox?",
+          "body": "Oxidation is loss of electrons and an increase in oxidation number. Reduction is gain of electrons and a decrease in oxidation number. They happen together."
+        },
+        {
+          "heading": "What are spectator ions?",
+          "body": "Spectator ions remain chemically unchanged in an aqueous reaction. Remove identical ions on both sides to write the net ionic equation, preserving charge and atom balance."
+        }
+      ],
+      "formula": "OIL RIG: Oxidation Is Loss; Reduction Is Gain",
+      "practice": [
+        {
+          "question": "Balance: Mg + O₂ → MgO.",
+          "answer": "Use 2 oxygen atoms on the product side, then balance magnesium: 2Mg + O₂ → 2MgO."
+        },
+        {
+          "question": "For Zn + Cu²⁺ → Zn²⁺ + Cu, identify oxidation and reduction.",
+          "answer": "Zn → Zn²⁺ + 2e⁻ is oxidation. Cu²⁺ + 2e⁻ → Cu is reduction. Zinc is the reducing agent because it donates electrons."
+        }
+      ],
+      "visual": "flow",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-chemical-reactions-redox",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "Why must equations be balanced?",
+          "back": "Atoms and total charge are conserved. Change coefficients in front of formulae, never subscripts inside a chemical formula. Check every element after balancing."
+        },
+        {
+          "front": "How do you recognise redox?",
+          "back": "Oxidation is loss of electrons and an increase in oxidation number. Reduction is gain of electrons and a decrease in oxidation number. They happen together."
+        },
+        {
+          "front": "What are spectator ions?",
+          "back": "Spectator ions remain chemically unchanged in an aqueous reaction. Remove identical ions on both sides to write the net ionic equation, preserving charge and atom balance."
+        },
+        {
+          "front": "Balance: Mg + O₂ → MgO.",
+          "back": "Use 2 oxygen atoms on the product side, then balance magnesium: 2Mg + O₂ → 2MgO."
+        },
+        {
+          "front": "For Zn + Cu²⁺ → Zn²⁺ + Cu, identify oxidation and reduction.",
+          "back": "Zn → Zn²⁺ + 2e⁻ is oxidation. Cu²⁺ + 2e⁻ → Cu is reduction. Zinc is the reducing agent because it donates electrons."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Energy changes & catalysts",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "37",
+          "page": 12,
+          "label": "Question 5: reaction energy profile",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does enthalpy change mean?",
+          "body": "ΔH = energy of products − energy of reactants. Negative ΔH indicates an exothermic reaction; positive ΔH indicates endothermic. Label axes on an energy profile."
+        },
+        {
+          "heading": "What is activation energy?",
+          "body": "Activation energy is the energy barrier from reactants to the transition state. Bond breaking absorbs energy; bond formation releases energy."
+        },
+        {
+          "heading": "How does a catalyst work?",
+          "body": "A catalyst provides an alternative pathway with a lower activation energy. It speeds up a reaction without being used up overall and does not change ΔH or the reactant/product energy levels."
+        }
+      ],
+      "formula": "ΔH = Hproducts − Hreactants",
+      "practice": [
+        {
+          "question": "Reactants have energy 80 kJ and products 30 kJ. Find ΔH and classify the reaction.",
+          "answer": "ΔH = 30 − 80 = −50 kJ. The reaction is exothermic because products are lower in energy and energy is released."
+        },
+        {
+          "question": "Reactants are at 40 kJ/mol and the peak at 150 kJ/mol. A catalyst lowers the peak to 100. Find both activation energies.",
+          "answer": "Uncatalysed Eₐ = 150 − 40 = 110 kJ/mol. Catalysed Eₐ = 100 − 40 = 60 kJ/mol. ΔH is unchanged."
+        }
+      ],
+      "visual": "energy",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-energy-changes-catalysts",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does enthalpy change mean?",
+          "back": "ΔH = energy of products − energy of reactants. Negative ΔH indicates an exothermic reaction; positive ΔH indicates endothermic. Label axes on an energy profile."
+        },
+        {
+          "front": "What is activation energy?",
+          "back": "Activation energy is the energy barrier from reactants to the transition state. Bond breaking absorbs energy; bond formation releases energy."
+        },
+        {
+          "front": "How does a catalyst work?",
+          "back": "A catalyst provides an alternative pathway with a lower activation energy. It speeds up a reaction without being used up overall and does not change ΔH or the reactant/product energy levels."
+        },
+        {
+          "front": "Reactants have energy 80 kJ and products 30 kJ. Find ΔH and classify the reaction.",
+          "back": "ΔH = 30 − 80 = −50 kJ. The reaction is exothermic because products are lower in energy and energy is released."
+        },
+        {
+          "front": "Reactants are at 40 kJ/mol and the peak at 150 kJ/mol. A catalyst lowers the peak to 100. Find both activation energies.",
+          "back": "Uncatalysed Eₐ = 150 − 40 = 110 kJ/mol. Catalysed Eₐ = 100 − 40 = 60 kJ/mol. ΔH is unchanged."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Acids, bases & conjugate pairs",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "37",
+          "page": 14,
+          "label": "Question 6: acid-base reactions",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "33",
+          "page": 7,
+          "label": "Question 4: acids and indicators",
+          "memoPage": 3,
+          "memo": "34"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What is a Brønsted–Lowry acid?",
+          "body": "An acid donates a proton (H⁺); a base accepts a proton. This definition describes proton transfer in a reaction, so identify which reactant actually donates or accepts."
+        },
+        {
+          "heading": "How do conjugate pairs differ?",
+          "body": "An acid and its conjugate base differ by one H⁺. Removing H⁺ lowers the charge by 1; adding H⁺ raises the charge by 1. Water can act as an acid or a base."
+        },
+        {
+          "heading": "What happens when acid meets carbonate?",
+          "body": "An acid and a carbonate or hydrogen carbonate produce a salt, water and carbon dioxide. CO₂ turns clear limewater milky. Balance the complete reaction."
+        }
+      ],
+      "formula": "Acid + base ⇌ conjugate base + conjugate acid",
+      "practice": [
+        {
+          "question": "In HCl + H₂O → H₃O⁺ + Cl⁻ identify the acid, base and conjugate pairs.",
+          "answer": "HCl donates H⁺, so is the acid. H₂O accepts it, so is the base. Conjugate pairs are HCl/Cl⁻ and H₂O/H₃O⁺."
+        },
+        {
+          "question": "Balance the reaction between hydrochloric acid and sodium carbonate.",
+          "answer": "2HCl + Na₂CO₃ → 2NaCl + H₂O + CO₂. The gas can be identified by turning clear limewater milky."
+        }
+      ],
+      "visual": "flow",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-acids-bases-conjugate-pairs",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What is a Brønsted–Lowry acid?",
+          "back": "An acid donates a proton (H⁺); a base accepts a proton. This definition describes proton transfer in a reaction, so identify which reactant actually donates or accepts."
+        },
+        {
+          "front": "How do conjugate pairs differ?",
+          "back": "An acid and its conjugate base differ by one H⁺. Removing H⁺ lowers the charge by 1; adding H⁺ raises the charge by 1. Water can act as an acid or a base."
+        },
+        {
+          "front": "What happens when acid meets carbonate?",
+          "back": "An acid and a carbonate or hydrogen carbonate produce a salt, water and carbon dioxide. CO₂ turns clear limewater milky. Balance the complete reaction."
+        },
+        {
+          "front": "In HCl + H₂O → H₃O⁺ + Cl⁻ identify the acid, base and conjugate pairs.",
+          "back": "HCl donates H⁺, so is the acid. H₂O accepts it, so is the base. Conjugate pairs are HCl/Cl⁻ and H₂O/H₃O⁺."
+        },
+        {
+          "front": "Balance the reaction between hydrochloric acid and sodium carbonate.",
+          "back": "2HCl + Na₂CO₃ → 2NaCl + H₂O + CO₂. The gas can be identified by turning clear limewater milky."
+        }
+      ]
+    },
+    {
+      "subject": "physical",
+      "title": "Moles & stoichiometry",
+      "group": "Chemistry",
+      "sources": [
+        {
+          "paper": "37",
+          "page": 16,
+          "label": "Question 7: concentration and moles",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "37",
+          "page": 17,
+          "label": "Question 7: hydrates and mass ratios",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "33",
+          "page": 9,
+          "label": "Question 6: mole ratios and hydrates",
+          "memoPage": 4,
+          "memo": "34"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do you convert mass to moles?",
+          "body": "Use n = m/M with mass in grams and molar mass in g/mol. A mole contains Avogadro’s number of particles. Say whether the particles are atoms, molecules or formula units."
+        },
+        {
+          "heading": "How do balanced equations give ratios?",
+          "body": "Equation coefficients give mole ratios, not mass ratios. Convert known mass to moles, use the coefficient ratio, then convert the required moles to mass."
+        },
+        {
+          "heading": "How do you calculate concentration?",
+          "body": "Molar concentration is moles of solute per dm³ of solution. Convert cm³ to dm³ by dividing by 1 000. For empirical formulae, divide element mole amounts by the smallest."
+        }
+      ],
+      "formula": "n = m/M  •  c = n/V  •  N = nNₐ",
+      "practice": [
+        {
+          "question": "Find the concentration when 5.85 g NaCl (M = 58.5 g/mol) is dissolved to make 500 cm³ of solution.",
+          "answer": "n = 5.85/58.5 = 0.100 mol. V = 500/1 000 = 0.500 dm³. c = 0.100/0.500 = 0.200 mol/dm³."
+        },
+        {
+          "question": "For 2H₂ + O₂ → 2H₂O, what mass of water forms from 4 g H₂ with excess oxygen? Use M(H₂) = 2 and M(H₂O) = 18 g/mol.",
+          "answer": "n(H₂) = 4/2 = 2 mol. Ratio H₂:H₂O is 2:2 = 1:1, so 2 mol water forms. m = 2 × 18 = 36 g."
+        }
+      ],
+      "visual": "atom",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "physical-moles-stoichiometry",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do you convert mass to moles?",
+          "back": "Use n = m/M with mass in grams and molar mass in g/mol. A mole contains Avogadro’s number of particles. Say whether the particles are atoms, molecules or formula units."
+        },
+        {
+          "front": "How do balanced equations give ratios?",
+          "back": "Equation coefficients give mole ratios, not mass ratios. Convert known mass to moles, use the coefficient ratio, then convert the required moles to mass."
+        },
+        {
+          "front": "How do you calculate concentration?",
+          "back": "Molar concentration is moles of solute per dm³ of solution. Convert cm³ to dm³ by dividing by 1 000. For empirical formulae, divide element mole amounts by the smallest."
+        },
+        {
+          "front": "Find the concentration when 5.85 g NaCl (M = 58.5 g/mol) is dissolved to make 500 cm³ of solution.",
+          "back": "n = 5.85/58.5 = 0.100 mol. V = 500/1 000 = 0.500 dm³. c = 0.100/0.500 = 0.200 mol/dm³."
+        },
+        {
+          "front": "For 2H₂ + O₂ → 2H₂O, what mass of water forms from 4 g H₂ with excess oxygen? Use M(H₂) = 2 and M(H₂O) = 18 g/mol.",
+          "back": "n(H₂) = 4/2 = 2 mol. Ratio H₂:H₂O is 2:2 = 1:1, so 2 mol water forms. m = 2 × 18 = 36 g."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Cells & membrane transport",
+      "group": "Cell biology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 8,
+          "label": "Question 1.5: cell structure",
+          "memoPage": 8,
+          "memo": "30"
+        },
+        {
+          "paper": "29",
+          "page": 9,
+          "label": "Question 1.5: selective permeability",
+          "memoPage": 9,
+          "memo": "30"
+        },
+        {
+          "paper": "19",
+          "page": 4,
+          "label": "Question 3: cell diagram",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What do the main organelles do?",
+          "body": "The nucleus contains genetic information; mitochondria carry out most aerobic ATP production; chloroplasts carry out photosynthesis. Plant cells also have a cellulose cell wall and usually a large permanent vacuole."
+        },
+        {
+          "heading": "How do diffusion and osmosis differ?",
+          "body": "Diffusion is the net movement of particles down a concentration gradient. Osmosis is the net movement of water through a selectively permeable membrane from higher to lower water potential."
+        },
+        {
+          "heading": "When does transport require energy?",
+          "body": "Active transport moves substances against their concentration gradient using energy and transport proteins. Facilitated diffusion uses membrane proteins but moves down a gradient without direct ATP input."
+        }
+      ],
+      "formula": "Structure → function → explanation",
+      "practice": [
+        {
+          "question": "A plant cell is placed in pure water. Explain why it becomes turgid.",
+          "answer": "Water enters by osmosis because the outside has higher water potential. The vacuole expands and pushes the cytoplasm against the cell wall. The strong wall resists further expansion, creating turgor."
+        },
+        {
+          "question": "Why does active transport require ATP while facilitated diffusion does not?",
+          "answer": "Active transport moves particles against their concentration gradient and needs an energy supply. Facilitated diffusion moves down the gradient through proteins, so no direct ATP input is needed."
+        }
+      ],
+      "visual": "cell",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-cells-membrane-transport",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What do the main organelles do?",
+          "back": "The nucleus contains genetic information; mitochondria carry out most aerobic ATP production; chloroplasts carry out photosynthesis. Plant cells also have a cellulose cell wall and usually a large permanent vacuole."
+        },
+        {
+          "front": "How do diffusion and osmosis differ?",
+          "back": "Diffusion is the net movement of particles down a concentration gradient. Osmosis is the net movement of water through a selectively permeable membrane from higher to lower water potential."
+        },
+        {
+          "front": "When does transport require energy?",
+          "back": "Active transport moves substances against their concentration gradient using energy and transport proteins. Facilitated diffusion uses membrane proteins but moves down a gradient without direct ATP input."
+        },
+        {
+          "front": "A plant cell is placed in pure water. Explain why it becomes turgid.",
+          "back": "Water enters by osmosis because the outside has higher water potential. The vacuole expands and pushes the cytoplasm against the cell wall. The strong wall resists further expansion, creating turgor."
+        },
+        {
+          "front": "Why does active transport require ATP while facilitated diffusion does not?",
+          "back": "Active transport moves particles against their concentration gradient and needs an energy supply. Facilitated diffusion moves down the gradient through proteins, so no direct ATP input is needed."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Mitosis & the cell cycle",
+      "group": "Cell biology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 22,
+          "label": "Question 5: mitotic errors",
+          "memoPage": 21,
+          "memo": "30"
+        },
+        {
+          "paper": "22",
+          "page": 4,
+          "label": "Question 7: cell division",
+          "memoPage": 1,
+          "memo": "24"
+        },
+        {
+          "paper": "23",
+          "page": 6,
+          "label": "Question 5: cell cycle",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What happens before mitosis?",
+          "body": "During interphase the cell grows and, in S phase, replicates DNA. Each duplicated chromosome has two sister chromatids before division. DNA replication is essential for equal genetic information."
+        },
+        {
+          "heading": "What is the PMAT sequence?",
+          "body": "Prophase: chromosomes condense. Metaphase: chromosomes line up at the equator. Anaphase: sister chromatids separate to opposite poles. Telophase: nuclei reform; cytokinesis divides the cytoplasm."
+        },
+        {
+          "heading": "What is the outcome of mitosis?",
+          "body": "In normal mitosis, two daughter cells keep the parent cell’s chromosome number and are genetically identical, apart from possible mutations. Mitosis supports growth, repair and asexual reproduction."
+        }
+      ],
+      "formula": "Interphase → Prophase → Metaphase → Anaphase → Telophase",
+      "practice": [
+        {
+          "question": "A body cell with 6 chromosomes divides by normal mitosis. How many daughter cells form and how many chromosomes are in each?",
+          "answer": "Two daughter cells form. Each has 6 chromosomes, the same chromosome number as the parent cell."
+        },
+        {
+          "question": "Distinguish metaphase from anaphase.",
+          "answer": "At metaphase, duplicated chromosomes align at the equator. At anaphase, sister chromatids separate at the centromeres and move to opposite poles."
+        }
+      ],
+      "visual": "mitosis",
+      "tip": "Do not confuse DNA replication in interphase with chromosome separation in anaphase. The supplied 2022 memo has an inconsistent stage description.",
+      "id": "life-mitosis-the-cell-cycle",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What happens before mitosis?",
+          "back": "During interphase the cell grows and, in S phase, replicates DNA. Each duplicated chromosome has two sister chromatids before division. DNA replication is essential for equal genetic information."
+        },
+        {
+          "front": "What is the PMAT sequence?",
+          "back": "Prophase: chromosomes condense. Metaphase: chromosomes line up at the equator. Anaphase: sister chromatids separate to opposite poles. Telophase: nuclei reform; cytokinesis divides the cytoplasm."
+        },
+        {
+          "front": "What is the outcome of mitosis?",
+          "back": "In normal mitosis, two daughter cells keep the parent cell’s chromosome number and are genetically identical, apart from possible mutations. Mitosis supports growth, repair and asexual reproduction."
+        },
+        {
+          "front": "A body cell with 6 chromosomes divides by normal mitosis. How many daughter cells form and how many chromosomes are in each?",
+          "back": "Two daughter cells form. Each has 6 chromosomes, the same chromosome number as the parent cell."
+        },
+        {
+          "front": "Distinguish metaphase from anaphase.",
+          "back": "At metaphase, duplicated chromosomes align at the equator. At anaphase, sister chromatids separate at the centromeres and move to opposite poles."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Enzymes & biological molecules",
+      "group": "Biochemistry",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 11,
+          "label": "Question 2: lactase and lactose",
+          "memoPage": 11,
+          "memo": "30"
+        },
+        {
+          "paper": "29",
+          "page": 13,
+          "label": "Question 2.3: enzyme diagram",
+          "memoPage": 12,
+          "memo": "30"
+        },
+        {
+          "paper": "19",
+          "page": 12,
+          "label": "Question 10: enzyme action",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How does an enzyme act?",
+          "body": "An enzyme is a biological catalyst. Its active site binds a suitable substrate, helping a reaction proceed with a lower activation energy. Products leave and the enzyme can be reused."
+        },
+        {
+          "heading": "Why do temperature and pH matter?",
+          "body": "Activity usually increases with temperature up to an optimum. Excess heat or unsuitable pH can alter the active-site shape. Denaturation reduces binding and activity; cooling is not the same as denaturing."
+        },
+        {
+          "heading": "What happens as substrate increases?",
+          "body": "At fixed enzyme concentration the reaction rate rises, then levels off as active sites become saturated. More substrate cannot increase the maximum rate unless more active enzyme is available."
+        }
+      ],
+      "formula": "Enzyme + substrate ⇌ complex → enzyme + products",
+      "practice": [
+        {
+          "question": "Why can a high temperature reduce the rate of an enzyme-controlled reaction?",
+          "answer": "Heat can disrupt bonds maintaining enzyme shape. The active site changes, so fewer substrates bind and fewer enzyme-substrate complexes form."
+        },
+        {
+          "question": "An enzyme reaction stops getting faster when more substrate is added. Explain.",
+          "answer": "The available active sites are occupied: the enzymes are saturated. Enzyme concentration is now limiting, so adding substrate alone does not raise the maximum rate."
+        }
+      ],
+      "visual": "enzyme",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-enzymes-biological-molecules",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How does an enzyme act?",
+          "back": "An enzyme is a biological catalyst. Its active site binds a suitable substrate, helping a reaction proceed with a lower activation energy. Products leave and the enzyme can be reused."
+        },
+        {
+          "front": "Why do temperature and pH matter?",
+          "back": "Activity usually increases with temperature up to an optimum. Excess heat or unsuitable pH can alter the active-site shape. Denaturation reduces binding and activity; cooling is not the same as denaturing."
+        },
+        {
+          "front": "What happens as substrate increases?",
+          "back": "At fixed enzyme concentration the reaction rate rises, then levels off as active sites become saturated. More substrate cannot increase the maximum rate unless more active enzyme is available."
+        },
+        {
+          "front": "Why can a high temperature reduce the rate of an enzyme-controlled reaction?",
+          "back": "Heat can disrupt bonds maintaining enzyme shape. The active site changes, so fewer substrates bind and fewer enzyme-substrate complexes form."
+        },
+        {
+          "front": "An enzyme reaction stops getting faster when more substrate is added. Explain.",
+          "back": "The available active sites are occupied: the enzymes are saturated. Enzyme concentration is now limiting, so adding substrate alone does not raise the maximum rate."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Digestion & blood-glucose control",
+      "group": "Human biology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 15,
+          "label": "Question 3: digestion and bile",
+          "memoPage": 15,
+          "memo": "30"
+        },
+        {
+          "paper": "29",
+          "page": 17,
+          "label": "Question 3.4: blood-glucose hormones",
+          "memoPage": 16,
+          "memo": "30"
+        },
+        {
+          "paper": "19",
+          "page": 6,
+          "label": "Question 5: digestive organs",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What are digestion and absorption?",
+          "body": "Digestion breaks large food molecules into smaller soluble molecules. Absorption moves these molecules across the intestinal wall into blood or lymph. Most nutrient absorption occurs in the small intestine."
+        },
+        {
+          "heading": "What does bile do?",
+          "body": "The liver produces bile; the gall bladder stores and concentrates it. Bile emulsifies fats into droplets, increasing surface area for lipase. Emulsification is physical and bile is not a digestive enzyme."
+        },
+        {
+          "heading": "How is blood glucose regulated?",
+          "body": "High glucose stimulates pancreatic insulin release, increasing glucose uptake and glycogen formation. Low glucose stimulates glucagon, promoting liver glycogen breakdown and glucose release. This is negative feedback."
+        }
+      ],
+      "formula": "High glucose → insulin  •  Low glucose → glucagon",
+      "practice": [
+        {
+          "question": "Explain how villi improve absorption.",
+          "answer": "Villi and microvilli increase surface area. A thin epithelium shortens diffusion distance. Blood capillaries and lacteals carry absorbed nutrients away, helping maintain transport gradients."
+        },
+        {
+          "question": "Describe the response to a rise in blood glucose after a meal.",
+          "answer": "Pancreatic beta cells release insulin. Body cells increase glucose uptake and the liver and muscles store glucose as glycogen. Blood glucose falls toward its regulated range."
+        }
+      ],
+      "visual": "feedback",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-digestion-blood-glucose-control",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What are digestion and absorption?",
+          "back": "Digestion breaks large food molecules into smaller soluble molecules. Absorption moves these molecules across the intestinal wall into blood or lymph. Most nutrient absorption occurs in the small intestine."
+        },
+        {
+          "front": "What does bile do?",
+          "back": "The liver produces bile; the gall bladder stores and concentrates it. Bile emulsifies fats into droplets, increasing surface area for lipase. Emulsification is physical and bile is not a digestive enzyme."
+        },
+        {
+          "front": "How is blood glucose regulated?",
+          "back": "High glucose stimulates pancreatic insulin release, increasing glucose uptake and glycogen formation. Low glucose stimulates glucagon, promoting liver glycogen breakdown and glucose release. This is negative feedback."
+        },
+        {
+          "front": "Explain how villi improve absorption.",
+          "back": "Villi and microvilli increase surface area. A thin epithelium shortens diffusion distance. Blood capillaries and lacteals carry absorbed nutrients away, helping maintain transport gradients."
+        },
+        {
+          "front": "Describe the response to a rise in blood glucose after a meal.",
+          "back": "Pancreatic beta cells release insulin. Body cells increase glucose uptake and the liver and muscles store glucose as glycogen. Blood glucose falls toward its regulated range."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Photosynthesis & cellular respiration",
+      "group": "Plant biology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 7,
+          "label": "Question 1.4: carbon cycle and photosynthesis",
+          "memoPage": 7,
+          "memo": "30"
+        },
+        {
+          "paper": "29",
+          "page": 2,
+          "label": "Question 1.1: respiration",
+          "memoPage": 2,
+          "memo": "30"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does photosynthesis achieve?",
+          "body": "In chloroplasts, light energy supports the conversion of carbon dioxide and water into organic molecules, with oxygen released. Chlorophyll absorbs light. Plants build biomass from the products."
+        },
+        {
+          "heading": "What does respiration achieve?",
+          "body": "Cellular respiration transfers energy from organic molecules to ATP. Glycolysis occurs in the cytoplasm; most aerobic ATP production involves mitochondria. Plants respire as well as photosynthesise."
+        },
+        {
+          "heading": "How are the processes connected?",
+          "body": "Photosynthesis stores energy in organic molecules; respiration makes that energy available for cell work. Matter cycles between organisms and the environment, but energy flows and is eventually dissipated as heat."
+        }
+      ],
+      "formula": "6CO₂ + 6H₂O + light → C₆H₁₂O₆ + 6O₂",
+      "practice": [
+        {
+          "question": "Name the reactants and products in the simplified photosynthesis equation.",
+          "answer": "Reactants are carbon dioxide and water, using light energy. Products are glucose and oxygen."
+        },
+        {
+          "question": "Do plants respire at night? Explain.",
+          "answer": "Yes. Living plant cells require ATP continuously, so respiration continues day and night. Photosynthesis depends on light and does not proceed normally in darkness."
+        }
+      ],
+      "visual": "cycle",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-photosynthesis-cellular-respiration",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does photosynthesis achieve?",
+          "back": "In chloroplasts, light energy supports the conversion of carbon dioxide and water into organic molecules, with oxygen released. Chlorophyll absorbs light. Plants build biomass from the products."
+        },
+        {
+          "front": "What does respiration achieve?",
+          "back": "Cellular respiration transfers energy from organic molecules to ATP. Glycolysis occurs in the cytoplasm; most aerobic ATP production involves mitochondria. Plants respire as well as photosynthesise."
+        },
+        {
+          "front": "How are the processes connected?",
+          "back": "Photosynthesis stores energy in organic molecules; respiration makes that energy available for cell work. Matter cycles between organisms and the environment, but energy flows and is eventually dissipated as heat."
+        },
+        {
+          "front": "Name the reactants and products in the simplified photosynthesis equation.",
+          "back": "Reactants are carbon dioxide and water, using light energy. Products are glucose and oxygen."
+        },
+        {
+          "front": "Do plants respire at night? Explain.",
+          "back": "Yes. Living plant cells require ATP continuously, so respiration continues day and night. Photosynthesis depends on light and does not proceed normally in darkness."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Plant transport & adaptations",
+      "group": "Plant biology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 19,
+          "label": "Question 4.1: leaf adaptations",
+          "memoPage": 19,
+          "memo": "30"
+        },
+        {
+          "paper": "29",
+          "page": 21,
+          "label": "Questions 4.2–4.3: transport and stomata",
+          "memoPage": 20,
+          "memo": "30"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What do xylem and phloem transport?",
+          "body": "Xylem carries water and mineral ions mainly from roots toward leaves through mostly dead conducting cells. Phloem translocates dissolved organic substances between sources and sinks through living tissue."
+        },
+        {
+          "heading": "How do stomata open?",
+          "body": "Guard cells take up solutes, lowering their water potential. Water enters by osmosis and guard cells become turgid, opening the pore. Water loss makes them flaccid and closes it."
+        },
+        {
+          "heading": "How do leaves limit water loss?",
+          "body": "A thick waxy cuticle, reduced leaf area, hairs or sunken stomata can reduce water loss. Explain how a named feature works in the environment; a feature is not useful in every habitat."
+        }
+      ],
+      "formula": "Water enters guard cells → turgor increases → pore opens",
+      "practice": [
+        {
+          "question": "Give two differences between xylem and phloem.",
+          "answer": "Xylem transports water/mineral ions and its main conducting cells are dead at maturity. Phloem transports sugars/other organic solutes and its conducting tissue is living."
+        },
+        {
+          "question": "Explain why a waxy cuticle benefits a plant in a dry habitat.",
+          "answer": "The waxy layer limits evaporation from the leaf surface. This reduces water loss when water is scarce and helps the plant maintain cell turgor."
+        }
+      ],
+      "visual": "flow",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-plant-transport-adaptations",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What do xylem and phloem transport?",
+          "back": "Xylem carries water and mineral ions mainly from roots toward leaves through mostly dead conducting cells. Phloem translocates dissolved organic substances between sources and sinks through living tissue."
+        },
+        {
+          "front": "How do stomata open?",
+          "back": "Guard cells take up solutes, lowering their water potential. Water enters by osmosis and guard cells become turgid, opening the pore. Water loss makes them flaccid and closes it."
+        },
+        {
+          "front": "How do leaves limit water loss?",
+          "back": "A thick waxy cuticle, reduced leaf area, hairs or sunken stomata can reduce water loss. Explain how a named feature works in the environment; a feature is not useful in every habitat."
+        },
+        {
+          "front": "Give two differences between xylem and phloem.",
+          "back": "Xylem transports water/mineral ions and its main conducting cells are dead at maturity. Phloem transports sugars/other organic solutes and its conducting tissue is living."
+        },
+        {
+          "front": "Explain why a waxy cuticle benefits a plant in a dry habitat.",
+          "back": "The waxy layer limits evaporation from the leaf surface. This reduces water loss when water is scarce and helps the plant maintain cell turgor."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Ecology, nutrient cycles & biodiversity",
+      "group": "Ecology",
+      "sources": [
+        {
+          "paper": "29",
+          "page": 18,
+          "label": "Question 4: nitrogen-fixing plants",
+          "memoPage": 18,
+          "memo": "30"
+        },
+        {
+          "paper": "22",
+          "page": 6,
+          "label": "Question 9: elephant ecology",
+          "memoPage": 2,
+          "memo": "24"
+        },
+        {
+          "paper": "19",
+          "page": 10,
+          "label": "Question 9: mangrove ecosystems",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do food webs show energy flow?",
+          "body": "Arrows point from food to consumer, showing energy transfer. Producers form the first trophic level. Energy available usually decreases at higher levels because organisms respire and not all biomass is eaten or assimilated."
+        },
+        {
+          "heading": "How do nutrient cycles differ from energy flow?",
+          "body": "Elements such as carbon and nitrogen are recycled. Decomposers break down organic material, returning nutrients to usable pools. Energy enters mainly as sunlight and leaves as heat."
+        },
+        {
+          "heading": "What makes a relationship mutualistic?",
+          "body": "In mutualism both partners benefit. Nitrogen-fixing bacteria obtain organic nutrients from plants and supply biologically usable nitrogen compounds. Biodiversity includes genetic, species and ecosystem variation."
+        }
+      ],
+      "formula": "Sun → producer → consumer → decomposer",
+      "practice": [
+        {
+          "question": "In grass → locust → frog → snake, identify the producer and secondary consumer.",
+          "answer": "Grass is the producer. Locust is the primary consumer and frog is the secondary consumer. Snake is the tertiary consumer."
+        },
+        {
+          "question": "Explain one effect of habitat fragmentation on biodiversity.",
+          "answer": "Fragments isolate populations and can reduce access to food, mates and migration routes. Smaller isolated populations are more vulnerable to local extinction, reducing biodiversity."
+        }
+      ],
+      "visual": "cycle",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-ecology-nutrient-cycles-biodiversity",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do food webs show energy flow?",
+          "back": "Arrows point from food to consumer, showing energy transfer. Producers form the first trophic level. Energy available usually decreases at higher levels because organisms respire and not all biomass is eaten or assimilated."
+        },
+        {
+          "front": "How do nutrient cycles differ from energy flow?",
+          "back": "Elements such as carbon and nitrogen are recycled. Decomposers break down organic material, returning nutrients to usable pools. Energy enters mainly as sunlight and leaves as heat."
+        },
+        {
+          "front": "What makes a relationship mutualistic?",
+          "back": "In mutualism both partners benefit. Nitrogen-fixing bacteria obtain organic nutrients from plants and supply biologically usable nitrogen compounds. Biodiversity includes genetic, species and ecosystem variation."
+        },
+        {
+          "front": "In grass → locust → frog → snake, identify the producer and secondary consumer.",
+          "back": "Grass is the producer. Locust is the primary consumer and frog is the secondary consumer. Snake is the tertiary consumer."
+        },
+        {
+          "front": "Explain one effect of habitat fragmentation on biodiversity.",
+          "back": "Fragments isolate populations and can reduce access to food, mates and migration routes. Smaller isolated populations are more vulnerable to local extinction, reducing biodiversity."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Evolution, climate & scientific essays",
+      "group": "Earth and life",
+      "sources": [
+        {
+          "paper": "19",
+          "page": 9,
+          "label": "Question 8: fossil sequence",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "26",
+          "page": 2,
+          "label": "Paper 2: climate-change essay",
+          "memoPage": 1,
+          "memo": "28"
+        },
+        {
+          "paper": "21",
+          "page": 2,
+          "label": "Paper 2: source-based essay",
+          "memoPage": null,
+          "memo": null
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do fossils provide evidence?",
+          "body": "Fossils record past organisms and change over time. Relative dating orders events or layers; numerical dating estimates ages. Interpret the actual scale and labels before comparing fossils."
+        },
+        {
+          "heading": "How can climate change affect biodiversity?",
+          "body": "Changing temperatures, rainfall and habitats can shift ranges and disrupt feeding relationships. Some organisms disperse or adjust; others cannot keep pace. Distinguish evidence, uncertainty and unsupported claims."
+        },
+        {
+          "heading": "How do you build a scientific argument?",
+          "body": "State a position, use specific source evidence and explain its relevance. Discuss counterarguments fairly and conclude in proportion to the evidence. Evaluate source reliability, methods and possible bias."
+        }
+      ],
+      "formula": "Claim → source evidence → explanation → evaluation",
+      "practice": [
+        {
+          "question": "Explain the difference between relative and numerical fossil dating.",
+          "answer": "Relative dating places fossils or rock layers in order from older to younger without assigning an exact age. Numerical dating estimates an age in years, often using radioactive isotope decay."
+        },
+        {
+          "question": "Give one argument and one counterpoint for climate change causing species extinctions.",
+          "answer": "Argument: rapid habitat changes may exceed the ability of specialist species to move or adapt. Counterpoint: responses vary and some species can shift range, so evidence should be assessed by species and region rather than assuming all will go extinct."
+        }
+      ],
+      "visual": "timeline",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-evolution-climate-scientific-essays",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do fossils provide evidence?",
+          "back": "Fossils record past organisms and change over time. Relative dating orders events or layers; numerical dating estimates ages. Interpret the actual scale and labels before comparing fossils."
+        },
+        {
+          "front": "How can climate change affect biodiversity?",
+          "back": "Changing temperatures, rainfall and habitats can shift ranges and disrupt feeding relationships. Some organisms disperse or adjust; others cannot keep pace. Distinguish evidence, uncertainty and unsupported claims."
+        },
+        {
+          "front": "How do you build a scientific argument?",
+          "back": "State a position, use specific source evidence and explain its relevance. Discuss counterarguments fairly and conclude in proportion to the evidence. Evaluate source reliability, methods and possible bias."
+        },
+        {
+          "front": "Explain the difference between relative and numerical fossil dating.",
+          "back": "Relative dating places fossils or rock layers in order from older to younger without assigning an exact age. Numerical dating estimates an age in years, often using radioactive isotope decay."
+        },
+        {
+          "front": "Give one argument and one counterpoint for climate change causing species extinctions.",
+          "back": "Argument: rapid habitat changes may exceed the ability of specialist species to move or adapt. Counterpoint: responses vary and some species can shift range, so evidence should be assessed by species and region rather than assuming all will go extinct."
+        }
+      ]
+    },
+    {
+      "subject": "life",
+      "title": "Scientific investigations & practical skills",
+      "group": "Practical science",
+      "sources": [
+        {
+          "paper": "20",
+          "page": 4,
+          "label": "Practical: hypotheses and variables",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "25",
+          "page": 2,
+          "label": "2023 practical: biological food tests",
+          "memoPage": null,
+          "memo": null
+        },
+        {
+          "paper": "22",
+          "page": 7,
+          "label": "Question 9.6: population data",
+          "memoPage": 3,
+          "memo": "24"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do you distinguish variables?",
+          "body": "The independent variable is deliberately changed; the dependent variable is measured; controlled variables are held constant. A fair comparison changes one tested factor at a time."
+        },
+        {
+          "heading": "What makes a useful hypothesis?",
+          "body": "State a testable predicted relationship, ideally with a biological reason. A conclusion must answer the aim using recorded evidence, rather than simply repeating the hypothesis."
+        },
+        {
+          "heading": "How do you improve reliability and validity?",
+          "body": "Repeat measurements and calculate appropriate summaries to improve reliability. Control confounding factors, use suitable equipment and a comparison/control where appropriate to support validity."
+        }
+      ],
+      "formula": "Aim → hypothesis → variables → method → results → conclusion",
+      "practice": [
+        {
+          "question": "A learner tests how temperature affects amylase activity. Name the independent, dependent and two controlled variables.",
+          "answer": "Independent: temperature. Dependent: reaction rate or time to a defined endpoint. Controls: pH and enzyme concentration (also substrate concentration/volume where appropriate)."
+        },
+        {
+          "question": "Three repeat reaction times are 40 s, 42 s and 38 s. Calculate the mean and explain why repeats help.",
+          "answer": "Mean = (40 + 42 + 38)/3 = 40 s. Repeats help reveal random variation and anomalous results, making the estimate of typical performance more reliable."
+        }
+      ],
+      "visual": "bars",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "life-scientific-investigations-practical-skills",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do you distinguish variables?",
+          "back": "The independent variable is deliberately changed; the dependent variable is measured; controlled variables are held constant. A fair comparison changes one tested factor at a time."
+        },
+        {
+          "front": "What makes a useful hypothesis?",
+          "back": "State a testable predicted relationship, ideally with a biological reason. A conclusion must answer the aim using recorded evidence, rather than simply repeating the hypothesis."
+        },
+        {
+          "front": "How do you improve reliability and validity?",
+          "back": "Repeat measurements and calculate appropriate summaries to improve reliability. Control confounding factors, use suitable equipment and a comparison/control where appropriate to support validity."
+        },
+        {
+          "front": "A learner tests how temperature affects amylase activity. Name the independent, dependent and two controlled variables.",
+          "back": "Independent: temperature. Dependent: reaction rate or time to a defined endpoint. Controls: pH and enzyme concentration (also substrate concentration/volume where appropriate)."
+        },
+        {
+          "front": "Three repeat reaction times are 40 s, 42 s and 38 s. Calculate the mean and explain why repeats help.",
+          "back": "Mean = (40 + 42 + 38)/3 = 40 s. Repeats help reveal random variation and anomalous results, making the estimate of typical performance more reliable."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Bones, muscles & movement",
+      "group": "Anatomy",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 3,
+          "label": "Question 2: weightlifting and anatomy",
+          "memoPage": 4,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What does the skeleton do?",
+          "body": "The skeleton supports and protects the body, provides muscle attachment sites and acts as a lever system. Bones store minerals such as calcium and phosphorus; marrow produces blood cells."
+        },
+        {
+          "heading": "How do antagonistic muscles work?",
+          "body": "Muscles generate pulling forces. For a particular movement the agonist produces the main action and the antagonist opposes or controls it. Their roles change when movement reverses."
+        },
+        {
+          "heading": "What are contraction types?",
+          "body": "Isometric contraction develops tension with no overall muscle-length change. Concentric contraction shortens an active muscle; eccentric contraction lengthens an active muscle while controlling a load."
+        }
+      ],
+      "formula": "Muscle force → tendon → bone → joint movement",
+      "practice": [
+        {
+          "question": "During a controlled biceps curl upwards, identify the main agonist and contraction type.",
+          "answer": "The biceps brachii is a main elbow-flexion agonist and contracts concentrically as it shortens. The triceps acts as an antagonist."
+        },
+        {
+          "question": "A learner holds a squat still. Name the contraction type and explain it.",
+          "answer": "The muscles maintaining the position act mainly isometrically. They produce tension without a visible change in overall muscle length or joint position."
+        }
+      ],
+      "visual": "lever",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-bones-muscles-movement",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What does the skeleton do?",
+          "back": "The skeleton supports and protects the body, provides muscle attachment sites and acts as a lever system. Bones store minerals such as calcium and phosphorus; marrow produces blood cells."
+        },
+        {
+          "front": "How do antagonistic muscles work?",
+          "back": "Muscles generate pulling forces. For a particular movement the agonist produces the main action and the antagonist opposes or controls it. Their roles change when movement reverses."
+        },
+        {
+          "front": "What are contraction types?",
+          "back": "Isometric contraction develops tension with no overall muscle-length change. Concentric contraction shortens an active muscle; eccentric contraction lengthens an active muscle while controlling a load."
+        },
+        {
+          "front": "During a controlled biceps curl upwards, identify the main agonist and contraction type.",
+          "back": "The biceps brachii is a main elbow-flexion agonist and contracts concentrically as it shortens. The triceps acts as an antagonist."
+        },
+        {
+          "front": "A learner holds a squat still. Name the contraction type and explain it.",
+          "back": "The muscles maintaining the position act mainly isometrically. They produce tension without a visible change in overall muscle length or joint position."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Energy systems & exercise",
+      "group": "Exercise physiology",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 6,
+          "label": "Question 3: energy-system source",
+          "memoPage": 8,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How does the ATP-PC system work?",
+          "body": "Stored ATP and phosphocreatine provide very rapid energy for brief maximal efforts. Capacity is limited, and recovery between efforts helps replenish phosphocreatine stores."
+        },
+        {
+          "heading": "How do glycolytic and aerobic systems differ?",
+          "body": "Anaerobic glycolysis supplies ATP rapidly from carbohydrate without direct oxygen use. Aerobic metabolism uses oxygen and can sustain ATP production from carbohydrate and fat over longer periods."
+        },
+        {
+          "heading": "Do the systems switch on separately?",
+          "body": "All energy systems contribute together. Their relative contribution changes with intensity, duration and training. Use sporting examples to justify the dominant contribution rather than claiming exclusive use."
+        }
+      ],
+      "formula": "Short explosive ↔ sustained moderate effort",
+      "practice": [
+        {
+          "question": "Which energy system has a major role in a single maximal 5-second sprint, and why?",
+          "answer": "The ATP-PC system has a major role because it supplies ATP very quickly for a brief maximal effort. Other systems also contribute."
+        },
+        {
+          "question": "Why is aerobic fitness useful in a match containing repeated sprints?",
+          "answer": "Aerobic metabolism supports activity between sprints and recovery, including phosphocreatine restoration. It helps the athlete sustain repeated efforts across the match."
+        }
+      ],
+      "visual": "energy",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-energy-systems-exercise",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How does the ATP-PC system work?",
+          "back": "Stored ATP and phosphocreatine provide very rapid energy for brief maximal efforts. Capacity is limited, and recovery between efforts helps replenish phosphocreatine stores."
+        },
+        {
+          "front": "How do glycolytic and aerobic systems differ?",
+          "back": "Anaerobic glycolysis supplies ATP rapidly from carbohydrate without direct oxygen use. Aerobic metabolism uses oxygen and can sustain ATP production from carbohydrate and fat over longer periods."
+        },
+        {
+          "front": "Do the systems switch on separately?",
+          "back": "All energy systems contribute together. Their relative contribution changes with intensity, duration and training. Use sporting examples to justify the dominant contribution rather than claiming exclusive use."
+        },
+        {
+          "front": "Which energy system has a major role in a single maximal 5-second sprint, and why?",
+          "back": "The ATP-PC system has a major role because it supplies ATP very quickly for a brief maximal effort. Other systems also contribute."
+        },
+        {
+          "front": "Why is aerobic fitness useful in a match containing repeated sprints?",
+          "back": "Aerobic metabolism supports activity between sprints and recovery, including phosphocreatine restoration. It helps the athlete sustain repeated efforts across the match."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Levers & anatomical planes",
+      "group": "Biomechanics",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 9,
+          "label": "Question 4: lever systems",
+          "memoPage": 11,
+          "memo": "44"
+        },
+        {
+          "paper": "43",
+          "page": 12,
+          "label": "Question 4.5: anatomical planes",
+          "memoPage": 14,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What are the parts of a lever?",
+          "body": "A lever is a rigid structure rotating around a fulcrum. Effort is the applied force and load is the resistance. The effort and load arms are perpendicular moment-arm distances from the pivot to force lines."
+        },
+        {
+          "heading": "How are lever classes organised?",
+          "body": "First class has the fulcrum in the middle; second class has the load in the middle; third class has effort in the middle. Third-class levers often favour speed and range over force advantage."
+        },
+        {
+          "heading": "Which movements occur in each plane?",
+          "body": "Sagittal: flexion and extension. Frontal: abduction and adduction. Transverse: rotation. Name the joint and movement, and distinguish the movement plane from the axis perpendicular to it."
+        }
+      ],
+      "formula": "Torque = force × perpendicular moment arm",
+      "practice": [
+        {
+          "question": "In a lever, effort lies between the fulcrum and the load. Name the class and give a body example.",
+          "answer": "It is a third-class lever. In elbow flexion, the elbow is the fulcrum, the biceps applies effort near the elbow and the load is farther along the forearm/hand."
+        },
+        {
+          "question": "A 30 N force acts at a perpendicular distance of 0.2 m from a pivot. Find the torque.",
+          "answer": "Torque = 30 × 0.2 = 6 N·m. The perpendicular distance to the force line, rather than any arbitrary bone length, must be used."
+        }
+      ],
+      "visual": "lever",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-levers-anatomical-planes",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What are the parts of a lever?",
+          "back": "A lever is a rigid structure rotating around a fulcrum. Effort is the applied force and load is the resistance. The effort and load arms are perpendicular moment-arm distances from the pivot to force lines."
+        },
+        {
+          "front": "How are lever classes organised?",
+          "back": "First class has the fulcrum in the middle; second class has the load in the middle; third class has effort in the middle. Third-class levers often favour speed and range over force advantage."
+        },
+        {
+          "front": "Which movements occur in each plane?",
+          "back": "Sagittal: flexion and extension. Frontal: abduction and adduction. Transverse: rotation. Name the joint and movement, and distinguish the movement plane from the axis perpendicular to it."
+        },
+        {
+          "front": "In a lever, effort lies between the fulcrum and the load. Name the class and give a body example.",
+          "back": "It is a third-class lever. In elbow flexion, the elbow is the fulcrum, the biceps applies effort near the elbow and the load is farther along the forearm/hand."
+        },
+        {
+          "front": "A 30 N force acts at a perpendicular distance of 0.2 m from a pivot. Find the torque.",
+          "back": "Torque = 30 × 0.2 = 6 N·m. The perpendicular distance to the force line, rather than any arbitrary bone length, must be used."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Nutrition & exercise fuel",
+      "group": "Sports nutrition",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 13,
+          "label": "Question 5: diet source evaluation",
+          "memoPage": 15,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What do macronutrients supply?",
+          "body": "Carbohydrate and protein each supply about 4 kcal/g; fat supplies about 9 kcal/g. Carbohydrate is an important exercise fuel; protein supports growth and repair; fat also supports membranes, insulation and vitamin absorption."
+        },
+        {
+          "heading": "What does glycaemic index compare?",
+          "body": "GI compares the blood-glucose response to equal amounts of available carbohydrate from different foods. It is affected by food processing and meal context. A carbohydrate-free food is not meaningfully assigned a low GI."
+        },
+        {
+          "heading": "How should you evaluate a diet claim?",
+          "body": "Ask what evidence supports it, whether the study population matches the claim and whether a source is selling something. School questions about a diet are an opportunity to evaluate evidence, not a personal meal prescription."
+        }
+      ],
+      "formula": "Energy ≈ 4 × carbohydrate g + 4 × protein g + 9 × fat g",
+      "practice": [
+        {
+          "question": "A snack contains 20 g carbohydrate, 5 g protein and 4 g fat. Estimate energy in kcal.",
+          "answer": "Energy = 20 × 4 + 5 × 4 + 4 × 9 = 80 + 20 + 36 = 136 kcal."
+        },
+        {
+          "question": "Why is it misleading to describe a carbohydrate-free food as low GI?",
+          "answer": "GI is measured using a portion containing a standard amount of available carbohydrate. A food with essentially none cannot be compared on that basis, so its GI is generally not applicable."
+        }
+      ],
+      "visual": "bars",
+      "tip": "Use these as exam concepts. One nutritional calorie (kcal) is 1 000 small calories; the supplied memo uses the word calorie loosely.",
+      "id": "sports-nutrition-exercise-fuel",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What do macronutrients supply?",
+          "back": "Carbohydrate and protein each supply about 4 kcal/g; fat supplies about 9 kcal/g. Carbohydrate is an important exercise fuel; protein supports growth and repair; fat also supports membranes, insulation and vitamin absorption."
+        },
+        {
+          "front": "What does glycaemic index compare?",
+          "back": "GI compares the blood-glucose response to equal amounts of available carbohydrate from different foods. It is affected by food processing and meal context. A carbohydrate-free food is not meaningfully assigned a low GI."
+        },
+        {
+          "front": "How should you evaluate a diet claim?",
+          "back": "Ask what evidence supports it, whether the study population matches the claim and whether a source is selling something. School questions about a diet are an opportunity to evaluate evidence, not a personal meal prescription."
+        },
+        {
+          "front": "A snack contains 20 g carbohydrate, 5 g protein and 4 g fat. Estimate energy in kcal.",
+          "back": "Energy = 20 × 4 + 5 × 4 + 4 × 9 = 80 + 20 + 36 = 136 kcal."
+        },
+        {
+          "front": "Why is it misleading to describe a carbohydrate-free food as low GI?",
+          "back": "GI is measured using a portion containing a standard amount of available carbohydrate. A food with essentially none cannot be compared on that basis, so its GI is generally not applicable."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Heart, lungs & aerobic fitness",
+      "group": "Exercise physiology",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 16,
+          "label": "Question 6: VO₂ max and circulation",
+          "memoPage": 18,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What is cardiac output?",
+          "body": "Cardiac output is the volume pumped by a ventricle per minute. It equals heart rate multiplied by stroke volume. Keep mL and L consistent when calculating."
+        },
+        {
+          "heading": "What is VO₂ max?",
+          "body": "VO₂ max is the maximum rate of oxygen consumption during intense exercise, often expressed as mL/kg/min. It reflects the integrated ability to deliver and use oxygen, not simply lung size."
+        },
+        {
+          "heading": "How does training affect endurance?",
+          "body": "Endurance training can increase stroke volume, capillary density and mitochondrial capacity, and lower resting heart rate. Adaptations depend on the training programme and the individual."
+        }
+      ],
+      "formula": "Cardiac output = heart rate × stroke volume",
+      "practice": [
+        {
+          "question": "Heart rate is 150 beats/min and stroke volume is 120 mL/beat. Find cardiac output in L/min.",
+          "answer": "Q = 150 × 120 = 18 000 mL/min. Divide by 1 000: Q = 18 L/min."
+        },
+        {
+          "question": "Why do thin alveolar walls and many surrounding capillaries support gas exchange?",
+          "answer": "Thin walls reduce diffusion distance. The capillary network supplies a large exchange area and helps maintain oxygen and carbon-dioxide concentration gradients."
+        }
+      ],
+      "visual": "heart",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-heart-lungs-aerobic-fitness",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What is cardiac output?",
+          "back": "Cardiac output is the volume pumped by a ventricle per minute. It equals heart rate multiplied by stroke volume. Keep mL and L consistent when calculating."
+        },
+        {
+          "front": "What is VO₂ max?",
+          "back": "VO₂ max is the maximum rate of oxygen consumption during intense exercise, often expressed as mL/kg/min. It reflects the integrated ability to deliver and use oxygen, not simply lung size."
+        },
+        {
+          "front": "How does training affect endurance?",
+          "back": "Endurance training can increase stroke volume, capillary density and mitochondrial capacity, and lower resting heart rate. Adaptations depend on the training programme and the individual."
+        },
+        {
+          "front": "Heart rate is 150 beats/min and stroke volume is 120 mL/beat. Find cardiac output in L/min.",
+          "back": "Q = 150 × 120 = 18 000 mL/min. Divide by 1 000: Q = 18 L/min."
+        },
+        {
+          "front": "Why do thin alveolar walls and many surrounding capillaries support gas exchange?",
+          "back": "Thin walls reduce diffusion distance. The capillary network supplies a large exchange area and helps maintain oxygen and carbon-dioxide concentration gradients."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Arousal, psychology & motor skills",
+      "group": "Sports psychology",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 20,
+          "label": "Question 7: arousal and performance",
+          "memoPage": 21,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "What is the inverted-U model?",
+          "body": "Performance may improve as arousal rises toward an optimum and then fall as arousal becomes excessive. The optimum varies with the task, skill level and individual; it is a model rather than a universal law."
+        },
+        {
+          "heading": "How do skill demands differ?",
+          "body": "Fine skills require precise small-muscle control; gross skills use larger muscle groups. Complex tasks often need greater attentional control. Do not assume every athlete has the same optimum arousal."
+        },
+        {
+          "heading": "How can an athlete regulate arousal?",
+          "body": "Breathing routines, imagery and attention cues can help manage arousal. Match a strategy to the athlete and task, and explain how it could support concentration or readiness."
+        }
+      ],
+      "formula": "Low arousal → optimum zone → excessive arousal",
+      "practice": [
+        {
+          "question": "Use the inverted-U model to explain why too much arousal can hurt a precision task.",
+          "answer": "Arousal above the athlete’s optimum can increase tension and disrupt attention and fine control. This may reduce accuracy in a precision task such as putting."
+        },
+        {
+          "question": "Give two ways an athlete could reduce excessive pre-match arousal.",
+          "answer": "Controlled breathing can help regulate physiological activation. A familiar attention routine or calming imagery can redirect focus toward useful task cues."
+        }
+      ],
+      "visual": "arousal",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-arousal-psychology-motor-skills",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "What is the inverted-U model?",
+          "back": "Performance may improve as arousal rises toward an optimum and then fall as arousal becomes excessive. The optimum varies with the task, skill level and individual; it is a model rather than a universal law."
+        },
+        {
+          "front": "How do skill demands differ?",
+          "back": "Fine skills require precise small-muscle control; gross skills use larger muscle groups. Complex tasks often need greater attentional control. Do not assume every athlete has the same optimum arousal."
+        },
+        {
+          "front": "How can an athlete regulate arousal?",
+          "back": "Breathing routines, imagery and attention cues can help manage arousal. Match a strategy to the athlete and task, and explain how it could support concentration or readiness."
+        },
+        {
+          "front": "Use the inverted-U model to explain why too much arousal can hurt a precision task.",
+          "back": "Arousal above the athlete’s optimum can increase tension and disrupt attention and fine control. This may reduce accuracy in a precision task such as putting."
+        },
+        {
+          "front": "Give two ways an athlete could reduce excessive pre-match arousal.",
+          "back": "Controlled breathing can help regulate physiological activation. A familiar attention routine or calming imagery can redirect focus toward useful task cues."
+        }
+      ]
+    },
+    {
+      "subject": "sports",
+      "title": "Training adaptations & evidence-based essays",
+      "group": "Performance",
+      "sources": [
+        {
+          "paper": "43",
+          "page": 5,
+          "label": "Question 2.7: musculoskeletal adaptations",
+          "memoPage": 6,
+          "memo": "44"
+        },
+        {
+          "paper": "43",
+          "page": 23,
+          "label": "Question 8: limits of human performance",
+          "memoPage": 23,
+          "memo": "44"
+        }
+      ],
+      "notes": [
+        {
+          "heading": "How do training principles guide progress?",
+          "body": "Specificity means adaptations match the training demand. Progressive overload gradually increases that demand. Recovery allows adaptation; excessive load without recovery can impair performance."
+        },
+        {
+          "heading": "Which adaptations are relevant?",
+          "body": "Resistance training can increase strength and muscle size; endurance training can increase aerobic capacity and fatigue resistance. Separate immediate exercise responses from adaptations developed over weeks or months."
+        },
+        {
+          "heading": "How do you evaluate performance limits?",
+          "body": "Use evidence about physiology, training, technology and participation. Consider both biological constraints and changes that allow progress. Distinguish fair technological improvements from prohibited practices without assuming a source is neutral."
+        }
+      ],
+      "formula": "Training stimulus + recovery → adaptation",
+      "practice": [
+        {
+          "question": "Distinguish an acute response to running from a long-term endurance adaptation.",
+          "answer": "A raised heart rate during a run is an acute response. An increased stroke volume after months of appropriate endurance training is a chronic adaptation."
+        },
+        {
+          "question": "Give one supported argument on each side of whether athletic records can continue improving.",
+          "answer": "For improvement: better training methods, technology and wider participation can improve performance. For limits: human physiology places constraints on oxygen delivery, force production and recovery. A conclusion should weigh the evidence for the specific sport."
+        }
+      ],
+      "visual": "growth",
+      "tip": "Show your reasoning and check the units or restrictions in your final answer.",
+      "id": "sports-training-adaptations-evidence-based-essays",
+      "minutes": 14,
+      "cards": [
+        {
+          "front": "How do training principles guide progress?",
+          "back": "Specificity means adaptations match the training demand. Progressive overload gradually increases that demand. Recovery allows adaptation; excessive load without recovery can impair performance."
+        },
+        {
+          "front": "Which adaptations are relevant?",
+          "back": "Resistance training can increase strength and muscle size; endurance training can increase aerobic capacity and fatigue resistance. Separate immediate exercise responses from adaptations developed over weeks or months."
+        },
+        {
+          "front": "How do you evaluate performance limits?",
+          "back": "Use evidence about physiology, training, technology and participation. Consider both biological constraints and changes that allow progress. Distinguish fair technological improvements from prohibited practices without assuming a source is neutral."
+        },
+        {
+          "front": "Distinguish an acute response to running from a long-term endurance adaptation.",
+          "back": "A raised heart rate during a run is an acute response. An increased stroke volume after months of appropriate endurance training is a chronic adaptation."
+        },
+        {
+          "front": "Give one supported argument on each side of whether athletic records can continue improving.",
+          "back": "For improvement: better training methods, technology and wider participation can improve performance. For limits: human physiology places constraints on oxygen delivery, force production and recovery. A conclusion should weigh the evidence for the specific sport."
+        }
+      ]
+    }
+  ],
+  "sourceCount": 44,
+  "duplicates": {
+    "12": 11,
+    "15": 1,
+    "27": 26,
+    "38": 36
+  },
+  "contentVersion": 1
+}
