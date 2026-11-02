@@ -1,12 +1,14 @@
 {
-    "name": "DLS Study Club",
-    "short_name": "DLS Study",
-    "start_url": ".",
+    "id": "./",
+    "name": "For Rosa",
+    "short_name": "For Rosa",
+    "start_url": "./",
+    "scope": "./",
     "display": "standalone",
     "background_color": "#F8F8FC",
     "theme_color": "#6654D9",
     "description": "Grade 10 papers, practice, visual revision and flashcards.",
-    "orientation": "portrait-primary",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {

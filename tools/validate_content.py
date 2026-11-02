@@ -28,10 +28,11 @@ ids=set()
 for t in data['topics']:
  assert t['id'] not in ids
  ids.add(t['id'])
- assert len(t['practice'])>=6 and len(t['notes'])>=3 and len(t['cards'])>=9
- questions=[q['question'].strip().casefold() for q in t['practice']]
+ assert len(t['practice'])>=6 and len(t['notes'])>=3 and len(t['cards'])>=15 and len(t['challenges'])>=2
+ questions=[q['question'].strip().casefold() for q in t['practice']+t['challenges']]
  assert len(questions)==len(set(questions)), f'Duplicate practice question: {t["title"]}'
- assert all(q['question'].strip() and q['answer'].strip() for q in t['practice'])
+ assert all(q['question'].strip() and q['answer'].strip() for q in t['practice']+t['challenges'])
+ assert all(c['front'].strip() and c['back'].strip() for c in t['cards'])
  assert t['formula'] and t['tip'] and t['sources']
  for r in t['sources']:
   p=papers[r['paper']]
@@ -43,7 +44,7 @@ for s in data['subjects']:
  assert any(t['subject']==s['id'] for t in data['topics'])
  assert any(p['subject']==s['id'] and p['kind']=='paper' for p in papers.values())
 print('PASS: 44 originals accounted for; checksums, blank uploads, memo pairs, source pages and all topic packs validated.')
-print(len(data['topics']),'topics;',sum(len(t['practice']) for t in data['topics']),'worked questions;',sum(len(t['cards']) for t in data['topics']),'flashcards.')
+print(len(data['topics']),'topics;',sum(len(t['practice']) for t in data['topics']),'regular worked questions;',sum(len(t['challenges']) for t in data['topics']),'challenges;',sum(len(t['cards']) for t in data['topics']),'flashcards.')
 
 if '--review' in __import__('sys').argv:
  for t in data['topics']:

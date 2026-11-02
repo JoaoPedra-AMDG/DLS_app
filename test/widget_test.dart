@@ -6,6 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dls_study/app.dart';
 import 'package:dls_study/models.dart';
 import 'package:dls_study/visuals.dart';
+import 'package:dls_study/pdf_reader_screen.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -118,6 +119,7 @@ void main() {
       ),
     );
     for (var i = 0; i < (t['cards'] as List).length; i++) {
+      await tester.ensureVisible(find.text('Reveal answer'));
       await tester.tap(find.text('Reveal answer'));
       await tester.pumpAndSettle();
       await tester.ensureVisible(find.text('I remembered it'));
@@ -153,5 +155,86 @@ void main() {
       expect(tester.takeException(), isNull, reason: type);
     }
     await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets('Challenge questions reveal their worked solutions', (
+    tester,
+  ) async {
+    await launch(tester);
+    await tester.tap(find.text('Find your next discovery…'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'circuits');
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Electric circuits'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Challenge questions'));
+    await tester.pumpAndSettle();
+    expect(find.text('CHALLENGE 1'), findsOneWidget);
+    await tester.ensureVisible(find.text('Reveal worked answer').first);
+    await tester.tap(find.text('Reveal worked answer').first);
+    await tester.pumpAndSettle();
+    final t = store.topics.firstWhere((t) => t['title'] == 'Electric circuits');
+    expect(find.text(t['challenges'][0]['answer']), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('PDF reader keeps Back and Download available on a phone', (
+    tester,
+  ) async {
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    var downloads = 0;
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Builder(
+          builder:
+              (context) => Scaffold(
+                body: Center(
+                  child: FilledButton(
+                    onPressed:
+                        () => Navigator.of(context).push(
+                          MaterialPageRoute<void>(
+                            builder:
+                                (_) => PdfReaderScreen(
+                                  uri: Uri.parse(
+                                    'https://study.test/paper.pdf',
+                                  ),
+                                  title: 'November Paper 1 · 2024',
+                                  filename: 'paper.pdf',
+                                  onDownload: () async {
+                                    downloads++;
+                                    return true;
+                                  },
+                                ),
+                          ),
+                        ),
+                    child: const Text('Read paper'),
+                  ),
+                ),
+              ),
+        ),
+      ),
+    );
+    await tester.tap(find.text('Read paper'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Download'));
+    await tester.pumpAndSettle();
+    expect(downloads, 1);
+    await tester.tap(find.text('Back'));
+    await tester.pumpAndSettle();
+    expect(find.text('Read paper'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Students can find platform-specific install instructions', (
+    tester,
+  ) async {
+    await launch(tester, size: const Size(390, 844));
+    await tester.tap(find.byTooltip('Install For Rosa'));
+    await tester.pumpAndSettle();
+    expect(find.text('Install For Rosa'), findsOneWidget);
+    expect(find.text('Android · Chrome'), findsOneWidget);
+    expect(find.text('iPhone or iPad · Safari'), findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 }

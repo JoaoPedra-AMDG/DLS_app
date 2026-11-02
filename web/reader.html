@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#6654d9">
+  <title>PDF reader · For Rosa</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#eeedf5;color:#25233d;font:14px system-ui,sans-serif}
+    header,.controls{display:flex;align-items:center;gap:12px;padding:12px 16px;background:white;border-bottom:1px solid #dedbe9;flex-wrap:wrap}
+    header strong{flex:1;min-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    button,a.action{border:1px solid #d7d0ef;background:#fff;border-radius:9px;padding:10px 13px;color:#5140b2;cursor:pointer;font:inherit;text-decoration:none;min-height:42px}
+    button:disabled{opacity:.4;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b5a7ff;outline-offset:2px}
+    .controls{position:sticky;top:0;z-index:1;justify-content:center;padding:8px;gap:8px}
+    .controls input{width:54px;padding:10px 4px;border:1px solid #d7d0ef;border-radius:8px;text-align:center;font:inherit}
+    #status{padding:12px 16px;margin:0;text-align:center;color:#625b76;min-height:42px}
+    #viewport{overflow:auto;min-height:60vh;padding:0 12px 20px;text-align:center}
+    #page{display:inline-block;box-shadow:0 3px 18px #25233d20;background:white}canvas{display:block;max-width:none}
+    details{max-width:900px;margin:12px auto;padding:15px;background:white;border-radius:10px;text-align:left}#page-text{line-height:1.7;white-space:pre-wrap}
+    [hidden]{display:none!important}#fallback{display:block;margin:10px auto;width:max-content;max-width:95%}
+    @media(max-width:450px){header{gap:6px;padding:9px}.controls{gap:5px;font-size:12px}button,a.action{padding:9px}#viewport{padding:0 5px 14px}}
+  </style>
+</head>
+<body>
+  <header id="standalone-header"><a class="action" href="./">← Back to study</a><strong id="title">For Rosa · PDF</strong><a class="action" id="download" download>↓ Download PDF</a></header>
+  <nav class="controls" aria-label="PDF page and zoom controls">
+    <button id="previous" type="button" disabled aria-label="Previous page">← Previous</button>
+    <form id="page-form"><label for="page-number">Page </label><input id="page-number" type="number" min="1" value="1" required aria-label="PDF page number"><span id="page-count"> / …</span></form>
+    <button id="next" type="button" disabled aria-label="Next page">Next →</button>
+    <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+    <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+    <button id="fit" type="button">Fit width</button>
+  </nav>
+  <p id="status" role="status" aria-live="polite">Opening your paper…</p>
+  <main id="viewport"><div id="page"><canvas id="canvas" aria-label="Original PDF page"></canvas></div></main>
+  <a id="fallback" class="action" hidden target="_blank" rel="noopener">Open original PDF in browser</a>
+  <details><summary>Read this page as text</summary><p id="page-text">Page text will appear here after the page loads. Scanned handwriting may not contain extractable text.</p></details>
+  <script type="module" src="reader.js"></script>
+</body>
+</html>

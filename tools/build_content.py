@@ -11,6 +11,7 @@ from pathlib import Path
 from pypdf import PdfReader
 from curriculum import topics
 from extra_practice import EXTRA_PRACTICE
+from topic_extensions import EXTENSIONS
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -82,13 +83,18 @@ for n,(subject,year,exam,kind,memo,note) in spec.items():
 
 by_id={p['id']:p for p in papers}
 assert set(EXTRA_PRACTICE)=={t['title'] for t in topics}, 'Extra-practice topics must match the curriculum'
+assert set(EXTENSIONS)=={t['title'] for t in topics}, 'Every topic needs a challenge and card extension'
 for i,t in enumerate(topics):
  additions=EXTRA_PRACTICE[t['title']]
  assert len(additions)>=4, f'Expected at least four extra exercises for {t["title"]}'
  t['practice'].extend(dict(question=q,answer=a) for q,a in additions)
  t['id']=t['subject']+'-'+re.sub('[^a-z0-9]+','-',t['title'].lower()).strip('-')
  t['minutes']=8+len(t['notes'])*2
- t['cards']=[dict(front=h,back=b) for h,b in t['notes']]+[dict(front=q['question'],back=q['answer']) for q in t['practice']]
+ extension=EXTENSIONS[t['title']]
+ t['challenges']=extension['challenges']
+ assert len(t['challenges'])>=2 and len(extension['cards'])>=4
+ # Keep the previous nine card indices intact before appending new material.
+ t['cards']=[dict(front=h,back=b) for h,b in t['notes']]+[dict(front=q['question'],back=q['answer']) for q in t['practice']]+[dict(front=q['question'],back=q['answer']) for q in t['challenges']]+extension['cards']
  t['notes']=[dict(heading=h,body=b) for h,b in t['notes']]
  for ref in t['sources']:
   p=by_id[ref['paper']]
@@ -97,12 +103,12 @@ for i,t in enumerate(topics):
   if ref.get('memoPage') and p['memo']:
    assert ref['memoPage']<=by_id[p['memo']]['pages']
 
-content=dict(subjects=subjects,papers=papers,topics=topics,sourceCount=44,duplicates=duplicates,contentVersion=2)
+content=dict(subjects=subjects,papers=papers,topics=topics,sourceCount=44,duplicates=duplicates,contentVersion=3)
 (ASSETS/'content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2),encoding='utf-8')
 audit=ROOT/'docs'/'SOURCE_AUDIT.md'; audit.parent.mkdir(exist_ok=True)
 lines=['# Source audit','','All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers; duplicates share one published copy. Blank uploads are retained in the catalogue as unavailable. Page links use PDF page positions, not printed page labels.','','| Upload(s) | Subject | Resource | Type | Pages | Notes |','|---|---|---|---|---|---|']
 for p in papers:
  lines.append('| '+', '.join(p['originals'])+' | '+p['subject']+' | '+p['title']+' | '+p['kind']+' | '+str(p['pages'])+' | '+p['note']+' |')
-lines += ['','## Learning content','','Topics are editorial groupings based on the supplied papers, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines.','',f'{len(topics)} topics; {sum(len(t["practice"]) for t in topics)} additional worked questions; {sum(len(t["cards"]) for t in topics)} flashcards.','','The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.']
+lines += ['','## Learning content','','Topics are editorial groupings based on the supplied papers, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines.','',f'{len(topics)} topics; {sum(len(t["practice"]) for t in topics)} regular worked questions; {sum(len(t["challenges"]) for t in topics)} stretch challenges; {sum(len(t["cards"]) for t in topics)} flashcards.','','The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.']
 audit.write_text('\n'.join(lines),encoding='utf-8')
 print(f'Built {len(papers)} unique resources, {len(topics)} topics')

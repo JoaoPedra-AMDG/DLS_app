@@ -713,6 +713,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-numbers-surds-intervals",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Solve √(x + 6) = x. Explain why squaring can give an invalid candidate, and check your final answer.",
+          "answer": "The square root is non-negative, so x must be at least 0. Squaring gives x + 6 = x², hence (x − 3)(x + 2) = 0. Candidates are 3 and −2. Reject −2 because it is negative and √4 ≠ −2. Check x = 3: √9 = 3. Therefore x = 3 only."
+        },
+        {
+          "question": "Let r = √18 − √8 and s = √50 + √8. Without decimals, calculate rs and r + s. Classify each result as rational or irrational and justify.",
+          "answer": "r = 3√2 − 2√2 = √2 and s = 5√2 + 2√2 = 7√2. Therefore rs = 7(√2)² = 14, which is rational. r + s = 8√2, which is irrational because a non-zero rational multiple of √2 is irrational."
+        }
+      ],
       "cards": [
         {
           "front": "What makes a number rational?",
@@ -749,6 +759,30 @@
         {
           "front": "Without a calculator, identify the two consecutive integers between which √30 lies. Explain.",
           "back": "25 < 30 < 36. Taking positive square roots gives 5 < √30 < 6, so it lies between 5 and 6."
+        },
+        {
+          "front": "Solve √(x + 6) = x. Explain why squaring can give an invalid candidate, and check your final answer.",
+          "back": "The square root is non-negative, so x must be at least 0. Squaring gives x + 6 = x², hence (x − 3)(x + 2) = 0. Candidates are 3 and −2. Reject −2 because it is negative and √4 ≠ −2. Check x = 3: √9 = 3. Therefore x = 3 only."
+        },
+        {
+          "front": "Let r = √18 − √8 and s = √50 + √8. Without decimals, calculate rs and r + s. Classify each result as rational or irrational and justify.",
+          "back": "r = 3√2 − 2√2 = √2 and s = 5√2 + 2√2 = 7√2. Therefore rs = 7(√2)² = 14, which is rational. r + s = 8√2, which is irrational because a non-zero rational multiple of √2 is irrational."
+        },
+        {
+          "front": "What extra condition is needed before squaring √f(x) = g(x)?",
+          "back": "Require f(x) ≥ 0 and g(x) ≥ 0, then check candidates in the original equation."
+        },
+        {
+          "front": "What is √(x²) for real x?",
+          "back": "|x|, because the principal square root is non-negative."
+        },
+        {
+          "front": "What number line symbol represents an excluded endpoint?",
+          "back": "An open circle, corresponding to a round bracket in interval notation."
+        },
+        {
+          "front": "How can a product of two irrational numbers be rational?",
+          "back": "For example, √2 × √8 = √16 = 4. Irrational factors do not guarantee an irrational product."
         }
       ]
     },
@@ -824,6 +858,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-algebra-equations",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Solve 1/(x − 1) + 1/(x + 1) = 3/4. State all restrictions and verify that no candidate violates them.",
+          "answer": "x ≠ ±1. Combining fractions gives 2x/(x² − 1) = 3/4. Cross-multiply: 8x = 3x² − 3, so 3x² − 8x − 3 = 0 = (3x + 1)(x − 3). Hence x = −1/3 or 3. Neither is excluded; substituting each gives 3/4."
+        },
+        {
+          "question": "Show that x² − (k + 1)x + k = 0 has roots 1 and k. Determine all real k for which its roots are positive and unequal.",
+          "answer": "Factorise the expression as (x − 1)(x − k). The roots are therefore 1 and k. Both are positive when k > 0, and they are unequal when k ≠ 1. Combined condition: k > 0 with k ≠ 1."
+        }
+      ],
       "cards": [
         {
           "front": "Why factorise first?",
@@ -860,6 +904,30 @@
         {
           "front": "Solve −3x + 6 ≥ 15.",
           "back": "Subtract 6: −3x ≥ 9. Divide by −3 and reverse the inequality sign: x ≤ −3."
+        },
+        {
+          "front": "Solve 1/(x − 1) + 1/(x + 1) = 3/4. State all restrictions and verify that no candidate violates them.",
+          "back": "x ≠ ±1. Combining fractions gives 2x/(x² − 1) = 3/4. Cross-multiply: 8x = 3x² − 3, so 3x² − 8x − 3 = 0 = (3x + 1)(x − 3). Hence x = −1/3 or 3. Neither is excluded; substituting each gives 3/4."
+        },
+        {
+          "front": "Show that x² − (k + 1)x + k = 0 has roots 1 and k. Determine all real k for which its roots are positive and unequal.",
+          "back": "Factorise the expression as (x − 1)(x − k). The roots are therefore 1 and k. Both are positive when k > 0, and they are unequal when k ≠ 1. Combined condition: k > 0 with k ≠ 1."
+        },
+        {
+          "front": "When does cancelling an algebraic fraction preserve its restrictions?",
+          "back": "Keep every value excluded by the original denominator, even after a factor cancels."
+        },
+        {
+          "front": "What check follows solving a rational equation?",
+          "back": "Substitute into the original equation and reject zero-denominator candidates."
+        },
+        {
+          "front": "If a quadratic has roots 3 and −2, what monic equation has those roots?",
+          "back": "(x − 3)(x + 2) = 0, so x² − x − 6 = 0."
+        },
+        {
+          "front": "Why does dividing an inequality by a negative reverse its sign?",
+          "back": "Multiplication or division by a negative reverses the order of numbers on the number line."
         }
       ]
     },
@@ -935,6 +1003,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-exponents-number-patterns",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "An arithmetic sequence has T₄ = 16 and T₁₀ = 40. Find Tₙ and the sum of its first 20 terms. You may use Sₙ = n(T₁ + Tₙ)/2.",
+          "answer": "T₁₀ − T₄ = 6d = 24, so d = 4. T₄ = a + 3d gives a = 4. Thus Tₙ = 4n and T₂₀ = 80. S₂₀ = 20(4 + 80)/2 = 840."
+        },
+        {
+          "question": "Solve [9^(x − 1) × 27]/3^(x + 1) = 81 by expressing everything as powers of 3.",
+          "answer": "9^(x − 1) = 3^(2x − 2) and 27 = 3³. The left side is 3^(2x − 2 + 3 − x − 1) = 3ˣ. Since 81 = 3⁴, x = 4. The denominator is positive for every real x."
+        }
+      ],
       "cards": [
         {
           "front": "How do exponent laws work?",
@@ -971,6 +1049,30 @@
         {
           "front": "Solve 3^(x + 1) = 81.",
           "back": "Write 81 as 3⁴. Equal positive bases other than 1 have equal exponents, so x + 1 = 4 and x = 3."
+        },
+        {
+          "front": "An arithmetic sequence has T₄ = 16 and T₁₀ = 40. Find Tₙ and the sum of its first 20 terms. You may use Sₙ = n(T₁ + Tₙ)/2.",
+          "back": "T₁₀ − T₄ = 6d = 24, so d = 4. T₄ = a + 3d gives a = 4. Thus Tₙ = 4n and T₂₀ = 80. S₂₀ = 20(4 + 80)/2 = 840."
+        },
+        {
+          "front": "Solve [9^(x − 1) × 27]/3^(x + 1) = 81 by expressing everything as powers of 3.",
+          "back": "9^(x − 1) = 3^(2x − 2) and 27 = 3³. The left side is 3^(2x − 2 + 3 − x − 1) = 3ˣ. Since 81 = 3⁴, x = 4. The denominator is positive for every real x."
+        },
+        {
+          "front": "How do two known arithmetic terms give d?",
+          "back": "d = (Tₙ − Tₘ)/(n − m)."
+        },
+        {
+          "front": "What does a zero common difference mean?",
+          "back": "Every term is equal; the arithmetic sequence is constant."
+        },
+        {
+          "front": "How can you rewrite 16ˣ with base 2?",
+          "back": "16ˣ = (2⁴)ˣ = 2^(4x)."
+        },
+        {
+          "front": "When is an alleged term position invalid?",
+          "back": "If the solved n is not a positive integer, the target is not a term in the sequence."
         }
       ]
     },
@@ -1039,6 +1141,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-functions-transformations",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "For f(x) = −x² + 6x − 5, find the turning point, range and x-intercepts. Then determine where f(x) > 0.",
+          "answer": "Complete the square: f(x) = −(x − 3)² + 4. The turning point is (3; 4) and range y ≤ 4. Factorising gives f(x) = −(x − 1)(x − 5), so the intercepts are (1; 0) and (5; 0). The downward parabola is positive between the roots: 1 < x < 5."
+        },
+        {
+          "question": "A hyperbola has asymptotes x = 2 and y = −1 and passes through (3; 5). Write its equation in the form y = a/(x − p) + q and find its x-intercept.",
+          "answer": "p = 2 and q = −1, so y = a/(x − 2) − 1. Substitute (3; 5): 5 = a − 1, giving a = 6. For y = 0, 6/(x − 2) = 1, so x = 8. The x-intercept is (8; 0)."
+        }
+      ],
       "cards": [
         {
           "front": "Which features belong on a graph?",
@@ -1075,6 +1187,30 @@
         {
           "front": "Reflect y = x² − 2 in the x-axis. State the new equation and turning point.",
           "back": "Negate the complete output: y = −(x² − 2) = −x² + 2. The original turning point (0; −2) becomes (0; 2)."
+        },
+        {
+          "front": "For f(x) = −x² + 6x − 5, find the turning point, range and x-intercepts. Then determine where f(x) > 0.",
+          "back": "Complete the square: f(x) = −(x − 3)² + 4. The turning point is (3; 4) and range y ≤ 4. Factorising gives f(x) = −(x − 1)(x − 5), so the intercepts are (1; 0) and (5; 0). The downward parabola is positive between the roots: 1 < x < 5."
+        },
+        {
+          "front": "A hyperbola has asymptotes x = 2 and y = −1 and passes through (3; 5). Write its equation in the form y = a/(x − p) + q and find its x-intercept.",
+          "back": "p = 2 and q = −1, so y = a/(x − 2) − 1. Substitute (3; 5): 5 = a − 1, giving a = 6. For y = 0, 6/(x − 2) = 1, so x = 8. The x-intercept is (8; 0)."
+        },
+        {
+          "front": "What is the vertex of y = a(x − h)² + k?",
+          "back": "(h; k). The sign of a determines whether it opens upward or downward."
+        },
+        {
+          "front": "What does f(x − 2) do to a graph?",
+          "back": "It shifts the graph 2 units to the right."
+        },
+        {
+          "front": "What happens to x-intercepts under y = −f(x)?",
+          "back": "They stay fixed because negating zero still gives zero."
+        },
+        {
+          "front": "Why can a horizontal asymptote be absent from a hyperbola’s range?",
+          "back": "For y = a/(x − p) + q with a ≠ 0, the fractional term cannot equal zero, so y ≠ q."
         }
       ]
     },
@@ -1143,6 +1279,16 @@
       "tip": "Use the rate and period stated in the question. This is school mathematics, not an investment recommendation.",
       "id": "maths-financial-maths",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "R4 000 earns 8% compound interest yearly for two years. R1 000 is then withdrawn, and the remaining money earns 5% for one more year. Find the final balance.",
+          "answer": "After two years: 4 000(1.08)² = R4 665.60. After withdrawal: R3 665.60. Apply the new rate only to this balance: 3 665.60(1.05) = R3 848.88."
+        },
+        {
+          "question": "A balance grows from R2 500 to R3 000 in two years at a fixed annual compound rate. Find the rate to two decimal places and explain why dividing the total percentage increase by two is not exact.",
+          "answer": "3 000 = 2 500(1 + i)², so (1 + i)² = 1.2. Take the positive root: i = √1.2 − 1 ≈ 0.095445, or 9.54% per year. A simple division gives 10%, but compound growth earns interest on the updated balance, not a fixed yearly amount."
+        }
+      ],
       "cards": [
         {
           "front": "How does simple interest grow?",
@@ -1179,6 +1325,30 @@
         {
           "front": "What principal will grow to R6 050 after 2 years at 10% compound interest per year?",
           "back": "6 050 = P(1.10)² = 1.21P. Therefore P = 6 050/1.21 = R5 000."
+        },
+        {
+          "front": "R4 000 earns 8% compound interest yearly for two years. R1 000 is then withdrawn, and the remaining money earns 5% for one more year. Find the final balance.",
+          "back": "After two years: 4 000(1.08)² = R4 665.60. After withdrawal: R3 665.60. Apply the new rate only to this balance: 3 665.60(1.05) = R3 848.88."
+        },
+        {
+          "front": "A balance grows from R2 500 to R3 000 in two years at a fixed annual compound rate. Find the rate to two decimal places and explain why dividing the total percentage increase by two is not exact.",
+          "back": "3 000 = 2 500(1 + i)², so (1 + i)² = 1.2. Take the positive root: i = √1.2 − 1 ≈ 0.095445, or 9.54% per year. A simple division gives 10%, but compound growth earns interest on the updated balance, not a fixed yearly amount."
+        },
+        {
+          "front": "How is reducing-balance depreciation written?",
+          "back": "A = P(1 − i)ⁿ when i is the depreciation rate per period."
+        },
+        {
+          "front": "What should happen at a withdrawal date in a compound-interest timeline?",
+          "back": "Calculate the balance to that date, subtract the withdrawal, then apply later growth to the remainder."
+        },
+        {
+          "front": "What is interest earned when no deposits or withdrawals occur?",
+          "back": "I = A − P."
+        },
+        {
+          "front": "Why must interest-rate periods match n?",
+          "back": "The rate applies once per chosen period; using a yearly rate with a monthly period count gives the wrong growth."
         }
       ]
     },
@@ -1247,6 +1417,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-probability-venn-diagrams",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Of 60 learners, 35 play sport A, 28 play sport B and 15 play both. Find P(exactly one sport), P(neither), and P(B | A).",
+          "answer": "A only = 20 and B only = 13. Exactly one = 33, so its probability is 33/60 = 11/20. Union = 35 + 28 − 15 = 48, leaving 12 neither: 12/60 = 1/5. Among the 35 in A, 15 are also in B, so P(B | A) = 15/35 = 3/7."
+        },
+        {
+          "question": "A fair die is rolled. A is an even result and B is a result greater than 3. List A ∩ B, calculate P(A ∪ B), and test whether A and B are independent.",
+          "answer": "A = {2,4,6}; B = {4,5,6}; overlap = {4,6}. Thus P(A ∩ B) = 2/6 = 1/3. Union = {2,4,5,6}, so its probability is 4/6 = 2/3. P(A)P(B) = (1/2)(1/2) = 1/4, which differs from 1/3; the events are not independent."
+        }
+      ],
       "cards": [
         {
           "front": "What goes in a Venn overlap?",
@@ -1283,6 +1463,30 @@
         {
           "front": "A and B are mutually exclusive with P(A) = 0.2 and P(B) = 0.5. Find P(A ∪ B) and the probability of neither.",
           "back": "Mutual exclusivity means the overlap is zero. P(A ∪ B) = 0.2 + 0.5 = 0.7. P(neither) = 1 − 0.7 = 0.3."
+        },
+        {
+          "front": "Of 60 learners, 35 play sport A, 28 play sport B and 15 play both. Find P(exactly one sport), P(neither), and P(B | A).",
+          "back": "A only = 20 and B only = 13. Exactly one = 33, so its probability is 33/60 = 11/20. Union = 35 + 28 − 15 = 48, leaving 12 neither: 12/60 = 1/5. Among the 35 in A, 15 are also in B, so P(B | A) = 15/35 = 3/7."
+        },
+        {
+          "front": "A fair die is rolled. A is an even result and B is a result greater than 3. List A ∩ B, calculate P(A ∪ B), and test whether A and B are independent.",
+          "back": "A = {2,4,6}; B = {4,5,6}; overlap = {4,6}. Thus P(A ∩ B) = 2/6 = 1/3. Union = {2,4,5,6}, so its probability is 4/6 = 2/3. P(A)P(B) = (1/2)(1/2) = 1/4, which differs from 1/3; the events are not independent."
+        },
+        {
+          "front": "What is the probability of exactly one of A and B?",
+          "back": "P(A) + P(B) − 2P(A ∩ B)."
+        },
+        {
+          "front": "How do you find the probability of neither event?",
+          "back": "1 − P(A ∪ B)."
+        },
+        {
+          "front": "Does “or” normally include the overlap in probability?",
+          "back": "Yes. Inclusive “or” includes A only, B only, and both."
+        },
+        {
+          "front": "What denominator is used for P(B | A)?",
+          "back": "P(A), or the number of outcomes in A when using equally likely counts."
         }
       ]
     },
@@ -1358,6 +1562,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-trigonometry-trig-graphs",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "From a point on level ground, a tower’s angle of elevation is 30°. After moving 20 m straight toward its base, it is 60°. Find the tower’s height exactly.",
+          "answer": "Let x be the nearer distance and h the height. h = x tan 60° = x√3, while h = (x + 20)tan 30° = (x + 20)/√3. Equate: 3x = x + 20, giving x = 10. Thus h = 10√3 m, about 17.32 m. The original distance was 30 m."
+        },
+        {
+          "question": "For f(x) = 2 sin x − 1 on 0° ≤ x ≤ 360°, state the range, find all zeros and give the interval where f(x) ≥ 0.",
+          "answer": "Since −1 ≤ sin x ≤ 1, −3 ≤ f(x) ≤ 1. Zeros satisfy sin x = 1/2, so x = 30° or 150°. The graph is at or above zero from 30° to 150°, including both endpoints."
+        }
+      ],
       "cards": [
         {
           "front": "How do you choose a trig ratio?",
@@ -1394,6 +1608,30 @@
         {
           "front": "Find the vertical asymptotes of y = tan x + 2 for 0° ≤ x ≤ 360°.",
           "back": "The vertical shift does not change where tan x is undefined. cos x = 0 at x = 90° and 270°, so these are the vertical asymptotes."
+        },
+        {
+          "front": "From a point on level ground, a tower’s angle of elevation is 30°. After moving 20 m straight toward its base, it is 60°. Find the tower’s height exactly.",
+          "back": "Let x be the nearer distance and h the height. h = x tan 60° = x√3, while h = (x + 20)tan 30° = (x + 20)/√3. Equate: 3x = x + 20, giving x = 10. Thus h = 10√3 m, about 17.32 m. The original distance was 30 m."
+        },
+        {
+          "front": "For f(x) = 2 sin x − 1 on 0° ≤ x ≤ 360°, state the range, find all zeros and give the interval where f(x) ≥ 0.",
+          "back": "Since −1 ≤ sin x ≤ 1, −3 ≤ f(x) ≤ 1. Zeros satisfy sin x = 1/2, so x = 30° or 150°. The graph is at or above zero from 30° to 150°, including both endpoints."
+        },
+        {
+          "front": "What are the period and amplitude of y = a sin x + q?",
+          "back": "Period 360° and amplitude |a|; q shifts the midline."
+        },
+        {
+          "front": "What must you check before using inverse trig on a calculator?",
+          "back": "Degree mode for these exam angles, and whether the chosen angle lies in the required quadrant or interval."
+        },
+        {
+          "front": "Why are elevation and depression angles often equal?",
+          "back": "The horizontal sight lines are parallel, so alternate interior angles are equal."
+        },
+        {
+          "front": "What is the exact value of tan 60°?",
+          "back": "√3."
         }
       ]
     },
@@ -1455,6 +1693,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-analytical-geometry",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A(−2; 1), B(4; 3) and C(2; 9) are consecutive vertices of parallelogram ABCD. Find D, then prove that the shape is a rectangle.",
+          "answer": "For a parallelogram, D = A + C − B = (−4; 7). Gradient AB = 2/6 = 1/3 and gradient BC = 6/(−2) = −3. Their product is −1, so adjacent sides are perpendicular. A parallelogram with a right angle is a rectangle."
+        },
+        {
+          "question": "Find all points P on the x-axis that are 5 units from A(2; 4). Then find the midpoint of these two possible points.",
+          "answer": "Let P = (x; 0). Distance squared gives (x − 2)² + (0 − 4)² = 25. Thus (x − 2)² = 9, so x = 5 or −1. Points are (5; 0) and (−1; 0); their midpoint is (2; 0)."
+        }
+      ],
       "cards": [
         {
           "front": "How do you find distance and midpoint?",
@@ -1491,6 +1739,30 @@
         {
           "front": "A(0; 0), B(6; 0) and C(2; 4) form a triangle. Calculate its area.",
           "back": "AB is a horizontal base of length 6. The perpendicular height from C to the x-axis is 4. Area = ½ × 6 × 4 = 12 square units."
+        },
+        {
+          "front": "A(−2; 1), B(4; 3) and C(2; 9) are consecutive vertices of parallelogram ABCD. Find D, then prove that the shape is a rectangle.",
+          "back": "For a parallelogram, D = A + C − B = (−4; 7). Gradient AB = 2/6 = 1/3 and gradient BC = 6/(−2) = −3. Their product is −1, so adjacent sides are perpendicular. A parallelogram with a right angle is a rectangle."
+        },
+        {
+          "front": "Find all points P on the x-axis that are 5 units from A(2; 4). Then find the midpoint of these two possible points.",
+          "back": "Let P = (x; 0). Distance squared gives (x − 2)² + (0 − 4)² = 25. Thus (x − 2)² = 9, so x = 5 or −1. Points are (5; 0) and (−1; 0); their midpoint is (2; 0)."
+        },
+        {
+          "front": "How can the fourth vertex of a parallelogram be found from consecutive A, B, C?",
+          "back": "D = A + C − B, applied separately to x and y coordinates."
+        },
+        {
+          "front": "What is the gradient of a vertical line?",
+          "back": "Undefined; its x-coordinate is constant."
+        },
+        {
+          "front": "How do you prove three non-vertical points are collinear?",
+          "back": "Show equal gradients between pairs, taking care that coincident points do not create an invalid division."
+        },
+        {
+          "front": "What is the distance from (x; y) to the x-axis?",
+          "back": "|y|."
         }
       ]
     },
@@ -1566,6 +1838,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-euclidean-geometry-measurement",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A closed solid consists of a cylinder of radius 3 cm and height 8 cm topped by a cone of the same radius and height 4 cm. Find its volume and exposed surface area in terms of π.",
+          "answer": "Cylinder volume = π(3²)(8) = 72π. Cone volume = (1/3)π(3²)(4) = 12π. Total = 84π cm³. Cone slant height = √(3² + 4²) = 5 cm. Exposed area = cylinder curved area 2π(3)(8) + cone curved area π(3)(5) + bottom base π(3²) = 48π + 15π + 9π = 72π cm². The shared circular face is internal and excluded."
+        },
+        {
+          "question": "In triangle ABC, D and E are midpoints of AB and AC. F and G are midpoints of AD and AE. If BC = 24 cm, find FG and justify both theorem applications.",
+          "answer": "In triangle ABC, the midpoint theorem gives DE ∥ BC and DE = BC/2 = 12 cm. In triangle ADE, F and G are midpoints of two sides, so FG ∥ DE and FG = DE/2 = 6 cm. Thus FG is one quarter of BC."
+        }
+      ],
       "cards": [
         {
           "front": "What does the midpoint theorem say?",
@@ -1602,6 +1884,30 @@
         {
           "front": "A cone has radius 3 cm and slant height 5 cm. Find its curved surface area and its total surface area in terms of π.",
           "back": "Curved area = πrl = π × 3 × 5 = 15π cm². Add the circular base πr² = 9π cm² for a total surface area of 24π cm²."
+        },
+        {
+          "front": "A closed solid consists of a cylinder of radius 3 cm and height 8 cm topped by a cone of the same radius and height 4 cm. Find its volume and exposed surface area in terms of π.",
+          "back": "Cylinder volume = π(3²)(8) = 72π. Cone volume = (1/3)π(3²)(4) = 12π. Total = 84π cm³. Cone slant height = √(3² + 4²) = 5 cm. Exposed area = cylinder curved area 2π(3)(8) + cone curved area π(3)(5) + bottom base π(3²) = 48π + 15π + 9π = 72π cm². The shared circular face is internal and excluded."
+        },
+        {
+          "front": "In triangle ABC, D and E are midpoints of AB and AC. F and G are midpoints of AD and AE. If BC = 24 cm, find FG and justify both theorem applications.",
+          "back": "In triangle ABC, the midpoint theorem gives DE ∥ BC and DE = BC/2 = 12 cm. In triangle ADE, F and G are midpoints of two sides, so FG ∥ DE and FG = DE/2 = 6 cm. Thus FG is one quarter of BC."
+        },
+        {
+          "front": "Does a shared internal face contribute to a composite solid’s exposed area?",
+          "back": "No. Only surfaces exposed to the outside are counted."
+        },
+        {
+          "front": "How is a cone’s slant height related to radius and vertical height?",
+          "back": "For a right cone, l² = r² + h²."
+        },
+        {
+          "front": "What proof condition must be checked before applying the midpoint theorem?",
+          "back": "The two specified points must be midpoints of two sides of the same triangle."
+        },
+        {
+          "front": "How do volume units change if all lengths are doubled?",
+          "back": "Volume becomes 2³ = 8 times as large."
         }
       ]
     },
@@ -1677,6 +1983,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "maths-statistics-data-handling",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "For scores 2, 4, 6, 8, 30, calculate the mean and median. Remove 30 and recalculate both. Explain which measure was affected more and why.",
+          "answer": "Original mean = 50/5 = 10 and median = 6. Without 30, mean = 20/4 = 5 and median = (4 + 6)/2 = 5. The mean changed by 5, while the median changed by 1. The high outlier affected the mean more because every value contributes directly to the total."
+        },
+        {
+          "question": "A grouped table has intervals [0;10), [10;20), [20;30) with frequencies 2, k, 4. Its estimated mean is 17.5. Find k and the modal class.",
+          "answer": "Using midpoints 5, 15, 25: estimated mean = (10 + 15k + 100)/(6 + k). Set equal to 17.5: 110 + 15k = 105 + 17.5k. Thus 5 = 2.5k and k = 2. Frequencies are 2, 2, 4, so the modal class is [20;30)."
+        }
+      ],
       "cards": [
         {
           "front": "What do centre and spread tell you?",
@@ -1713,6 +2029,30 @@
         {
           "front": "Team A and Team B have the same median score. Their IQRs are 4 and 10 respectively. Which has more consistent scores in the middle 50%?",
           "back": "Team A has the smaller IQR, so its middle 50% of scores are less spread out. It is more consistent by this measure; the equal medians do not reveal that difference."
+        },
+        {
+          "front": "For scores 2, 4, 6, 8, 30, calculate the mean and median. Remove 30 and recalculate both. Explain which measure was affected more and why.",
+          "back": "Original mean = 50/5 = 10 and median = 6. Without 30, mean = 20/4 = 5 and median = (4 + 6)/2 = 5. The mean changed by 5, while the median changed by 1. The high outlier affected the mean more because every value contributes directly to the total."
+        },
+        {
+          "front": "A grouped table has intervals [0;10), [10;20), [20;30) with frequencies 2, k, 4. Its estimated mean is 17.5. Find k and the modal class.",
+          "back": "Using midpoints 5, 15, 25: estimated mean = (10 + 15k + 100)/(6 + k). Set equal to 17.5: 110 + 15k = 105 + 17.5k. Thus 5 = 2.5k and k = 2. Frequencies are 2, 2, 4, so the modal class is [20;30)."
+        },
+        {
+          "front": "Why is a grouped mean an estimate?",
+          "back": "Individual values are replaced with class midpoints."
+        },
+        {
+          "front": "Which measure of centre is often less sensitive to one extreme outlier?",
+          "back": "The median, because it depends on ordered position rather than the sum of every value."
+        },
+        {
+          "front": "Can two data sets have the same median but different IQRs?",
+          "back": "Yes. The same centre does not imply the same spread."
+        },
+        {
+          "front": "What must be checked before finding a median from raw values?",
+          "back": "Sort the data and count whether the number of values is odd or even."
         }
       ]
     },
@@ -1781,6 +2121,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-advanced-algebra-binomial-expansion",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "The coefficient of x³ in (x + a)⁴ is 12. Find a, then the coefficient of x² and the constant term.",
+          "answer": "The expansion begins x⁴ + 4ax³ + 6a²x² + 4a³x + a⁴. Hence 4a = 12, so a = 3. The coefficient of x² is 6(3²) = 54 and the constant is 3⁴ = 81."
+        },
+        {
+          "question": "Simplify [1/(x − 1) − 1/(x + 1)]/[1/(x − 1) + 1/(x + 1)] and state every restriction from the original expression.",
+          "answer": "The inner numerator is 2/(x² − 1), and inner denominator is 2x/(x² − 1). Their ratio is 1/x. Original denominators exclude x = ±1, and the entire divisor must be non-zero, excluding x = 0. Final answer: 1/x for x ≠ −1, 0, 1."
+        }
+      ],
       "cards": [
         {
           "front": "How does the binomial pattern work?",
@@ -1817,6 +2167,30 @@
         {
           "front": "If (x + a)(x + b) = x² + 7x + 10 for all x, find the possible ordered pairs (a; b).",
           "back": "Compare coefficients: a + b = 7 and ab = 10. The numbers are 2 and 5, so the ordered pairs are (2; 5) and (5; 2)."
+        },
+        {
+          "front": "The coefficient of x³ in (x + a)⁴ is 12. Find a, then the coefficient of x² and the constant term.",
+          "back": "The expansion begins x⁴ + 4ax³ + 6a²x² + 4a³x + a⁴. Hence 4a = 12, so a = 3. The coefficient of x² is 6(3²) = 54 and the constant is 3⁴ = 81."
+        },
+        {
+          "front": "Simplify [1/(x − 1) − 1/(x + 1)]/[1/(x − 1) + 1/(x + 1)] and state every restriction from the original expression.",
+          "back": "The inner numerator is 2/(x² − 1), and inner denominator is 2x/(x² − 1). Their ratio is 1/x. Original denominators exclude x = ±1, and the entire divisor must be non-zero, excluding x = 0. Final answer: 1/x for x ≠ −1, 0, 1."
+        },
+        {
+          "front": "What is the coefficient of a²b² in (a + b)⁴?",
+          "back": "6."
+        },
+        {
+          "front": "Why can a compound fraction have more restrictions than its simplified form?",
+          "back": "The original internal denominators and the entire divisor must all be defined and non-zero where required."
+        },
+        {
+          "front": "What identifies corresponding terms when comparing coefficients?",
+          "back": "The same power of the variable on each side of an identity."
+        },
+        {
+          "front": "How many terms occur before collecting in the standard binomial expansion (a + b)ⁿ?",
+          "back": "n + 1, for a non-negative integer n."
         }
       ]
     },
@@ -1892,6 +2266,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-polynomials-nature-of-roots",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Factorise f(x) = x³ − kx² − 4x + 4k. Determine the real k for which f(x) = 0 has three distinct real roots.",
+          "answer": "Group terms: x²(x − k) − 4(x − k) = (x − k)(x² − 4) = (x − k)(x − 2)(x + 2). Roots are k, 2 and −2. All are real for real k, and they are distinct exactly when k ≠ 2 and k ≠ −2."
+        },
+        {
+          "question": "Determine all real k for which x² − 2kx + k + 2 = 0 has real roots, and identify the values giving equal roots.",
+          "answer": "Δ = (−2k)² − 4(k + 2) = 4(k² − k − 2) = 4(k − 2)(k + 1). Real roots require Δ ≥ 0, so k ≤ −1 or k ≥ 2. Equal roots occur at Δ = 0: k = −1 or 2."
+        }
+      ],
       "cards": [
         {
           "front": "What does the factor theorem say?",
@@ -1928,6 +2312,30 @@
         {
           "front": "Solve x² − 4x − 1 = 0 in exact surd form.",
           "back": "Use the quadratic formula: x = [4 ± √(16 + 4)]/2 = [4 ± √20]/2 = 2 ± √5."
+        },
+        {
+          "front": "Factorise f(x) = x³ − kx² − 4x + 4k. Determine the real k for which f(x) = 0 has three distinct real roots.",
+          "back": "Group terms: x²(x − k) − 4(x − k) = (x − k)(x² − 4) = (x − k)(x − 2)(x + 2). Roots are k, 2 and −2. All are real for real k, and they are distinct exactly when k ≠ 2 and k ≠ −2."
+        },
+        {
+          "front": "Determine all real k for which x² − 2kx + k + 2 = 0 has real roots, and identify the values giving equal roots.",
+          "back": "Δ = (−2k)² − 4(k + 2) = 4(k² − k − 2) = 4(k − 2)(k + 1). Real roots require Δ ≥ 0, so k ≤ −1 or k ≥ 2. Equal roots occur at Δ = 0: k = −1 or 2."
+        },
+        {
+          "front": "What does a repeated polynomial factor tell you?",
+          "back": "Its corresponding root has multiplicity greater than one."
+        },
+        {
+          "front": "For Δ > 0, what type of roots does a real quadratic have?",
+          "back": "Two distinct real roots; they need not be rational."
+        },
+        {
+          "front": "What does f(k) represent in the remainder theorem?",
+          "back": "The remainder on division by x − k."
+        },
+        {
+          "front": "What must be true of a before using a quadratic discriminant?",
+          "back": "The coefficient a of x² must be non-zero."
         }
       ]
     },
@@ -2010,6 +2418,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-functions-modulus-area-estimates",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Solve |x − 1| = 2x + 1 by considering signs and explain why every algebraic candidate is not automatically valid.",
+          "answer": "The right side must be non-negative, so x ≥ −1/2. If x ≥ 1, then x − 1 = 2x + 1 gives x = −2, inconsistent with this case and the sign restriction. If x < 1, then 1 − x = 2x + 1 gives x = 0, which satisfies the original equation. Only x = 0 is valid."
+        },
+        {
+          "question": "Use left rectangles of width 0.5 for y = 2 − x on [0;3]. Calculate both the signed-area estimate and the estimate of total geometric area.",
+          "answer": "Left endpoints are 0, 0.5, 1, 1.5, 2, 2.5 with heights 2, 1.5, 1, 0.5, 0, −0.5. Signed estimate = 0.5(4.5) = 2.25 square units. For geometric area add absolute rectangle heights: 0.5(5.5) = 2.75 square units. These are estimates, and the negative section contributes positively only to total geometric area."
+        }
+      ],
       "cards": [
         {
           "front": "How does absolute value work?",
@@ -2046,6 +2464,30 @@
         {
           "front": "Explain how the graph of g(x) = |f(x)| is obtained from the graph of f.",
           "back": "Keep portions with f(x) ≥ 0 unchanged. Reflect every portion below the x-axis into the upper half-plane, so negative y-values become positive. The x-intercepts remain fixed."
+        },
+        {
+          "front": "Solve |x − 1| = 2x + 1 by considering signs and explain why every algebraic candidate is not automatically valid.",
+          "back": "The right side must be non-negative, so x ≥ −1/2. If x ≥ 1, then x − 1 = 2x + 1 gives x = −2, inconsistent with this case and the sign restriction. If x < 1, then 1 − x = 2x + 1 gives x = 0, which satisfies the original equation. Only x = 0 is valid."
+        },
+        {
+          "front": "Use left rectangles of width 0.5 for y = 2 − x on [0;3]. Calculate both the signed-area estimate and the estimate of total geometric area.",
+          "back": "Left endpoints are 0, 0.5, 1, 1.5, 2, 2.5 with heights 2, 1.5, 1, 0.5, 0, −0.5. Signed estimate = 0.5(4.5) = 2.25 square units. For geometric area add absolute rectangle heights: 0.5(5.5) = 2.75 square units. These are estimates, and the negative section contributes positively only to total geometric area."
+        },
+        {
+          "front": "What sign must the other side of an absolute-value equation have?",
+          "back": "It must be non-negative."
+        },
+        {
+          "front": "How does |f(x)| change the part of f below the x-axis?",
+          "back": "It reflects that part upward while leaving non-negative outputs unchanged."
+        },
+        {
+          "front": "How is total geometric area different from signed area?",
+          "back": "Areas below the x-axis are counted positively for geometric area and negatively for signed area."
+        },
+        {
+          "front": "For an increasing positive function, are left-endpoint rectangles an overestimate?",
+          "back": "No. They give an underestimate over the interval."
         }
       ]
     },
@@ -2114,6 +2556,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-conditional-probability-tree-diagrams",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Box A is chosen with probability 0.4 and B with probability 0.6. A contains 70% red counters and B 20%. One counter is drawn. Find P(red) and P(A | red).",
+          "answer": "P(red) = 0.4(0.7) + 0.6(0.2) = 0.28 + 0.12 = 0.40. P(A and red) = 0.28. Therefore P(A | red) = 0.28/0.40 = 0.70."
+        },
+        {
+          "question": "One box is chosen: A with probability 0.4, B with 0.6. Red proportions are 0.7 in A and 0.2 in B. Two draws are made with replacement from that same chosen box. Find P(both red) and explain why squaring the overall single-draw red probability is wrong.",
+          "answer": "Condition on the box: P(both red) = 0.4(0.7²) + 0.6(0.2²) = 0.196 + 0.024 = 0.22. Overall P(red on one draw) = 0.40, whose square is 0.16. Although draws are independent within each box, sharing the same randomly chosen box makes the two draws dependent when the box is unknown."
+        }
+      ],
       "cards": [
         {
           "front": "What changes with conditional probability?",
@@ -2150,6 +2602,30 @@
         {
           "front": "A factory uses machine A for 60% of items and B for 40%. Defect rates are 2% for A and 5% for B. Find the probability a defective item came from B.",
           "back": "P(B and defective) = 0.40 × 0.05 = 0.020. P(defective) = 0.60(0.02) + 0.40(0.05) = 0.032. Therefore P(B | defective) = 0.020/0.032 = 5/8 = 62.5%."
+        },
+        {
+          "front": "Box A is chosen with probability 0.4 and B with probability 0.6. A contains 70% red counters and B 20%. One counter is drawn. Find P(red) and P(A | red).",
+          "back": "P(red) = 0.4(0.7) + 0.6(0.2) = 0.28 + 0.12 = 0.40. P(A and red) = 0.28. Therefore P(A | red) = 0.28/0.40 = 0.70."
+        },
+        {
+          "front": "One box is chosen: A with probability 0.4, B with 0.6. Red proportions are 0.7 in A and 0.2 in B. Two draws are made with replacement from that same chosen box. Find P(both red) and explain why squaring the overall single-draw red probability is wrong.",
+          "back": "Condition on the box: P(both red) = 0.4(0.7²) + 0.6(0.2²) = 0.196 + 0.024 = 0.22. Overall P(red on one draw) = 0.40, whose square is 0.16. Although draws are independent within each box, sharing the same randomly chosen box makes the two draws dependent when the box is unknown."
+        },
+        {
+          "front": "What operation combines probabilities along one tree path?",
+          "back": "Multiplication, using the correct conditional branch probabilities."
+        },
+        {
+          "front": "What operation combines separate disjoint successful paths?",
+          "back": "Addition."
+        },
+        {
+          "front": "Why does “without replacement” change a second-draw probability?",
+          "back": "Both the available counts and total can change after the first draw."
+        },
+        {
+          "front": "What condition is needed for P(A | B) to be defined?",
+          "back": "P(B) > 0."
         }
       ]
     },
@@ -2211,6 +2687,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-counting-permutations",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Six distinct learners stand in a row. C must be first, and A and B must stand together. How many arrangements are possible?",
+          "answer": "Fix C in the first place. Treat A and B as a block among the five remaining learners, giving four objects to arrange: 4! ways. A and B have 2 orders internally. Total = 4! × 2 = 48."
+        },
+        {
+          "question": "A code has three different letters A–Z followed by two different digits 0–9. The last digit must be even, and a zero in either digit position is allowed. How many codes can be made?",
+          "answer": "Letters: 26 × 25 × 24 choices. Choose the last digit first: 5 even choices, including zero. The other digit then has 9 choices. Total = 26 × 25 × 24 × 5 × 9 = 702 000."
+        }
+      ],
       "cards": [
         {
           "front": "When do you multiply choices?",
@@ -2247,6 +2733,30 @@
         {
           "front": "Three girls and three boys, all distinct, sit in a row alternating by group. How many arrangements are possible?",
           "back": "There are two valid patterns: GBGBGB and BGBGBG. For either pattern, arrange the girls in 3! ways and boys in 3! ways. Total = 2 × 3! × 3! = 72."
+        },
+        {
+          "front": "Six distinct learners stand in a row. C must be first, and A and B must stand together. How many arrangements are possible?",
+          "back": "Fix C in the first place. Treat A and B as a block among the five remaining learners, giving four objects to arrange: 4! ways. A and B have 2 orders internally. Total = 4! × 2 = 48."
+        },
+        {
+          "front": "A code has three different letters A–Z followed by two different digits 0–9. The last digit must be even, and a zero in either digit position is allowed. How many codes can be made?",
+          "back": "Letters: 26 × 25 × 24 choices. Choose the last digit first: 5 even choices, including zero. The other digit then has 9 choices. Total = 26 × 25 × 24 × 5 × 9 = 702 000."
+        },
+        {
+          "front": "Why count the most restricted position first?",
+          "back": "It avoids overlooking a condition or double-counting options later."
+        },
+        {
+          "front": "How do you handle two distinct people required to be adjacent?",
+          "back": "Treat them as one block, then multiply by their 2 internal orders."
+        },
+        {
+          "front": "Does a leading zero count in a PIN if allowed?",
+          "back": "Yes. A PIN is a code, not necessarily a multi-digit number."
+        },
+        {
+          "front": "What is 5!?",
+          "back": "5 × 4 × 3 × 2 × 1 = 120."
         }
       ]
     },
@@ -2315,6 +2825,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-independence-multi-way-data",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Among 100 learners, 40 belong to A and 50 to B. Their overlap is k. Find k if membership is independent. Then find P(exactly one) and P(not A | B).",
+          "answer": "Independence requires k/100 = (40/100)(50/100) = 0.20, so k = 20. Exactly one count = (40 − 20) + (50 − 20) = 50, probability 0.5. In B, 30 of 50 are not in A, so P(not A | B) = 30/50 = 0.6."
+        },
+        {
+          "question": "P(A) = 0.6, P(B) = 0.5 and P(neither) = 0.2. Determine P(A ∩ B), test independence, and explain whether the events are mutually exclusive.",
+          "answer": "P(A ∪ B) = 1 − 0.2 = 0.8. Hence P(A ∩ B) = 0.6 + 0.5 − 0.8 = 0.3. This equals 0.6 × 0.5, so the events are independent. They are not mutually exclusive because their overlap is positive."
+        }
+      ],
       "cards": [
         {
           "front": "What does independence mean?",
@@ -2351,6 +2871,30 @@
         {
           "front": "Two events have probabilities 0.2 and 0.5 and are mutually exclusive. Can they be independent? Justify numerically.",
           "back": "Mutual exclusivity gives P(A ∩ B) = 0. But P(A)P(B) = 0.2 × 0.5 = 0.1. These differ, so the events are not independent."
+        },
+        {
+          "front": "Among 100 learners, 40 belong to A and 50 to B. Their overlap is k. Find k if membership is independent. Then find P(exactly one) and P(not A | B).",
+          "back": "Independence requires k/100 = (40/100)(50/100) = 0.20, so k = 20. Exactly one count = (40 − 20) + (50 − 20) = 50, probability 0.5. In B, 30 of 50 are not in A, so P(not A | B) = 30/50 = 0.6."
+        },
+        {
+          "front": "P(A) = 0.6, P(B) = 0.5 and P(neither) = 0.2. Determine P(A ∩ B), test independence, and explain whether the events are mutually exclusive.",
+          "back": "P(A ∪ B) = 1 − 0.2 = 0.8. Hence P(A ∩ B) = 0.6 + 0.5 − 0.8 = 0.3. This equals 0.6 × 0.5, so the events are independent. They are not mutually exclusive because their overlap is positive."
+        },
+        {
+          "front": "What equation tests independence?",
+          "back": "P(A ∩ B) = P(A)P(B)."
+        },
+        {
+          "front": "Can events with positive probabilities be both independent and mutually exclusive?",
+          "back": "No. Their product is positive but a mutually exclusive overlap is zero."
+        },
+        {
+          "front": "What is the sample space for a conditional table question?",
+          "back": "Only the row, column or group specified by the condition."
+        },
+        {
+          "front": "If A and B are independent with P(B) > 0, what is P(A | B)?",
+          "back": "P(A)."
         }
       ]
     },
@@ -2419,6 +2963,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-complex-numbers-the-argand-plane",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Let z = 1 + 2i. Find z² and z times its conjugate. Hence write 1/z in the form a + bi.",
+          "answer": "z² = 1 + 4i + 4i² = −3 + 4i. The conjugate is 1 − 2i, and z times its conjugate = 1² + 2² = 5. Thus 1/z = (1 − 2i)/5 = 1/5 − (2/5)i."
+        },
+        {
+          "question": "Find real a and b if (a + bi)/(1 − i) = 2 + 3i. Plot the resulting complex number by stating its Argand coordinates, and calculate its modulus.",
+          "answer": "Multiply by 1 − i: a + bi = (2 + 3i)(1 − i) = 5 + i. So a = 5, b = 1, and Argand coordinates are (5; 1). Its modulus is √(5² + 1²) = √26."
+        }
+      ],
       "cards": [
         {
           "front": "What is a complex number?",
@@ -2455,6 +3009,30 @@
         {
           "front": "Solve (2 + i)(a + bi) = 3 + 4i for real a and b.",
           "back": "Expand: (2a − b) + (a + 2b)i = 3 + 4i. Equate parts: 2a − b = 3 and a + 2b = 4. Substituting b = 2a − 3 gives 5a = 10, so a = 2 and b = 1."
+        },
+        {
+          "front": "Let z = 1 + 2i. Find z² and z times its conjugate. Hence write 1/z in the form a + bi.",
+          "back": "z² = 1 + 4i + 4i² = −3 + 4i. The conjugate is 1 − 2i, and z times its conjugate = 1² + 2² = 5. Thus 1/z = (1 − 2i)/5 = 1/5 − (2/5)i."
+        },
+        {
+          "front": "Find real a and b if (a + bi)/(1 − i) = 2 + 3i. Plot the resulting complex number by stating its Argand coordinates, and calculate its modulus.",
+          "back": "Multiply by 1 − i: a + bi = (2 + 3i)(1 − i) = 5 + i. So a = 5, b = 1, and Argand coordinates are (5; 1). Its modulus is √(5² + 1²) = √26."
+        },
+        {
+          "front": "What is i⁴?",
+          "back": "1, because i² = −1 and (−1)² = 1."
+        },
+        {
+          "front": "What is the conjugate of −2 − 5i?",
+          "back": "−2 + 5i."
+        },
+        {
+          "front": "Where is −3 + 2i on the Argand plane?",
+          "back": "At (−3; 2), in quadrant II."
+        },
+        {
+          "front": "Why does multiplying conjugates give a real number?",
+          "back": "(a + bi)(a − bi) = a² + b²; the imaginary terms cancel."
         }
       ]
     },
@@ -2516,6 +3094,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "ap-standard-deviation-statistical-intervals",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "For a data set, [18;42] is the interval within two standard deviations of the mean. Every observation is then transformed by y = 3x − 5. Find the original mean and standard deviation, and the transformed one-standard-deviation interval.",
+          "answer": "Original μ = (18 + 42)/2 = 30. Half-width = 12 = 2σ, so σ = 6. Under y = 3x − 5, μ becomes 3(30) − 5 = 85 and σ becomes 3(6) = 18. The transformed one-standard-deviation interval is [67;103]."
+        },
+        {
+          "question": "Two data sets have mean 50. A has standard deviation 5 and B has standard deviation 10. A report says “95% of both sets must lie from 40 to 60”. Evaluate the claim, including what could be said if both were approximately normal.",
+          "answer": "The claim cannot be guaranteed without distribution information. For A, [40;60] is μ ± 2σ, so an approximately normal model suggests about 95%. For B it is μ ± 1σ, suggesting about 68% under that model. Even for a normal model these percentages are approximate descriptions, not a requirement for every finite sample."
+        }
+      ],
       "cards": [
         {
           "front": "What does standard deviation measure?",
@@ -2552,6 +3140,30 @@
         {
           "front": "Two classes have a mean score of 65. Their standard deviations are 4 and 12. Which class has scores more closely clustered around its mean?",
           "back": "The class with standard deviation 4 has less spread around its mean. The equal means show equal average scores but do not imply equal consistency."
+        },
+        {
+          "front": "For a data set, [18;42] is the interval within two standard deviations of the mean. Every observation is then transformed by y = 3x − 5. Find the original mean and standard deviation, and the transformed one-standard-deviation interval.",
+          "back": "Original μ = (18 + 42)/2 = 30. Half-width = 12 = 2σ, so σ = 6. Under y = 3x − 5, μ becomes 3(30) − 5 = 85 and σ becomes 3(6) = 18. The transformed one-standard-deviation interval is [67;103]."
+        },
+        {
+          "front": "Two data sets have mean 50. A has standard deviation 5 and B has standard deviation 10. A report says “95% of both sets must lie from 40 to 60”. Evaluate the claim, including what could be said if both were approximately normal.",
+          "back": "The claim cannot be guaranteed without distribution information. For A, [40;60] is μ ± 2σ, so an approximately normal model suggests about 95%. For B it is μ ± 1σ, suggesting about 68% under that model. Even for a normal model these percentages are approximate descriptions, not a requirement for every finite sample."
+        },
+        {
+          "front": "What happens to standard deviation when a constant is added to every value?",
+          "back": "It stays the same; distances from the mean are unchanged."
+        },
+        {
+          "front": "What happens to standard deviation when every value is multiplied by c?",
+          "back": "It is multiplied by |c|."
+        },
+        {
+          "front": "How do you recover μ from a symmetric interval [L;U]?",
+          "back": "μ = (L + U)/2."
+        },
+        {
+          "front": "Does the 68–95–99.7 rule apply to every distribution?",
+          "back": "No. It is associated with a normal-distribution model."
         }
       ]
     },
@@ -2620,6 +3232,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-waves-sound-superposition",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A wave source makes 30 oscillations in 5 s. A crest travels 9 m in 3 s. Find frequency, period and wavelength. If the frequency doubles in the same medium at unchanged speed, find the new wavelength.",
+          "answer": "f = 30/5 = 6 Hz. T = 1/6 s ≈ 0.167 s. Wave speed v = 9/3 = 3 m/s. λ = v/f = 3/6 = 0.5 m. At 12 Hz and the same speed, λ = 3/12 = 0.25 m: doubling frequency halves wavelength."
+        },
+        {
+          "question": "Two pulses of displacements +6 cm and −4 cm overlap completely on an ideal string. Find their resultant displacement. Explain whether the pulses have permanently lost amplitude after separating.",
+          "answer": "At overlap, algebraic superposition gives +6 − 4 = +2 cm, a partial destructive interference. In the ideal model the pulses continue after passing with their original amplitudes and shapes. A temporary reduced displacement does not mean the pulses were permanently destroyed."
+        }
+      ],
       "cards": [
         {
           "front": "What do amplitude and wavelength measure?",
@@ -2656,6 +3278,30 @@
         {
           "front": "Two sounds have the same frequency but different amplitudes. Compare their pitch and loudness.",
           "back": "They have the same pitch because their frequencies are equal. The greater-amplitude sound is generally louder, assuming the same listening conditions."
+        },
+        {
+          "front": "A wave source makes 30 oscillations in 5 s. A crest travels 9 m in 3 s. Find frequency, period and wavelength. If the frequency doubles in the same medium at unchanged speed, find the new wavelength.",
+          "back": "f = 30/5 = 6 Hz. T = 1/6 s ≈ 0.167 s. Wave speed v = 9/3 = 3 m/s. λ = v/f = 3/6 = 0.5 m. At 12 Hz and the same speed, λ = 3/12 = 0.25 m: doubling frequency halves wavelength."
+        },
+        {
+          "front": "Two pulses of displacements +6 cm and −4 cm overlap completely on an ideal string. Find their resultant displacement. Explain whether the pulses have permanently lost amplitude after separating.",
+          "back": "At overlap, algebraic superposition gives +6 − 4 = +2 cm, a partial destructive interference. In the ideal model the pulses continue after passing with their original amplitudes and shapes. A temporary reduced displacement does not mean the pulses were permanently destroyed."
+        },
+        {
+          "front": "How are period and frequency related?",
+          "back": "T = 1/f and f = 1/T."
+        },
+        {
+          "front": "What remains the same for a wave entering a new medium from the same source?",
+          "back": "Its frequency; speed and wavelength can change."
+        },
+        {
+          "front": "What makes two points on a periodic wave in phase?",
+          "back": "They are at the same stage of oscillation, separated by an integer number of wavelengths."
+        },
+        {
+          "front": "Does a sound wave carry particles all the way from source to listener?",
+          "back": "No. Particles oscillate locally while the disturbance transfers energy through the medium."
         }
       ]
     },
@@ -2717,6 +3363,16 @@
       "tip": "Convert nm to metres before substitution. The supplied 2024 paper calls 7.8 nm visible light; that wavelength is outside the visible spectrum.",
       "id": "physical-electromagnetic-radiation",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A photon has energy 3.315 × 10⁻¹⁹ J. Use h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s to find its frequency and wavelength in nm. Place it broadly in the EM spectrum.",
+          "answer": "f = E/h = 5.00 × 10¹⁴ Hz. λ = c/f = 6.00 × 10⁻⁷ m = 600 nm. This is in the visible region of the spectrum."
+        },
+        {
+          "question": "Radiation A has wavelength 200 nm and B has wavelength 800 nm in vacuum. Compare their frequencies and photon energies as ratios. Explain why a brighter beam of B does not change the energy of each B photon.",
+          "answer": "Since f = c/λ, fA/fB = λB/λA = 800/200 = 4. Since E = hf, EA/EB = 4 as well. Greater beam brightness can mean more photons arriving per unit time/area, but each photon’s energy is set by its frequency, not beam brightness."
+        }
+      ],
       "cards": [
         {
           "front": "How are EM waves different?",
@@ -2753,6 +3409,30 @@
         {
           "front": "A photon has energy 1.326 × 10⁻¹⁹ J. Find its frequency using h = 6.63 × 10⁻³⁴ J·s.",
           "back": "E = hf, so f = E/h = (1.326 × 10⁻¹⁹)/(6.63 × 10⁻³⁴) = 2.00 × 10¹⁴ Hz."
+        },
+        {
+          "front": "A photon has energy 3.315 × 10⁻¹⁹ J. Use h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s to find its frequency and wavelength in nm. Place it broadly in the EM spectrum.",
+          "back": "f = E/h = 5.00 × 10¹⁴ Hz. λ = c/f = 6.00 × 10⁻⁷ m = 600 nm. This is in the visible region of the spectrum."
+        },
+        {
+          "front": "Radiation A has wavelength 200 nm and B has wavelength 800 nm in vacuum. Compare their frequencies and photon energies as ratios. Explain why a brighter beam of B does not change the energy of each B photon.",
+          "back": "Since f = c/λ, fA/fB = λB/λA = 800/200 = 4. Since E = hf, EA/EB = 4 as well. Greater beam brightness can mean more photons arriving per unit time/area, but each photon’s energy is set by its frequency, not beam brightness."
+        },
+        {
+          "front": "How do you convert nm to m?",
+          "back": "Multiply by 10⁻⁹."
+        },
+        {
+          "front": "Which has greater photon energy: shorter or longer wavelength in vacuum?",
+          "back": "Shorter wavelength, because E = hc/λ."
+        },
+        {
+          "front": "Can EM radiation travel through a vacuum?",
+          "back": "Yes; unlike sound, it does not require a material medium."
+        },
+        {
+          "front": "What does E = hf describe?",
+          "back": "The energy per photon of frequency f, not automatically the total energy of a whole beam."
         }
       ]
     },
@@ -2821,6 +3501,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-magnetism-electrostatics",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Identical conducting spheres A and B have +8 nC and −2 nC. They touch and separate. B then touches an identical neutral sphere C. Find the final charge on each and check total charge conservation.",
+          "answer": "Initially the total is +6 nC. After A and B touch, each has +3 nC. B and neutral C then share B’s +3 nC equally, so B = +1.5 nC and C = +1.5 nC. A remains +3 nC. Final total = 3 + 1.5 + 1.5 = +6 nC."
+        },
+        {
+          "question": "An initially neutral object ends with charge +6.4 × 10⁻¹⁹ C. Determine how many electrons were transferred and in which direction. Explain why a nearby neutral conductor can still be attracted to it without touching.",
+          "answer": "n = |Q|/e = (6.4 × 10⁻¹⁹)/(1.6 × 10⁻¹⁹) = 4. Four electrons left the object. A nearby conductor can polarise: electrons shift toward the positive object, placing opposite charge closer than like charge. The attraction can dominate while the conductor’s total charge remains zero."
+        }
+      ],
       "cards": [
         {
           "front": "What does a field show?",
@@ -2857,6 +3547,30 @@
         {
           "front": "A charged rod attracts a neutral metal sphere without touching it. Explain how this can occur.",
           "back": "The rod causes charges in the conducting sphere to redistribute. Opposite charge is nearer the rod and like charge is farther away. The closer attractive interaction can dominate, giving attraction while the sphere remains neutral overall."
+        },
+        {
+          "front": "Identical conducting spheres A and B have +8 nC and −2 nC. They touch and separate. B then touches an identical neutral sphere C. Find the final charge on each and check total charge conservation.",
+          "back": "Initially the total is +6 nC. After A and B touch, each has +3 nC. B and neutral C then share B’s +3 nC equally, so B = +1.5 nC and C = +1.5 nC. A remains +3 nC. Final total = 3 + 1.5 + 1.5 = +6 nC."
+        },
+        {
+          "front": "An initially neutral object ends with charge +6.4 × 10⁻¹⁹ C. Determine how many electrons were transferred and in which direction. Explain why a nearby neutral conductor can still be attracted to it without touching.",
+          "back": "n = |Q|/e = (6.4 × 10⁻¹⁹)/(1.6 × 10⁻¹⁹) = 4. Four electrons left the object. A nearby conductor can polarise: electrons shift toward the positive object, placing opposite charge closer than like charge. The attraction can dominate while the conductor’s total charge remains zero."
+        },
+        {
+          "front": "What moves in ordinary charging of solid objects: protons or electrons?",
+          "back": "Electrons move; protons normally remain bound in nuclei."
+        },
+        {
+          "front": "What does a negative net charge indicate?",
+          "back": "An excess of electrons compared with the neutral state."
+        },
+        {
+          "front": "What direction do external magnetic field lines take around a bar magnet?",
+          "back": "From the north pole to the south pole outside the magnet."
+        },
+        {
+          "front": "What does a denser pattern of magnetic field lines represent?",
+          "back": "A stronger magnetic field in the diagram’s model."
         }
       ]
     },
@@ -2918,6 +3632,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-electric-circuits",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A 4 Ω resistor is in series with a parallel combination of 6 Ω and 3 Ω. The supply is 12 V. Find total current, voltage across the parallel part, and current through each branch.",
+          "answer": "Parallel resistance: 1/Rp = 1/6 + 1/3 = 1/2, so Rp = 2 Ω. Total R = 4 + 2 = 6 Ω and total I = 12/6 = 2 A. Series resistor drop = 2 × 4 = 8 V, leaving 4 V across each parallel branch. Branch currents are 4/6 = 2/3 A and 4/3 A; they add to 2 A."
+        },
+        {
+          "question": "Two equal resistors are connected in parallel across a 9 V battery. The total current is 3 A. Find each resistor’s resistance and the charge through one branch in 2 minutes.",
+          "answer": "Equivalent resistance = 9/3 = 3 Ω. For two equal parallel resistors, each R = 2 × 3 = 6 Ω. Each branch current = 9/6 = 1.5 A. Convert 2 min to 120 s: branch charge Q = It = 1.5 × 120 = 180 C."
+        }
+      ],
       "cards": [
         {
           "front": "What are current, voltage and resistance?",
@@ -2954,6 +3678,30 @@
         {
           "front": "A resistor carries 0.3 A when the potential difference is 9 V. Calculate its resistance and the current at 6 V, assuming constant resistance.",
           "back": "R = V/I = 9/0.3 = 30 Ω. At 6 V, I = 6/30 = 0.2 A. This assumes conditions such as temperature keep the resistance unchanged."
+        },
+        {
+          "front": "A 4 Ω resistor is in series with a parallel combination of 6 Ω and 3 Ω. The supply is 12 V. Find total current, voltage across the parallel part, and current through each branch.",
+          "back": "Parallel resistance: 1/Rp = 1/6 + 1/3 = 1/2, so Rp = 2 Ω. Total R = 4 + 2 = 6 Ω and total I = 12/6 = 2 A. Series resistor drop = 2 × 4 = 8 V, leaving 4 V across each parallel branch. Branch currents are 4/6 = 2/3 A and 4/3 A; they add to 2 A."
+        },
+        {
+          "front": "Two equal resistors are connected in parallel across a 9 V battery. The total current is 3 A. Find each resistor’s resistance and the charge through one branch in 2 minutes.",
+          "back": "Equivalent resistance = 9/3 = 3 Ω. For two equal parallel resistors, each R = 2 × 3 = 6 Ω. Each branch current = 9/6 = 1.5 A. Convert 2 min to 120 s: branch charge Q = It = 1.5 × 120 = 180 C."
+        },
+        {
+          "front": "What is shared equally across parallel branches?",
+          "back": "Potential difference; branch currents need not be equal."
+        },
+        {
+          "front": "Where is an ammeter connected?",
+          "back": "In series with the current being measured."
+        },
+        {
+          "front": "Where is a voltmeter connected?",
+          "back": "Across the component, in parallel."
+        },
+        {
+          "front": "What is the unit of electric charge?",
+          "back": "The coulomb (C); Q = It when current is constant."
         }
       ]
     },
@@ -3022,6 +3770,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-vectors-motion-graphs",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A velocity-time graph rises linearly from 0 to 8 m/s in 4 s, stays at 8 m/s for 3 s, then falls linearly to −4 m/s over 6 s. Find total displacement, distance and average velocity over all 13 s.",
+          "answer": "First area = ½(4)(8) = 16 m; constant section = 3(8) = 24 m. Final acceleration is (−4 − 8)/6 = −2 m/s², so velocity reaches zero after 4 s of that section. Its positive area is ½(4)(8) = 16 m and negative area is −½(2)(4) = −4 m. Displacement = 16 + 24 + 16 − 4 = 52 m. Distance = 16 + 24 + 16 + 4 = 60 m. Average velocity = 52/13 = 4 m/s in the positive direction."
+        },
+        {
+          "question": "An object travels 12 m north, then 5 m east in 10 s total. Find average speed and average velocity, giving a direction for the latter.",
+          "answer": "Distance = 12 + 5 = 17 m, so average speed = 1.7 m/s. Displacement magnitude = √(12² + 5²) = 13 m. Average velocity magnitude = 13/10 = 1.3 m/s, at tan⁻¹(5/12) ≈ 22.62° east of north."
+        }
+      ],
       "cards": [
         {
           "front": "What makes a quantity a vector?",
@@ -3058,6 +3816,30 @@
         {
           "front": "Forces of 9 N east and 12 N north act together. State the magnitude of the resultant and of the equilibrant.",
           "back": "The forces are perpendicular. Resultant magnitude = √(9² + 12²) = √225 = 15 N. The equilibrant also has magnitude 15 N but points exactly opposite to the resultant."
+        },
+        {
+          "front": "A velocity-time graph rises linearly from 0 to 8 m/s in 4 s, stays at 8 m/s for 3 s, then falls linearly to −4 m/s over 6 s. Find total displacement, distance and average velocity over all 13 s.",
+          "back": "First area = ½(4)(8) = 16 m; constant section = 3(8) = 24 m. Final acceleration is (−4 − 8)/6 = −2 m/s², so velocity reaches zero after 4 s of that section. Its positive area is ½(4)(8) = 16 m and negative area is −½(2)(4) = −4 m. Displacement = 16 + 24 + 16 − 4 = 52 m. Distance = 16 + 24 + 16 + 4 = 60 m. Average velocity = 52/13 = 4 m/s in the positive direction."
+        },
+        {
+          "front": "An object travels 12 m north, then 5 m east in 10 s total. Find average speed and average velocity, giving a direction for the latter.",
+          "back": "Distance = 12 + 5 = 17 m, so average speed = 1.7 m/s. Displacement magnitude = √(12² + 5²) = 13 m. Average velocity magnitude = 13/10 = 1.3 m/s, at tan⁻¹(5/12) ≈ 22.62° east of north."
+        },
+        {
+          "front": "What does signed area under a velocity-time graph give?",
+          "back": "Displacement."
+        },
+        {
+          "front": "How do you get distance from a velocity-time graph?",
+          "back": "Add the absolute areas above and below the time axis."
+        },
+        {
+          "front": "Can negative velocity occur with positive acceleration?",
+          "back": "Yes. The object can move in the negative direction while slowing down."
+        },
+        {
+          "front": "What is an equilibrant relative to a resultant?",
+          "back": "A vector of equal magnitude and opposite direction."
         }
       ]
     },
@@ -3119,6 +3901,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-energy-conservation",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A 2 kg object starts from rest 5 m above the ground. It loses 18 J of mechanical energy to friction before reaching the ground. Find its speed there, using g = 9.8 m/s².",
+          "answer": "Initial Eₚ = mgh = 2 × 9.8 × 5 = 98 J. Final kinetic energy = 98 − 18 = 80 J. Since Eₖ = ½(2)v² = v², v = √80 = 4√5 ≈ 8.94 m/s. Mechanical energy decreases, while total energy including thermal transfers is conserved."
+        },
+        {
+          "question": "Object A has mass m and speed v. Object B has half A’s mass. Find B’s speed if it must have the same kinetic energy as A. Then compare B’s energy with A’s if it instead moves at 2v.",
+          "answer": "Equal energy requires ½(m/2)u² = ½mv², so u² = 2v² and u = √2 v for speed. At 2v, B’s kinetic energy is ½(m/2)(2v)² = mv², which is twice A’s ½mv²."
+        }
+      ],
       "cards": [
         {
           "front": "Where is mechanical energy stored?",
@@ -3155,6 +3947,30 @@
         {
           "front": "A system starts with 200 J of mechanical energy and loses 35 J of mechanical energy to friction. Find its final mechanical energy and explain what happened to the missing amount.",
           "back": "Final mechanical energy = 200 − 35 = 165 J. The 35 J was transferred mainly into thermal energy, so total energy is conserved even though mechanical energy is reduced."
+        },
+        {
+          "front": "A 2 kg object starts from rest 5 m above the ground. It loses 18 J of mechanical energy to friction before reaching the ground. Find its speed there, using g = 9.8 m/s².",
+          "back": "Initial Eₚ = mgh = 2 × 9.8 × 5 = 98 J. Final kinetic energy = 98 − 18 = 80 J. Since Eₖ = ½(2)v² = v², v = √80 = 4√5 ≈ 8.94 m/s. Mechanical energy decreases, while total energy including thermal transfers is conserved."
+        },
+        {
+          "front": "Object A has mass m and speed v. Object B has half A’s mass. Find B’s speed if it must have the same kinetic energy as A. Then compare B’s energy with A’s if it instead moves at 2v.",
+          "back": "Equal energy requires ½(m/2)u² = ½mv², so u² = 2v² and u = √2 v for speed. At 2v, B’s kinetic energy is ½(m/2)(2v)² = mv², which is twice A’s ½mv²."
+        },
+        {
+          "front": "Which quantity is squared in kinetic energy?",
+          "back": "Speed: Eₖ = ½mv²."
+        },
+        {
+          "front": "What condition permits mechanical-energy conservation?",
+          "back": "Only conservative forces do work on the chosen system, or non-conservative work is zero."
+        },
+        {
+          "front": "Does friction destroy total energy?",
+          "back": "No. It transfers mechanical energy into other forms, often thermal energy."
+        },
+        {
+          "front": "Why must a reference level be stated for gravitational potential energy?",
+          "back": "The value mgh depends on the chosen zero of height; energy differences are what matter physically."
         }
       ]
     },
@@ -3223,6 +4039,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-atomic-structure-periodicity",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "An element’s isotopes have masses 35 and 37. Its relative atomic mass is 35.6. Find each percentage abundance. Then state the proton, neutron and electron counts in its mass-37 ion with Z = 17 and charge −1.",
+          "answer": "Let the mass-35 fraction be x: 35x + 37(1 − x) = 35.6. Thus 37 − 2x = 35.6, giving x = 0.7. Abundances are 70% mass-35 and 30% mass-37. For the specified ion: protons = 17, neutrons = 37 − 17 = 20, electrons = 18."
+        },
+        {
+          "question": "X²⁺ and Y⁻ each have 10 electrons. Determine the atomic numbers of X and Y and explain why equal electron counts do not make them the same element.",
+          "answer": "X²⁺ lost two electrons, so neutral X has 12 electrons and Z = 12. Y⁻ gained one, so neutral Y has 9 electrons and Z = 9. They are different elements because element identity depends on proton number, not on an ion’s electron count."
+        }
+      ],
       "cards": [
         {
           "front": "How do you count particles?",
@@ -3259,6 +4085,30 @@
         {
           "front": "A neutral main-group atom has electron-shell arrangement 2,8,1. State how it forms a stable positive ion and the ion’s electron arrangement.",
           "back": "It can lose its one outer electron to form a 1+ ion. The remaining electron arrangement is 2,8. The proton count does not change during ion formation."
+        },
+        {
+          "front": "An element’s isotopes have masses 35 and 37. Its relative atomic mass is 35.6. Find each percentage abundance. Then state the proton, neutron and electron counts in its mass-37 ion with Z = 17 and charge −1.",
+          "back": "Let the mass-35 fraction be x: 35x + 37(1 − x) = 35.6. Thus 37 − 2x = 35.6, giving x = 0.7. Abundances are 70% mass-35 and 30% mass-37. For the specified ion: protons = 17, neutrons = 37 − 17 = 20, electrons = 18."
+        },
+        {
+          "front": "X²⁺ and Y⁻ each have 10 electrons. Determine the atomic numbers of X and Y and explain why equal electron counts do not make them the same element.",
+          "back": "X²⁺ lost two electrons, so neutral X has 12 electrons and Z = 12. Y⁻ gained one, so neutral Y has 9 electrons and Z = 9. They are different elements because element identity depends on proton number, not on an ion’s electron count."
+        },
+        {
+          "front": "How do you find neutrons from A and Z?",
+          "back": "Neutrons = A − Z."
+        },
+        {
+          "front": "Does forming an ion change atomic number?",
+          "back": "No. Electron loss or gain does not change the proton count."
+        },
+        {
+          "front": "What must isotope fractions add to?",
+          "back": "1, or 100% when using percentage abundances."
+        },
+        {
+          "front": "What makes two atoms isotopes of the same element?",
+          "back": "The same number of protons but different numbers of neutrons."
         }
       ]
     },
@@ -3327,6 +4177,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-bonding-chemical-formulae",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Aluminium forms Al³⁺ and sulfate is SO₄²⁻. Write the neutral compound formula and count the numbers of Al, S and O atoms represented in one formula unit.",
+          "answer": "Charge balance requires 2 Al³⁺ ions (+6) and 3 sulfate ions (−6), so the formula is Al₂(SO₄)₃. It represents 2 Al, 3 S and 12 O atoms per formula unit. Parentheses apply the subscript 3 to the entire sulfate group."
+        },
+        {
+          "question": "Compare bonding and electrical conductivity in solid NaCl, molten NaCl and a simple molecular substance such as CO₂. Explain using particles rather than only naming bond types.",
+          "answer": "NaCl is an ionic lattice. In the solid its ions are fixed in place, so it does not conduct through freely moving ions. When molten, its ions can move and carry charge. CO₂ has covalent bonds within neutral molecules and normally lacks mobile ions or delocalised electrons, so pure CO₂ is not a typical electrical conductor."
+        }
+      ],
       "cards": [
         {
           "front": "How do ionic and covalent bonds differ?",
@@ -3363,6 +4223,30 @@
         {
           "front": "How many shared electron pairs occur in a nitrogen molecule N₂? Explain using the triple-bond notation.",
           "back": "N≡N has a triple covalent bond: three shared electron pairs, containing six shared electrons in total. Each nitrogen also has a lone pair."
+        },
+        {
+          "front": "Aluminium forms Al³⁺ and sulfate is SO₄²⁻. Write the neutral compound formula and count the numbers of Al, S and O atoms represented in one formula unit.",
+          "back": "Charge balance requires 2 Al³⁺ ions (+6) and 3 sulfate ions (−6), so the formula is Al₂(SO₄)₃. It represents 2 Al, 3 S and 12 O atoms per formula unit. Parentheses apply the subscript 3 to the entire sulfate group."
+        },
+        {
+          "front": "Compare bonding and electrical conductivity in solid NaCl, molten NaCl and a simple molecular substance such as CO₂. Explain using particles rather than only naming bond types.",
+          "back": "NaCl is an ionic lattice. In the solid its ions are fixed in place, so it does not conduct through freely moving ions. When molten, its ions can move and carry charge. CO₂ has covalent bonds within neutral molecules and normally lacks mobile ions or delocalised electrons, so pure CO₂ is not a typical electrical conductor."
+        },
+        {
+          "front": "Why are brackets needed in Ca(NO₃)₂?",
+          "back": "There are two entire nitrate ions, so the subscript multiplies both N and O counts."
+        },
+        {
+          "front": "What is a covalent bond?",
+          "back": "An electrostatic attraction involving a shared electron pair and the bonded nuclei."
+        },
+        {
+          "front": "Why are ionic formulae written in lowest whole-number charge-balanced ratios?",
+          "back": "The compound is electrically neutral overall; the formula represents its simplest ion ratio."
+        },
+        {
+          "front": "What do lone pairs represent in a Lewis diagram?",
+          "back": "Valence electron pairs not shared in a bond."
         }
       ]
     },
@@ -3431,6 +4315,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-chemical-reactions-redox",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Balance Fe₂O₃ + CO → Fe + CO₂. Determine the oxidation-number change of iron and carbon, and identify the reducing agent.",
+          "answer": "Balanced equation: Fe₂O₃ + 3CO → 2Fe + 3CO₂. Iron changes from +3 to 0 and is reduced. Carbon changes from +2 in CO to +4 in CO₂ and is oxidised. CO is the reducing agent because it causes iron’s reduction while itself being oxidised."
+        },
+        {
+          "question": "Write balanced half-equations and the overall ionic equation for aluminium reducing Cu²⁺ to copper. Show that electron loss equals electron gain.",
+          "answer": "Oxidation: Al → Al³⁺ + 3e⁻; multiply by 2. Reduction: Cu²⁺ + 2e⁻ → Cu; multiply by 3. Both involve 6 electrons. Overall: 2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu. Atoms and net charge (+6 on each side) are balanced."
+        }
+      ],
       "cards": [
         {
           "front": "Why must equations be balanced?",
@@ -3467,6 +4361,30 @@
         {
           "front": "For AgNO₃(aq) + NaCl(aq) → AgCl(s) + NaNO₃(aq), write the net ionic equation and identify spectator ions.",
           "back": "Ag⁺(aq) + Cl⁻(aq) → AgCl(s). Na⁺ and NO₃⁻ remain unchanged in solution and are spectator ions."
+        },
+        {
+          "front": "Balance Fe₂O₃ + CO → Fe + CO₂. Determine the oxidation-number change of iron and carbon, and identify the reducing agent.",
+          "back": "Balanced equation: Fe₂O₃ + 3CO → 2Fe + 3CO₂. Iron changes from +3 to 0 and is reduced. Carbon changes from +2 in CO to +4 in CO₂ and is oxidised. CO is the reducing agent because it causes iron’s reduction while itself being oxidised."
+        },
+        {
+          "front": "Write balanced half-equations and the overall ionic equation for aluminium reducing Cu²⁺ to copper. Show that electron loss equals electron gain.",
+          "back": "Oxidation: Al → Al³⁺ + 3e⁻; multiply by 2. Reduction: Cu²⁺ + 2e⁻ → Cu; multiply by 3. Both involve 6 electrons. Overall: 2Al + 3Cu²⁺ → 2Al³⁺ + 3Cu. Atoms and net charge (+6 on each side) are balanced."
+        },
+        {
+          "front": "What happens to oxidation number during oxidation?",
+          "back": "It increases."
+        },
+        {
+          "front": "Which reactant is the oxidising agent?",
+          "back": "The species that accepts electrons and is itself reduced."
+        },
+        {
+          "front": "What must balance in an ionic equation besides atoms?",
+          "back": "Total electric charge."
+        },
+        {
+          "front": "Why should you not change a formula’s subscripts when balancing?",
+          "back": "That changes the chemical substance instead of only its reacting amount."
         }
       ]
     },
@@ -3528,6 +4446,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-energy-changes-catalysts",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A reaction has reactants at 90 kJ/mol, products at 30 kJ/mol and an uncatalysed peak at 210 kJ/mol. A catalyst lowers the peak to 150. Find ΔH, both forward activation energies and the catalysed reverse activation energy.",
+          "answer": "ΔH = 30 − 90 = −60 kJ/mol, so forward reaction is exothermic. Uncatalysed forward Eₐ = 210 − 90 = 120 kJ/mol. Catalysed forward Eₐ = 150 − 90 = 60 kJ/mol. Catalysed reverse Eₐ = 150 − 30 = 120 kJ/mol. The catalyst does not change ΔH."
+        },
+        {
+          "question": "A proposed explanation says a catalyst speeds up an exothermic reaction by lowering the products’ energy and making ΔH more negative. Correct it using an energy-profile description.",
+          "answer": "A catalyst offers an alternative pathway with a lower activation-energy barrier. Reactant and product energy levels stay the same, so ΔH stays the same. On a profile, draw a lower peak joining the same start and end levels. It changes the rate, not the overall energy released per mole for that reaction."
+        }
+      ],
       "cards": [
         {
           "front": "What does enthalpy change mean?",
@@ -3564,6 +4492,30 @@
         {
           "front": "Bond breaking absorbs 500 kJ/mol and bond formation releases 620 kJ/mol for a reaction. Calculate the overall energy change.",
           "back": "ΔH = energy absorbed − energy released = 500 − 620 = −120 kJ/mol. The reaction is exothermic because more energy is released than absorbed."
+        },
+        {
+          "front": "A reaction has reactants at 90 kJ/mol, products at 30 kJ/mol and an uncatalysed peak at 210 kJ/mol. A catalyst lowers the peak to 150. Find ΔH, both forward activation energies and the catalysed reverse activation energy.",
+          "back": "ΔH = 30 − 90 = −60 kJ/mol, so forward reaction is exothermic. Uncatalysed forward Eₐ = 210 − 90 = 120 kJ/mol. Catalysed forward Eₐ = 150 − 90 = 60 kJ/mol. Catalysed reverse Eₐ = 150 − 30 = 120 kJ/mol. The catalyst does not change ΔH."
+        },
+        {
+          "front": "A proposed explanation says a catalyst speeds up an exothermic reaction by lowering the products’ energy and making ΔH more negative. Correct it using an energy-profile description.",
+          "back": "A catalyst offers an alternative pathway with a lower activation-energy barrier. Reactant and product energy levels stay the same, so ΔH stays the same. On a profile, draw a lower peak joining the same start and end levels. It changes the rate, not the overall energy released per mole for that reaction."
+        },
+        {
+          "front": "From which level is forward activation energy measured?",
+          "back": "From reactant energy to the transition-state peak."
+        },
+        {
+          "front": "How is reverse activation energy found on a profile?",
+          "back": "Peak energy minus product energy."
+        },
+        {
+          "front": "What sign does ΔH have for an exothermic reaction?",
+          "back": "Negative."
+        },
+        {
+          "front": "Do bond formation and bond breaking release energy in the same way?",
+          "back": "No. Bond breaking requires energy; bond formation releases it."
         }
       ]
     },
@@ -3632,6 +4584,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-acids-bases-conjugate-pairs",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "In HSO₄⁻ + H₂O ⇌ SO₄²⁻ + H₃O⁺, identify both conjugate pairs. Then write a reaction in which water instead acts as an acid, and identify what changes in its role.",
+          "answer": "Pairs are HSO₄⁻/SO₄²⁻ and H₂O/H₃O⁺. Here HSO₄⁻ donates H⁺ and water accepts it. For NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, water donates H⁺ and acts as an acid. Water is amphiprotic because it can accept or donate a proton depending on its reaction partner."
+        },
+        {
+          "question": "Sodium hydrogen carbonate reacts with hydrochloric acid. Write the balanced equation, identify the gas and describe how an observation would support its identification rather than merely showing that a gas formed.",
+          "answer": "NaHCO₃ + HCl → NaCl + H₂O + CO₂. The gas is carbon dioxide. Bubbling only shows gas formation; passing the gas into clear limewater and observing milkiness supports identifying it as CO₂. Use the prescribed safe laboratory procedure."
+        }
+      ],
       "cards": [
         {
           "front": "What is a Brønsted–Lowry acid?",
@@ -3668,6 +4630,30 @@
         {
           "front": "State what amphiprotic means and use water as an example.",
           "back": "An amphiprotic substance can donate or accept H⁺. Water accepts H⁺ to form H₃O⁺ when reacting with an acid, or donates H⁺ to form OH⁻ when reacting with a suitable base."
+        },
+        {
+          "front": "In HSO₄⁻ + H₂O ⇌ SO₄²⁻ + H₃O⁺, identify both conjugate pairs. Then write a reaction in which water instead acts as an acid, and identify what changes in its role.",
+          "back": "Pairs are HSO₄⁻/SO₄²⁻ and H₂O/H₃O⁺. Here HSO₄⁻ donates H⁺ and water accepts it. For NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, water donates H⁺ and acts as an acid. Water is amphiprotic because it can accept or donate a proton depending on its reaction partner."
+        },
+        {
+          "front": "Sodium hydrogen carbonate reacts with hydrochloric acid. Write the balanced equation, identify the gas and describe how an observation would support its identification rather than merely showing that a gas formed.",
+          "back": "NaHCO₃ + HCl → NaCl + H₂O + CO₂. The gas is carbon dioxide. Bubbling only shows gas formation; passing the gas into clear limewater and observing milkiness supports identifying it as CO₂. Use the prescribed safe laboratory procedure."
+        },
+        {
+          "front": "How does the charge change when a species loses H⁺?",
+          "back": "It decreases by 1, becoming its conjugate base."
+        },
+        {
+          "front": "What is the conjugate acid of NH₃?",
+          "back": "NH₄⁺."
+        },
+        {
+          "front": "What does amphiprotic mean?",
+          "back": "Able to donate or accept a proton in different reactions."
+        },
+        {
+          "front": "Why is fizzing alone not a specific test for CO₂?",
+          "back": "Many reactions produce gases; a characteristic test is needed to support the identification."
         }
       ]
     },
@@ -3743,6 +4729,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "physical-moles-stoichiometry",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "For 2H₂ + O₂ → 2H₂O, mix 6 g H₂ with 32 g O₂. Use molar masses 2, 32 and 18 g/mol respectively. Identify the limiting reagent, the mass of water formed and the mass of excess reactant left.",
+          "answer": "H₂ = 6/2 = 3 mol and O₂ = 32/32 = 1 mol. One mole O₂ needs 2 mol H₂, so O₂ is limiting. It makes 2 mol H₂O = 2 × 18 = 36 g. H₂ remaining = 1 mol = 2 g. Check mass: initial 38 g = 36 g water + 2 g hydrogen."
+        },
+        {
+          "question": "A 12.5 g sample of CuSO₄·nH₂O is heated to constant mass, leaving 8.0 g anhydrous CuSO₄. Use M(CuSO₄) = 160 g/mol and M(H₂O) = 18 g/mol. Find n and explain the mole-ratio step.",
+          "answer": "Water lost = 12.5 − 8.0 = 4.5 g, so n(H₂O) = 4.5/18 = 0.25 mol. Anhydrous CuSO₄ = 8.0/160 = 0.05 mol. Divide both by 0.05: CuSO₄:H₂O = 1:5. Therefore n = 5. This assumes the mass loss is water and heating leaves the stated anhydrous solid."
+        }
+      ],
       "cards": [
         {
           "front": "How do you convert mass to moles?",
@@ -3779,6 +4775,30 @@
         {
           "front": "For 2Mg + O₂ → 2MgO, calculate the mass of MgO formed from 12 g Mg with excess oxygen. Use M(Mg) = 24 and M(MgO) = 40 g/mol.",
           "back": "n(Mg) = 12/24 = 0.50 mol. The Mg:MgO mole ratio is 1:1, so 0.50 mol MgO forms. Mass = nM = 0.50 × 40 = 20 g."
+        },
+        {
+          "front": "For 2H₂ + O₂ → 2H₂O, mix 6 g H₂ with 32 g O₂. Use molar masses 2, 32 and 18 g/mol respectively. Identify the limiting reagent, the mass of water formed and the mass of excess reactant left.",
+          "back": "H₂ = 6/2 = 3 mol and O₂ = 32/32 = 1 mol. One mole O₂ needs 2 mol H₂, so O₂ is limiting. It makes 2 mol H₂O = 2 × 18 = 36 g. H₂ remaining = 1 mol = 2 g. Check mass: initial 38 g = 36 g water + 2 g hydrogen."
+        },
+        {
+          "front": "A 12.5 g sample of CuSO₄·nH₂O is heated to constant mass, leaving 8.0 g anhydrous CuSO₄. Use M(CuSO₄) = 160 g/mol and M(H₂O) = 18 g/mol. Find n and explain the mole-ratio step.",
+          "back": "Water lost = 12.5 − 8.0 = 4.5 g, so n(H₂O) = 4.5/18 = 0.25 mol. Anhydrous CuSO₄ = 8.0/160 = 0.05 mol. Divide both by 0.05: CuSO₄:H₂O = 1:5. Therefore n = 5. This assumes the mass loss is water and heating leaves the stated anhydrous solid."
+        },
+        {
+          "front": "What do balanced-equation coefficients compare?",
+          "back": "Numbers of reacting particles or moles, not direct mass ratios."
+        },
+        {
+          "front": "How do you identify a limiting reagent?",
+          "back": "Compare available moles with the stoichiometric amounts required, then find which is exhausted first."
+        },
+        {
+          "front": "What is removed when a hydrate is heated to the specified anhydrous form?",
+          "back": "Water of crystallisation, under the assumptions of the experiment."
+        },
+        {
+          "front": "Why convert cm³ to dm³ for c = n/V in mol/dm³?",
+          "back": "Volume units must match the units required for concentration; divide cm³ by 1 000."
         }
       ]
     },
@@ -3854,6 +4874,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-cells-membrane-transport",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Equal potato cylinders are placed in solutions A, B and C. Their masses change by +12%, 0% and −8%. Infer the relative water potentials of the solutions and potato tissue. Explain why the result in B does not mean water molecules stopped moving.",
+          "answer": "A has higher water potential than the tissue, so net water entry increases mass. C has lower water potential, so net water loss decreases mass. B is approximately in balance with the tissue under these conditions. In B, water still moves both ways across membranes, but there is no net transfer detectable by this mass measurement."
+        },
+        {
+          "question": "A cell takes up ion X against its concentration gradient. A treatment that reduces ATP production sharply reduces X uptake but does not stop the passage of small non-polar molecules through the membrane. Explain the two transport patterns and identify a limitation of the evidence.",
+          "answer": "X uptake is consistent with energy-dependent active transport through proteins. Small non-polar molecules can cross the lipid bilayer by simple diffusion down their gradient without direct ATP use. The result supports this interpretation but does not prove one specific transporter mechanism; the treatment may have other effects on cell health or membranes. A suitable viability control is needed."
+        }
+      ],
       "cards": [
         {
           "front": "What do the main organelles do?",
@@ -3890,6 +4920,30 @@
         {
           "front": "Explain how facilitated diffusion differs from simple diffusion.",
           "back": "Both involve net movement down a concentration gradient without direct ATP input. Facilitated diffusion uses membrane proteins, whereas simple diffusion crosses the lipid bilayer without a transport protein."
+        },
+        {
+          "front": "Equal potato cylinders are placed in solutions A, B and C. Their masses change by +12%, 0% and −8%. Infer the relative water potentials of the solutions and potato tissue. Explain why the result in B does not mean water molecules stopped moving.",
+          "back": "A has higher water potential than the tissue, so net water entry increases mass. C has lower water potential, so net water loss decreases mass. B is approximately in balance with the tissue under these conditions. In B, water still moves both ways across membranes, but there is no net transfer detectable by this mass measurement."
+        },
+        {
+          "front": "A cell takes up ion X against its concentration gradient. A treatment that reduces ATP production sharply reduces X uptake but does not stop the passage of small non-polar molecules through the membrane. Explain the two transport patterns and identify a limitation of the evidence.",
+          "back": "X uptake is consistent with energy-dependent active transport through proteins. Small non-polar molecules can cross the lipid bilayer by simple diffusion down their gradient without direct ATP use. The result supports this interpretation but does not prove one specific transporter mechanism; the treatment may have other effects on cell health or membranes. A suitable viability control is needed."
+        },
+        {
+          "front": "What does zero net osmosis mean?",
+          "back": "Movement in both directions is balanced; individual water molecules still move."
+        },
+        {
+          "front": "Which plant-cell structure resists swelling as turgor increases?",
+          "back": "The cell wall."
+        },
+        {
+          "front": "What does selectively permeable mean?",
+          "back": "Some substances cross more readily than others; permeability depends on membrane and particle properties."
+        },
+        {
+          "front": "How do you calculate percentage mass change?",
+          "back": "(Final mass − initial mass)/initial mass × 100%."
         }
       ]
     },
@@ -3965,6 +5019,16 @@
       "tip": "Do not confuse DNA replication in interphase with chromosome separation in anaphase. The supplied 2022 memo has an inconsistent stage description.",
       "id": "life-mitosis-the-cell-cycle",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A normal diploid cell has 4 chromosomes before DNA replication. State its chromosome and chromatid counts at metaphase, then the chromosome count in each daughter cell after normal mitosis. Explain the counting convention.",
+          "answer": "After replication, metaphase still has 4 chromosomes, each with two sister chromatids, so there are 8 chromatids. Chromosome number is counted by centromeres, not by DNA copies. When division is completed normally, each daughter cell has 4 chromosomes. Replication doubles DNA content without doubling metaphase chromosome number."
+        },
+        {
+          "question": "In a cell with 6 duplicated chromosomes, one pair of sister chromatids fails to separate while the others segregate normally. Predict the daughter-cell chromosome numbers and explain why normal mitosis is important for tissue repair.",
+          "answer": "The affected chromosome’s two chromatids go to one daughter instead of one to each. With all other segregation normal, the daughters receive 7 and 5 chromosomes rather than 6 each. Normal mitosis preserves the full chromosome complement during growth and repair; unequal segregation can disrupt cell function. The numbers assume the single stated segregation error."
+        }
+      ],
       "cards": [
         {
           "front": "What happens before mitosis?",
@@ -4001,6 +5065,30 @@
         {
           "front": "Distinguish mitosis from cytokinesis.",
           "back": "Mitosis divides replicated nuclear genetic material into daughter nuclei. Cytokinesis divides the cytoplasm and separates the cell into two daughter cells; the processes are connected but distinct."
+        },
+        {
+          "front": "A normal diploid cell has 4 chromosomes before DNA replication. State its chromosome and chromatid counts at metaphase, then the chromosome count in each daughter cell after normal mitosis. Explain the counting convention.",
+          "back": "After replication, metaphase still has 4 chromosomes, each with two sister chromatids, so there are 8 chromatids. Chromosome number is counted by centromeres, not by DNA copies. When division is completed normally, each daughter cell has 4 chromosomes. Replication doubles DNA content without doubling metaphase chromosome number."
+        },
+        {
+          "front": "In a cell with 6 duplicated chromosomes, one pair of sister chromatids fails to separate while the others segregate normally. Predict the daughter-cell chromosome numbers and explain why normal mitosis is important for tissue repair.",
+          "back": "The affected chromosome’s two chromatids go to one daughter instead of one to each. With all other segregation normal, the daughters receive 7 and 5 chromosomes rather than 6 each. Normal mitosis preserves the full chromosome complement during growth and repair; unequal segregation can disrupt cell function. The numbers assume the single stated segregation error."
+        },
+        {
+          "front": "At which stage are sister chromatids normally separated?",
+          "back": "Anaphase."
+        },
+        {
+          "front": "Does DNA replication occur during mitosis?",
+          "back": "It occurs before mitosis, in the S phase of interphase."
+        },
+        {
+          "front": "What distinguishes a chromosome count from a chromatid count at metaphase?",
+          "back": "A duplicated chromosome has one joined centromere region but two sister chromatids."
+        },
+        {
+          "front": "What is cytokinesis?",
+          "back": "Division of the cytoplasm to form separate daughter cells."
         }
       ]
     },
@@ -4076,6 +5164,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-enzymes-biological-molecules",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "With fixed enzyme concentration, initial reaction rates at increasing substrate concentrations are 2, 4, 7, 8 and 8 units/min. Explain the plateau and predict the effect of adding more active enzyme to the final mixture, assuming substrate remains plentiful.",
+          "answer": "At high substrate concentration, nearly all available active sites are occupied, so enzyme concentration limits the rate. More substrate alone gives little increase. Adding active enzyme provides additional active sites and should increase the maximum attainable rate if other conditions and substrate supply remain suitable. The data do not show that the enzyme was consumed."
+        },
+        {
+          "question": "Two enzyme samples are treated differently: A is cooled to 5°C and B heated to 90°C. Both are later returned to the same optimum temperature and tested identically. A recovers its activity but B does not. Explain and propose one controlled variable needed for the comparison.",
+          "answer": "Cooling can slow molecular movement without permanently disrupting the enzyme, so A can recover after warming. High heat can denature B, altering the active site so normal binding does not return. Keep pH, enzyme amount, substrate concentration and testing time equivalent. A comparison should also check that both samples underwent the same final assay conditions."
+        }
+      ],
       "cards": [
         {
           "front": "How does an enzyme act?",
@@ -4112,6 +5210,30 @@
         {
           "front": "Name a test for starch and state a positive result.",
           "back": "Add iodine solution to the sample under appropriate laboratory instructions. A blue-black colour indicates starch; iodine solution remaining yellow-brown is a negative result."
+        },
+        {
+          "front": "With fixed enzyme concentration, initial reaction rates at increasing substrate concentrations are 2, 4, 7, 8 and 8 units/min. Explain the plateau and predict the effect of adding more active enzyme to the final mixture, assuming substrate remains plentiful.",
+          "back": "At high substrate concentration, nearly all available active sites are occupied, so enzyme concentration limits the rate. More substrate alone gives little increase. Adding active enzyme provides additional active sites and should increase the maximum attainable rate if other conditions and substrate supply remain suitable. The data do not show that the enzyme was consumed."
+        },
+        {
+          "front": "Two enzyme samples are treated differently: A is cooled to 5°C and B heated to 90°C. Both are later returned to the same optimum temperature and tested identically. A recovers its activity but B does not. Explain and propose one controlled variable needed for the comparison.",
+          "back": "Cooling can slow molecular movement without permanently disrupting the enzyme, so A can recover after warming. High heat can denature B, altering the active site so normal binding does not return. Keep pH, enzyme amount, substrate concentration and testing time equivalent. A comparison should also check that both samples underwent the same final assay conditions."
+        },
+        {
+          "front": "Are enzymes used up overall during the reactions they catalyse?",
+          "back": "No. They can be reused, although they can be damaged or denatured."
+        },
+        {
+          "front": "What does an enzyme-rate plateau at high substrate often suggest?",
+          "back": "Available enzyme active sites have become limiting."
+        },
+        {
+          "front": "What is activation energy?",
+          "back": "The energy barrier that reacting particles must overcome for a reaction pathway."
+        },
+        {
+          "front": "Why does a negative starch test not by itself prove an enzyme worked?",
+          "back": "Starch may have been absent initially or another factor may explain the result; compare appropriate controls."
         }
       ]
     },
@@ -4187,6 +5309,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-digestion-blood-glucose-control",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A diagram claims bile chemically digests fats and the small intestine mainly stores the absorbed glucose. Correct both statements and trace how absorbed glucose can be stored after a meal.",
+          "answer": "Bile emulsifies fat physically, producing small droplets that provide more surface for lipase; it is not the enzyme chemically hydrolysing fat. The small intestine is a major site of nutrient absorption. Absorbed glucose enters blood and can be taken up by tissues; insulin promotes storage as glycogen in the liver and muscles when glucose is high."
+        },
+        {
+          "question": "A meal raises blood glucose, followed later by a return toward its regulated range. Describe the negative-feedback response. Then explain why the graph alone cannot establish that the person has normal insulin sensitivity.",
+          "answer": "The rise stimulates pancreatic insulin release. Insulin supports glucose uptake and glycogen formation, tending to lower blood glucose and reduce the original stimulus. A glucose graph alone does not measure insulin levels, sensitivity or other influences such as meal size, exercise and timing. Multiple mechanisms can produce similar curves, so a clinical conclusion would require more evidence."
+        }
+      ],
       "cards": [
         {
           "front": "What are digestion and absorption?",
@@ -4223,6 +5355,30 @@
         {
           "front": "Why does the small intestine have both a large surface area and a good blood supply?",
           "back": "Villi and microvilli provide a large area for absorption. Blood carries many absorbed nutrients away and helps maintain concentration gradients, supporting continued uptake."
+        },
+        {
+          "front": "A diagram claims bile chemically digests fats and the small intestine mainly stores the absorbed glucose. Correct both statements and trace how absorbed glucose can be stored after a meal.",
+          "back": "Bile emulsifies fat physically, producing small droplets that provide more surface for lipase; it is not the enzyme chemically hydrolysing fat. The small intestine is a major site of nutrient absorption. Absorbed glucose enters blood and can be taken up by tissues; insulin promotes storage as glycogen in the liver and muscles when glucose is high."
+        },
+        {
+          "front": "A meal raises blood glucose, followed later by a return toward its regulated range. Describe the negative-feedback response. Then explain why the graph alone cannot establish that the person has normal insulin sensitivity.",
+          "back": "The rise stimulates pancreatic insulin release. Insulin supports glucose uptake and glycogen formation, tending to lower blood glucose and reduce the original stimulus. A glucose graph alone does not measure insulin levels, sensitivity or other influences such as meal size, exercise and timing. Multiple mechanisms can produce similar curves, so a clinical conclusion would require more evidence."
+        },
+        {
+          "front": "Where is bile produced and where is it stored?",
+          "back": "Produced by the liver; stored and concentrated in the gall bladder."
+        },
+        {
+          "front": "Which hormone mainly promotes release of glucose from liver glycogen when blood glucose is low?",
+          "back": "Glucagon."
+        },
+        {
+          "front": "Why is blood-glucose control negative feedback?",
+          "back": "The response counteracts the initial rise or fall rather than amplifying it."
+        },
+        {
+          "front": "What is the distinction between digestion and absorption?",
+          "back": "Digestion breaks food molecules down; absorption transfers suitable products across the gut wall."
         }
       ]
     },
@@ -4291,6 +5447,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-photosynthesis-cellular-respiration",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A plant releases 3 units of CO₂ per hour in darkness. At moderate light it takes up a net 5 units per hour. Assuming respiration remains 3 units per hour, calculate gross CO₂ uptake by photosynthesis and explain a limitation of that assumption.",
+          "answer": "Net uptake = gross photosynthetic uptake − respiratory release. Thus 5 = gross − 3, so gross uptake = 8 units/hour. This calculation assumes the respiratory rate is unchanged between darkness and light; real rates can vary with temperature, physiology and other conditions."
+        },
+        {
+          "question": "An illuminated plant is given labelled carbon dioxide and later the label appears in its sugars. Explain the inference, then describe how some labelled carbon might return to the air and why energy is not recycled in the same way.",
+          "answer": "The label supports the incorporation of carbon from CO₂ into organic molecules during photosynthesis. Later respiration can break down those molecules and release labelled CO₂. Carbon atoms can cycle through organisms and the environment. Energy enters mainly as light, is transferred through chemical processes and is eventually dissipated as heat rather than cycling back as the same usable sunlight."
+        }
+      ],
       "cards": [
         {
           "front": "What does photosynthesis achieve?",
@@ -4327,6 +5493,30 @@
         {
           "front": "A green plant is kept in darkness. Which continues: respiration, photosynthesis, both or neither? Explain.",
           "back": "Respiration continues in living cells to supply ATP. Photosynthesis cannot proceed normally without light energy, so the two processes do not both continue normally in darkness."
+        },
+        {
+          "front": "A plant releases 3 units of CO₂ per hour in darkness. At moderate light it takes up a net 5 units per hour. Assuming respiration remains 3 units per hour, calculate gross CO₂ uptake by photosynthesis and explain a limitation of that assumption.",
+          "back": "Net uptake = gross photosynthetic uptake − respiratory release. Thus 5 = gross − 3, so gross uptake = 8 units/hour. This calculation assumes the respiratory rate is unchanged between darkness and light; real rates can vary with temperature, physiology and other conditions."
+        },
+        {
+          "front": "An illuminated plant is given labelled carbon dioxide and later the label appears in its sugars. Explain the inference, then describe how some labelled carbon might return to the air and why energy is not recycled in the same way.",
+          "back": "The label supports the incorporation of carbon from CO₂ into organic molecules during photosynthesis. Later respiration can break down those molecules and release labelled CO₂. Carbon atoms can cycle through organisms and the environment. Energy enters mainly as light, is transferred through chemical processes and is eventually dissipated as heat rather than cycling back as the same usable sunlight."
+        },
+        {
+          "front": "What is the compensation point?",
+          "back": "The conditions at which photosynthetic CO₂ uptake equals respiratory CO₂ release, so net exchange is zero."
+        },
+        {
+          "front": "Where does glycolysis occur?",
+          "back": "In the cytoplasm."
+        },
+        {
+          "front": "Do plant cells use ATP?",
+          "back": "Yes. Plants respire and use ATP for cellular work as animals do."
+        },
+        {
+          "front": "What is the main purpose of chlorophyll in photosynthesis?",
+          "back": "To absorb light energy."
         }
       ]
     },
@@ -4395,6 +5585,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-plant-transport-adaptations",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A plant is moved from humid still air to dry moving air, while light and temperature initially remain constant. Predict the initial effect on transpiration, then explain how stomatal closure could alter that prediction later.",
+          "answer": "Dry air increases the water-vapour gradient and moving air removes the humid boundary layer, so transpiration can initially increase if stomata remain open. Later water stress may reduce guard-cell turgor and close stomata, decreasing loss. Thus the longer-term result depends on the plant’s physiological response, not only the initial environmental change."
+        },
+        {
+          "question": "A ring of bark containing phloem is removed from a stem while xylem remains intact. Predict the initial effect on water supply above the ring and on sugar transport to roots. Explain a possible later effect on the whole plant.",
+          "answer": "Initially xylem can still carry water upward because it remains continuous. Downward phloem transport of sugars across the ring is disrupted, so roots can lose their normal sugar supply. Root function can then decline, eventually compromising water uptake and the whole plant. The distinction depends on the specified tissues remaining intact or being removed."
+        }
+      ],
       "cards": [
         {
           "front": "What do xylem and phloem transport?",
@@ -4431,6 +5631,30 @@
         {
           "front": "Why can phloem transport be described in terms of sources and sinks rather than simply upward movement?",
           "back": "A source supplies organic solutes, for example a photosynthesising leaf. A sink uses or stores them, for example a growing root or fruit. Sources and sinks occur in different positions, so transport is not described by one fixed upward direction."
+        },
+        {
+          "front": "A plant is moved from humid still air to dry moving air, while light and temperature initially remain constant. Predict the initial effect on transpiration, then explain how stomatal closure could alter that prediction later.",
+          "back": "Dry air increases the water-vapour gradient and moving air removes the humid boundary layer, so transpiration can initially increase if stomata remain open. Later water stress may reduce guard-cell turgor and close stomata, decreasing loss. Thus the longer-term result depends on the plant’s physiological response, not only the initial environmental change."
+        },
+        {
+          "front": "A ring of bark containing phloem is removed from a stem while xylem remains intact. Predict the initial effect on water supply above the ring and on sugar transport to roots. Explain a possible later effect on the whole plant.",
+          "back": "Initially xylem can still carry water upward because it remains continuous. Downward phloem transport of sugars across the ring is disrupted, so roots can lose their normal sugar supply. Root function can then decline, eventually compromising water uptake and the whole plant. The distinction depends on the specified tissues remaining intact or being removed."
+        },
+        {
+          "front": "What main materials does xylem transport?",
+          "back": "Water and dissolved mineral ions."
+        },
+        {
+          "front": "What does phloem translocation move between sources and sinks?",
+          "back": "Dissolved organic substances such as sugars."
+        },
+        {
+          "front": "Why can moving air increase transpiration?",
+          "back": "It can remove the humid boundary layer around a leaf."
+        },
+        {
+          "front": "What happens to guard-cell turgor when water leaves them?",
+          "back": "Turgor decreases and the stomatal pore tends to close."
         }
       ]
     },
@@ -4506,6 +5730,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-ecology-nutrient-cycles-biodiversity",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "In a simplified ecosystem, producers store 20 000 kJ over a period. Assume 10% is transferred to each successive consumer level. Estimate energy available to primary, secondary and tertiary consumers. Explain two reasons real transfers do not follow an exact universal 10% rule.",
+          "answer": "Estimated primary-consumer energy = 2 000 kJ; secondary = 200 kJ; tertiary = 20 kJ. Transfer efficiency varies with organisms and circumstances. Not all biomass is eaten or assimilated, and energy is used in respiration and dissipated as heat. The 10% figure is an assumption for this model, not a universal constant."
+        },
+        {
+          "question": "An isolated habitat loses its top predator and herbivore numbers initially rise. Propose a linked effect on vegetation and soil, then explain why the outcome cannot be predicted from a single food chain with certainty.",
+          "answer": "More herbivores may increase grazing, reduce vegetation and expose soil, potentially increasing erosion. But alternative foods, other predators, disease, migration and plant regrowth can alter the outcome. A food web and environmental data are needed to assess competing interactions rather than treating one chain as a complete prediction."
+        }
+      ],
       "cards": [
         {
           "front": "How do food webs show energy flow?",
@@ -4542,6 +5776,30 @@
         {
           "front": "Explain one benefit a plant and a nitrogen-fixing bacterium each receive in a mutualistic association.",
           "back": "The bacterium obtains organic nutrients supplied by the plant. The plant gains access to nitrogen compounds produced through bacterial nitrogen fixation. Both partners benefit."
+        },
+        {
+          "front": "In a simplified ecosystem, producers store 20 000 kJ over a period. Assume 10% is transferred to each successive consumer level. Estimate energy available to primary, secondary and tertiary consumers. Explain two reasons real transfers do not follow an exact universal 10% rule.",
+          "back": "Estimated primary-consumer energy = 2 000 kJ; secondary = 200 kJ; tertiary = 20 kJ. Transfer efficiency varies with organisms and circumstances. Not all biomass is eaten or assimilated, and energy is used in respiration and dissipated as heat. The 10% figure is an assumption for this model, not a universal constant."
+        },
+        {
+          "front": "An isolated habitat loses its top predator and herbivore numbers initially rise. Propose a linked effect on vegetation and soil, then explain why the outcome cannot be predicted from a single food chain with certainty.",
+          "back": "More herbivores may increase grazing, reduce vegetation and expose soil, potentially increasing erosion. But alternative foods, other predators, disease, migration and plant regrowth can alter the outcome. A food web and environmental data are needed to assess competing interactions rather than treating one chain as a complete prediction."
+        },
+        {
+          "front": "What do arrows represent in a food chain?",
+          "back": "The direction of energy transfer from a food organism to its consumer."
+        },
+        {
+          "front": "What is a trophic level?",
+          "back": "An organism’s feeding position in an energy-transfer pathway."
+        },
+        {
+          "front": "What is a habitat different from a niche?",
+          "back": "Habitat is where an organism lives; niche includes its ecological role and resource relationships."
+        },
+        {
+          "front": "Does greater species richness guarantee resilience to every disturbance?",
+          "back": "No. Responses also depend on species roles, interactions and the type of disturbance."
         }
       ]
     },
@@ -4617,6 +5875,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-evolution-climate-scientific-essays",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A source reports that 80% of a sample’s specialist species declined after a drought, compared with 30% of generalists. Build an evidence-based argument about vulnerability, give one alternative explanation, and state one limitation before generalising.",
+          "answer": "The sample supports greater observed vulnerability among specialists in those conditions, potentially because narrow resource needs reduce flexibility. Alternative explanations include different habitat loss, disease exposure or sampling detectability between groups. Sample size, selection, location and duration must be examined; the percentages alone cannot establish a universal response or prove drought was the sole cause."
+        },
+        {
+          "question": "A fossil sequence shows a change in limb structure across several rock layers. Explain what this can support about change over time and two things it cannot establish without further evidence.",
+          "answer": "If the layer sequence and fossil identification are reliable, it can support that organisms with different limb structures occurred at different times. It does not alone prove that one sampled fossil was the direct ancestor of another or identify the exact selective cause. Dating, broader anatomical evidence and other lines of evidence help evaluate those claims."
+        }
+      ],
       "cards": [
         {
           "front": "How do fossils provide evidence?",
@@ -4653,6 +5921,30 @@
         {
           "front": "Write a balanced concluding sentence for an essay on whether habitat change may cause extinctions.",
           "back": "Example: Habitat change can raise extinction risk, especially for specialists unable to disperse, but the outcome depends on its rate, the species involved and other pressures; conclusions should match the evidence in the sources."
+        },
+        {
+          "front": "A source reports that 80% of a sample’s specialist species declined after a drought, compared with 30% of generalists. Build an evidence-based argument about vulnerability, give one alternative explanation, and state one limitation before generalising.",
+          "back": "The sample supports greater observed vulnerability among specialists in those conditions, potentially because narrow resource needs reduce flexibility. Alternative explanations include different habitat loss, disease exposure or sampling detectability between groups. Sample size, selection, location and duration must be examined; the percentages alone cannot establish a universal response or prove drought was the sole cause."
+        },
+        {
+          "front": "A fossil sequence shows a change in limb structure across several rock layers. Explain what this can support about change over time and two things it cannot establish without further evidence.",
+          "back": "If the layer sequence and fossil identification are reliable, it can support that organisms with different limb structures occurred at different times. It does not alone prove that one sampled fossil was the direct ancestor of another or identify the exact selective cause. Dating, broader anatomical evidence and other lines of evidence help evaluate those claims."
+        },
+        {
+          "front": "What is a counterargument in a scientific essay?",
+          "back": "A reasoned alternative interpretation or challenge that should be evaluated with evidence."
+        },
+        {
+          "front": "Why must an essay distinguish association from causation?",
+          "back": "Two patterns occurring together do not alone show that one caused the other."
+        },
+        {
+          "front": "What does relative dating provide?",
+          "back": "An order of older and younger events or fossils, rather than a numerical age by itself."
+        },
+        {
+          "front": "Why evaluate a source’s methods as well as its conclusion?",
+          "back": "Sampling and measurement determine how strongly the evidence supports the claim."
         }
       ]
     },
@@ -4728,6 +6020,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "life-scientific-investigations-practical-skills",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A learner counts oxygen bubbles from pondweed at distances of 10, 20 and 30 cm from a lamp. Rates are 24, 15 and 8 bubbles/min. Give a cautious conclusion, identify two confounders and propose two improvements.",
+          "answer": "The observations are consistent with higher apparent photosynthetic output nearer the lamp, but distance itself is not a direct measurement of light intensity. Lamp heating and unequal bubble volumes can affect interpretation. Measure or control temperature, measure light intensity, collect oxygen volume instead of only bubble count, and repeat trials using comparable plant material."
+        },
+        {
+          "question": "A control group gives results 10, 11, 9 and a treated group 13, 30, 14 units. Find both means. Explain why automatically deleting 30 is poor practice and propose a defensible next step.",
+          "answer": "Control mean = 30/3 = 10; treated mean = 57/3 = 19. The value 30 strongly affects the treated mean, but being unusual does not prove it is wrong. Check records, equipment and the pre-agreed exclusion rules, investigate a documented procedural error if present, and repeat measurements. Report the variation transparently rather than remove an inconvenient result without evidence."
+        }
+      ],
       "cards": [
         {
           "front": "How do you distinguish variables?",
@@ -4764,6 +6066,30 @@
         {
           "front": "Write a testable hypothesis for an investigation of how temperature affects enzyme activity over a range below the enzyme’s optimum.",
           "back": "Example: Over the tested range below the optimum, increasing temperature will increase enzyme reaction rate because particles move more rapidly and form successful enzyme-substrate interactions more frequently."
+        },
+        {
+          "front": "A learner counts oxygen bubbles from pondweed at distances of 10, 20 and 30 cm from a lamp. Rates are 24, 15 and 8 bubbles/min. Give a cautious conclusion, identify two confounders and propose two improvements.",
+          "back": "The observations are consistent with higher apparent photosynthetic output nearer the lamp, but distance itself is not a direct measurement of light intensity. Lamp heating and unequal bubble volumes can affect interpretation. Measure or control temperature, measure light intensity, collect oxygen volume instead of only bubble count, and repeat trials using comparable plant material."
+        },
+        {
+          "front": "A control group gives results 10, 11, 9 and a treated group 13, 30, 14 units. Find both means. Explain why automatically deleting 30 is poor practice and propose a defensible next step.",
+          "back": "Control mean = 30/3 = 10; treated mean = 57/3 = 19. The value 30 strongly affects the treated mean, but being unusual does not prove it is wrong. Check records, equipment and the pre-agreed exclusion rules, investigate a documented procedural error if present, and repeat measurements. Report the variation transparently rather than remove an inconvenient result without evidence."
+        },
+        {
+          "front": "What is the difference between reliability and validity?",
+          "back": "Reliability concerns consistency; validity concerns whether the method supports the intended measurement or comparison."
+        },
+        {
+          "front": "What is a confounding variable?",
+          "back": "Another factor that changes with the tested factor and could explain the outcome."
+        },
+        {
+          "front": "What must accompany a graph’s axis label?",
+          "back": "The measured variable and its unit, where applicable."
+        },
+        {
+          "front": "Why is repeating trials not a cure for a miscalibrated balance?",
+          "back": "The same systematic bias can affect every repeat; calibration must be addressed."
         }
       ]
     },
@@ -4825,6 +6151,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-bones-muscles-movement",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Analyse a slow squat in three phases: lowering, holding still, then rising. For the quadriceps, identify the main contraction type in each phase and explain why knee flexion during lowering does not mean the quadriceps are inactive.",
+          "answer": "During controlled lowering the quadriceps are active while lengthening, so their action is eccentric. During a still hold they act mainly isometrically. During rising they shorten to extend the knees, so their action is concentric. Lowering requires control against the load; a muscle can actively produce tension while lengthening rather than switch off."
+        },
+        {
+          "question": "A report attributes improved lifting performance entirely to bigger muscles after a short training period. Give two other plausible contributors and explain why a single before-and-after performance measurement cannot separate them.",
+          "answer": "Improved neural recruitment/coordination and better technique or familiarity with the test can increase measured performance. Motivation and measurement conditions can also matter. One before-and-after result combines these influences, so size measurements and suitable repeated, standardised tests are needed before attributing the gain to hypertrophy alone."
+        }
+      ],
       "cards": [
         {
           "front": "What does the skeleton do?",
@@ -4861,6 +6197,30 @@
         {
           "front": "Give two protective functions of the skeleton, naming a structure and the organ it protects.",
           "back": "The skull protects the brain. The rib cage helps protect the heart and lungs. Other correct structure-organ examples can also be accepted."
+        },
+        {
+          "front": "Analyse a slow squat in three phases: lowering, holding still, then rising. For the quadriceps, identify the main contraction type in each phase and explain why knee flexion during lowering does not mean the quadriceps are inactive.",
+          "back": "During controlled lowering the quadriceps are active while lengthening, so their action is eccentric. During a still hold they act mainly isometrically. During rising they shorten to extend the knees, so their action is concentric. Lowering requires control against the load; a muscle can actively produce tension while lengthening rather than switch off."
+        },
+        {
+          "front": "A report attributes improved lifting performance entirely to bigger muscles after a short training period. Give two other plausible contributors and explain why a single before-and-after performance measurement cannot separate them.",
+          "back": "Improved neural recruitment/coordination and better technique or familiarity with the test can increase measured performance. Motivation and measurement conditions can also matter. One before-and-after result combines these influences, so size measurements and suitable repeated, standardised tests are needed before attributing the gain to hypertrophy alone."
+        },
+        {
+          "front": "What does an eccentric contraction involve?",
+          "back": "An active muscle lengthens while producing tension."
+        },
+        {
+          "front": "What does an isometric contraction involve?",
+          "back": "Tension without a meaningful overall change in muscle length or joint position."
+        },
+        {
+          "front": "Can agonist and antagonist roles reverse?",
+          "back": "Yes. They depend on the movement being analysed."
+        },
+        {
+          "front": "How do tendons and ligaments differ?",
+          "back": "Tendons connect muscle to bone; ligaments connect bones at joints."
         }
       ]
     },
@@ -4922,6 +6282,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-energy-systems-exercise",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A match includes one 5-second maximal sprint, 20 seconds of low-intensity movement and another sprint. Explain why both ATP-PC and aerobic capacity matter and predict a possible effect if the recovery interval is shortened substantially.",
+          "answer": "ATP-PC has a major role in rapid ATP supply during the brief maximal sprint. Aerobic metabolism supports the low-intensity period and recovery, including phosphocreatine restoration. Shorter recovery can leave less restoration before the next sprint and increase fatigue or the relative contribution of other pathways. All systems overlap throughout rather than switching exclusively."
+        },
+        {
+          "question": "An athlete completes a short maximal effort and a long steady effort. A commentator says the first produces “no aerobic energy” and the second “no anaerobic energy”. Critique both claims and relate the overlap to intensity and duration.",
+          "answer": "Neither statement is accurate: energy pathways contribute together. Rapid ATP-PC and anaerobic glycolytic supply can have large relative roles at high intensity, while aerobic contribution becomes especially important in sustained work. The mix changes with demand, duration and training; calling a system dominant does not make all other contributions zero."
+        }
+      ],
       "cards": [
         {
           "front": "How does the ATP-PC system work?",
@@ -4958,6 +6328,30 @@
         {
           "front": "Why is it inaccurate to say that aerobic metabolism begins only after anaerobic metabolism stops?",
           "back": "The pathways contribute simultaneously. Intensity and duration change their relative contributions; they are not separate switches that turn on only when another system stops."
+        },
+        {
+          "front": "A match includes one 5-second maximal sprint, 20 seconds of low-intensity movement and another sprint. Explain why both ATP-PC and aerobic capacity matter and predict a possible effect if the recovery interval is shortened substantially.",
+          "back": "ATP-PC has a major role in rapid ATP supply during the brief maximal sprint. Aerobic metabolism supports the low-intensity period and recovery, including phosphocreatine restoration. Shorter recovery can leave less restoration before the next sprint and increase fatigue or the relative contribution of other pathways. All systems overlap throughout rather than switching exclusively."
+        },
+        {
+          "front": "An athlete completes a short maximal effort and a long steady effort. A commentator says the first produces “no aerobic energy” and the second “no anaerobic energy”. Critique both claims and relate the overlap to intensity and duration.",
+          "back": "Neither statement is accurate: energy pathways contribute together. Rapid ATP-PC and anaerobic glycolytic supply can have large relative roles at high intensity, while aerobic contribution becomes especially important in sustained work. The mix changes with demand, duration and training; calling a system dominant does not make all other contributions zero."
+        },
+        {
+          "front": "Why does phosphocreatine need recovery time?",
+          "back": "Its limited stores must be replenished after use; aerobic processes support this recovery."
+        },
+        {
+          "front": "Which energy supply molecule is used directly for muscle contraction?",
+          "back": "ATP."
+        },
+        {
+          "front": "Why can the dominant system differ within one sport?",
+          "back": "Intensity and duration vary between actions and recovery periods."
+        },
+        {
+          "front": "Does lactate formation by itself explain all exercise fatigue?",
+          "back": "No. Fatigue has multiple interacting physiological causes."
         }
       ]
     },
@@ -5026,6 +6420,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-levers-anatomical-planes",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A forearm is held horizontal. Ignore forearm weight. A 40 N load acts 0.30 m from the elbow, while the biceps has a perpendicular moment arm of 0.04 m. Find the required biceps force, identify the lever class and explain its force disadvantage.",
+          "answer": "Balance torques: F × 0.04 = 40 × 0.30 = 12 N·m, so F = 300 N. The effort lies between the elbow fulcrum and hand load, making it a third-class lever. The short effort arm means a force much larger than the load is needed; this arrangement can favour speed and range of movement."
+        },
+        {
+          "question": "A 60 N effort acts with perpendicular arm 0.20 m against a 40 N load. Find the load arm required for balance. Explain what happens to the required effort if its moment arm is halved while the load torque stays fixed.",
+          "answer": "Effort torque = 60 × 0.20 = 12 N·m. Balance requires 40d = 12, giving d = 0.30 m. If the effort arm halves, the effort must double to 120 N to provide the same torque, assuming other forces remain unchanged."
+        }
+      ],
       "cards": [
         {
           "front": "What are the parts of a lever?",
@@ -5062,6 +6466,30 @@
         {
           "front": "For a balanced lever, a 40 N load acts 0.3 m from the pivot. What effort is required with a perpendicular moment arm of 0.6 m?",
           "back": "Balance torques: effort × 0.6 = 40 × 0.3 = 12 N·m. Effort = 12/0.6 = 20 N, assuming these are the only relevant torques."
+        },
+        {
+          "front": "A forearm is held horizontal. Ignore forearm weight. A 40 N load acts 0.30 m from the elbow, while the biceps has a perpendicular moment arm of 0.04 m. Find the required biceps force, identify the lever class and explain its force disadvantage.",
+          "back": "Balance torques: F × 0.04 = 40 × 0.30 = 12 N·m, so F = 300 N. The effort lies between the elbow fulcrum and hand load, making it a third-class lever. The short effort arm means a force much larger than the load is needed; this arrangement can favour speed and range of movement."
+        },
+        {
+          "front": "A 60 N effort acts with perpendicular arm 0.20 m against a 40 N load. Find the load arm required for balance. Explain what happens to the required effort if its moment arm is halved while the load torque stays fixed.",
+          "back": "Effort torque = 60 × 0.20 = 12 N·m. Balance requires 40d = 12, giving d = 0.30 m. If the effort arm halves, the effort must double to 120 N to provide the same torque, assuming other forces remain unchanged."
+        },
+        {
+          "front": "Which quantity multiplies force to give torque?",
+          "back": "The perpendicular distance from the pivot to the force’s line of action."
+        },
+        {
+          "front": "What lies in the middle of a third-class lever?",
+          "back": "The effort."
+        },
+        {
+          "front": "Which plane contains shoulder abduction?",
+          "back": "The frontal plane."
+        },
+        {
+          "front": "Why is a movement’s axis different from its plane?",
+          "back": "The rotation axis is perpendicular to the plane in which the movement occurs."
         }
       ]
     },
@@ -5123,6 +6551,16 @@
       "tip": "Use these as exam concepts. One nutritional calorie (kcal) is 1 000 small calories; the supplied memo uses the word calorie loosely.",
       "id": "sports-nutrition-exercise-fuel",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Snack A has 25 g carbohydrate, 8 g protein and 10 g fat; B has 35 g carbohydrate, 8 g protein and 4 g fat. Use 4, 4 and 9 kcal/g. Compare total energy and explain why equal or similar energy does not make their nutritional effects identical.",
+          "answer": "A supplies 25(4) + 8(4) + 10(9) = 222 kcal. B supplies 35(4) + 8(4) + 4(9) = 208 kcal. A provides 14 kcal more, but the macronutrient amounts differ. Fibre, food form, micronutrients, digestion and activity context also matter, so one energy total cannot establish identical nutritional effects or a personal best choice."
+        },
+        {
+          "question": "A sports article claims a diet caused faster race times because 8 of 10 volunteers improved after adopting it. Evaluate the claim and describe a stronger comparison that would help distinguish diet from training effects.",
+          "answer": "Improvement in 8/10 is descriptive evidence, not proof of cause. Training changes, expectation, familiarity, participant selection and normal variation could contribute. A stronger design would use an appropriate comparison group, standardised testing and recorded training, suitable allocation, repeated outcomes and clear reporting. The claim should stay within what the study can support, rather than become advice for every athlete."
+        }
+      ],
       "cards": [
         {
           "front": "What do macronutrients supply?",
@@ -5159,6 +6597,30 @@
         {
           "front": "A sports-diet article uses one athlete’s success as proof that its diet works for everyone. Give two reasons to question the claim.",
           "back": "A single anecdote cannot establish a general effect, and other influences such as training, genetics and total energy intake may explain the success. A stronger claim needs suitable comparative evidence from relevant populations."
+        },
+        {
+          "front": "Snack A has 25 g carbohydrate, 8 g protein and 10 g fat; B has 35 g carbohydrate, 8 g protein and 4 g fat. Use 4, 4 and 9 kcal/g. Compare total energy and explain why equal or similar energy does not make their nutritional effects identical.",
+          "back": "A supplies 25(4) + 8(4) + 10(9) = 222 kcal. B supplies 35(4) + 8(4) + 4(9) = 208 kcal. A provides 14 kcal more, but the macronutrient amounts differ. Fibre, food form, micronutrients, digestion and activity context also matter, so one energy total cannot establish identical nutritional effects or a personal best choice."
+        },
+        {
+          "front": "A sports article claims a diet caused faster race times because 8 of 10 volunteers improved after adopting it. Evaluate the claim and describe a stronger comparison that would help distinguish diet from training effects.",
+          "back": "Improvement in 8/10 is descriptive evidence, not proof of cause. Training changes, expectation, familiarity, participant selection and normal variation could contribute. A stronger design would use an appropriate comparison group, standardised testing and recorded training, suitable allocation, repeated outcomes and clear reporting. The claim should stay within what the study can support, rather than become advice for every athlete."
+        },
+        {
+          "front": "What energy values are commonly used for carbohydrate, protein and fat?",
+          "back": "Approximately 4, 4 and 9 kcal/g respectively."
+        },
+        {
+          "front": "What is 1 kcal in small calories?",
+          "back": "1 000 cal."
+        },
+        {
+          "front": "Why is glycaemic index not a meaningful label for carbohydrate-free food?",
+          "back": "The comparison is defined using a standard amount of available carbohydrate."
+        },
+        {
+          "front": "What is one warning sign of weak nutrition evidence?",
+          "back": "A universal causal claim based only on an anecdote or an uncontrolled before-and-after observation."
         }
       ]
     },
@@ -5220,6 +6682,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-heart-lungs-aerobic-fitness",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "Two athletes each have cardiac output 20 L/min at a test stage. A’s heart rate is 160 beats/min and B’s is 125. Find their stroke volumes and explain why this alone does not prove which has the higher VO₂ max.",
+          "answer": "A: SV = 20/160 = 0.125 L/beat = 125 mL/beat. B: SV = 20/125 = 0.160 L/beat = 160 mL/beat. VO₂ max depends on more than stroke volume at one test stage, including oxygen transport and extraction, and the stage may not be maximal. The numbers alone cannot rank their maximum aerobic capacity."
+        },
+        {
+          "question": "After months of endurance training, an athlete’s resting heart rate falls from 72 to 60 beats/min while resting cardiac output stays 4.8 L/min. Calculate stroke volume before and after, then link the change to the maintained output.",
+          "answer": "Before: SV = 4.8/72 = 0.0667 L/beat ≈ 66.7 mL/beat. After: SV = 4.8/60 = 0.080 L/beat = 80 mL/beat. A larger volume per beat compensates for fewer beats per minute, preserving the stated resting output. This is consistent with an endurance adaptation under the given assumptions."
+        }
+      ],
       "cards": [
         {
           "front": "What is cardiac output?",
@@ -5256,6 +6728,30 @@
         {
           "front": "Distinguish an increase in breathing rate during exercise from an increase in mitochondrial capacity after training.",
           "back": "A rise in breathing rate during a bout of exercise is an acute response. Greater mitochondrial capacity developed through repeated appropriate training is a chronic adaptation that can support aerobic ATP production."
+        },
+        {
+          "front": "Two athletes each have cardiac output 20 L/min at a test stage. A’s heart rate is 160 beats/min and B’s is 125. Find their stroke volumes and explain why this alone does not prove which has the higher VO₂ max.",
+          "back": "A: SV = 20/160 = 0.125 L/beat = 125 mL/beat. B: SV = 20/125 = 0.160 L/beat = 160 mL/beat. VO₂ max depends on more than stroke volume at one test stage, including oxygen transport and extraction, and the stage may not be maximal. The numbers alone cannot rank their maximum aerobic capacity."
+        },
+        {
+          "front": "After months of endurance training, an athlete’s resting heart rate falls from 72 to 60 beats/min while resting cardiac output stays 4.8 L/min. Calculate stroke volume before and after, then link the change to the maintained output.",
+          "back": "Before: SV = 4.8/72 = 0.0667 L/beat ≈ 66.7 mL/beat. After: SV = 4.8/60 = 0.080 L/beat = 80 mL/beat. A larger volume per beat compensates for fewer beats per minute, preserving the stated resting output. This is consistent with an endurance adaptation under the given assumptions."
+        },
+        {
+          "front": "What units cancel when calculating L/min divided by beats/min?",
+          "back": "The result is L/beat, a stroke volume."
+        },
+        {
+          "front": "Why must mL sometimes be divided by 1 000 in cardiac-output calculations?",
+          "back": "To express the result in litres rather than millilitres."
+        },
+        {
+          "front": "What does VO₂ max measure?",
+          "back": "The maximum rate of oxygen consumption during intense exercise, often relative to body mass."
+        },
+        {
+          "front": "What properties of alveoli support rapid diffusion?",
+          "back": "A large exchange area, thin walls and a good capillary supply maintaining gradients."
         }
       ]
     },
@@ -5317,6 +6813,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-arousal-psychology-motor-skills",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A precision-task athlete scores 60, 82 and 65 under low, moderate and high arousal conditions. Explain how these observations fit an inverted-U model, then give two reasons they do not establish a universal optimal level.",
+          "answer": "The middle condition gives the highest observed performance, consistent with improvement toward an optimum and impairment beyond it. But there are only three conditions and results may be affected by practice, fatigue or measurement error. Athletes and tasks differ, so these data cannot locate one exact optimum or generalise it to every person or sport."
+        },
+        {
+          "question": "One athlete prepares for a maximal jump and another for a precision putt. Propose how their arousal strategies might differ, justify with task demands and explain why the proposal should still be individualised.",
+          "answer": "The jumper may benefit from a routine increasing readiness and forceful effort, while the putter may use breathing or attention cues to limit distracting tension and support precise control. Task demands justify the different emphasis, but skill, preference and prior responses vary. Evaluate the actual athlete rather than assume one routine or arousal level always works."
+        }
+      ],
       "cards": [
         {
           "front": "What is the inverted-U model?",
@@ -5353,6 +6859,30 @@
         {
           "front": "Explain how a short attention cue could help an athlete who is distracted by worries during a skill.",
           "back": "A relevant cue, such as focusing on the target or a movement step, can redirect attention toward controllable task information. The explanation should connect the cue to the specific skill rather than assume all distraction will vanish."
+        },
+        {
+          "front": "A precision-task athlete scores 60, 82 and 65 under low, moderate and high arousal conditions. Explain how these observations fit an inverted-U model, then give two reasons they do not establish a universal optimal level.",
+          "back": "The middle condition gives the highest observed performance, consistent with improvement toward an optimum and impairment beyond it. But there are only three conditions and results may be affected by practice, fatigue or measurement error. Athletes and tasks differ, so these data cannot locate one exact optimum or generalise it to every person or sport."
+        },
+        {
+          "front": "One athlete prepares for a maximal jump and another for a precision putt. Propose how their arousal strategies might differ, justify with task demands and explain why the proposal should still be individualised.",
+          "back": "The jumper may benefit from a routine increasing readiness and forceful effort, while the putter may use breathing or attention cues to limit distracting tension and support precise control. Task demands justify the different emphasis, but skill, preference and prior responses vary. Evaluate the actual athlete rather than assume one routine or arousal level always works."
+        },
+        {
+          "front": "What does the inverted-U model predict beyond an optimum?",
+          "back": "Further arousal can reduce performance."
+        },
+        {
+          "front": "Why are gross and fine skills not a strict either-or description of all actions?",
+          "back": "Many actions combine large-muscle movement with precise control."
+        },
+        {
+          "front": "What should a useful attentional cue focus on?",
+          "back": "Relevant, controllable features of the task."
+        },
+        {
+          "front": "Does feeling highly aroused guarantee poor performance?",
+          "back": "No. Its effect depends on the athlete, task, interpretation and level relative to the optimum."
         }
       ]
     },
@@ -5421,6 +6951,16 @@
       "tip": "Show your reasoning and check the units or restrictions in your final answer.",
       "id": "sports-training-adaptations-evidence-based-essays",
       "minutes": 14,
+      "challenges": [
+        {
+          "question": "A runner’s time improves after a programme that changes training load, footwear and sleep habits together. Construct a cautious conclusion, identify the attribution problem and propose a way to improve the evidence.",
+          "answer": "The combined programme is associated with an improvement in this runner, but the design cannot isolate training load from footwear, sleep or other influences. Use standardised repeated tests and appropriate comparison conditions, changing or measuring the candidate influences systematically. The conclusion should not claim one cause without evidence separating it from the alternatives."
+        },
+        {
+          "question": "An essay argues that a new record proves human performance has no limits. Build a response using one argument for further improvement, one biological constraint and a reason the conclusion is too strong.",
+          "answer": "Better training, technology or wider participation can enable further records. However, oxygen delivery, force production, recovery and other biological processes impose constraints. One new record only shows that the previous best was surpassed; it does not prove unlimited improvement. A balanced conclusion should be specific to the sport, evidence and timescale."
+        }
+      ],
       "cards": [
         {
           "front": "How do training principles guide progress?",
@@ -5457,6 +6997,30 @@
         {
           "front": "An essay source says new equipment caused a sporting record. What additional evidence would help assess that claim?",
           "back": "Compare performance with and without the equipment under similar conditions, considering training, athlete ability, rules and measurement methods. A record occurring after a new design appeared is not enough by itself to prove the equipment caused it."
+        },
+        {
+          "front": "A runner’s time improves after a programme that changes training load, footwear and sleep habits together. Construct a cautious conclusion, identify the attribution problem and propose a way to improve the evidence.",
+          "back": "The combined programme is associated with an improvement in this runner, but the design cannot isolate training load from footwear, sleep or other influences. Use standardised repeated tests and appropriate comparison conditions, changing or measuring the candidate influences systematically. The conclusion should not claim one cause without evidence separating it from the alternatives."
+        },
+        {
+          "front": "An essay argues that a new record proves human performance has no limits. Build a response using one argument for further improvement, one biological constraint and a reason the conclusion is too strong.",
+          "back": "Better training, technology or wider participation can enable further records. However, oxygen delivery, force production, recovery and other biological processes impose constraints. One new record only shows that the previous best was surpassed; it does not prove unlimited improvement. A balanced conclusion should be specific to the sport, evidence and timescale."
+        },
+        {
+          "front": "What does progressive overload mean?",
+          "back": "Gradually raising training demand as adaptation occurs, with appropriate recovery."
+        },
+        {
+          "front": "What does specificity predict?",
+          "back": "Adaptations depend on the type of demand imposed by training."
+        },
+        {
+          "front": "How is an acute response different from a chronic adaptation?",
+          "back": "A response occurs during or shortly after a bout; an adaptation develops through repeated exposure over time."
+        },
+        {
+          "front": "Why can a sporting record not prove unlimited human improvement?",
+          "back": "Surpassing a past measurement is not evidence that no future constraint exists."
         }
       ]
     }
@@ -5468,5 +7032,5 @@
     "27": 26,
     "38": 36
   },
-  "contentVersion": 2
+  "contentVersion": 3
 }

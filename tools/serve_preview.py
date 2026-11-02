@@ -14,5 +14,5 @@ class Handler(SimpleHTTPRequestHandler):
   self.path=self.path[len('/DLS_app'):]
   super().do_GET()
 
-print('DLS preview: http://127.0.0.1:8798/DLS_app/',flush=True)
+print('For Rosa preview: http://127.0.0.1:8798/DLS_app/',flush=True)
 ThreadingHTTPServer(('127.0.0.1',8798),Handler).serve_forever()

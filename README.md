@@ -1,4 +1,4 @@
-# DLS Study Club
+# For Rosa
 
 A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages website and an Android project. The interface uses a course-dashboard layout and topic-based revision, with an independent design and branding.
 
@@ -10,7 +10,7 @@ A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages 
 - 44 uploaded PDFs audited; four exact duplicates combined into one copy each. There are 38 useful unique PDFs and two blank resources recorded as unavailable.
 - Papers named by subject, paper, session and year, with matching supplied memos. An unknown year is explicitly labelled.
 - 46 editorial topic packs linking directly to original question pages and matching memo pages where available. Original diagrams, equations and reading passages stay intact in the PDFs.
-- 276 authored practice questions with worked answers (six per topic), 138 short revision sections, 414 flashcards, animated concept sketches and interactive graph controls.
+- 276 regular practice questions with worked answers (six per topic) plus 92 multi-step challenge questions (two per topic), 138 short revision sections, 690 flashcards, animated concept sketches and interactive graph controls.
 - Search, year/subject/resource filters, bookmarks, revision completion, card-recall ratings and a 25-minute focus timer.
 - Responsive phone, tablet and desktop layouts; reduced-motion support for lesson animations.
 - Device-local progress. No learner accounts, backend, tracking or cross-device synchronization.
@@ -33,6 +33,7 @@ dart format --output=none --set-exit-if-changed lib test
 flutter analyze
 flutter test
 flutter build web --release --base-href /DLS_app/ --no-web-resources-cdn
+python tools/prepare_web_release.py
 ```
 
 Serve `build/web` under `/DLS_app/` to match the release base path, or build with `--base-href /` for a root-hosted local preview. The release bundles its own rendering resources rather than relying on a Flutter CDN.
@@ -43,7 +44,7 @@ Every push to `main` automatically regenerates and validates the learning librar
 
 Read [docs/SOURCE_AUDIT.md](docs/SOURCE_AUDIT.md) for a complete mapping of all 44 uploads, duplicates, partial memos and missing resources. Notably, no 2024 Chemistry memo was provided: upload 38 is a duplicate Physics memo. Original files are preserved byte-for-byte under `assets/papers/`. The numbered uploads remain locally and are ignored by Git to avoid duplication.
 
-Topic definitions, notes and the initial practice are in `tools/curriculum.py`; four additional exercises per topic are in `tools/extra_practice.py`. `assets/content.json` is the generated app catalogue. To rebuild it, install Python `pypdf==6.10.0` and run the following. The builder uses the original numbered uploads when available, or the committed PDFs under `assets/papers/` on a fresh checkout and in GitHub Actions:
+Topic definitions, notes and the initial practice are in `tools/curriculum.py`; four additional exercises per topic are in `tools/extra_practice.py`; challenges and new recall cards are in `tools/topic_extensions.py`. `assets/content.json` is the generated app catalogue. To rebuild it, install Python `pypdf==6.10.0` and run the following. The builder uses the original numbered uploads when available, or the committed PDFs under `assets/papers/` on a fresh checkout and in GitHub Actions:
 
 ```sh
 python tools/build_content.py
@@ -69,3 +70,11 @@ Bookmarks and progress use `shared_preferences` on the learner's device. Clearin
 - `test/widget_test.dart`: learner journeys, local persistence, narrow layout and visual rendering tests.
 
 The app is independent of Canvas and Save My Exams. Exam PDFs and their embedded third-party source material remain the property of their respective owners. No third-party educational branding or website assets have been copied.
+
+## Install For Rosa
+
+Open the public site in a normal browser and tap the app’s install icon. Supporting browsers offer a native install prompt. Otherwise, the app gives Android/Chrome, iPhone/iPad Safari, and desktop instructions. In Safari use Share → Add to Home Screen; in Chrome or Edge use Install app or the browser’s install option.
+
+The web manifest uses the name For Rosa and standalone display mode. The service worker saves the app shell and learning content for offline use after its first successful download. PDFs are cached on demand, and the PDF reader and resource rows also provide an explicit Download button. Cache storage depends on the browser; use downloaded files when you need a separate durable copy. The in-app PDF reader preserves the study screen and offers Back, Download, page controls, fit-width and zoom. It bundles Mozilla PDF.js 4.10.38 locally with its licence in web/vendor/pdfjs/LICENSE.
+
+Every push to main regenerates the content, validates sources, runs web and Flutter tests, builds and stamps a new app-shell revision, and deploys GitHub Pages. Existing open pages show a reload notice when a new app-shell version is downloaded. Student bookmarks and card ratings remain stored separately on their device.

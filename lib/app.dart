@@ -2,7 +2,8 @@ import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'pdf_reader_screen.dart';
+import 'platform_actions.dart' as platform;
 import 'models.dart';
 import 'visuals.dart';
 
@@ -20,7 +21,7 @@ class _DlsAppState extends State<DlsApp> {
       widget.store == null ? StudyStore.load() : Future.value(widget.store);
   @override
   Widget build(BuildContext context) => MaterialApp(
-    title: 'DLS Study Club',
+    title: 'For Rosa',
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
       useMaterial3: true,
@@ -165,24 +166,37 @@ class _StudyShellState extends State<StudyShell> {
     top();
   }
 
-  Future<void> openPaper(Json p, {int? page}) async {
+  Uri paperUri(Json p) {
     final path = 'assets/assets/papers/${p['file']}';
-    final uri = (kIsWeb
-            ? Uri.base.replace(fragment: '', query: '').resolve(path)
-            : Uri.parse('https://joaopedra-amdg.github.io/DLS_app/$path'))
-        .replace(fragment: page == null ? '' : 'page=$page');
+    return (kIsWeb
+        ? Uri.base.replace(fragment: '', query: '').resolve(path)
+        : Uri.parse('https://joaopedra-amdg.github.io/DLS_app/$path'));
+  }
+
+  Future<void> openPaper(Json p, {int? page}) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder:
+            (_) => PdfReaderScreen(
+              uri: paperUri(p),
+              title: p['title'],
+              filename: p['file'],
+              page: page ?? 1,
+            ),
+      ),
+    );
+  }
+
+  Future<void> downloadPaper(Json p) async {
     try {
-      if (!await launchUrl(
-            uri,
-            mode: LaunchMode.externalApplication,
-            webOnlyWindowName: '_blank',
-          ) &&
-          mounted) {
-        notice('The PDF could not open. Allow a new tab and try again.');
+      if (!await platform.downloadPdf(paperUri(p), p['file']) && mounted) {
+        notice('The PDF could not download. Please try again.');
       }
     } catch (_) {
       if (mounted) {
-        notice('The PDF could not open. Check your connection and try again.');
+        notice(
+          'The PDF could not download. Check your connection and try again.',
+        );
       }
     }
   }
@@ -309,7 +323,7 @@ class _StudyShellState extends State<StudyShell> {
                                             ),
                                           ),
                                           const Text(
-                                            'DLS Study Club · Grade 10',
+                                            'For Rosa · Grade 10',
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: muted,
@@ -378,27 +392,29 @@ class _StudyShellState extends State<StudyShell> {
                   ),
                 ),
                 const SizedBox(width: 10),
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'DLS',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 22,
-                        letterSpacing: -.8,
+                const Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'For Rosa',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 22,
+                          letterSpacing: -.8,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'STUDY CLUB',
-                      style: TextStyle(
-                        fontSize: 9,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 2.1,
-                        color: muted,
+                      Text(
+                        'YOUR STUDY SPACE',
+                        style: TextStyle(
+                          fontSize: 7.5,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 1,
+                          color: muted,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -654,6 +670,11 @@ class _StudyShellState extends State<StudyShell> {
           ),
         ),
         const SizedBox(width: 18),
+        IconButton(
+          tooltip: 'Install For Rosa',
+          onPressed: install,
+          icon: const Icon(Icons.install_mobile_rounded, color: purple),
+        ),
         const Pill(text: 'GRADE 10', color: purple),
       ],
     ),
@@ -1497,7 +1518,7 @@ class _StudyShellState extends State<StudyShell> {
         ),
         const SizedBox(height: 19),
         Text(
-          '${filtered.length} resources · PDFs open in a new tab',
+          '${filtered.length} resources · Read in the app or download a copy',
           style: const TextStyle(fontSize: 12, color: muted),
         ),
         const SizedBox(height: 14),
@@ -1674,10 +1695,18 @@ class _StudyShellState extends State<StudyShell> {
             children: [
               OutlinedButton.icon(
                 onPressed: () => openPaper(p),
-                icon: const Icon(Icons.open_in_new_rounded, size: 15),
+                icon: const Icon(Icons.picture_as_pdf_outlined, size: 15),
                 label: Text(
                   isMemo ? 'Open memo' : 'Open PDF',
                   style: const TextStyle(fontSize: 12),
+                ),
+              ),
+              TextButton.icon(
+                onPressed: () => downloadPaper(p),
+                icon: const Icon(Icons.download_rounded, size: 17),
+                label: const Text(
+                  'Download PDF',
+                  style: TextStyle(fontSize: 12),
                 ),
               ),
               if (p['memo'] != null)
@@ -1751,6 +1780,7 @@ class _StudyShellState extends State<StudyShell> {
             'Further practice',
             'Revision notes',
             'Flashcards',
+            'Challenge questions',
           ],
           topicTab,
           (i) => setState(() => topicTab = i),
@@ -1763,13 +1793,15 @@ class _StudyShellState extends State<StudyShell> {
           practice(t)
         else if (topicTab == 2)
           revision(t, s)
-        else
+        else if (topicTab == 3)
           FlashcardDeck(
             key: ValueKey(t['id']),
             topic: t,
             store: store,
             color: subjectColor(s),
-          ),
+          )
+        else
+          practice(t, challenge: true),
       ],
     );
   }
@@ -1817,7 +1849,7 @@ class _StudyShellState extends State<StudyShell> {
                             store.paper(r['paper']),
                             page: r['page'],
                           ),
-                      icon: const Icon(Icons.open_in_new_rounded, size: 16),
+                      icon: const Icon(Icons.picture_as_pdf_outlined, size: 16),
                       label: const Text(
                         'Open question page',
                         style: TextStyle(fontSize: 12),
@@ -1871,25 +1903,31 @@ class _StudyShellState extends State<StudyShell> {
       ),
     ],
   );
-  Widget practice(Json t) => Column(
+  Widget practice(Json t, {bool challenge = false}) => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      const Pill(
-        text: 'NEW PRACTICE · GENERATED STUDY MATERIAL',
+      Pill(
+        text:
+            challenge
+                ? 'STRETCH PRACTICE · GENERATED CHALLENGES'
+                : 'NEW PRACTICE · GENERATED STUDY MATERIAL',
         color: purple,
       ),
       const SizedBox(height: 13),
-      const Text(
-        'Your turn to try',
-        style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
+      Text(
+        challenge ? 'Take your thinking a little further.' : 'Your turn to try',
+        style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
       ),
       const SizedBox(height: 8),
-      const Text(
-        'Work it out first. Reveal the worked answer when you’re ready. These are original practice questions inspired by the topic, not official exam questions.',
-        style: TextStyle(fontSize: 12, color: muted, height: 1.8),
+      Text(
+        challenge
+            ? 'These multi-step extension questions combine ideas and add a reasoning step beyond the linked paper selections. Try them after the regular practice, then reveal the worked solution. They are generated study material, not official exam questions.'
+            : 'Work it out first. Reveal the worked answer when you’re ready. These are original practice questions inspired by the topic, not official exam questions.',
+        style: const TextStyle(fontSize: 12, color: muted, height: 1.8),
       ),
       const SizedBox(height: 21),
-      for (final (i, q) in List<Json>.from(t['practice']).indexed)
+      for (final (i, q)
+          in List<Json>.from(t[challenge ? 'challenges' : 'practice']).indexed)
         Padding(
           padding: const EdgeInsets.only(bottom: 17),
           child: panel(
@@ -1897,7 +1935,7 @@ class _StudyShellState extends State<StudyShell> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'QUESTION ${i + 1}',
+                  '${challenge ? 'CHALLENGE' : 'QUESTION'} ${i + 1}',
                   style: const TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w800,
@@ -1912,7 +1950,9 @@ class _StudyShellState extends State<StudyShell> {
                 ),
                 const SizedBox(height: 17),
                 ExpansionTile(
-                  key: ValueKey('${t['id']}-question-$i'),
+                  key: ValueKey(
+                    '${t['id']}-${challenge ? 'challenge' : 'question'}-$i',
+                  ),
                   tilePadding: EdgeInsets.zero,
                   childrenPadding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
                   title: const Text(
@@ -2188,16 +2228,90 @@ class _StudyShellState extends State<StudyShell> {
           },
         ),
   );
+  Future<void> install() async {
+    final result = await platform.installApp();
+    if (!mounted) return;
+    if (result == 'accepted') {
+      notice('For Rosa is being added to your device.');
+      return;
+    }
+    if (result == 'dismissed') return;
+    if (result == 'installed') {
+      notice('You’re already using For Rosa as an installed app.');
+      return;
+    }
+    showDialog<void>(
+      context: context,
+      builder:
+          (ctx) => AlertDialog(
+            title: const Text('Install For Rosa'),
+            content: const SizedBox(
+              width: 440,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      'Keep your study space on your home screen.',
+                      style: TextStyle(fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(height: 18),
+                    Text(
+                      'Android · Chrome',
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(height: 6),
+                    Text(
+                      'Open the browser menu ⋮ and choose “Install app” or “Add to Home screen”.',
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      'iPhone or iPad · Safari',
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(height: 6),
+                    Text(
+                      'Tap Share, then “Add to Home Screen”. If offered, turn on “Open as Web App”, then tap Add.',
+                    ),
+                    SizedBox(height: 16),
+                    Text(
+                      'Computer · Chrome or Edge',
+                      style: TextStyle(fontWeight: FontWeight.w700),
+                    ),
+                    SizedBox(height: 6),
+                    Text(
+                      'Use the install icon in the address bar, or the browser menu’s install option.',
+                    ),
+                    SizedBox(height: 18),
+                    Text(
+                      'If you opened this inside another app, open the same link in your browser first. Your progress stays on this device.',
+                      style: TextStyle(color: muted, fontSize: 12, height: 1.6),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(ctx),
+                child: const Text('Got it'),
+              ),
+            ],
+          ),
+    );
+  }
+
   void showAbout() => showDialog<void>(
     context: context,
     builder:
         (ctx) => AlertDialog(
-          title: const Text('Your DLS study library'),
+          title: const Text('Your For Rosa study library'),
           content: const SizedBox(
             width: 480,
             child: SingleChildScrollView(
               child: Text(
-                'Built from the 44 PDFs supplied for Grade 10 study. Topics reflect these papers and may not cover your entire curriculum.\n\nOriginal exam questions and supplied memos stay in their original PDFs. New practice, worked answers, revision notes and flashcards are generated learning material, not official marking guidelines. Some source memos contain errors; generated notes explain standard concepts.\n\nProgress and bookmarks are stored only in this browser or app on this device. They do not sync between devices, and clearing site data removes them. No account or learner details are collected. PDFs need a connection.\n\nDLS Study Club is an independent study companion inspired by clear course dashboards and topic-based revision. It is not affiliated with Canvas or Save My Exams. Original exam materials belong to their respective owners.',
+                'Built from the 44 PDFs supplied for Grade 10 study. Topics reflect these papers and may not cover your entire curriculum.\n\nOriginal exam questions and supplied memos stay in their original PDFs. New practice, worked answers, revision notes and flashcards are generated learning material, not official marking guidelines. Some source memos contain errors; generated notes explain standard concepts.\n\nProgress and bookmarks are stored only in this browser or app on this device. They do not sync between devices, and clearing site data removes them. No account or learner details are collected. Download PDFs to keep your own copy; previously cached content can be available offline.\n\nFor Rosa is an independent study companion inspired by clear course dashboards and topic-based revision. It is not affiliated with Canvas or Save My Exams. Original exam materials belong to their respective owners.',
                 style: TextStyle(fontSize: 13, height: 1.8),
               ),
             ),
