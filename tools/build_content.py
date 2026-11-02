@@ -10,6 +10,7 @@ import shutil
 from pathlib import Path
 from pypdf import PdfReader
 from curriculum import topics
+from extra_practice import EXTRA_PRACTICE
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -68,14 +69,23 @@ subjects = [
 ]
 papers=[]
 for n,(subject,year,exam,kind,memo,note) in spec.items():
- source=ROOT/f'{n}.pdf'
- reader=PdfReader(source)
  slug=re.sub('[^a-z0-9]+','-',f'{subject}-{year or "year-unknown"}-{exam}-{kind}'.lower()).strip('-')+'.pdf'
- shutil.copyfile(source, ASSETS/'papers'/slug)
+ original=ROOT/f'{n}.pdf'
+ published=ASSETS/'papers'/slug
+ source=original if original.is_file() else published
+ if not source.is_file():
+  raise FileNotFoundError(f'Missing source PDF: {original.name} or assets/papers/{slug}')
+ reader=PdfReader(source)
+ if source.resolve()!=published.resolve():
+  shutil.copyfile(source, published)
  papers.append(dict(id=str(n),subject=subject,year=year,title=f'{exam} · {year or "Year not stated"}',kind=kind,memo=str(memo) if memo else None,note=note,file=slug,pages=len(reader.pages),sha256=hashlib.sha256(source.read_bytes()).hexdigest(),originals=[f'{n}.pdf']+[f'{d}.pdf' for d,target in duplicates.items() if target==n]))
 
 by_id={p['id']:p for p in papers}
+assert set(EXTRA_PRACTICE)=={t['title'] for t in topics}, 'Extra-practice topics must match the curriculum'
 for i,t in enumerate(topics):
+ additions=EXTRA_PRACTICE[t['title']]
+ assert len(additions)>=4, f'Expected at least four extra exercises for {t["title"]}'
+ t['practice'].extend(dict(question=q,answer=a) for q,a in additions)
  t['id']=t['subject']+'-'+re.sub('[^a-z0-9]+','-',t['title'].lower()).strip('-')
  t['minutes']=8+len(t['notes'])*2
  t['cards']=[dict(front=h,back=b) for h,b in t['notes']]+[dict(front=q['question'],back=q['answer']) for q in t['practice']]
@@ -87,7 +97,7 @@ for i,t in enumerate(topics):
   if ref.get('memoPage') and p['memo']:
    assert ref['memoPage']<=by_id[p['memo']]['pages']
 
-content=dict(subjects=subjects,papers=papers,topics=topics,sourceCount=44,duplicates=duplicates,contentVersion=1)
+content=dict(subjects=subjects,papers=papers,topics=topics,sourceCount=44,duplicates=duplicates,contentVersion=2)
 (ASSETS/'content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2),encoding='utf-8')
 audit=ROOT/'docs'/'SOURCE_AUDIT.md'; audit.parent.mkdir(exist_ok=True)
 lines=['# Source audit','','All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers; duplicates share one published copy. Blank uploads are retained in the catalogue as unavailable. Page links use PDF page positions, not printed page labels.','','| Upload(s) | Subject | Resource | Type | Pages | Notes |','|---|---|---|---|---|---|']

@@ -49,6 +49,6 @@ All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers;
 
 Topics are editorial groupings based on the supplied papers, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines.
 
-46 topics; 92 additional worked questions; 230 flashcards.
+46 topics; 276 additional worked questions; 414 flashcards.
 
 The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.

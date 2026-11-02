@@ -28,7 +28,10 @@ ids=set()
 for t in data['topics']:
  assert t['id'] not in ids
  ids.add(t['id'])
- assert len(t['practice'])>=2 and len(t['notes'])>=3 and len(t['cards'])>=5
+ assert len(t['practice'])>=6 and len(t['notes'])>=3 and len(t['cards'])>=9
+ questions=[q['question'].strip().casefold() for q in t['practice']]
+ assert len(questions)==len(set(questions)), f'Duplicate practice question: {t["title"]}'
+ assert all(q['question'].strip() and q['answer'].strip() for q in t['practice'])
  assert t['formula'] and t['tip'] and t['sources']
  for r in t['sources']:
   p=papers[r['paper']]

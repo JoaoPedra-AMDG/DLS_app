@@ -10,7 +10,7 @@ A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages 
 - 44 uploaded PDFs audited; four exact duplicates combined into one copy each. There are 38 useful unique PDFs and two blank resources recorded as unavailable.
 - Papers named by subject, paper, session and year, with matching supplied memos. An unknown year is explicitly labelled.
 - 46 editorial topic packs linking directly to original question pages and matching memo pages where available. Original diagrams, equations and reading passages stay intact in the PDFs.
-- 92 newly authored practice questions with worked answers, 138 short revision sections, 230 flashcards, animated concept sketches and interactive graph controls.
+- 276 authored practice questions with worked answers (six per topic), 138 short revision sections, 414 flashcards, animated concept sketches and interactive graph controls.
 - Search, year/subject/resource filters, bookmarks, revision completion, card-recall ratings and a 25-minute focus timer.
 - Responsive phone, tablet and desktop layouts; reduced-motion support for lesson animations.
 - Device-local progress. No learner accounts, backend, tracking or cross-device synchronization.
@@ -37,13 +37,13 @@ flutter build web --release --base-href /DLS_app/ --no-web-resources-cdn
 
 Serve `build/web` under `/DLS_app/` to match the release base path, or build with `--base-href /` for a root-hosted local preview. The release bundles its own rendering resources rather than relying on a Flutter CDN.
 
-Every push to `main` runs formatting, analysis and learner-flow tests before the Pages deployment in `.github/workflows/pages.yml`. GitHub Pages must use **GitHub Actions** as its build source.
+Every push to `main` automatically regenerates and validates the learning library, runs formatting, analysis and learner-flow tests, builds Flutter web, and deploys the public site through `.github/workflows/pages.yml`. The share link stays the same. GitHub Pages uses **GitHub Actions** as its build source. To publish more practice, edit `tools/extra_practice.py` or `tools/curriculum.py`, commit and push to `main`; the workflow includes those content changes automatically. Open or reload the site after deployment to see the updated version. A failed check prevents that update from being published.
 
 ## Learning content and sources
 
 Read [docs/SOURCE_AUDIT.md](docs/SOURCE_AUDIT.md) for a complete mapping of all 44 uploads, duplicates, partial memos and missing resources. Notably, no 2024 Chemistry memo was provided: upload 38 is a duplicate Physics memo. Original files are preserved byte-for-byte under `assets/papers/`. The numbered uploads remain locally and are ignored by Git to avoid duplication.
 
-Topic definitions, notes and generated practice are in `tools/curriculum.py`; `assets/content.json` is the generated app catalogue. To rebuild it, place the original `1.pdf` through `44.pdf` in the project root, install Python `pypdf`, and run:
+Topic definitions, notes and the initial practice are in `tools/curriculum.py`; four additional exercises per topic are in `tools/extra_practice.py`. `assets/content.json` is the generated app catalogue. To rebuild it, install Python `pypdf==6.10.0` and run the following. The builder uses the original numbered uploads when available, or the committed PDFs under `assets/papers/` on a fresh checkout and in GitHub Actions:
 
 ```sh
 python tools/build_content.py

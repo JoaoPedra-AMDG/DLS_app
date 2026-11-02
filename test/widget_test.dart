@@ -30,7 +30,7 @@ void main() {
     'Learner finds a topic, reveals a worked answer and bookmarks it',
     (tester) async {
       await launch(tester);
-      expect(find.text('Your next “I get it!” starts here.'), findsOneWidget);
+      expect(find.text('Your subjects'), findsOneWidget);
       await tester.tap(find.text('Find your next discovery…'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), 'mitosis');
@@ -127,7 +127,10 @@ void main() {
     expect(find.text('Study all cards'), findsOneWidget);
     await tester.tap(find.text('Study all cards'));
     await tester.pumpAndSettle();
-    expect(find.text('CARD 1 OF 5'), findsOneWidget);
+    expect(
+      find.text('CARD 1 OF ${(t['cards'] as List).length}'),
+      findsOneWidget,
+    );
     expect(tester.takeException(), isNull);
   });
   testWidgets('Every topic illustration paints at phone width', (tester) async {
