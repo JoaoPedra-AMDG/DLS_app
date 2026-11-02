@@ -680,7 +680,7 @@ class _StudyShellState extends State<StudyShell> {
           ),
           const SizedBox(height: 17),
           const Text(
-            'Your next “I get it!” starts here.',
+            'AMDG',
             style: TextStyle(
               fontSize: 29,
               fontWeight: FontWeight.w800,
