@@ -2574,7 +2574,7 @@ class _SearchLibraryState extends State<SearchLibrary> {
         widget.store.topics
             .where(
               (t) => matches(
-                '${t['title']} ${t['group']} ${widget.store.subject(t['subject'])['name']}',
+                '${t['title']} ${topicGroup(t)} ${(t['aliases'] as List?)?.join(' ') ?? ''} ${widget.store.subject(t['subject'])['name']}',
               ),
             )
             .toList();

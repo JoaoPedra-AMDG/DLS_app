@@ -153,6 +153,8 @@ LIFE_PACKS = {
    ('Distinguish nitrogen fixation, nitrification and denitrification.', 'Fixation: nitrogen gas to usable compounds. Nitrification: ammonium → nitrite → nitrate. Denitrification: nitrate → nitrogen gas.'),
   ]),
  'life-evolution-climate-scientific-essays': dict(
+  title='History of life on Earth',
+  aliases=['History of life notes', 'Fossils, geological time and mass extinctions'],
   sources=[HISTORY, ESSAYS],
   notes=[
    ('Class summary: origins and evidence', 'The class slides compare hydrothermal-vent, primordial-soup and panspermia hypotheses. Distinguish a proposed explanation from established evidence: the Miller–Urey experiment formed organic molecules, not living organisms. Fossils preserve remains or traces and provide evidence of past organisms, environments and change through time.'),
@@ -195,6 +197,9 @@ def apply_life_summaries(topics, documents):
         pack = LIFE_PACKS.get(topic['id'])
         if pack is None:
             continue
+        if 'title' in pack:
+            topic['aliases'] = [topic['title']] + pack.get('aliases', [])
+            topic['title'] = pack['title']
         assert len(pack['cards']) == 8
         references = list(dict.fromkeys(source_documents[sid] for sid in pack['sources']))
         topic['classroomSources'] = list(dict.fromkeys(topic['classroomSources'] + references))

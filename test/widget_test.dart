@@ -55,6 +55,39 @@ void main() {
     },
   );
   testWidgets(
+    'History of life is discoverable by its class title and previous name',
+    (tester) async {
+      await launch(tester);
+      await tester.tap(find.text('Search subjects, topics and papers'));
+      await tester.pumpAndSettle();
+      for (final query in [
+        'history of life',
+        'history of life notes',
+        'evolution climate',
+        'fossils',
+      ]) {
+        await tester.enterText(find.byType(TextField), query);
+        await tester.pumpAndSettle();
+        expect(find.text('History of life on Earth'), findsOneWidget);
+      }
+      await tester.tap(find.text('History of life on Earth'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Revision notes'));
+      await tester.pump();
+      expect(find.text('Class summary: origins and evidence'), findsOneWidget);
+      expect(
+        find.text('Class summary: fossils and geological change'),
+        findsOneWidget,
+      );
+      final topic = store.topics.firstWhere(
+        (t) => t['title'] == 'History of life on Earth',
+      );
+      expect(topic['id'], 'life-evolution-climate-scientific-essays');
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets(
     'Revision completion and flashcard ratings survive store reload',
     (tester) async {
       await launch(tester);

@@ -7394,7 +7394,7 @@
     },
     {
       "subject": "life",
-      "title": "Evolution, climate & scientific essays",
+      "title": "History of life on Earth",
       "group": "Earth and life",
       "sources": [
         {
@@ -7646,6 +7646,11 @@
       "classroomSources": [
         "school-10f3c536a8c996fe",
         "school-a91f5e8bc163ada4"
+      ],
+      "aliases": [
+        "Evolution, climate & scientific essays",
+        "History of life notes",
+        "Fossils, geological time and mass extinctions"
       ]
     },
     {
