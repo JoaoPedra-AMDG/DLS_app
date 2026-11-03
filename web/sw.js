@@ -4,7 +4,8 @@ const PRECACHE = /*__PRECACHE__*/ [];
 const local = path => new URL(path, self.registration.scope).href;
 
 self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE)).then(() => self.skipWaiting()));
+  // Revalidate stable asset URLs instead of filling a new release with old HTTP-cache entries.
+  event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE.map(path => new Request(local(path), { cache: 'reload' })))).then(() => self.skipWaiting()));
 });
 self.addEventListener('activate', event => {
   event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('for-rosa-') && key !== CACHE_NAME).map(key => caches.delete(key)))).then(() => self.clients.claim()));
@@ -17,7 +18,7 @@ self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const cache = await caches.open(CACHE_NAME);
     try {
-      const response = await fetch(request);
+      const response = await fetch(request, { cache: 'no-cache' });
       if (response.ok && response.status === 200 && !request.headers.has('range')) {
         // Full PDFs are cached only when opened; do not pre-download the library.
         event.waitUntil(cache.put(request, response.clone()).catch(() => {}));

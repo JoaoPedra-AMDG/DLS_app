@@ -35,15 +35,17 @@ test('Install action handles manual instructions, a user prompt and standalone m
 function workerHarness() {
   const handlers = {}, entries = new Map(), deleted = [], scope = 'https://study.test/DLS_app/';
   let online = true;
+  const fetchOptions = [], precacheRequests = [];
   const cache = {
-    async addAll() {},
+    async addAll(requests) { precacheRequests.push(...requests); },
     async put(request, response) { entries.set(typeof request === 'string' ? request : request.url, response); },
     async match(request) { return entries.get(typeof request === 'string' ? request : request.url)?.clone(); },
   };
   const self = { registration: { scope }, location: { origin: 'https://study.test' }, addEventListener: (name, fn) => { handlers[name] = fn; }, async skipWaiting() {}, clients: { async claim() {} } };
   const caches = { async open() { return cache; }, async keys() { return ['for-rosa-old', 'another-app-cache', 'for-rosa-__BUILD_ID__']; }, async delete(name) { deleted.push(name); } };
-  const fetch = async () => { if (!online) throw Error('offline'); return new Response('fresh resource', { status: 200 }); };
-  vm.runInNewContext(fs.readFileSync('web/sw.js', 'utf8'), { self, caches, fetch, Response, URL, Promise });
+  const fetch = async (_request, options) => { fetchOptions.push(options); if (!online) throw Error('offline'); return new Response('fresh resource', { status: 200 }); };
+  const workerSource = fs.readFileSync('web/sw.js', 'utf8').replace('/*__PRECACHE__*/ []', '["./main.dart.js"]');
+  vm.runInNewContext(workerSource, { self, caches, fetch, Request, Response, URL, Promise });
   async function request(url, options) {
     const pending = []; let response;
     handlers.fetch({ request: new Request(url, options), respondWith(promise) { response = promise; }, waitUntil(promise) { pending.push(promise); } });
@@ -51,8 +53,19 @@ function workerHarness() {
     await Promise.all(pending);
     return result;
   }
-  return { handlers, entries, deleted, scope, request, offline() { online = false; } };
+  return { handlers, entries, deleted, scope, request, fetchOptions, precacheRequests, offline() { online = false; } };
 }
+
+test('A new release refreshes stable asset URLs and online requests revalidate the HTTP cache', async () => {
+  const worker = workerHarness();
+  let installation;
+  worker.handlers.install({ waitUntil(promise) { installation = promise; } });
+  await installation;
+  assert.equal(worker.precacheRequests[0].url, `${worker.scope}main.dart.js`);
+  assert.equal(worker.precacheRequests[0].cache, 'reload');
+  await worker.request(`${worker.scope}main.dart.js`);
+  assert.equal(worker.fetchOptions[0].cache, 'no-cache');
+});
 
 test('Offline cache returns previously opened PDFs and leaves unrelated app caches alone', async () => {
   const worker = workerHarness();
