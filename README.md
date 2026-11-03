@@ -58,6 +58,8 @@ Validation checks all input provenance and published file checksums, actual blan
 
 Generated learning material is clearly labelled and is separate from official exam content. Topics reflect the supplied papers and are not a guarantee of complete curriculum coverage. Some original memo statements are imprecise or incorrect; the notes explain standard concepts instead of copying those mistakes. The source PDF bytes remain untouched.
 
+Life Sciences includes brief class-document summaries at the start of each topic and short recall cards appended to its existing deck. The reviewed source copies and scope are documented in [the Life Sciences audit](docs/LIFE_SCIENCES_CLASSROOM_AUDIT.md). Those teaching files remain school links; their original bytes are kept locally rather than bundled in this update.
+
 ## Privacy and persistence
 
 Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. A PDF needs a successful initial online load before it can be cached. The focus timer runs while For Rosa remains open; closing the app ends it. It is not a background notification service.

@@ -49,7 +49,7 @@ All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers;
 
 Topics are editorial groupings based on the supplied papers and available Classroom teaching documents, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines. School links do not imply that an offline copy was imported or that its contents were read.
 
-56 topics; 336 regular worked questions; 112 concept challenges; 951 flashcards.
+56 topics; 336 regular worked questions; 112 concept challenges; 1023 flashcards.
 
 The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.
 
@@ -57,4 +57,4 @@ The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explai
 
 32 verified document copies are included. Their original bytes, viewing-copy checksums, page counts and source IDs are recorded in assets/classroom_manifest.json. The original teaching catalogue is assets/classroom_source_index.json. Repeated teaching-file names are grouped while retaining every source ID.
 
-216 additional source copies are represented by 187 grouped school links. These files were not downloaded or read; they require the school account and are not available offline. Notes associated with a school link are independently authored study explanations, not a summary of the inaccessible file. English and RE additions use the verified workbook, scope and blank teacher assignment briefs. Personal student submissions are excluded.
+216 additional source copies are represented by 187 grouped school links. These links require the school account and have no offline copy in the public app. Some Life Sciences source files were downloaded and reviewed locally to write brief summaries; see docs/LIFE_SCIENCES_CLASSROOM_AUDIT.md for the specific reviewed copies. Other school links do not imply that their contents were read. English and RE additions use the verified workbook, scope and blank teacher assignment briefs. Personal student submissions are excluded.

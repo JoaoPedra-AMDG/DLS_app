@@ -5,6 +5,7 @@ Original learner progress IDs and flashcard positions are preserved.
 """
 import re
 from copy import deepcopy
+from life_classroom import apply_life_summaries
 
 SUBJECT_NAMES = {
  'maths': 'Gr.10 Maths 2026', 'ap': 'Gr.10 FSM 2026',
@@ -104,6 +105,7 @@ def enrich(topics, subjects, documents):
             heading, body = CLASSROOM_FOCUS[topic['title']]
             topic['notes'].append(dict(heading=heading,body=body))
             topic['cards'].append(dict(front=heading,back=body))
+    apply_life_summaries(topics, documents)
     return topics, subjects
 
 NEW_TOPICS = []

@@ -4,9 +4,18 @@ import json
 import re
 from pathlib import Path
 from pypdf import PdfReader
+from life_classroom import LIFE_PACKS
 
 root=Path(__file__).resolve().parents[1]
 data=json.loads((root/'assets/content.json').read_text(encoding='utf-8'))
+reviews=json.loads((root/'docs/life_classroom_sources.json').read_text(encoding='utf-8'))
+reviewed_sources={s['id'] for s in reviews}
+expected_reviewed={sid for pack in LIFE_PACKS.values() for sid in pack['sources']}
+assert reviewed_sources==expected_reviewed and len(reviews)==len(reviewed_sources)
+for source in reviews:
+ assert re.fullmatch(r'[0-9a-f]{64}',source['sha256']) and source['sections']>0
+ local=root/'tmp/classroom-originals'/(source['id']+'.'+source['format'].lower())
+ if local.exists(): assert hashlib.sha256(local.read_bytes()).hexdigest()==source['sha256']
 papers={p['id']:p for p in data['papers']}
 documents={d['id']:d for d in data.get('classroom',[])}
 for d in documents.values():
@@ -56,6 +65,15 @@ for t in data['topics']:
  assert all(q['question'].strip() and q['answer'].strip() for q in t['practice']+t['challenges'])
  assert all(c['front'].strip() and c['back'].strip() for c in t['cards'])
  assert t['formula'] and t['tip'] and (t['sources'] or t.get('classroomSources'))
+ if t['subject']=='life':
+  summaries=[n for n in t['notes'] if n.get('classroomSummary')]
+  summary_cards=[c for c in t['cards'] if c.get('classroomSummary')]
+  assert summaries and len(summary_cards)>=8, t['title']
+  assert all(len(n['body'].split())<=60 for n in summaries), t['title']
+  assert all(len(c['back'].split())<=25 for c in summary_cards), t['title']
+  linked={sid for document_id in t['classroomSources'] for sid in documents[document_id]['sourceIds']}
+  for entry in summaries+summary_cards:
+   assert entry['sourceIds'] and set(entry['sourceIds'])<=reviewed_sources & linked
  for document_id in t.get('classroomSources',[]):
   assert document_id in documents and t['subject'] in documents[document_id]['subjects']
  for r in t['sources']:

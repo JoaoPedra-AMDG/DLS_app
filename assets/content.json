@@ -5417,6 +5417,50 @@
       ],
       "notes": [
         {
+          "heading": "Class summary: cell structures",
+          "body": "Cells are the basic units of life and arise from existing cells. The nucleus contains DNA; ribosomes make proteins; rough ER and the Golgi apparatus process and transport them. Mitochondria produce ATP, while chloroplasts carry out photosynthesis. Plant cells also have a cellulose wall and a large permanent vacuole.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "heading": "Class summary: membranes and movement",
+          "body": "The membrane is a selectively permeable phospholipid bilayer with proteins. Diffusion and facilitated diffusion move substances down a gradient without ATP. Osmosis moves water across a selectively permeable membrane from higher to lower water potential. Active transport requires energy; endocytosis brings material in and exocytosis releases it.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "heading": "Class summary: four animal tissues",
+          "body": "Epithelial tissue covers and lines surfaces; microvilli increase absorption. Connective tissue supports, binds or transports, with cells in an extracellular matrix: bone, cartilage, tendons and blood are examples. Muscle tissue contracts. Nervous tissue carries impulses through neurons and is supported by glial cells.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "heading": "Class summary: muscle and nerve structure",
+          "body": "Skeletal muscle is striated and voluntary; smooth muscle is non-striated and involuntary; cardiac muscle is branched, striated and involuntary, with intercalated discs. In a typical neuron, dendrites receive impulses, the cell body contains the nucleus, and the axon carries impulses away. Myelin helps impulses travel rapidly.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
           "heading": "What do the main organelles do?",
           "body": "The nucleus contains genetic information; mitochondria carry out most aerobic ATP production; chloroplasts carry out photosynthesis. Plant cells also have a cellulose cell wall and usually a large permanent vacuole."
         },
@@ -5538,6 +5582,94 @@
         {
           "front": "Why does the fact that a cell is alive not mean every substance must be moved across its membrane by active transport?",
           "back": "Diffusion and osmosis are passive processes driven by gradients and occur in living cells without direct energy input for each movement. Active transport uses cellular energy to move substances against an electrochemical gradient or through energy-coupled mechanisms."
+        },
+        {
+          "front": "How are phospholipids arranged in a cell membrane?",
+          "back": "Hydrophilic heads face the watery surroundings; hydrophobic tails face inward, forming a bilayer.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What is the route of a protein being secreted by a cell?",
+          "back": "Ribosomes on rough ER → transport vesicles → Golgi apparatus → secretory vesicles → cell membrane.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Why do mitochondria have cristae?",
+          "back": "The folded inner membrane provides more surface area for ATP-producing reactions.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What do epithelial microvilli do?",
+          "back": "Increase surface area for absorption; they do not beat like cilia.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Why is blood classified as connective tissue?",
+          "back": "Its cells are suspended in an extracellular matrix: liquid plasma.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Which muscle tissue is voluntary and striated?",
+          "back": "Skeletal muscle.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Which muscle tissue has branching cells and intercalated discs?",
+          "back": "Cardiac muscle; its contractions are involuntary.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What is the usual direction of an impulse through a neuron?",
+          "back": "Dendrites → cell body → axon → axon terminals.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1tt1Vh8-PowIefoNzJQTj2tfu6ixjLx2w",
+            "10_Z_pIbq_JQXw8NfxmSzI9yauxG0pPqM",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
         }
       ],
       "classroomSources": [
@@ -5546,7 +5678,9 @@
         "school-96e542a0766b7c1d",
         "school-dcb08bbed0b1b3e6",
         "school-f33cf2edeba95338",
-        "school-9ae63c5318b59ee6"
+        "school-9ae63c5318b59ee6",
+        "school-41920d425930db5d",
+        "school-abd6047379544baf"
       ]
     },
     {
@@ -5577,6 +5711,36 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: preparation and purpose",
+          "body": "During interphase a cell grows, performs normal functions and replicates DNA before division. Mitosis divides the nucleus and normally preserves chromosome number. It supports growth, replacement, repair and some forms of asexual reproduction. Bacteria reproduce by binary fission, not mitosis.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "heading": "Class summary: PMAT",
+          "body": "Prophase: chromosomes condense and the spindle forms. Metaphase: chromosomes line up at the equator. Anaphase: sister chromatids separate to opposite poles. Telophase: two nuclei form as chromosomes decondense. Identify the chromosome arrangement in a diagram before naming the phase.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "heading": "Class summary: division outcomes",
+          "body": "Cytokinesis divides the cytoplasm: animal cells form a cleavage furrow and plant cells form a cell plate. Mitosis normally produces two genetically identical daughter cells. Meiosis involves two divisions and produces four genetically varied cells with half the original chromosome number.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
         {
           "heading": "What happens before mitosis?",
           "body": "During interphase the cell grows and, in S phase, replicates DNA. Each duplicated chromosome has two sister chromatids before division. DNA replication is essential for equal genetic information."
@@ -5707,6 +5871,86 @@
         {
           "front": "DNA copying and cell division are separate stages",
           "back": "DNA replication precedes mitosis. Mitosis distributes copies into daughter nuclei and cytokinesis divides the cell. Keep the distinction between a chromosome, its sister chromatids and the amount of DNA clear when explaining why chromosome number is normally maintained."
+        },
+        {
+          "front": "When does DNA replicate before mitosis?",
+          "back": "During the S phase of interphase, before mitosis begins.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What is the difference between karyokinesis and cytokinesis?",
+          "back": "Karyokinesis divides the nucleus; cytokinesis divides the cytoplasm.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What is the key chromosome arrangement in metaphase?",
+          "back": "Duplicated chromosomes line up at the cell equator, attached to spindle fibres.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What separates in anaphase of mitosis?",
+          "back": "Sister chromatids; after separation, each is a daughter chromosome.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "How does plant cytokinesis differ from animal cytokinesis?",
+          "back": "A plant cell forms a cell plate; an animal cell forms a cleavage furrow.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "Compare the usual products of mitosis and meiosis.",
+          "back": "Mitosis: two matching cells with unchanged chromosome number. Meiosis: four varied cells with half the chromosome number.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "Why is mitosis important for growth and repair?",
+          "back": "It increases cell number and replaces damaged or worn-out cells while preserving genetic information.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What can happen if spindle fibres fail to attach correctly?",
+          "back": "Chromosomes may be distributed unequally, producing daughter cells with abnormal chromosome numbers.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1CG0dHYqnmZnh0biP6p59NifhTQHZgdvp",
+            "1E_Ocw-Hhai1Yx64O2xyAcHrwwdag7qBJ",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
         }
       ],
       "classroomSources": [
@@ -5746,6 +5990,46 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: carbohydrates",
+          "body": "Monosaccharides include glucose, fructose and galactose. Two monosaccharides form a disaccharide: sucrose = glucose + fructose; lactose = glucose + galactose; maltose = glucose + glucose. Polysaccharides include starch for plant storage, glycogen for animal storage and cellulose in plant cell walls.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "heading": "Class summary: proteins",
+          "body": "Proteins are amino-acid chains joined by peptide bonds; their folded structure determines function. Examples include enzymes, antibodies, haemoglobin, collagen, actin and myosin. Essential amino acids must come from food because the body cannot make enough of them. Denaturation changes protein shape and can destroy its function.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "heading": "Class summary: lipids",
+          "body": "A triglyceride contains glycerol and three fatty acids joined by ester bonds. Lipids store energy, insulate and protect organs. Saturated fatty acids have no carbon–carbon double bonds; unsaturated fatty acids have at least one. Phospholipids have two fatty-acid tails and a phosphate-containing head, forming cell membranes.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "heading": "Class summary: enzymes",
+          "body": "Enzymes are biological catalysts: they speed reactions without being used up. A substrate binds to a specific active site. Temperature and pH affect activity; extreme conditions can denature the enzyme. Low temperature usually slows activity without denaturing it. Enzymes are also used in brewing, baking and detergents.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
         {
           "heading": "How does an enzyme act?",
           "body": "An enzyme is a biological catalyst. Its active site binds a suitable substrate, helping a reaction proceed with a lower activation energy. Products leave and the enzyme can be reused."
@@ -5868,6 +6152,86 @@
         {
           "front": "Why does doubling substrate concentration eventually stop doubling reaction rate when enzyme concentration is fixed?",
           "back": "At high substrate concentration, enzyme active sites are occupied much of the time. The rate becomes limited by the enzyme’s available sites and turnover. Adding more substrate then has little effect unless more active enzyme becomes available."
+        },
+        {
+          "front": "Which monosaccharides form sucrose, lactose and maltose?",
+          "back": "Sucrose: glucose + fructose. Lactose: glucose + galactose. Maltose: glucose + glucose.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "Compare starch, glycogen and cellulose.",
+          "back": "Starch stores carbohydrate in plants; glycogen stores it in animals; cellulose provides plant cell-wall structure.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "What are the building blocks and joining bonds of proteins?",
+          "back": "Amino acids joined by peptide bonds.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "What makes an amino acid essential in the diet?",
+          "back": "The body cannot synthesise enough of it, so it must be obtained from food.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "Why can an enzyme lose activity at high temperature?",
+          "back": "Denaturation changes its active-site shape, so the substrate no longer binds effectively.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "Does cooling usually denature an enzyme?",
+          "back": "No. It usually slows molecular movement and reaction rate; activity can recover on warming.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "What makes up a triglyceride?",
+          "back": "One glycerol molecule joined to three fatty acids by ester bonds.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
+        },
+        {
+          "front": "How do saturated and unsaturated fatty acids differ?",
+          "back": "Saturated: no carbon–carbon double bonds. Unsaturated: one or more carbon–carbon double bonds.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1TfRkYY_6rkxRUsFCBiXzIvjwJCRzDkcw",
+            "1sufrDG1utz9s1EJbkuMzNpBvikgXxHl4",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f"
+          ]
         }
       ],
       "classroomSources": [
@@ -5905,6 +6269,39 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: digestive processes",
+          "body": "Ingestion takes food in. Mechanical digestion breaks it into smaller pieces; chemical digestion uses enzymes to form absorbable molecules. Absorption transfers nutrients across the gut lining; assimilation uses them in cells. Egestion removes undigested material and differs from excretion of metabolic wastes.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "heading": "Class summary: feeding adaptations",
+          "body": "Incisors cut, canines tear, and premolars and molars crush or grind. Herbivores generally have longer digestive tracts and fermentation regions for plant fibre; ruminant microbes help digest cellulose. Carnivores generally have shorter tracts. Omnivores have adaptations for a mixed diet. Gut microorganisms also help break down some food components.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "heading": "Class summary: absorption and glucose balance",
+          "body": "Villi and microvilli increase small-intestine surface area. Digestion reduces carbohydrates to monosaccharides; absorbed sugars travel to the liver. Insulin lowers blood glucose by promoting uptake and storage, while glucagon raises it by promoting liver glycogen breakdown and glucose release. Glycogen is stored mainly in liver and muscle.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
         {
           "heading": "What are digestion and absorption?",
           "body": "Digestion breaks large food molecules into smaller soluble molecules. Absorption moves these molecules across the intestinal wall into blood or lymph. Most nutrient absorption occurs in the small intestine."
@@ -6027,13 +6424,103 @@
         {
           "front": "Blood glucose rises after a meal. Explain why insulin’s response is called negative feedback, even though insulin secretion increases.",
           "back": "The response opposes the original change: insulin promotes processes that lower elevated blood glucose toward the regulated range. “Negative” describes opposition to the disturbance, not a decrease in every variable in the pathway."
+        },
+        {
+          "front": "How do absorption and assimilation differ?",
+          "back": "Absorption moves digested nutrients across the gut lining; assimilation uses them in body cells.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What do incisors, canines and molars do?",
+          "back": "Incisors cut; canines tear; premolars and molars crush and grind.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Why do many herbivores have long digestive tracts?",
+          "back": "Plant fibre takes time to process, and specialised regions allow microbial fermentation.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "Why are microbes important in a ruminant’s rumen?",
+          "back": "They produce enzymes that digest cellulose, which the animal cannot digest using its own enzymes.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "How do villi and microvilli improve absorption?",
+          "back": "They greatly increase the surface area of the small-intestine lining.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What is insulin’s main effect on blood glucose?",
+          "back": "It lowers blood glucose by promoting uptake and storage, including glycogen formation.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What is glucagon’s main effect on blood glucose?",
+          "back": "It raises blood glucose by promoting liver glycogen breakdown and glucose release.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
+        },
+        {
+          "front": "What is the gut microbiome?",
+          "back": "The community of microorganisms in the digestive tract; some aid digestion and help limit harmful microbes.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1I9PlFLVnF-St-Ah_fO5nDEqK3h9SU9Vp",
+            "1fLBXAcfAVp0WQjX3LXZBHEf0-M24r03f",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII"
+          ]
         }
       ],
       "classroomSources": [
         "school-e077e3d2cb5b51d8",
         "school-9b93b4f4a477b53f",
         "school-77e5a84ff3ed585a",
-        "school-714a8ad8fdf9bac4"
+        "school-714a8ad8fdf9bac4",
+        "school-493af116e7d1f02c",
+        "school-abd6047379544baf"
       ]
     },
     {
@@ -6057,6 +6544,42 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: photosynthesis and respiration",
+          "body": "Photosynthesis stores light energy in organic molecules; aerobic respiration transfers energy from glucose to ATP. Plants perform both processes and respire by day and night. Chloroplast thylakoid membranes carry out light-dependent reactions; carbon fixation occurs in the stroma. Mitochondria are important sites of aerobic respiration.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "heading": "Class summary: ATP and aerobic stages",
+          "body": "ATP supplies usable energy for transport, movement and synthesis. Glycolysis occurs in the cytoplasm and gives a net two ATP per glucose. The link reaction and Krebs cycle occur in the mitochondrial matrix; the electron transport chain is on the inner membrane. Oxygen is the final electron acceptor; most ATP comes from oxidative phosphorylation.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "heading": "Class summary: fermentation",
+          "body": "Without oxygen, fermentation allows glycolysis to continue, yielding a net two ATP per glucose. Yeast produces ethanol and carbon dioxide, useful in brewing and bread-making. Animal cells can produce lactate. Aerobic respiration yields much more ATP; the class slide’s 38-ATP total is a simplified teaching tally, not a universal measured yield.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
         {
           "heading": "What does photosynthesis achieve?",
           "body": "In chloroplasts, light energy supports the conversion of carbon dioxide and water into organic molecules, with oxygen released. Chlorophyll absorbs light. Plants build biomass from the products."
@@ -6187,6 +6710,102 @@
         {
           "front": "Separate the processes and their roles",
           "back": "Photosynthesis stores energy in organic molecules using light; cellular respiration makes energy available for cellular processes. Living plant cells respire as well as photosynthesise. Explain an investigation’s result in terms of the relevant process, controlled variables and a suitable comparison."
+        },
+        {
+          "front": "What is the balanced overall equation for photosynthesis?",
+          "back": "6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "What is the balanced overall equation for aerobic respiration?",
+          "back": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O, with energy transferred to ATP and released as heat.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "Where does glycolysis occur, and what is its net ATP yield?",
+          "back": "In the cytoplasm; net two ATP per glucose.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "Where do the link reaction, Krebs cycle and electron transport chain occur?",
+          "back": "Link reaction and Krebs cycle: mitochondrial matrix. Electron transport chain: inner mitochondrial membrane.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "What is oxygen’s role in aerobic respiration?",
+          "back": "It is the final electron acceptor in the electron transport chain, helping form water.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "What are the products of yeast fermentation?",
+          "back": "Ethanol and carbon dioxide; glycolysis supplies net two ATP per glucose.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "What is produced during fermentation in animal cells?",
+          "back": "Lactate; the pathway allows glycolysis to keep supplying a net two ATP per glucose.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
+        },
+        {
+          "front": "Do green plants respire at night?",
+          "back": "Yes. They respire by day and night; photosynthesis requires light.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1xKs-JNV6RQSh0yGYCB_8kAD9hGDGyGjj",
+            "1OMOYXNA_pu6B3uvF6jDwJfCXlHPhqvwF",
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H"
+          ]
         }
       ],
       "classroomSources": [
@@ -6194,7 +6813,9 @@
         "school-8a63bc3c3c3966f9",
         "school-18638df20f3bec28",
         "school-5ebbed3d4e3371ac",
-        "school-abd6047379544baf"
+        "school-abd6047379544baf",
+        "school-dcb08bbed0b1b3e6",
+        "school-d021c2287d50e00c"
       ]
     },
     {
@@ -6218,6 +6839,46 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: plant tissue roles",
+          "body": "Meristems contain actively dividing cells. Parenchyma performs storage and other functions; chlorenchyma photosynthesises and aerenchyma contains large air spaces. Collenchyma provides flexible support using living cells with unevenly thickened walls. Sclerenchyma provides rigid support using thick, lignified walls; its cells are usually dead at maturity.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "heading": "Class summary: transport tissues",
+          "body": "Xylem transports water and mineral ions, mainly upwards, and its lignified walls provide support. Phloem transports organic nutrients from sources to sinks. In a typical stem vascular bundle, xylem is towards the inside and phloem towards the outside; roots and leaves have different arrangements.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "heading": "Class summary: transpiration pathway",
+          "body": "Water enters root cells by osmosis, passes into xylem and moves to leaves. It evaporates from mesophyll cell surfaces and water vapour diffuses through stomata. Transpiration pull maintains the upward water column; cohesion holds water molecules together and adhesion attracts water to xylem walls.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "heading": "Class summary: controlling water loss",
+          "body": "Warmth, wind and low humidity generally increase transpiration when stomata are open. Guard-cell turgor regulates stomatal opening. Thick cuticles and fewer or sunken stomata reduce water loss, but restricting stomata also limits carbon dioxide uptake and can reduce photosynthesis.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
         {
           "heading": "What do xylem and phloem transport?",
           "body": "Xylem carries water and mineral ions mainly from roots toward leaves through mostly dead conducting cells. Phloem translocates dissolved organic substances between sources and sinks through living tissue."
@@ -6340,13 +7001,95 @@
         {
           "front": "Why can a thin leaf be helpful for diffusion while a thick waxy cuticle is helpful in a dry habitat? Explain the different demands.",
           "back": "A thin leaf shortens diffusion distances for gases. A waxy cuticle reduces uncontrolled water loss. Adaptations balance resource exchange and conservation rather than maximising only one feature; stomata regulate much of the gas exchange."
+        },
+        {
+          "front": "What is meristematic tissue?",
+          "back": "Plant tissue containing actively dividing cells, responsible for growth.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "Compare collenchyma and sclerenchyma.",
+          "back": "Collenchyma: living cells, unevenly thickened walls, flexible support. Sclerenchyma: lignified walls, usually dead at maturity, rigid support.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "What does xylem transport?",
+          "back": "Water and mineral ions, mainly from roots towards leaves; it also supports the plant.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "What does phloem transport?",
+          "back": "Organic nutrients such as sucrose from sources to sinks.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "What are the final two steps of transpiration from a leaf?",
+          "back": "Water evaporates from mesophyll surfaces; water vapour diffuses out through stomata.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "How do cohesion and adhesion differ in xylem?",
+          "back": "Cohesion: attraction between water molecules. Adhesion: attraction between water and xylem walls.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "How do guard cells control stomata?",
+          "back": "Changes in guard-cell turgor change the size of the stomatal opening.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
+        },
+        {
+          "front": "What is the trade-off when a plant closes its stomata?",
+          "back": "It reduces water loss but also limits carbon dioxide entry for photosynthesis.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1ibFod84zdV4bsLYGi8Z2kXxfdR4VbhFZ",
+            "1gQ02HhSrpYh7OwgVmsUoqqzdx2SvZ56H",
+            "1-qbloE3wE84sCLle6gH-k-tq1eiTefC5"
+          ]
         }
       ],
       "classroomSources": [
         "school-76af57ede46b4775",
         "school-96e542a0766b7c1d",
         "school-dcb08bbed0b1b3e6",
-        "school-f33cf2edeba95338"
+        "school-f33cf2edeba95338",
+        "school-d021c2287d50e00c",
+        "school-493af116e7d1f02c"
       ]
     },
     {
@@ -6377,6 +7120,50 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: ecosystems and interactions",
+          "body": "Biotic factors are living; abiotic factors are non-living. A habitat is where an organism lives; its niche includes its role and resource use. Competition is for limited resources; predation involves one organism eating another. Mutualism benefits both partners, commensalism benefits one without affecting the other, and parasitism benefits one while harming its host.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "heading": "Class summary: food webs and pyramids",
+          "body": "Producers form the first trophic level; consumers obtain food from other organisms, and decomposers recycle matter. Food-chain arrows show energy moving from food to consumer. Less energy is available at higher levels: about 10% transfer is a simplified model, not a fixed law. Energy pyramids stay upright; pyramids of numbers or biomass can differ.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "heading": "Class summary: carbon, oxygen and water",
+          "body": "Photosynthesis removes carbon dioxide and releases oxygen. Feeding transfers carbon through food webs; respiration, decomposition and combustion return carbon dioxide. Oxygen is used in aerobic respiration and combustion. The water cycle links evaporation and transpiration with condensation, precipitation, infiltration and runoff. Matter cycles; energy flows through ecosystems.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "heading": "Class summary: nitrogen cycle",
+          "body": "Fixation converts atmospheric nitrogen into usable nitrogen compounds. Ammonification returns organic nitrogen to ammonia or ammonium. Nitrifying bacteria form nitrites and then nitrates; plants assimilate nitrogen to build molecules such as proteins. Denitrifying bacteria return nitrogen gas to the atmosphere. Most plants cannot use atmospheric nitrogen directly.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
         {
           "heading": "How do food webs show energy flow?",
           "body": "Arrows point from food to consumer, showing energy transfer. Producers form the first trophic level. Energy available usually decreases at higher levels because organisms respire and not all biomass is eaten or assimilated."
@@ -6507,6 +7294,94 @@
         {
           "front": "Follow matter and energy separately",
           "back": "Read arrows in food relationships as directed transfers, and explain population changes through specific interactions. Nutrients move between organisms and environmental reservoirs. Energy transfers through trophic levels and disperses as heat, so energy flow requires continuing input rather than cycling in the same way as matter."
+        },
+        {
+          "front": "How does a habitat differ from a niche?",
+          "back": "Habitat: where an organism lives. Niche: its role, resource use and interactions.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "How do biotic and abiotic factors differ?",
+          "back": "Biotic factors are living, such as competitors; abiotic factors are non-living, such as temperature and water availability.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "Compare mutualism, commensalism and parasitism.",
+          "back": "Mutualism: both benefit. Commensalism: one benefits, the other is unaffected. Parasitism: one benefits and the host is harmed.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "Which way do arrows point in a food chain?",
+          "back": "From the organism being eaten towards the consumer, showing energy transfer.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "Using the 10% model, what follows 8,000 kJ at the producer level?",
+          "back": "About 800 kJ at primary consumers, then 80 kJ at secondary consumers.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "How do energy flow and nutrient cycling differ?",
+          "back": "Energy flows through ecosystems and is dissipated as heat; nutrients are recycled between organisms and the environment.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "Which processes remove and return atmospheric carbon dioxide?",
+          "back": "Photosynthesis removes it; respiration, decomposition and combustion return it.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
+        },
+        {
+          "front": "Distinguish nitrogen fixation, nitrification and denitrification.",
+          "back": "Fixation: nitrogen gas to usable compounds. Nitrification: ammonium → nitrite → nitrate. Denitrification: nitrate → nitrogen gas.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1LT6Z73SNk_qrubSyhG40a93oVuhjzMY8",
+            "1heJ8k6ia_Bjrjw_QxoSCUFWPIul9nudu",
+            "1cQHJgufmsyEKJmvKXPpmmxxTux9Btqc3",
+            "1_0BkJ1VfjMY57ZbtF6Ci4JVp7E_cHZ8d"
+          ]
         }
       ],
       "classroomSources": [
@@ -6545,6 +7420,33 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: origins and evidence",
+          "body": "The class slides compare hydrothermal-vent, primordial-soup and panspermia hypotheses. Distinguish a proposed explanation from established evidence: the Miller–Urey experiment formed organic molecules, not living organisms. Fossils preserve remains or traces and provide evidence of past organisms, environments and change through time.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "heading": "Class summary: fossils and geological change",
+          "body": "In undisturbed sedimentary layers, lower layers are generally older: superposition gives relative age. Index fossils help correlate layers; radiometric dating estimates numerical ages using suitable material. Southern African examples include Australopithecus africanus and Homo naledi. Mass extinctions remove many species; environmental change can then create opportunities for surviving groups.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "heading": "Class summary: a discursive science essay",
+          "body": "Introduce the issue and context. Develop balanced paragraphs using relevant evidence, scientific terminology and your own explanation. Consider more than one interpretation, then weigh the evidence in a justified conclusion. Separate observations, inferences and opinions; uncertainty should not be presented as a proven fact.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
         {
           "heading": "How do fossils provide evidence?",
           "body": "Fossils record past organisms and change over time. Relative dating orders events or layers; numerical dating estimates ages. Interpret the actual scale and labels before comparing fossils."
@@ -6667,6 +7569,78 @@
         {
           "front": "Why does one unusually cold day not refute a claim about long-term global warming?",
           "back": "Weather describes short-term local conditions; climate concerns statistical patterns over longer periods and larger regions. A long-term warming trend can coexist with cold events. Evaluate the relevant long-term evidence rather than treating one observation as the whole trend."
+        },
+        {
+          "front": "What did the Miller–Urey experiment demonstrate?",
+          "back": "Organic molecules could form under the tested conditions; it did not create living organisms.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "What kinds of evidence can fossils preserve?",
+          "back": "Body remains, impressions or traces such as footprints and burrows.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "What does superposition tell you about undisturbed sedimentary layers?",
+          "back": "Lower layers are generally older than the layers above them.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "How does relative dating differ from radiometric dating?",
+          "back": "Relative dating orders events; radiometric dating uses radioactive decay to estimate numerical ages of suitable materials.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "What makes an index fossil useful?",
+          "back": "It is recognisable, widely distributed and restricted to a relatively short geological time interval.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "Name two hominin species discussed in the Southern African fossil lesson.",
+          "back": "Australopithecus africanus and Homo naledi.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "What is a mass extinction?",
+          "back": "A geologically rapid, widespread loss of a large proportion of species.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
+        },
+        {
+          "front": "What belongs in the conclusion of a discursive Life Sciences essay?",
+          "back": "A judgement that weighs the main evidence and justifies the conclusion, without introducing unsupported claims.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1tubMKr-VNLtN8a2cH6ZmjTzjaToRETEb",
+            "1brzEEefwZ_nuDipATcEO_7vohnVqsg1D"
+          ]
         }
       ],
       "classroomSources": [
@@ -6702,6 +7676,39 @@
         }
       ],
       "notes": [
+        {
+          "heading": "Class summary: a fair investigation",
+          "body": "State a testable hypothesis linking the independent variable you change to the dependent variable you measure. Keep relevant other conditions constant and explain each control. Repeat measurements and use an adequate sample to improve reliability. Distinguish a control treatment from a controlled variable.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "heading": "Class summary: seed-respiration evidence",
+          "body": "Living germinating seeds respire actively; boiled, cooled seeds provide a non-living comparison. Carbon dioxide turns clear limewater milky. Keep seed quantity, temperature and apparatus comparable. Prevent microbial contamination, which could also produce carbon dioxide. These observations support respiration in living seeds rather than merely a change in the apparatus.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "heading": "Class summary: interpreting and presenting results",
+          "body": "Label graph axes with variables and units; describe the trend using data before explaining it. Calculate a percentage as part ÷ total × 100. In cell-division diagrams, include a title, clear labels and the correct chromosome number. Conclusions must answer the investigation question and stay within the evidence.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
         {
           "heading": "How do you distinguish variables?",
           "body": "The independent variable is deliberately changed; the dependent variable is measured; controlled variables are held constant. A fair comparison changes one tested factor at a time."
@@ -6824,13 +7831,105 @@
         {
           "front": "Why does changing temperature and light intensity together make it hard to explain a change in plant growth?",
           "back": "Either variable, or their interaction, could produce the effect. Changing one independent variable while controlling the other makes the causal comparison more interpretable. Appropriate replicates and a comparison group are also needed."
+        },
+        {
+          "front": "What is an independent variable?",
+          "back": "The factor deliberately changed by the investigator.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What is a dependent variable?",
+          "back": "The response measured to see the effect of the independent variable.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "How does a control treatment differ from a controlled variable?",
+          "back": "A control treatment provides a comparison; a controlled variable is a condition kept constant.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "Why use boiled, cooled seeds in a respiration experiment?",
+          "back": "They provide a non-living control for comparison with actively respiring germinating seeds.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What is the limewater test for carbon dioxide?",
+          "back": "Clear limewater turns milky when carbon dioxide is present.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "Why limit microbial contamination in a seed-respiration experiment?",
+          "back": "Microorganisms could respire and produce carbon dioxide, confusing the source of the result.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What percentage is 30 cells out of 225?",
+          "back": "30 ÷ 225 × 100 = 13.3%, rounded to one decimal place.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
+        },
+        {
+          "front": "What should accompany a graph’s axis labels?",
+          "back": "The variable names and appropriate measurement units.",
+          "classroomSummary": true,
+          "sourceIds": [
+            "1wv6O9MVMhGJtRyso-zsTbiph1QpFD926",
+            "1PHCCprvwQXdFhimGMg6FBj_IaXs1GbT6",
+            "1vMLdJea9mLdDtoHvad3N3gMSvIXLKUII",
+            "11t47y-kXPaQyTGbOBCBjiM1XKFdbXekX"
+          ]
         }
       ],
       "classroomSources": [
         "school-493af116e7d1f02c",
         "school-e651230f262ebe93",
         "school-d021c2287d50e00c",
-        "school-9ae63c5318b59ee6"
+        "school-9ae63c5318b59ee6",
+        "school-18638df20f3bec28",
+        "school-5ebbed3d4e3371ac",
+        "school-abd6047379544baf",
+        "school-56ea83d3854a4640"
       ]
     },
     {
