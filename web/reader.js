@@ -71,7 +71,39 @@ $('page-form').addEventListener('submit', event => {
 $('zoom-in').addEventListener('click', () => { zoom = Math.min(3, zoom + 0.25); renderPage(); });
 $('zoom-out').addEventListener('click', () => { zoom = Math.max(0.5, zoom - 0.25); renderPage(); });
 $('fit').addEventListener('click', () => { zoom = 1; renderPage(); });
+
+// Fullscreen is requested directly from a tap, as browsers require.
+// A local expanded mode also works on browsers without the Fullscreen API.
+let expanded = false;
+function setExpanded(value) {
+  expanded = value;
+  if (window !== parent) parent.postMessage(value ? 'for-rosa-reader-expand' : 'for-rosa-reader-collapse', location.origin);
+}
+function syncFullscreen() {
+  const active = Boolean(document.fullscreenElement) || expanded;
+  $('fullscreen').textContent = active ? '⛶ Exit fullscreen' : '⛶ Fullscreen';
+  $('fullscreen').setAttribute('aria-label', active ? 'Exit PDF fullscreen' : 'View PDF fullscreen');
+  $('exit-reader').hidden = !active;
+  $('fullscreen-download').hidden = !active;
+  renderPage();
+}
+$('fullscreen').addEventListener('click', async () => {
+  if (document.fullscreenElement) await document.exitFullscreen();
+  else if (expanded) setExpanded(false);
+  else {
+    try { await document.documentElement.requestFullscreen(); }
+    catch (_) { setExpanded(true); }
+  }
+  syncFullscreen();
+});
+$('exit-reader').addEventListener('click', async () => {
+  if (document.fullscreenElement) await document.exitFullscreen();
+  setExpanded(false);
+  syncFullscreen();
+});
+document.addEventListener('fullscreenchange', syncFullscreen);
 document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && expanded) { setExpanded(false); syncFullscreen(); return; }
   if (event.target.tagName === 'INPUT') return;
   if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
   if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
@@ -86,6 +118,8 @@ try {
   file.hash = '';
   $('download').href = file.href;
   $('download').download = file.pathname.split('/').pop();
+  $('fullscreen-download').href = file.href;
+  $('fullscreen-download').download = file.pathname.split('/').pop();
   $('fallback').href = file.href;
   pdf = await getDocument({ url: file.href, cMapUrl: new URL('./vendor/pdfjs/cmaps/', import.meta.url).href, cMapPacked: true, standardFontDataUrl: new URL('./vendor/pdfjs/standard_fonts/', import.meta.url).href, isEvalSupported: false }).promise;
   current = Math.min(current, pdf.numPages);

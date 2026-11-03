@@ -7,10 +7,12 @@ class PdfDocumentView extends StatelessWidget {
     required this.uri,
     required this.title,
     this.page = 1,
+    this.onExpandedChanged,
   });
   final Uri uri;
   final String title;
   final int page;
+  final ValueChanged<bool>? onExpandedChanged;
   @override
   Widget build(BuildContext context) => Center(
     child: FilledButton.icon(

@@ -12,7 +12,7 @@ files=[]
 for p in sorted(build.rglob('*')):
  if not p.is_file():continue
  rel=p.relative_to(build).as_posix()
- if rel.startswith('assets/assets/papers/') or rel in ['sw.js','flutter_service_worker.js'] or rel.endswith('.map'):continue
+ if rel.startswith(('assets/assets/papers/', 'assets/assets/classroom/')) or rel in ['sw.js','flutter_service_worker.js'] or rel.endswith('.map'):continue
  files.append('./'+rel)
 worker=(root/'web/sw.js').read_text(encoding='utf-8').replace('__BUILD_ID__',revision[:16]).replace('/*__PRECACHE__*/ []',json.dumps(files))
 (build/'sw.js').write_text(worker,encoding='utf-8')

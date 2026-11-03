@@ -20,6 +20,22 @@ class StudyStore extends ChangeNotifier {
   List<Json> get subjects => List<Json>.from(data['subjects']);
   List<Json> get papers => List<Json>.from(data['papers']);
   List<Json> get topics => List<Json>.from(data['topics']);
+  List<Json> get documents => List<Json>.from(data['classroom'] ?? []);
+  List<Json> subjectDocuments(String id) =>
+      documents
+          .where(
+            (d) =>
+                List<String>.from(d['subjects'] ?? [d['subject']]).contains(id),
+          )
+          .toList();
+  List<Json> topicDocuments(Json t) =>
+      documents
+          .where(
+            (d) => List<String>.from(
+              t['classroomSources'] ?? [],
+            ).contains(d['id']),
+          )
+          .toList();
   Json subject(String id) => subjects.firstWhere((s) => s['id'] == id);
   Json paper(String id) => papers.firstWhere((p) => p['id'] == id);
   List<Json> subjectTopics(String id) =>
@@ -86,5 +102,7 @@ IconData subjectIcon(String id) => switch (id) {
   'ap' => Icons.functions_rounded,
   'physical' => Icons.science_outlined,
   'life' => Icons.eco_outlined,
+  'english' => Icons.menu_book_outlined,
+  're' => Icons.church_outlined,
   _ => Icons.sports_basketball_outlined,
 };

@@ -6,12 +6,15 @@ A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages 
 
 ## Included
 
-- Five subjects: Maths, AP Maths, Physical Science (Physics and Chemistry), Life Science, and Sports Science.
+- Seven subjects, named to match the school’s Classroom: Mathematics, Further Studies Mathematics, Physical Science, Life Sciences, Sport Science, English, and RE. LO is excluded.
 - 44 uploaded PDFs audited; four exact duplicates combined into one copy each. There are 38 useful unique PDFs and two blank resources recorded as unavailable.
 - Papers named by subject, paper, session and year, with matching supplied memos. An unknown year is explicitly labelled.
-- 46 editorial topic packs linking directly to original question pages and matching memo pages where available. Original diagrams, equations and reading passages stay intact in the PDFs.
-- 276 regular practice questions with worked answers (six per topic) plus 92 multi-step challenge questions (two per topic), 138 short revision sections, 690 flashcards, animated concept sketches and interactive graph controls.
-- Search, year/subject/resource filters, bookmarks, revision completion, card-recall ratings and a 25-minute focus timer.
+- Topic packs link to original exam pages, memos and relevant Classroom material. Original diagrams, equations and reading passages stay intact in the PDFs.
+- Six further-practice questions and two concept challenges per topic, worked answers, revision notes and at least 15 flashcards per topic. Concept challenges ask learners to predict, explain, evaluate and test misconceptions.
+- A searchable Classroom library supports original downloads, PDF viewing copies and clearly labelled school links. A school link requires the relevant Google account and has no offline copy in For Rosa.
+- A dedicated Pomodoro screen offers 25-minute focus, 5-minute short breaks and 15-minute long breaks. Timers survive navigation within the app, pause, reset and catch up after a sleeping device resumes.
+- Wave amplitude and frequency controls, wavelength/period readouts, graph comparisons, adjustable circuit resistance and normal-distribution spread, and reset/pause controls.
+- Search, year/subject/resource filters, bookmarks, revision completion and card-recall ratings.
 - Responsive phone, tablet and desktop layouts; reduced-motion support for lesson animations.
 - Device-local progress. No learner accounts, backend, tracking or cross-device synchronization.
 
@@ -44,7 +47,7 @@ Every push to `main` automatically regenerates and validates the learning librar
 
 Read [docs/SOURCE_AUDIT.md](docs/SOURCE_AUDIT.md) for a complete mapping of all 44 uploads, duplicates, partial memos and missing resources. Notably, no 2024 Chemistry memo was provided: upload 38 is a duplicate Physics memo. Original files are preserved byte-for-byte under `assets/papers/`. The numbered uploads remain locally and are ignored by Git to avoid duplication.
 
-Topic definitions, notes and the initial practice are in `tools/curriculum.py`; four additional exercises per topic are in `tools/extra_practice.py`; challenges and new recall cards are in `tools/topic_extensions.py`. `assets/content.json` is the generated app catalogue. To rebuild it, install Python `pypdf==6.10.0` and run the following. The builder uses the original numbered uploads when available, or the committed PDFs under `assets/papers/` on a fresh checkout and in GitHub Actions:
+Topic definitions and initial practice are in `tools/curriculum.py`; additional exercises are in `tools/extra_practice.py`; earlier recall cards are preserved from `tools/topic_extensions.py`; concept challenges are in `tools/concept_challenges.py`. English, RE and Classroom study extensions are in `tools/classroom_curriculum.py`. Existing card positions stay unchanged so earlier learner ratings remain meaningful. `assets/content.json` is generated. To rebuild it, install Python `pypdf==6.10.0` and run the following. The builder uses the original numbered uploads when available, or the committed PDFs on a fresh checkout and in GitHub Actions:
 
 ```sh
 python tools/build_content.py
@@ -57,11 +60,15 @@ Generated learning material is clearly labelled and is separate from official ex
 
 ## Privacy and persistence
 
-Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. PDF access requires a connection. The focus timer runs while its page remains open and is not a background notification service.
+Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. A PDF needs a successful initial online load before it can be cached. The focus timer runs while For Rosa remains open; closing the app ends it. It is not a background notification service.
+
+Classroom imports require a separate publication decision: public GitHub Pages does not protect downloaded teaching-file copies behind a school login. Account details, passwords, grades, comments and personal submissions must stay out of the repository. Private source collection and review files are kept under ignored `tmp/`. A school link preserves the original provider’s access controls. Importing every posted file has not been completed; the source audit must distinguish verified downloads from school links.
 
 ## Project layout
 
-- `lib/app.dart`: dashboard, subject/topic views, search, paper filters, cards and timer.
+- `lib/app.dart`: dashboard, subject/topic views, search, file library, paper filters and cards.
+- `lib/focus_timer.dart`: persistent in-session Pomodoro state and its dedicated screen.
+- `lib/pdf_reader_screen.dart` and `web/reader.*`: PDF navigation, downloads and fullscreen reading.
 - `lib/models.dart`: catalogue access and local persistence.
 - `lib/visuals.dart`: local vector art and animated learning sketches.
 - `assets/content.json`: generated learning library.
@@ -73,8 +80,8 @@ The app is independent of Canvas and Save My Exams. Exam PDFs and their embedded
 
 ## Install For Rosa
 
-Open the public site in a normal browser and tap the app’s install icon. Supporting browsers offer a native install prompt. Otherwise, the app gives Android/Chrome, iPhone/iPad Safari, and desktop instructions. In Safari use Share → Add to Home Screen; in Chrome or Edge use Install app or the browser’s install option.
+Open the public site in a normal browser and tap **Install For Rosa** at the bottom of the home page. Supporting browsers offer a native install prompt. Otherwise, the app gives Android/Chrome, iPhone/iPad Safari, and desktop instructions. In Safari use Share → Add to Home Screen; in Chrome or Edge use Install app or the browser’s install option.
 
-The web manifest uses the name For Rosa and standalone display mode. The service worker saves the app shell and learning content for offline use after its first successful download. PDFs are cached on demand, and the PDF reader and resource rows also provide an explicit Download button. Cache storage depends on the browser; use downloaded files when you need a separate durable copy. The in-app PDF reader preserves the study screen and offers Back, Download, page controls, fit-width and zoom. It bundles Mozilla PDF.js 4.10.38 locally with its licence in web/vendor/pdfjs/LICENSE.
+The web manifest uses the name For Rosa and standalone display mode. The service worker saves the app shell and learning content for offline use after its first successful download. Teaching files are cached on demand. Cache storage depends on the browser; download a separate copy when needed. The PDF reader preserves the study screen and offers Back, Download, page controls, fit-width, zoom and Fullscreen. Browsers without native fullscreen use an expanded reading layout with a Return to app control. Mozilla PDF.js 4.10.38 is bundled locally with its licence in `web/vendor/pdfjs/LICENSE`.
 
 Every push to main regenerates the content, validates sources, runs web and Flutter tests, builds and stamps a new app-shell revision, and deploys GitHub Pages. Existing open pages show a reload notice when a new app-shell version is downloaded. Student bookmarks and card ratings remain stored separately on their device.

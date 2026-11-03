@@ -136,6 +136,8 @@ class _LearningVisualState extends State<LearningVisual>
   );
   bool playing = true;
   double parameter = 1;
+  double frequency = 1;
+  bool showReference = false;
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
@@ -160,6 +162,8 @@ class _LearningVisualState extends State<LearningVisual>
       'parabola',
       'growth',
       'arousal',
+      'distribution',
+      'circuit',
     ].contains(widget.type);
     return Container(
       padding: const EdgeInsets.all(22),
@@ -209,6 +213,8 @@ class _LearningVisualState extends State<LearningVisual>
                         widget.color,
                         controller.value,
                         parameter,
+                        frequency: frequency,
+                        showReference: showReference,
                       ),
                     ),
                   ),
@@ -218,7 +224,11 @@ class _LearningVisualState extends State<LearningVisual>
             Row(
               children: [
                 Text(
-                  widget.type == 'wave'
+                  widget.type == 'circuit'
+                      ? 'Resistance'
+                      : widget.type == 'distribution'
+                      ? 'Spread (σ)'
+                      : widget.type == 'wave'
                       ? 'Amplitude'
                       : widget.type == 'parabola'
                       ? 'Curve scale'
@@ -232,11 +242,113 @@ class _LearningVisualState extends State<LearningVisual>
                     value: parameter,
                     min: .5,
                     max: 1.5,
+                    label: '${parameter.toStringAsFixed(2)}×',
+                    semanticFormatterCallback:
+                        (v) => '${v.toStringAsFixed(2)} times',
                     activeColor: widget.color,
                     onChanged: (v) => setState(() => parameter = v),
                   ),
                 ),
+                SizedBox(
+                  width: 43,
+                  child: Text(
+                    '${parameter.toStringAsFixed(1)}×',
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ),
               ],
+            ),
+          if (widget.type == 'wave') ...[
+            Row(
+              children: [
+                const Text('Frequency', style: TextStyle(fontSize: 12)),
+                Expanded(
+                  child: Slider(
+                    key: const ValueKey('wave-frequency'),
+                    value: frequency,
+                    min: .5,
+                    max: 2,
+                    activeColor: widget.color,
+                    label: '${frequency.toStringAsFixed(2)}×',
+                    semanticFormatterCallback:
+                        (v) => '${v.toStringAsFixed(2)} times frequency',
+                    onChanged: (v) {
+                      setState(() => frequency = v);
+                      controller.duration = Duration(
+                        milliseconds: (6000 / v).round(),
+                      );
+                      if (playing) controller.repeat();
+                    },
+                  ),
+                ),
+                SizedBox(
+                  width: 43,
+                  child: Text(
+                    '${frequency.toStringAsFixed(1)}×',
+                    style: const TextStyle(fontSize: 12),
+                  ),
+                ),
+              ],
+            ),
+            Text(
+              'Fixed wave speed · wavelength ${(1 / frequency).toStringAsFixed(2)}× · period ${(1 / frequency).toStringAsFixed(2)}×',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 11, color: muted),
+            ),
+            const SizedBox(height: 6),
+            const Text(
+              'A larger amplitude makes a taller wave. A higher frequency makes more cycles pass each second; at fixed speed, the wavelength becomes shorter.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 12, color: muted, height: 1.5),
+            ),
+          ],
+          if (widget.type == 'circuit')
+            Text(
+              'Fixed voltage · current ${(1 / parameter).toStringAsFixed(2)}×. Increasing resistance decreases current.',
+              textAlign: TextAlign.center,
+              style: const TextStyle(fontSize: 12, color: muted),
+            ),
+          if (widget.type == 'distribution')
+            const Text(
+              'The mean stays fixed. A larger standard deviation spreads the same total area into a wider, lower curve.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 12, color: muted, height: 1.5),
+            ),
+          if (adjustable)
+            Wrap(
+              alignment: WrapAlignment.center,
+              spacing: 12,
+              children: [
+                if ([
+                  'wave',
+                  'parabola',
+                  'growth',
+                  'arousal',
+                ].contains(widget.type))
+                  FilterChip(
+                    label: const Text('Compare original'),
+                    selected: showReference,
+                    onSelected: (v) => setState(() => showReference = v),
+                  ),
+                TextButton.icon(
+                  onPressed:
+                      () => setState(() {
+                        parameter = 1;
+                        frequency = 1;
+                        controller.duration = const Duration(seconds: 6);
+                        controller.value = 0;
+                        if (playing) controller.repeat();
+                      }),
+                  icon: const Icon(Icons.restart_alt, size: 17),
+                  label: const Text('Reset visual'),
+                ),
+              ],
+            ),
+          if (showReference)
+            const Text(
+              'Grey line: the original shape at the same phase.',
+              textAlign: TextAlign.center,
+              style: TextStyle(color: muted, fontSize: 11),
             ),
           Text(
             widget.formula,
@@ -260,10 +372,19 @@ class _LearningVisualState extends State<LearningVisual>
 }
 
 class DiagramPainter extends CustomPainter {
-  DiagramPainter(this.type, this.color, this.time, this.parameter);
+  DiagramPainter(
+    this.type,
+    this.color,
+    this.time,
+    this.parameter, {
+    this.frequency = 1,
+    this.showReference = false,
+  });
   final String type;
   final Color color;
   final double time, parameter;
+  final double frequency;
+  final bool showReference;
   void label(Canvas c, String t, Offset o, {Color? col, double size = 12}) {
     final text = TextPainter(
       text: TextSpan(
@@ -323,8 +444,8 @@ class DiagramPainter extends CustomPainter {
     } else if (type == 'distribution') {
       final curve = Path();
       for (int i = 0; i <= 360; i++) {
-        final x = (i - 180) / 65;
-        final y = 155 - 115 * math.exp(-x * x / 2);
+        final x = (i - 180) / (65 * parameter);
+        final y = 155 - 60 / parameter * math.exp(-x * x / 2);
         if (i == 0) {
           curve.moveTo(80 + i.toDouble(), y);
         } else {
@@ -334,7 +455,7 @@ class DiagramPainter extends CustomPainter {
       c.drawLine(const Offset(65, 155), const Offset(455, 155), p);
       c.drawPath(curve, p);
       for (int i = -2; i <= 2; i++) {
-        final x = 260 + i * 65.0;
+        final x = 260 + i * 65.0 * parameter;
         c.drawLine(Offset(x, 150), Offset(x, 160), p);
         label(
           c,
@@ -369,7 +490,8 @@ class DiagramPainter extends CustomPainter {
       for (int i = 0; i <= 420; i++) {
         final x = i / 420;
         final y = switch (type) {
-          'wave' => 90 - 40 * parameter * math.sin(x * 4 * math.pi - phase),
+          'wave' =>
+            90 - 40 * parameter * math.sin(x * 4 * math.pi * frequency - phase),
           'parabola' => 145 - 480 * parameter * math.pow(x - .5, 2),
           'growth' =>
             150 - 110 * (math.exp(x * parameter) - 1) / (math.exp(1.5) - 1),
@@ -387,6 +509,32 @@ class DiagramPainter extends CustomPainter {
         ..color = color
         ..strokeWidth = 3;
       c.drawPath(path, p);
+      if (showReference) {
+        final reference = Path();
+        for (int i = 0; i <= 420; i++) {
+          final x = i / 420;
+          final y =
+              (switch (type) {
+                'wave' => 90 - 40 * math.sin(x * 4 * math.pi - phase),
+                'parabola' => 145 - 480 * math.pow(x - .5, 2),
+                'growth' => 150 - 110 * (math.exp(x) - 1) / (math.exp(1.5) - 1),
+                'arousal' => 145 - 100 * math.exp(-math.pow((x - .5) * 4, 2)),
+                _ => 150 - 110 * x,
+              }).toDouble();
+          if (i == 0) {
+            reference.moveTo(50, y);
+          } else {
+            reference.lineTo(50 + i.toDouble(), y);
+          }
+        }
+        c.drawPath(
+          reference,
+          Paint()
+            ..color = muted.withValues(alpha: .5)
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = 1.5,
+        );
+      }
       label(c, switch (type) {
         'wave' => 'displacement vs position',
         'parabola' => 'y = a(x − h)² + k',
@@ -476,8 +624,16 @@ class DiagramPainter extends CustomPainter {
       );
       label(c, 'R', const Offset(260, 140));
       label(c, 'battery', const Offset(260, 15));
-      c.drawCircle(Offset(150 + 220 * time, 140), 5, Paint()..color = color);
-      label(c, 'I = V / R', const Offset(260, 178));
+      c.drawCircle(
+        Offset(150 + 220 * ((time / parameter) % 1), 140),
+        5,
+        Paint()..color = color,
+      );
+      label(
+        c,
+        'I = V / R · relative R = ${parameter.toStringAsFixed(1)}',
+        const Offset(260, 178),
+      );
     } else if (type == 'cell' ||
         type == 'mitosis' ||
         type == 'enzyme' ||
@@ -659,6 +815,9 @@ class DiagramPainter extends CustomPainter {
         'cycle' => ['producer', 'consumer', 'recycle'],
         'timeline' => ['past', 'evidence', 'explain'],
         'sequence' => ['1', '4', '7'],
+        'essay' => ['point', 'evidence', 'explain'],
+        'research' => ['source', 'check', 'cite'],
+        'narrative' => ['setting', 'choice', 'change'],
         _ => ['identify', 'connect', 'explain'],
       };
       for (int i = 0; i < 3; i++) {
@@ -684,6 +843,8 @@ class DiagramPainter extends CustomPainter {
   bool shouldRepaint(DiagramPainter old) =>
       old.time != time ||
       old.parameter != parameter ||
+      old.frequency != frequency ||
+      old.showReference != showReference ||
       old.type != type ||
       old.color != color;
 }

@@ -12,6 +12,9 @@ from pypdf import PdfReader
 from curriculum import topics
 from extra_practice import EXTRA_PRACTICE
 from topic_extensions import EXTENSIONS
+from concept_challenges import CONCEPTS
+from classroom_curriculum import enrich
+from classroom_sources import school_links
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'assets'
@@ -84,6 +87,7 @@ for n,(subject,year,exam,kind,memo,note) in spec.items():
 by_id={p['id']:p for p in papers}
 assert set(EXTRA_PRACTICE)=={t['title'] for t in topics}, 'Extra-practice topics must match the curriculum'
 assert set(EXTENSIONS)=={t['title'] for t in topics}, 'Every topic needs a challenge and card extension'
+assert set(CONCEPTS)=={t['title'] for t in topics}, 'Every topic needs conceptual challenges'
 for i,t in enumerate(topics):
  additions=EXTRA_PRACTICE[t['title']]
  assert len(additions)>=4, f'Expected at least four extra exercises for {t["title"]}'
@@ -91,10 +95,10 @@ for i,t in enumerate(topics):
  t['id']=t['subject']+'-'+re.sub('[^a-z0-9]+','-',t['title'].lower()).strip('-')
  t['minutes']=8+len(t['notes'])*2
  extension=EXTENSIONS[t['title']]
- t['challenges']=extension['challenges']
+ t['challenges']=CONCEPTS[t['title']]
  assert len(t['challenges'])>=2 and len(extension['cards'])>=4
  # Keep the previous nine card indices intact before appending new material.
- t['cards']=[dict(front=h,back=b) for h,b in t['notes']]+[dict(front=q['question'],back=q['answer']) for q in t['practice']]+[dict(front=q['question'],back=q['answer']) for q in t['challenges']]+extension['cards']
+ t['cards']=[dict(front=h,back=b) for h,b in t['notes']]+[dict(front=q['question'],back=q['answer']) for q in t['practice']]+[dict(front=q['question'],back=q['answer']) for q in extension['challenges']]+extension['cards']+[dict(front=q['question'],back=q['answer']) for q in t['challenges']]
  t['notes']=[dict(heading=h,body=b) for h,b in t['notes']]
  for ref in t['sources']:
   p=by_id[ref['paper']]
@@ -103,12 +107,21 @@ for i,t in enumerate(topics):
   if ref.get('memoPage') and p['memo']:
    assert ref['memoPage']<=by_id[p['memo']]['pages']
 
-content=dict(subjects=subjects,papers=papers,topics=topics,sourceCount=44,duplicates=duplicates,contentVersion=3)
+classroom_manifest=ASSETS/'classroom_manifest.json'
+classroom=json.loads(classroom_manifest.read_text(encoding='utf-8')) if classroom_manifest.exists() else []
+classroom_index=ASSETS/'classroom_source_index.json'
+if classroom_index.exists():
+ classroom += school_links(json.loads(classroom_index.read_text(encoding='utf-8')),classroom)
+topics,subjects=enrich(topics,subjects,classroom)
+content=dict(subjects=subjects,papers=papers,topics=topics,classroom=classroom,sourceCount=44,duplicates=duplicates,contentVersion=4)
 (ASSETS/'content.json').write_text(json.dumps(content,ensure_ascii=False,indent=2),encoding='utf-8')
 audit=ROOT/'docs'/'SOURCE_AUDIT.md'; audit.parent.mkdir(exist_ok=True)
 lines=['# Source audit','','All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers; duplicates share one published copy. Blank uploads are retained in the catalogue as unavailable. Page links use PDF page positions, not printed page labels.','','| Upload(s) | Subject | Resource | Type | Pages | Notes |','|---|---|---|---|---|---|']
 for p in papers:
  lines.append('| '+', '.join(p['originals'])+' | '+p['subject']+' | '+p['title']+' | '+p['kind']+' | '+str(p['pages'])+' | '+p['note']+' |')
-lines += ['','## Learning content','','Topics are editorial groupings based on the supplied papers, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines.','',f'{len(topics)} topics; {sum(len(t["practice"]) for t in topics)} regular worked questions; {sum(len(t["challenges"]) for t in topics)} stretch challenges; {sum(len(t["cards"]) for t in topics)} flashcards.','','The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.']
+lines += ['','## Learning content','','Topics are editorial groupings based on the supplied papers and available Classroom teaching documents, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines. School links do not imply that an offline copy was imported or that its contents were read.','',f'{len(topics)} topics; {sum(len(t["practice"]) for t in topics)} regular worked questions; {sum(len(t["challenges"]) for t in topics)} concept challenges; {sum(len(t["cards"]) for t in topics)} flashcards.','','The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.']
+local_documents=[d for d in classroom if d.get('availability')!='school']
+school_documents=[d for d in classroom if d.get('availability')=='school']
+lines += ['','## Classroom teaching files','',f'{len(local_documents)} verified document copies are included. Their original bytes, viewing-copy checksums, page counts and source IDs are recorded in assets/classroom_manifest.json. The original teaching catalogue is assets/classroom_source_index.json. Repeated teaching-file names are grouped while retaining every source ID.', '', f'{sum(len(d["sourceIds"]) for d in school_documents)} additional source copies are represented by {len(school_documents)} grouped school links. These files were not downloaded or read; they require the school account and are not available offline. Notes associated with a school link are independently authored study explanations, not a summary of the inaccessible file. English and RE additions use the verified workbook, scope and blank teacher assignment briefs. Personal student submissions are excluded.']
 audit.write_text('\n'.join(lines),encoding='utf-8')
 print(f'Built {len(papers)} unique resources, {len(topics)} topics')

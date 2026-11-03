@@ -22,3 +22,15 @@ Future<bool> downloadPdf(Uri uri, String filename) async {
   link.remove();
   return true;
 }
+
+Future<bool> openExternal(Uri uri) async {
+  final link =
+      web.HTMLAnchorElement()
+        ..href = uri.toString()
+        ..target = '_blank'
+        ..rel = 'noopener noreferrer';
+  web.document.body?.append(link);
+  link.click();
+  link.remove();
+  return true;
+}

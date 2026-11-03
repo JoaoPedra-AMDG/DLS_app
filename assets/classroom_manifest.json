@@ -1,0 +1,802 @@
+[
+  {
+    "id": "cc-1d0fb615c3cae96d",
+    "subject": "english",
+    "subjects": [
+      "english"
+    ],
+    "title": "Prepared Reading Rubric",
+    "year": null,
+    "kind": "rubric",
+    "availability": "local",
+    "file": "english-prepared-reading-rubric-1d0fb615.pdf",
+    "originalFile": "english-prepared-reading-rubric-1d0fb615.pdf",
+    "originalName": "Prepared Reading Rubric.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "1d0fb615c3cae96db3736525f9c383ee169345f3a44449c40cd0a4002e4c3467",
+    "pdfSha256": "1d0fb615c3cae96db3736525f9c383ee169345f3a44449c40cd0a4002e4c3467",
+    "sourceIds": [
+      "1fXK_JAS348WgmlV2UnTF38IqQH08BzrH"
+    ],
+    "sections": [
+      "Prepared Reading Rubric"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-47dcbd03a439d825",
+    "subject": "english",
+    "subjects": [
+      "english"
+    ],
+    "title": "Scope July 2026",
+    "year": 2026,
+    "kind": "scope",
+    "availability": "local",
+    "file": "english-scope-july-2026-47dcbd03.pdf",
+    "originalFile": "english-scope-july-2026-47dcbd03.docx",
+    "originalName": "Scope July 2026.docx",
+    "format": "DOCX",
+    "pages": 1,
+    "sha256": "47dcbd03a439d8254d3b97dc0f55417fa6e05010e6275b69ea798255633d78c4",
+    "pdfSha256": "48ee98f8adef7db45a5ea219e638f047f8322c489fac069f7467c24cfcddd12f",
+    "sourceIds": [
+      "1RO4xuqV4MPBGKjxiF4In6wyyV7f6EPWu"
+    ],
+    "sections": [
+      "Scope July 2026"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-bfb3c3738b4f8e55",
+    "subject": "english",
+    "subjects": [
+      "english"
+    ],
+    "title": "Poetry",
+    "year": null,
+    "kind": "notes",
+    "availability": "local",
+    "file": "english-poetry-bfb3c373.pdf",
+    "originalFile": "english-poetry-bfb3c373.pdf",
+    "originalName": "Poetry.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "bfb3c3738b4f8e55aee9a26a9321cbec0f8da75c211744ba08fb1c5dbb109c0d",
+    "pdfSha256": "bfb3c3738b4f8e55aee9a26a9321cbec0f8da75c211744ba08fb1c5dbb109c0d",
+    "sourceIds": [
+      "1QG7g0BJK9ChzMooNQtbWBrt3sAY7noif"
+    ],
+    "sections": [
+      "Poetry recital brief"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-dd62526a009dde8f",
+    "subject": "english",
+    "subjects": [
+      "english"
+    ],
+    "title": "Rubric for Poetry recital",
+    "year": null,
+    "kind": "rubric",
+    "availability": "local",
+    "file": "english-00206bb2d829260513105158-dd62526a.pdf",
+    "originalFile": "english-00206bb2d829260513105158-dd62526a.pdf",
+    "originalName": "00206BB2D829260513105158.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "dd62526a009dde8fb7d484de278c8b8560aab22eed64248bf6a4de0d2541c190",
+    "pdfSha256": "dd62526a009dde8fb7d484de278c8b8560aab22eed64248bf6a4de0d2541c190",
+    "sourceIds": [
+      "1zY1aSjkulNM7tzvU_sqZs3fI5YMLjm4c"
+    ],
+    "sections": [
+      "Rubric for Poetry recital"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-b7276d28b346e1f5",
+    "subject": "english",
+    "subjects": [
+      "english"
+    ],
+    "title": "Grade 10 Term 1 Workbook 2026.docx",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "english-grade-10-term-1-workbook-2026-docx-b7276d28.pdf",
+    "originalFile": "english-grade-10-term-1-workbook-2026-docx-b7276d28.pdf",
+    "originalName": "Grade 10 Term 1 Workbook 2026.docx.pdf",
+    "format": "PDF",
+    "pages": 40,
+    "sha256": "b7276d28b346e1f54d2c76ec4fcd07103fbab45051d68b962f415ecb9999de5d",
+    "pdfSha256": "b7276d28b346e1f54d2c76ec4fcd07103fbab45051d68b962f415ecb9999de5d",
+    "sourceIds": [
+      "19vUUOPN579iMVZ8_UptdMtj3vduaOa1H"
+    ],
+    "sections": [
+      "Term 1 workbook."
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-f6022181e19b7dfc",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Grade 10 Scope July Exam Paper 1",
+    "year": null,
+    "kind": "scope",
+    "availability": "local",
+    "file": "maths-grade-10-scope-july-exam-paper-1-f6022181.pdf",
+    "originalFile": "maths-grade-10-scope-july-exam-paper-1-f6022181.pdf",
+    "originalName": "Grade 10 Scope July Exam Paper 1.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "f6022181e19b7dfc9f47970d63c683effc5290aad36f52014ba1ab3d2179130d",
+    "pdfSha256": "f6022181e19b7dfc9f47970d63c683effc5290aad36f52014ba1ab3d2179130d",
+    "sourceIds": [
+      "1QA4v63iAoIfHvwebFkku4FxTcq78e-yx"
+    ],
+    "sections": [
+      "Scope"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-c0850fecdf6dc75b",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "consolidation answers simplify factors and fractions g-end ",
+    "year": null,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-consolidation-answers-simplify-factors-and-fractions-g-end-c0850fec.pdf",
+    "originalFile": "maths-consolidation-answers-simplify-factors-and-fractions-g-end-c0850fec.pdf",
+    "originalName": "consolidation answers simplify factors and fractions g-end .pdf",
+    "format": "PDF",
+    "pages": 10,
+    "sha256": "c0850fecdf6dc75b5ba37b7f221090c083716a589e81d3b372cdd8275c22a2e9",
+    "pdfSha256": "c0850fecdf6dc75b5ba37b7f221090c083716a589e81d3b372cdd8275c22a2e9",
+    "sourceIds": [
+      "1lQLGmLBakzYiRw8U_nti54p3gmUH46Wb"
+    ],
+    "sections": [
+      "Consolidation solutions g-"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-20dd3ef7168e1e9e",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 2 - Statistics 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-2-statistics-2026-20dd3ef7.pdf",
+    "originalFile": "maths-unit-2-statistics-2026-20dd3ef7.pdf",
+    "originalName": "Unit 2 - Statistics 2026.pdf",
+    "format": "PDF",
+    "pages": 16,
+    "sha256": "20dd3ef7168e1e9ef0a5cf2d0e1952d70fd741a31e2a643c18742c1b575793f7",
+    "pdfSha256": "20dd3ef7168e1e9ef0a5cf2d0e1952d70fd741a31e2a643c18742c1b575793f7",
+    "sourceIds": [
+      "1aK1z2n_WoODhEjq6uRC2Yir1Z1wyiDYq"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-333c03c69d1023b3",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 1 - Number patterns 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-1-number-patterns-2026-333c03c6.pdf",
+    "originalFile": "maths-unit-1-number-patterns-2026-333c03c6.pdf",
+    "originalName": "Unit 1 - Number patterns 2026.pdf",
+    "format": "PDF",
+    "pages": 5,
+    "sha256": "333c03c69d1023b3c9708f245ede5d1ea46556649af134dea8b49ced969e3097",
+    "pdfSha256": "333c03c69d1023b3c9708f245ede5d1ea46556649af134dea8b49ced969e3097",
+    "sourceIds": [
+      "16j12F6x3C1IUrty-irGLaDVUqiLhMpD3"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-ad6a9366b86e5852",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Scope - 20 Nov Exam P2 2026docx",
+    "year": null,
+    "kind": "scope",
+    "availability": "local",
+    "file": "maths-scope-20-nov-exam-p2-2026docx-ad6a9366.pdf",
+    "originalFile": "maths-scope-20-nov-exam-p2-2026docx-ad6a9366.pdf",
+    "originalName": "Scope - 20 Nov Exam P2 2026docx.pdf",
+    "format": "PDF",
+    "pages": 2,
+    "sha256": "ad6a9366b86e5852acbed7f2f49c7384f39561029c8a0b8b6c4671bada1fac47",
+    "pdfSha256": "ad6a9366b86e5852acbed7f2f49c7384f39561029c8a0b8b6c4671bada1fac47",
+    "sourceIds": [
+      "17Qh-TiOKsJQ-VSa0Omj67d_SfaTGQLzP"
+    ],
+    "sections": [
+      "Nov P2 scope updated"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-8ea65e9e768b08be",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "November Examinations Mathematics grade 10 paper 1",
+    "year": null,
+    "kind": "paper",
+    "availability": "local",
+    "file": "maths-november-examinations-mathematics-grade-10-paper-1-8ea65e9e.pdf",
+    "originalFile": "maths-november-examinations-mathematics-grade-10-paper-1-8ea65e9e.pdf",
+    "originalName": "November Examinations Mathematics grade 10 paper 1.pdf",
+    "format": "PDF",
+    "pages": 2,
+    "sha256": "8ea65e9e768b08bea595a3c204af7a2009f2178a9c95a088c7f32d7266ff41d7",
+    "pdfSha256": "8ea65e9e768b08bea595a3c204af7a2009f2178a9c95a088c7f32d7266ff41d7",
+    "sourceIds": [
+      "17k9j9aWjU2-vtjv4BGlhvVj7Ie6EgMOI"
+    ],
+    "sections": [
+      "Paper 1 November examination (paper 2 will follow - we are just checking it)"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-15385790ab38c58a",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "FORMULAE SHEET",
+    "year": null,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-formulae-sheet-15385790.pdf",
+    "originalFile": "maths-formulae-sheet-15385790.pdf",
+    "originalName": "FORMULAE SHEET.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "15385790ab38c58aa495e5dde1ffddce2f33afdf6072addace00288f637853be",
+    "pdfSha256": "15385790ab38c58aa495e5dde1ffddce2f33afdf6072addace00288f637853be",
+    "sourceIds": [
+      "1gic8hZeOswOIyOUxeVzli-yX2Ovak__V"
+    ],
+    "sections": [
+      "Grade 10 Formulae Sheet"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-4a897130c1d143f7",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "grade 10 probability mock test memo 7 oct",
+    "year": null,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-grade-10-probability-mock-test-memo-7-oct-4a897130.pdf",
+    "originalFile": "maths-grade-10-probability-mock-test-memo-7-oct-4a897130.pdf",
+    "originalName": "grade 10 probability mock test memo 7 oct.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "4a897130c1d143f7a8ec276c1be0cf4e282f53a229d3ccfa6c47d036bb83bcd3",
+    "pdfSha256": "4a897130c1d143f7a8ec276c1be0cf4e282f53a229d3ccfa6c47d036bb83bcd3",
+    "sourceIds": [
+      "1KM8ZB_NcfWKXy2Y7MLL7-GTLu5Iv3mXO"
+    ],
+    "sections": [
+      "Extra maths - november paper 1 30 spet 2026"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-e0c896ad73f4aabe",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "grade 10 textbook solutions - geometry worked solutions",
+    "year": null,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-grade-10-textbook-solutions-geometry-worked-solutions-e0c896ad.pdf",
+    "originalFile": "maths-grade-10-textbook-solutions-geometry-worked-solutions-e0c896ad.pdf",
+    "originalName": "grade 10 textbook solutions - geometry worked solutions.pdf",
+    "format": "PDF",
+    "pages": 35,
+    "sha256": "e0c896ad73f4aabe4ca181ea16e2dc4d25abeac7bc34bfb3cbedea224997e74c",
+    "pdfSha256": "e0c896ad73f4aabe4ca181ea16e2dc4d25abeac7bc34bfb3cbedea224997e74c",
+    "sourceIds": [
+      "1XVjjBeAvl9GxO4PmAEwR6Myc8qztsTot"
+    ],
+    "sections": [
+      "worked solutions to textbook geometry"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-bc227db7c6b48f4f",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "worked solutions to textbook geometry",
+    "year": null,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-00206b44168c260915095420-bc227db7.pdf",
+    "originalFile": "maths-00206b44168c260915095420-bc227db7.pdf",
+    "originalName": "00206B44168C260915095420.pdf",
+    "format": "PDF",
+    "pages": 6,
+    "sha256": "bc227db7c6b48f4f31023df8667c080eb2ca26d2d94a3c8086e78929be0d9ef7",
+    "pdfSha256": "bc227db7c6b48f4f31023df8667c080eb2ca26d2d94a3c8086e78929be0d9ef7",
+    "sourceIds": [
+      "1Tr4ZKjPE7KAOSKViMbrjM5UTrJ5NZNGC"
+    ],
+    "sections": [
+      "worked solutions to textbook geometry"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-fef790ca8b8dc05f",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Note 14 Sep 2026",
+    "year": 2026,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-note-14-sep-2026-fef790ca.pdf",
+    "originalFile": "maths-note-14-sep-2026-fef790ca.pdf",
+    "originalName": "Note 14 Sep 2026.pdf",
+    "format": "PDF",
+    "pages": 3,
+    "sha256": "fef790ca8b8dc05fecd83c7c9cec5f09f6f1654f58d42a306dc0a71e575e3620",
+    "pdfSha256": "fef790ca8b8dc05fecd83c7c9cec5f09f6f1654f58d42a306dc0a71e575e3620",
+    "sourceIds": [
+      "18913deSBOMwLI7cTZpAy0Yc92i1WkMHC"
+    ],
+    "sections": [
+      "worked solutions to textbook exercises - finance "
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-a9c3a2ce22b15cb1",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "grade 10 graph interpretation revision october 2026",
+    "year": 2026,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-grade-10-graph-interpretation-revision-october-2026-a9c3a2ce.pdf",
+    "originalFile": "maths-grade-10-graph-interpretation-revision-october-2026-a9c3a2ce.pdf",
+    "originalName": "grade 10 graph interpretation revision october 2026.pdf",
+    "format": "PDF",
+    "pages": 9,
+    "sha256": "a9c3a2ce22b15cb1a91d30d3b36093589ddd69b065c6bc9c1ad9cca35ff3b0ee",
+    "pdfSha256": "a9c3a2ce22b15cb1a91d30d3b36093589ddd69b065c6bc9c1ad9cca35ff3b0ee",
+    "sourceIds": [
+      "1yRCSZdFwBJVvD1ncfRwpA1fPhpuEV5oA"
+    ],
+    "sections": [
+      "Graph interpretation revision worksheet and memo"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-9265350d3b139bfe",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Grade 10 Functions & Finance Memo 2024",
+    "year": 2024,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-grade-10-functions-finance-memo-2024-9265350d.pdf",
+    "originalFile": "maths-grade-10-functions-finance-memo-2024-9265350d.pdf",
+    "originalName": "Grade 10 Functions & Finance Memo 2024.pdf",
+    "format": "PDF",
+    "pages": 8,
+    "sha256": "9265350d3b139bfe925440ad6f15a3bcaa9550f3d19d8eb7710ca8b0963d79b6",
+    "pdfSha256": "9265350d3b139bfe925440ad6f15a3bcaa9550f3d19d8eb7710ca8b0963d79b6",
+    "sourceIds": [
+      "16IEwQ6UrXGCActhfetJxC1GUkBjmpr74"
+    ],
+    "sections": [
+      "Functions tests past papers with memos"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-6888aebfffd6a885",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "2024 Grade 10 functions cycle test 2024",
+    "year": 2024,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-2024-grade-10-functions-cycle-test-2024-6888aebf.pdf",
+    "originalFile": "maths-2024-grade-10-functions-cycle-test-2024-6888aebf.pdf",
+    "originalName": "2024 Grade 10 functions cycle test 2024.pdf",
+    "format": "PDF",
+    "pages": 8,
+    "sha256": "6888aebfffd6a8857512fddbbd48f0977709687bed70ce2c5d596a1bd57ce508",
+    "pdfSha256": "6888aebfffd6a8857512fddbbd48f0977709687bed70ce2c5d596a1bd57ce508",
+    "sourceIds": [
+      "1fWJufK6ISl-1pGjA3FCZT47ry-ViyQJr"
+    ],
+    "sections": [
+      "Functions tests past papers with memos"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-15f8f7b9c2407285",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Gr 10 functions test Memo (1) june 2025",
+    "year": 2025,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-gr-10-functions-test-memo-1-june-2025-15f8f7b9.pdf",
+    "originalFile": "maths-gr-10-functions-test-memo-1-june-2025-15f8f7b9.pdf",
+    "originalName": "Gr 10 functions test Memo (1) june 2025.pdf",
+    "format": "PDF",
+    "pages": 6,
+    "sha256": "15f8f7b9c2407285cfca4995129379445148590aadbc31480f1549049fe43a40",
+    "pdfSha256": "15f8f7b9c2407285cfca4995129379445148590aadbc31480f1549049fe43a40",
+    "sourceIds": [
+      "1CSmlIPbp8f5I2RTxtQcITfZ3ko4CMgbw"
+    ],
+    "sections": [
+      "Functions tests past papers with memos"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-24f79a671f8a6376",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Grade 10 ClassT 17-06-2025 Functions (print) (1)",
+    "year": 2025,
+    "kind": "memo",
+    "availability": "local",
+    "file": "maths-grade-10-classt-17-06-2025-functions-print-1-24f79a67.pdf",
+    "originalFile": "maths-grade-10-classt-17-06-2025-functions-print-1-24f79a67.pdf",
+    "originalName": "Grade 10 ClassT 17-06-2025 Functions (print) (1).pdf",
+    "format": "PDF",
+    "pages": 8,
+    "sha256": "24f79a671f8a6376ddbd6c10a970590b8a1e5192bf8fc2159d8c24f77b8d8db6",
+    "pdfSha256": "24f79a671f8a6376ddbd6c10a970590b8a1e5192bf8fc2159d8c24f77b8d8db6",
+    "sourceIds": [
+      "1hqFWq31tvxAsunkXfCzRWKomMD6qb3d6"
+    ],
+    "sections": [
+      "Functions tests past papers with memos"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-a89c5f6107e17d29",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 1 The Real Number System 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-1-the-real-number-system-2026-a89c5f61.pdf",
+    "originalFile": "maths-unit-3-1-the-real-number-system-2026-a89c5f61.pdf",
+    "originalName": "Unit 3 - 1 The Real Number System 2026.pdf",
+    "format": "PDF",
+    "pages": 4,
+    "sha256": "a89c5f6107e17d29a9561e8561f6ded7eeebae2e716663c2c8c90ce5a739f828",
+    "pdfSha256": "a89c5f6107e17d29a9561e8561f6ded7eeebae2e716663c2c8c90ce5a739f828",
+    "sourceIds": [
+      "1XK7fK_3xLlBedZEm25ZNjs9exNtj8cRH"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-eb2c5786f5a111ee",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 2 Rounding 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-2-rounding-2026-eb2c5786.pdf",
+    "originalFile": "maths-unit-3-2-rounding-2026-eb2c5786.pdf",
+    "originalName": "Unit 3 - 2 Rounding 2026.pdf",
+    "format": "PDF",
+    "pages": 1,
+    "sha256": "eb2c5786f5a111eed0e121113f27f099f9ee26d471c6f749f89dc9a2f08ce1e1",
+    "pdfSha256": "eb2c5786f5a111eed0e121113f27f099f9ee26d471c6f749f89dc9a2f08ce1e1",
+    "sourceIds": [
+      "1gAu7xp5yXVlQO0kl-YlNgFR5UdyDI-Nj"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-8f90669c630dd952",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 3 Working with Rationals 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-3-working-with-rationals-2026-8f90669c.pdf",
+    "originalFile": "maths-unit-3-3-working-with-rationals-2026-8f90669c.pdf",
+    "originalName": "Unit 3 - 3 Working with Rationals 2026.pdf",
+    "format": "PDF",
+    "pages": 2,
+    "sha256": "8f90669c630dd9521b2ba55da23da6492ff2f52650e442e8782048bd261919a4",
+    "pdfSha256": "8f90669c630dd9521b2ba55da23da6492ff2f52650e442e8782048bd261919a4",
+    "sourceIds": [
+      "1SNs7sUIcFudrB9uURQ17Of4_bsBWiROF"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-7c31b1419ac654b8",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 4 Sets 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-4-sets-2026-7c31b141.pdf",
+    "originalFile": "maths-unit-3-4-sets-2026-7c31b141.pdf",
+    "originalName": "Unit 3 - 4 Sets 2026.pdf",
+    "format": "PDF",
+    "pages": 6,
+    "sha256": "7c31b1419ac654b88171e48ab4374db89ab50be29ffdec70af0c959b4b071a95",
+    "pdfSha256": "7c31b1419ac654b88171e48ab4374db89ab50be29ffdec70af0c959b4b071a95",
+    "sourceIds": [
+      "14zJUXLQ78_FuXvQTmdRyjWX4shB46HGu"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-8e578b062f511125",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 5 Products 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-5-products-2026-8e578b06.pdf",
+    "originalFile": "maths-unit-3-5-products-2026-8e578b06.pdf",
+    "originalName": "Unit 3 - 5 Products 2026.pdf",
+    "format": "PDF",
+    "pages": 3,
+    "sha256": "8e578b062f51112509e109d8b572af541005849489cfa694dfe7d5b4f0a25e47",
+    "pdfSha256": "8e578b062f51112509e109d8b572af541005849489cfa694dfe7d5b4f0a25e47",
+    "sourceIds": [
+      "14WNjWhipG8-1UVibacZBTS3DY6LgZGTA"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-def7eec2b8320b58",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 6 Factorising 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-6-factorising-2026-def7eec2.pdf",
+    "originalFile": "maths-unit-3-6-factorising-2026-def7eec2.pdf",
+    "originalName": "Unit 3 - 6 Factorising 2026.pdf",
+    "format": "PDF",
+    "pages": 8,
+    "sha256": "def7eec2b8320b583a08dd600aeab39972c4477ba8bb5b80d18ff46c99a7230a",
+    "pdfSha256": "def7eec2b8320b583a08dd600aeab39972c4477ba8bb5b80d18ff46c99a7230a",
+    "sourceIds": [
+      "1MJpQugcQ_WGpAon9yE2Z0hBnuYobNUkw"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-832ca639d88b8501",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 7 Consolidation of Factorisation 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-7-consolidation-of-factorisation-2026-832ca639.pdf",
+    "originalFile": "maths-unit-3-7-consolidation-of-factorisation-2026-832ca639.pdf",
+    "originalName": "Unit 3 - 7 Consolidation of Factorisation 2026.pdf",
+    "format": "PDF",
+    "pages": 2,
+    "sha256": "832ca639d88b850122e7f88de8907636f75321633f06a9a84d87319ac4cb7838",
+    "pdfSha256": "832ca639d88b850122e7f88de8907636f75321633f06a9a84d87319ac4cb7838",
+    "sourceIds": [
+      "1WBWhqV5PcRzbB4_wAmq0PcrCt5W2_Y2q"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-98704ba300d5cedf",
+    "subject": "maths",
+    "subjects": [
+      "maths"
+    ],
+    "title": "Unit 3 - 8 Multiply and Divide Fractions 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "maths-unit-3-8-multiply-and-divide-fractions-2026-98704ba3.pdf",
+    "originalFile": "maths-unit-3-8-multiply-and-divide-fractions-2026-98704ba3.pdf",
+    "originalName": "Unit 3 - 8 Multiply and Divide Fractions 2026.pdf",
+    "format": "PDF",
+    "pages": 3,
+    "sha256": "98704ba300d5cedf032a83f5f603c0c939a020a4ee6c7587abfbbd20d0743d64",
+    "pdfSha256": "98704ba300d5cedf032a83f5f603c0c939a020a4ee6c7587abfbbd20d0743d64",
+    "sourceIds": [
+      "1saqXWmAD2dXHE1Em3lABgkFr1IKPG4Gk"
+    ],
+    "sections": [
+      "Notes"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-6457a6772fb0f28c",
+    "subject": "physical",
+    "subjects": [
+      "physical"
+    ],
+    "title": "VECTORS Gr 10 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "physical-vectors-gr-10-2026-6457a677.pdf",
+    "originalFile": "physical-vectors-gr-10-2026-6457a677.pdf",
+    "originalName": "VECTORS Gr 10 2026.pdf",
+    "format": "PDF",
+    "pages": 10,
+    "sha256": "6457a6772fb0f28c6bb25a035dcebee67eb8ae424f945ef7c3b1f4e0bd92dc64",
+    "pdfSha256": "6457a6772fb0f28c6bb25a035dcebee67eb8ae424f945ef7c3b1f4e0bd92dc64",
+    "sourceIds": [
+      "1eraYZ9_E3xchStwnvi9ZHK0TW57hfEqE"
+    ],
+    "sections": [
+      "VECTORS"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-f9e2fec23b3a6015",
+    "subject": "re",
+    "subjects": [
+      "re"
+    ],
+    "title": "Eucharistic Miracles Assignment Grade 10 2026",
+    "year": 2026,
+    "kind": "notes",
+    "availability": "local",
+    "file": "re-eucharistic-miracles-assignment-grade-10-2026-f9e2fec2.pdf",
+    "originalFile": "re-eucharistic-miracles-assignment-grade-10-2026-f9e2fec2.docx",
+    "originalName": "Eucharistic Miracles Assignment Grade 10 2026.docx",
+    "format": "DOCX",
+    "pages": 2,
+    "sha256": "f9e2fec23b3a6015396c7af145fe188d48807a89c5e65e18c7eeb1162675cad8",
+    "pdfSha256": "ead24eac12aa712acf055d42a514825ebc14f1f5d9675a543cf7e49f30d873d0",
+    "sourceIds": [
+      "1SxDiqkS8M1Q5GjwvK_p1y5kPqqXXyHvwbQIcB6sAHSo"
+    ],
+    "sections": [
+      "Eucharistic Miracles"
+    ],
+    "imported": "2026-11-03"
+  },
+  {
+    "id": "cc-98bfda4e3479d206",
+    "subject": "re",
+    "subjects": [
+      "re"
+    ],
+    "title": "Saint Project brief and rubric",
+    "year": null,
+    "kind": "rubric",
+    "availability": "local",
+    "file": "re-saint-project-brief-and-rubric-98bfda4e.pdf",
+    "originalFile": "re-saint-project-brief-and-rubric-98bfda4e.pdf",
+    "originalName": "Saint Project brief and rubric.pdf",
+    "format": "PDF",
+    "pages": 2,
+    "sha256": "98bfda4e3479d206fdef10d41e69044e09d558e7892814b3fb0c4c87c4e8cd64",
+    "pdfSha256": "98bfda4e3479d206fdef10d41e69044e09d558e7892814b3fb0c4c87c4e8cd64",
+    "sourceIds": [
+      "1bTByW8-nWG1F_oLHTGTSIqs1a_PXEKKh"
+    ],
+    "sections": [
+      "Saint Project"
+    ],
+    "imported": "2026-11-03"
+  }
+]

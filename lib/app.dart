@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +5,7 @@ import 'pdf_reader_screen.dart';
 import 'platform_actions.dart' as platform;
 import 'models.dart';
 import 'visuals.dart';
+import 'focus_timer.dart';
 
 void main() => runApp(const DlsApp());
 
@@ -116,10 +116,15 @@ class _StudyShellState extends State<StudyShell> {
   Json? topic;
   int subjectTab = 0, topicTab = 0;
   String year = 'All years', kind = 'All resources', division = 'All';
+  String classroomQuery = '', classroomKind = 'All types';
+  bool classroomLocalOnly = false;
+  int classroomLimit = 24;
   final scroll = ScrollController();
+  final focusSession = FocusSession();
   StudyStore get store => widget.store;
   @override
   void dispose() {
+    focusSession.dispose();
     scroll.dispose();
     super.dispose();
   }
@@ -127,6 +132,10 @@ class _StudyShellState extends State<StudyShell> {
   void go(String target) {
     setState(() {
       nav = target;
+      classroomQuery = '';
+      classroomKind = 'All types';
+      classroomLocalOnly = false;
+      classroomLimit = 24;
       subjectId = null;
       topic = null;
       year = 'All years';
@@ -147,6 +156,10 @@ class _StudyShellState extends State<StudyShell> {
       subjectId = id;
       topic = null;
       subjectTab = tab;
+      classroomLimit = 24;
+      classroomQuery = '';
+      classroomKind = 'All types';
+      classroomLocalOnly = false;
       year = 'All years';
       kind = 'All resources';
       division = 'All';
@@ -201,6 +214,35 @@ class _StudyShellState extends State<StudyShell> {
     }
   }
 
+  Future<void> downloadOriginal(Json document) async {
+    final path = 'assets/assets/classroom/${document['originalFile']}';
+    final uri =
+        kIsWeb
+            ? Uri.base.replace(fragment: '', query: '').resolve(path)
+            : Uri.parse('https://joaopedra-amdg.github.io/DLS_app/$path');
+    try {
+      if (!await platform.downloadPdf(uri, document['originalName']) &&
+          mounted) {
+        notice('This file could not download. Please try again.');
+      }
+    } catch (_) {
+      if (mounted) notice('Check your connection and try again.');
+    }
+  }
+
+  Future<void> openSchoolFile(Json document) async {
+    try {
+      if (!await platform.openExternal(Uri.parse(document['sourceUrl'])) &&
+          mounted) {
+        notice('The school document could not open. Please try again.');
+      }
+    } catch (_) {
+      if (mounted) {
+        notice('Open this document from your school Classroom account.');
+      }
+    }
+  }
+
   void notice(String text) =>
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
   @override
@@ -225,6 +267,8 @@ class _StudyShellState extends State<StudyShell> {
                         selectedIndex:
                             nav == 'Overview'
                                 ? 0
+                                : nav == 'Pomodoro'
+                                ? 4
                                 : nav == 'Saved'
                                 ? 3
                                 : nav == 'Past papers'
@@ -237,6 +281,7 @@ class _StudyShellState extends State<StudyShell> {
                                 'My subjects',
                                 'Past papers',
                                 'Saved',
+                                'Pomodoro',
                               ][i],
                             ),
                         destinations: const [
@@ -255,6 +300,10 @@ class _StudyShellState extends State<StudyShell> {
                           NavigationDestination(
                             icon: Icon(Icons.bookmark_border_rounded),
                             label: 'Saved',
+                          ),
+                          NavigationDestination(
+                            icon: Icon(Icons.timer_outlined),
+                            label: 'Focus',
                           ),
                         ],
                       ),
@@ -306,8 +355,12 @@ class _StudyShellState extends State<StudyShell> {
                                         subjectsPage()
                                       else if (nav == 'Past papers')
                                         allPapers()
+                                      else if (nav == 'Classroom files')
+                                        classroomLibrary()
                                       else if (nav == 'Flashcards')
                                         flashcardsPage()
+                                      else if (nav == 'Pomodoro')
+                                        FocusScreen(session: focusSession)
                                       else
                                         savedPage(),
                                       const SizedBox(height: 34),
@@ -436,7 +489,9 @@ class _StudyShellState extends State<StudyShell> {
             ('Overview', Icons.grid_view_rounded),
             ('My subjects', Icons.auto_stories_outlined),
             ('Past papers', Icons.description_outlined),
+            ('Classroom files', Icons.folder_copy_outlined),
             ('Flashcards', Icons.style_outlined),
+            ('Pomodoro', Icons.timer_outlined),
             ('Saved', Icons.bookmark_border_rounded),
           ])
             Padding(
@@ -670,11 +725,6 @@ class _StudyShellState extends State<StudyShell> {
           ),
         ),
         const SizedBox(width: 18),
-        IconButton(
-          tooltip: 'Install For Rosa',
-          onPressed: install,
-          icon: const Icon(Icons.install_mobile_rounded, color: purple),
-        ),
         const Pill(text: 'GRADE 10', color: purple),
       ],
     ),
@@ -723,7 +773,10 @@ class _StudyShellState extends State<StudyShell> {
                   children: [
                     hero(),
                     const SizedBox(height: 28),
-                    sectionTitle('Your subjects', 'Five worlds to explore'),
+                    sectionTitle(
+                      'Your subjects',
+                      'A world of ideas to explore',
+                    ),
                     const SizedBox(height: 16),
                     subjectGrid(),
                     const SizedBox(height: 28),
@@ -746,7 +799,7 @@ class _StudyShellState extends State<StudyShell> {
                     children: [
                       progressPanel(),
                       const SizedBox(height: 20),
-                      const FocusTimer(),
+                      focusShortcut(),
                       const SizedBox(height: 20),
                       tipPanel(),
                     ],
@@ -766,21 +819,67 @@ class _StudyShellState extends State<StudyShell> {
                             children: [
                               Expanded(child: progressPanel()),
                               const SizedBox(width: 18),
-                              const Expanded(child: FocusTimer()),
+                              Expanded(child: focusShortcut()),
                             ],
                           )
                           : Column(
                             children: [
                               progressPanel(),
                               const SizedBox(height: 18),
-                              const FocusTimer(),
+                              focusShortcut(),
                             ],
                           ),
             ),
           ],
+          const SizedBox(height: 28),
+          panel(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  'Take For Rosa with you',
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 8),
+                const Text(
+                  'Add your study space to your home screen. Open a PDF once online to keep a copy available offline.',
+                  style: TextStyle(color: muted, height: 1.6),
+                ),
+                const SizedBox(height: 16),
+                FilledButton.icon(
+                  onPressed: install,
+                  icon: const Icon(Icons.install_mobile_rounded),
+                  label: const Text('Install For Rosa'),
+                ),
+              ],
+            ),
+          ),
         ],
       );
     },
+  );
+  Widget focusShortcut() => panel(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Icon(Icons.timer_outlined, color: purple),
+        const SizedBox(height: 12),
+        const Text(
+          'A moment to focus',
+          style: TextStyle(fontWeight: FontWeight.w700),
+        ),
+        const SizedBox(height: 8),
+        const Text(
+          'Give one task your attention, then take a proper break.',
+          style: TextStyle(color: muted, height: 1.6),
+        ),
+        const SizedBox(height: 14),
+        OutlinedButton(
+          onPressed: () => go('Pomodoro'),
+          child: const Text('Open Pomodoro'),
+        ),
+      ],
+    ),
   );
   Widget hero() => Container(
     clipBehavior: Clip.antiAlias,
@@ -1212,7 +1311,7 @@ class _StudyShellState extends State<StudyShell> {
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       pageHeading(
-        'Five subjects. Endless possibilities.',
+        'Your subjects. Endless possibilities.',
         'Find your subject, choose a topic, and take the next step.',
       ),
       const SizedBox(height: 25),
@@ -1261,7 +1360,13 @@ class _StudyShellState extends State<StudyShell> {
       ),
       const SizedBox(height: 25),
       tabs(
-        ['Past papers', 'Topic questions', 'Revision notes', 'Flashcards'],
+        [
+          'Past papers',
+          'Topic questions',
+          'Revision notes',
+          'Flashcards',
+          'Classroom files',
+        ],
         subjectTab,
         (i) => setState(() => subjectTab = i),
         color: subjectColor(s),
@@ -1269,6 +1374,8 @@ class _StudyShellState extends State<StudyShell> {
       const SizedBox(height: 24),
       if (subjectTab == 0)
         paperLibrary(subject: s)
+      else if (subjectTab == 4)
+        classroomLibrary(subject: s)
       else ...[
         pageHeading(
           subjectTab == 1
@@ -1819,6 +1926,30 @@ class _StudyShellState extends State<StudyShell> {
         style: TextStyle(color: muted, fontSize: 12, height: 1.8),
       ),
       const SizedBox(height: 20),
+      if ((t['sources'] as List).isEmpty)
+        const Text(
+          'Use the linked Classroom worksheets and teaching material below, then try the further practice and concept challenges.',
+          style: TextStyle(color: muted, height: 1.7),
+        ),
+      if (store.topicDocuments(t).isNotEmpty) ...[
+        const Text(
+          'From your Classroom',
+          style: TextStyle(fontSize: 17, fontWeight: FontWeight.w700),
+        ),
+        const SizedBox(height: 12),
+        ExpansionTile(
+          title: Text(
+            'Classroom worksheets and notes (${store.topicDocuments(t).length})',
+            style: const TextStyle(fontSize: 14),
+          ),
+          initiallyExpanded: (t['sources'] as List).isEmpty,
+          children: [
+            for (final document in store.topicDocuments(t))
+              classroomRow(document),
+          ],
+        ),
+        const SizedBox(height: 20),
+      ],
       for (final r in List<Json>.from(t['sources']))
         Padding(
           padding: const EdgeInsets.only(bottom: 16),
@@ -1909,7 +2040,7 @@ class _StudyShellState extends State<StudyShell> {
       Pill(
         text:
             challenge
-                ? 'STRETCH PRACTICE · GENERATED CHALLENGES'
+                ? 'CONCEPT CHALLENGES · EXPLAIN YOUR THINKING'
                 : 'NEW PRACTICE · GENERATED STUDY MATERIAL',
         color: purple,
       ),
@@ -1921,7 +2052,7 @@ class _StudyShellState extends State<StudyShell> {
       const SizedBox(height: 8),
       Text(
         challenge
-            ? 'These multi-step extension questions combine ideas and add a reasoning step beyond the linked paper selections. Try them after the regular practice, then reveal the worked solution. They are generated study material, not official exam questions.'
+            ? 'Predict what changes, explain why, and test a claim with an example or counterexample. These challenges test your understanding of the ideas, not just a longer calculation. Try before revealing the suggested reasoning. Generated study material.'
             : 'Work it out first. Reveal the worked answer when you’re ready. These are original practice questions inspired by the topic, not official exam questions.',
         style: const TextStyle(fontSize: 12, color: muted, height: 1.8),
       ),
@@ -1998,6 +2129,17 @@ class _StudyShellState extends State<StudyShell> {
         color: subjectColor(s),
         formula: t['formula'],
       ),
+      if (store.topicDocuments(t).isNotEmpty)
+        ExpansionTile(
+          title: const Text(
+            'Classroom sources for this topic',
+            style: TextStyle(fontSize: 14),
+          ),
+          subtitle: const Text(
+            'Read the teaching notes and original worksheets',
+          ),
+          children: [for (final d in store.topicDocuments(t)) classroomRow(d)],
+        ),
       const SizedBox(height: 22),
       for (final (i, n) in List<Json>.from(t['notes']).indexed)
         Padding(
@@ -2090,6 +2232,153 @@ class _StudyShellState extends State<StudyShell> {
       ),
     ],
   );
+  Widget classroomLibrary({Json? subject}) {
+    final docs =
+        (subject == null
+            ? store.documents
+            : store.subjectDocuments(subject['id']));
+    final query = classroomQuery.trim().toLowerCase();
+    final selected =
+        docs
+            .where(
+              (d) =>
+                  (classroomKind == 'All types' ||
+                      d['kind'] == classroomKind) &&
+                  (!classroomLocalOnly || d['availability'] != 'school') &&
+                  (query.isEmpty ||
+                      '${d['subject']} ${store.subject(d['subject'])['name']} ${d['title']} ${d['sections']}'
+                          .toLowerCase()
+                          .contains(query)),
+            )
+            .toList();
+    final types = docs.map((d) => d['kind'] as String).toSet().toList()..sort();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        pageHeading(
+          'Your Classroom library',
+          'Teacher notes, slides, worksheets, scopes and assessments, together in one place.',
+        ),
+        const SizedBox(height: 20),
+        TextField(
+          key: const ValueKey('classroom-search'),
+          decoration: const InputDecoration(
+            labelText: 'Search Classroom files',
+            prefixIcon: Icon(Icons.search),
+          ),
+          onChanged:
+              (v) => setState(() {
+                classroomQuery = v;
+                classroomLimit = 24;
+              }),
+        ),
+        const SizedBox(height: 14),
+        Wrap(
+          spacing: 10,
+          runSpacing: 8,
+          children: [
+            for (final type in ['All types', ...types])
+              ChoiceChip(
+                label: Text(type),
+                selected: classroomKind == type,
+                onSelected:
+                    (_) => setState(() {
+                      classroomKind = type;
+                      classroomLimit = 24;
+                    }),
+              ),
+          ],
+        ),
+        const SizedBox(height: 16),
+        FilterChip(
+          label: const Text('Files available in For Rosa'),
+          selected: classroomLocalOnly,
+          onSelected:
+              (v) => setState(() {
+                classroomLocalOnly = v;
+                classroomLimit = 24;
+              }),
+        ),
+        const SizedBox(height: 10),
+        Text(
+          '${selected.length} documents · school links open with your school account',
+          style: const TextStyle(color: muted, fontSize: 12),
+        ),
+        const SizedBox(height: 18),
+        if (selected.isEmpty)
+          const Text('No documents match. Try another search or type.'),
+        for (final document in selected.take(classroomLimit))
+          classroomRow(document),
+        if (selected.length > classroomLimit)
+          OutlinedButton(
+            onPressed: () => setState(() => classroomLimit += 24),
+            child: const Text('Show more files'),
+          ),
+      ],
+    );
+  }
+
+  Widget classroomRow(Json d) => Padding(
+    padding: const EdgeInsets.only(bottom: 14),
+    child: panel(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            d['title'],
+            style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700),
+          ),
+          const SizedBox(height: 7),
+          Text(
+            '${store.subject(d['subject'])['name']} · ${d['kind']}${d['pages'] != null ? ' · ${d['pages']} pages' : ''}',
+            style: const TextStyle(color: muted, fontSize: 12),
+          ),
+          const SizedBox(height: 13),
+          Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [
+              if (d['availability'] != 'school')
+                FilledButton.icon(
+                  onPressed: () => openPaper(d),
+                  icon: const Icon(Icons.picture_as_pdf_outlined, size: 17),
+                  label: const Text('Read PDF'),
+                ),
+              if (d['availability'] != 'school')
+                OutlinedButton.icon(
+                  onPressed: () => downloadOriginal(d),
+                  icon: const Icon(Icons.download_outlined, size: 17),
+                  label: Text('Download ${d['format']}'),
+                ),
+              if (d['availability'] == 'school')
+                OutlinedButton.icon(
+                  onPressed: () => openSchoolFile(d),
+                  icon: const Icon(Icons.open_in_new, size: 17),
+                  label: const Text('Open school document'),
+                ),
+            ],
+          ),
+          if (d['availability'] == 'school')
+            const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Text(
+                'School sign-in required · this file has no offline copy in For Rosa. Access and downloads are managed by the school.',
+                style: TextStyle(color: muted, fontSize: 11, height: 1.6),
+              ),
+            ),
+          if (d['availability'] != 'school' && d['format'] != 'PDF')
+            const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Text(
+                'PDF viewing copy · original document is available to download',
+                style: TextStyle(color: muted, fontSize: 11),
+              ),
+            ),
+        ],
+      ),
+    ),
+  );
+
   Widget flashcardsPage() => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
@@ -2311,7 +2600,7 @@ class _StudyShellState extends State<StudyShell> {
             width: 480,
             child: SingleChildScrollView(
               child: Text(
-                'Built from the 44 PDFs supplied for Grade 10 study. Topics reflect these papers and may not cover your entire curriculum.\n\nOriginal exam questions and supplied memos stay in their original PDFs. New practice, worked answers, revision notes and flashcards are generated learning material, not official marking guidelines. Some source memos contain errors; generated notes explain standard concepts.\n\nProgress and bookmarks are stored only in this browser or app on this device. They do not sync between devices, and clearing site data removes them. No account or learner details are collected. Download PDFs to keep your own copy; previously cached content can be available offline.\n\nFor Rosa is an independent study companion inspired by clear course dashboards and topic-based revision. It is not affiliated with Canvas or Save My Exams. Original exam materials belong to their respective owners.',
+                'Built from the supplied Grade 10 past papers and imported Classroom teaching material. Topics reflect the available sources and may not cover your entire curriculum.\n\nOriginal exam questions and supplied memos stay in their original PDFs. New practice, worked answers, revision notes and flashcards are generated learning material, not official marking guidelines. Some source memos contain errors; generated notes explain standard concepts.\n\nProgress and bookmarks are stored only in this browser or app on this device. They do not sync between devices, and clearing site data removes them. No account or learner details are collected. Download PDFs to keep your own copy; previously cached content can be available offline.\n\nFor Rosa is an independent study companion inspired by clear course dashboards and topic-based revision. It is not affiliated with Canvas or Save My Exams. Original exam materials belong to their respective owners.',
                 style: TextStyle(fontSize: 13, height: 1.8),
               ),
             ),
@@ -2808,148 +3097,4 @@ class _FlashcardDeckState extends State<FlashcardDeck> {
       ],
     );
   }
-}
-
-class FocusTimer extends StatefulWidget {
-  const FocusTimer({super.key});
-  @override
-  State<FocusTimer> createState() => _FocusTimerState();
-}
-
-class _FocusTimerState extends State<FocusTimer> {
-  int seconds = 25 * 60;
-  Timer? timer;
-  bool get running => timer?.isActive ?? false;
-  void toggle() {
-    if (running) {
-      timer?.cancel();
-      setState(() {});
-      return;
-    }
-    if (seconds == 0) {
-      seconds = 25 * 60;
-    }
-    final deadline = DateTime.now().add(Duration(seconds: seconds));
-    timer = Timer.periodic(const Duration(seconds: 1), (_) {
-      final remaining = deadline.difference(DateTime.now()).inSeconds;
-      setState(() => seconds = math.max(0, remaining));
-      if (seconds == 0) {
-        timer?.cancel();
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text(
-              'Focus session complete. Time for a stretch and a short break.',
-            ),
-          ),
-        );
-      }
-    });
-    setState(() {});
-  }
-
-  @override
-  void dispose() {
-    timer?.cancel();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => Container(
-    width: double.infinity,
-    padding: const EdgeInsets.all(22),
-    decoration: BoxDecoration(
-      color: const Color(0xFF292744),
-      borderRadius: BorderRadius.circular(18),
-    ),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Row(
-          children: [
-            Icon(
-              Icons.hourglass_top_rounded,
-              size: 19,
-              color: Color(0xFFC9C1F5),
-            ),
-            SizedBox(width: 9),
-            Expanded(
-              child: Text(
-                'A moment to focus',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 22),
-        Center(
-          child: Text(
-            '${(seconds ~/ 60).toString().padLeft(2, '0')}:${(seconds % 60).toString().padLeft(2, '0')}',
-            style: const TextStyle(
-              fontSize: 43,
-              color: Colors.white,
-              fontWeight: FontWeight.w300,
-              letterSpacing: 3,
-              fontFeatures: [FontFeature.tabularFigures()],
-            ),
-          ),
-        ),
-        const SizedBox(height: 8),
-        Center(
-          child: Text(
-            seconds == 0
-                ? 'Nice work. Take a breather.'
-                : 'One task. Your full attention.',
-            style: const TextStyle(fontSize: 10, color: Color(0xFFBBB6D2)),
-          ),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            Expanded(
-              child: FilledButton(
-                style: FilledButton.styleFrom(
-                  backgroundColor: const Color(0xFFE4DFFF),
-                  foregroundColor: ink,
-                  padding: const EdgeInsets.symmetric(vertical: 15),
-                ),
-                onPressed: toggle,
-                child: Text(
-                  running
-                      ? 'Pause'
-                      : seconds == 25 * 60
-                      ? 'Start focus session'
-                      : 'Continue',
-                  style: const TextStyle(
-                    fontSize: 11,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ),
-            ),
-            IconButton(
-              tooltip: 'Reset timer',
-              onPressed: () {
-                timer?.cancel();
-                setState(() => seconds = 25 * 60);
-              },
-              icon: const Icon(
-                Icons.restart_alt_rounded,
-                color: Colors.white70,
-                size: 20,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 10),
-        const Text(
-          'Keep this page open while the timer runs.',
-          style: TextStyle(fontSize: 9, color: Color(0xFFBBB6D2)),
-        ),
-      ],
-    ),
-  );
 }
