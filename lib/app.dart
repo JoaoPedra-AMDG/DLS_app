@@ -2366,6 +2366,24 @@ class _StudyShellState extends State<StudyShell> {
                 style: TextStyle(color: muted, fontSize: 11, height: 1.6),
               ),
             ),
+          if (d['availability'] == 'school' &&
+              ((d['sourceLinks'] as List?)?.length ?? 0) > 1)
+            ExpansionTile(
+              tilePadding: EdgeInsets.zero,
+              title: Text('All ${d['sourceLinks'].length} posted copies'),
+              children: [
+                for (var i = 0; i < d['sourceLinks'].length; i++)
+                  ListTile(
+                    title: Text('Posted copy ${i + 1}'),
+                    subtitle: Text(d['sourceLinks'][i]['label']),
+                    trailing: const Icon(Icons.open_in_new, size: 17),
+                    onTap:
+                        () => openSchoolFile({
+                          'sourceUrl': d['sourceLinks'][i]['url'],
+                        }),
+                  ),
+              ],
+            ),
           if (d['availability'] != 'school' && d['format'] != 'PDF')
             const Padding(
               padding: EdgeInsets.only(top: 10),

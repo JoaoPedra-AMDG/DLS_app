@@ -359,6 +359,10 @@ void main() {
           'availability': 'school',
           'sourceUrl': 'https://drive.google.com/',
           'sourceIds': ['fixture'],
+          'sourceLinks': [
+            {'url': 'https://drive.google.com/', 'label': 'First posting'},
+            {'url': 'https://docs.google.com/', 'label': 'Second posting'},
+          ],
           'sections': ['Example'],
         },
       ];
@@ -376,6 +380,10 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('Open school document'), findsOneWidget);
       expect(find.text('Read PDF'), findsNothing);
+      await tester.tap(find.text('All 2 posted copies'));
+      await tester.pumpAndSettle();
+      expect(find.text('First posting'), findsOneWidget);
+      expect(find.text('Second posting'), findsOneWidget);
       await tester.tap(find.text('Files available in For Rosa'));
       await tester.pumpAndSettle();
       expect(find.text('Open school document'), findsNothing);
