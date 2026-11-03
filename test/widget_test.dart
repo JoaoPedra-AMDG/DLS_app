@@ -141,6 +141,40 @@ void main() {
     expect(find.text('Open PDF'), findsNothing);
     expect(tester.takeException(), isNull);
   });
+  testWidgets('The 2022 Section A booklet opens its labelled study memo', (
+    tester,
+  ) async {
+    await launch(tester);
+    await tester.tap(find.text('Past papers').first);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('All resources'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Question booklets').last);
+    await tester.pumpAndSettle();
+    expect(
+      find.text('November Section A Answer Booklet · 2022'),
+      findsOneWidget,
+    );
+    expect(find.text('Matching memo'), findsOneWidget);
+    await tester.ensureVisible(find.text('Matching memo'));
+    await tester.tap(find.text('Matching memo'));
+    await tester.pumpAndSettle();
+    expect(find.byType(PdfReaderScreen), findsOneWidget);
+    expect(find.text('November Section A study memo - 2022'), findsOneWidget);
+    expect(find.text('Download'), findsOneWidget);
+    final memo = store.paper(store.paper('23')['memo']);
+    expect(memo['generated'], isTrue);
+    expect(memo['totalMarks'], 50);
+    await tester.tap(find.text('Back'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Question booklets'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Memos').last);
+    await tester.pumpAndSettle();
+    expect(find.text('STUDY MEMO'), findsOneWidget);
+    expect(find.text('3 pages · Generated study PDF'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
   testWidgets('A complete flashcard review can be restarted', (tester) async {
     final t = store.topics.first;
     await tester.pumpWidget(

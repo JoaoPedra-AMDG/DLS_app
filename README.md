@@ -60,6 +60,8 @@ Generated learning material is clearly labelled and is separate from official ex
 
 Life Sciences includes brief class-document summaries at the start of each topic and short recall cards appended to its existing deck. The reviewed source copies and scope are documented in [the Life Sciences audit](docs/LIFE_SCIENCES_CLASSROOM_AUDIT.md). Those teaching files remain school links; their original bytes are kept locally rather than bundled in this update.
 
+The 2022 Life Sciences Section A answer booklet has a generated 50-mark study memo, available through **Matching memo** or the memos filter. Generated PDFs are labelled **STUDY MEMO** and are separate from official school marking guidelines. Their source checksums and page mappings are in `assets/generated_memos.json`; `tools/create_life_2022_section_a_memo.py` reproduces this memo locally with ReportLab and pypdf. The public copy is in `assets/papers/`; local exports are kept under ignored `output/pdf/`.
+
 ## Privacy and persistence
 
 Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. A PDF needs a successful initial online load before it can be cached. The focus timer runs while For Rosa remains open; closing the app ends it. It is not a background notification service.

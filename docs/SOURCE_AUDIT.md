@@ -24,7 +24,7 @@ All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers;
 | 20.pdf | life | November Practical · Year not stated | paper | 8 | The document does not state a year |
 | 21.pdf | life | November Paper 2 · 2020 | paper | 2 | References a separate source booklet that was not supplied |
 | 22.pdf | life | November Theory Section B · 2022 | paper | 9 |  |
-| 23.pdf | life | November Section A Answer Booklet · 2022 | supplement | 6 | Contains Section A questions; this is not a marking memo |
+| 23.pdf | life | November Section A Answer Booklet · 2022 | supplement | 6 | Original question booklet. A generated 50-mark study memo is linked. |
 | 24.pdf | life | November Theory Section B · 2022 | memo | 4 | Year inferred from matching questions in the 2022 paper; no year on memo cover |
 | 25.pdf | life | November Practical · 2023 | paper | 10 | Scanned practical examination |
 | 26.pdf, 27.pdf | life | November Paper 2 · 2023 | paper | 8 |  |
@@ -44,6 +44,12 @@ All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers;
 | 42.pdf | ap | November Probability Statistics and Algebra · 2024 | memo | 20 | Scanned handwritten marking guidelines |
 | 43.pdf | sports | November Sport and Exercise Science · 2024 | paper | 29 |  |
 | 44.pdf | sports | November Sport and Exercise Science · 2024 | memo | 31 | Question numbering and pagination differ from the paper; match by question text |
+
+## Generated study memos
+
+Generated memos are independently authored study aids, not official school marking guidelines. Original question-booklet bytes remain unchanged. The generated_memos.json manifest records matching source hashes and PDF page mappings.
+
+- November Section A study memo - 2022: 50 marks; 3 PDF pages; paired with source 23.
 
 ## Learning content
 

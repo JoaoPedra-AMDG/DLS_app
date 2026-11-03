@@ -85,6 +85,19 @@ for n,(subject,year,exam,kind,memo,note) in spec.items():
   shutil.copyfile(source, published)
  papers.append(dict(id=str(n),subject=subject,year=year,title=f'{exam} · {year or "Year not stated"}',kind=kind,memo=str(memo) if memo else None,note=note,file=slug,pages=len(reader.pages),sha256=hashlib.sha256(source.read_bytes()).hexdigest(),originals=[f'{n}.pdf']+[f'{d}.pdf' for d,target in duplicates.items() if target==n]))
 
+generated_manifest=ASSETS/'generated_memos.json'
+if generated_manifest.exists():
+ for memo in json.loads(generated_manifest.read_text(encoding='utf-8')):
+  assert memo['generated'] and memo['kind']=='memo' and not memo['originals']
+  assert all(p['id']!=memo['id'] for p in papers)
+  parent=next(p for p in papers if p['id']==memo['sourcePaper'])
+  assert parent['sha256']==memo['sourceSha256'] and parent['memo'] in [None,memo['id']]
+  assert memo['subject']==parent['subject'] and memo['year']==parent['year']
+  assert hashlib.sha256((ASSETS/'papers'/memo['file']).read_bytes()).hexdigest()==memo['sha256']
+  parent['memo']=memo['id']
+  parent['note']=f'Original question {"booklet" if parent["kind"]=="supplement" else "paper"}. A generated {memo["totalMarks"]}-mark study memo is linked.'
+  papers.append(memo)
+
 by_id={p['id']:p for p in papers}
 assert set(EXTRA_PRACTICE)=={t['title'] for t in topics}, 'Extra-practice topics must match the curriculum'
 assert set(EXTENSIONS)=={t['title'] for t in topics}, 'Every topic needs a challenge and card extension'
@@ -105,6 +118,8 @@ for i,t in enumerate(topics):
   p=by_id[ref['paper']]
   assert 1 <= ref['page'] <= p['pages'], (t['title'],ref)
   ref['memo']=p['memo']
+  if p['memo'] and by_id[p['memo']].get('generated'):
+   ref['memoPage']=by_id[p['memo']]['sourcePageMap'].get(str(ref['page']),1)
   if ref.get('memoPage') and p['memo']:
    assert ref['memoPage']<=by_id[p['memo']]['pages']
 
@@ -119,7 +134,13 @@ content=dict(subjects=subjects,papers=papers,topics=topics,classroom=classroom,s
 audit=ROOT/'docs'/'SOURCE_AUDIT.md'; audit.parent.mkdir(exist_ok=True)
 lines=['# Source audit','','All 44 uploaded PDFs were opened. Original bytes are preserved in assets/papers; duplicates share one published copy. Blank uploads are retained in the catalogue as unavailable. Page links use PDF page positions, not printed page labels.','','| Upload(s) | Subject | Resource | Type | Pages | Notes |','|---|---|---|---|---|---|']
 for p in papers:
+ if p.get('generated'):continue
  lines.append('| '+', '.join(p['originals'])+' | '+p['subject']+' | '+p['title']+' | '+p['kind']+' | '+str(p['pages'])+' | '+p['note']+' |')
+if any(p.get('generated') for p in papers):
+ lines += ['','## Generated study memos','','Generated memos are independently authored study aids, not official school marking guidelines. Original question-booklet bytes remain unchanged. The generated_memos.json manifest records matching source hashes and PDF page mappings.','']
+ for p in papers:
+  if p.get('generated'):
+   lines.append(f'- {p["title"]}: {p["totalMarks"]} marks; {p["pages"]} PDF pages; paired with source {p["sourcePaper"]}.')
 lines += ['','## Learning content','','Topics are editorial groupings based on the supplied papers and available Classroom teaching documents, not a claim of complete curriculum coverage. Original topic questions link to complete source pages so equations, diagrams, tables and reading passages remain intact. Matching original memos are linked when supplied; missing memos are stated explicitly. New practice, worked answers, revision notes and flashcards are generated study material, not official marking guidelines. School links do not imply that an offline copy was imported or that its contents were read.','',f'{len(topics)} topics; {sum(len(t["practice"]) for t in topics)} regular worked questions; {sum(len(t["challenges"]) for t in topics)} concept challenges; {sum(len(t["cards"]) for t in topics)} flashcards.','','The Life Science 2022 memo has an anaphase/metaphase inconsistency; notes explain normal anaphase correctly. Some supplied Life Science and Sports Science memo statements oversimplify absorption, energy systems and nutrition; generated notes use conventional school-level explanations instead of reproducing those errors.']
 local_documents=[d for d in classroom if d.get('availability')!='school']
 school_documents=[d for d in classroom if d.get('availability')=='school']

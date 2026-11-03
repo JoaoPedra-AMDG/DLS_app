@@ -47,4 +47,5 @@ app.*.map.json
 # Uploaded originals stay on disk; published copies have descriptive names.
 /*.pdf
 /tmp/
+/output/
 __pycache__/

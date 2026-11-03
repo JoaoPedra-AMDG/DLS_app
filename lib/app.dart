@@ -1415,7 +1415,7 @@ class _StudyShellState extends State<StudyShell> {
     children: [
       pageHeading(
         'The past-paper library',
-        'Original DLS papers, organised by subject, paper and year.',
+        'Exam papers and memos, organised by subject, paper and year.',
       ),
       const SizedBox(height: 24),
       paperLibrary(),
@@ -1608,7 +1608,9 @@ class _StudyShellState extends State<StudyShell> {
                         Pill(
                           text:
                               isMemo
-                                  ? 'MEMO'
+                                  ? p['generated'] == true
+                                      ? 'STUDY MEMO'
+                                      : 'MEMO'
                                   : p['kind'] == 'supplement'
                                   ? 'QUESTION BOOKLET'
                                   : 'PAPER',
@@ -1626,7 +1628,7 @@ class _StudyShellState extends State<StudyShell> {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      '${p['pages']} pages · Original PDF',
+                      '${p['pages']} pages · ${p['generated'] == true ? 'Generated study PDF' : 'Original PDF'}',
                       style: const TextStyle(fontSize: 11, color: muted),
                     ),
                   ],
@@ -1690,6 +1692,12 @@ class _StudyShellState extends State<StudyShell> {
                 const Text(
                   'Memo not supplied',
                   style: TextStyle(fontSize: 11, color: muted),
+                ),
+              if (p['sourcePaper'] != null)
+                TextButton.icon(
+                  onPressed: () => openPaper(store.paper(p['sourcePaper'])),
+                  icon: const Icon(Icons.description_outlined, size: 16),
+                  label: const Text('Open question booklet'),
                 ),
             ],
           ),

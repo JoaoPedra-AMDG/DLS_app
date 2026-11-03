@@ -42,6 +42,12 @@ originals=[]
 for p in papers.values():
  published=root/'assets/papers'/p['file']
  assert hashlib.sha256(published.read_bytes()).hexdigest()==p['sha256'],p['file']
+ if p.get('generated'):
+  assert p['kind']=='memo' and p['originals']==[] and p['totalMarks']>0
+  parent=papers[p['sourcePaper']]
+  assert p['sourceSha256']==parent['sha256'] and parent['memo']==p['id']
+  assert len(PdfReader(published).pages)==p['pages']
+  assert all(1<=int(k)<=parent['pages'] and 1<=v<=p['pages'] for k,v in p['sourcePageMap'].items())
  for f in p['originals']:
   originals.append(f)
   if (root/f).exists():
