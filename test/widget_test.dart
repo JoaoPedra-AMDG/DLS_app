@@ -33,7 +33,7 @@ void main() {
     (tester) async {
       await launch(tester);
       expect(find.text('Your subjects'), findsOneWidget);
-      await tester.tap(find.text('Find your next discovery…'));
+      await tester.tap(find.text('Search subjects, topics and papers'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), 'mitosis');
       await tester.pumpAndSettle();
@@ -58,7 +58,7 @@ void main() {
     'Revision completion and flashcard ratings survive store reload',
     (tester) async {
       await launch(tester);
-      await tester.tap(find.text('Find your next discovery…'));
+      await tester.tap(find.text('Search subjects, topics and papers'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), 'circuits');
       await tester.pumpAndSettle();
@@ -158,11 +158,96 @@ void main() {
     await tester.pumpWidget(const SizedBox());
   });
 
+  testWidgets('English and RE topic lists and flashcards open without errors', (
+    tester,
+  ) async {
+    await launch(tester);
+    for (final id in ['english', 're']) {
+      await tester.ensureVisible(find.text(store.subject(id)['name']).first);
+      await tester.tap(find.text(store.subject(id)['name']).first);
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Flashcards').last);
+      await tester.pumpAndSettle();
+      final topic = store.subjectTopics(id).first;
+      expect(find.text(topic['title']), findsOneWidget);
+      await tester.tap(find.text(topic['title']));
+      await tester.pumpAndSettle();
+      expect(
+        find.text('CARD 1 OF ${(topic['cards'] as List).length}'),
+        findsOneWidget,
+      );
+      await tester.ensureVisible(find.text('Reveal answer'));
+      await tester.tap(find.text('Reveal answer'));
+      await tester.pumpAndSettle();
+      expect(find.text(topic['cards'][0]['back']), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    }
+  });
+
+  testWidgets(
+    'Subjects without flashcards show an empty state in both libraries',
+    (tester) async {
+      final data = Map<String, dynamic>.from(store.data);
+      data['topics'] = [
+        for (final topic in store.topics.where(
+          (t) => t['subject'] != 'english',
+        ))
+          if (topic['subject'] == 're') {...topic, 'cards': null} else topic,
+      ];
+      store = StudyStore(data, store.prefs);
+      await launch(tester);
+      for (final id in ['english', 're']) {
+        await tester.ensureVisible(find.text(store.subject(id)['name']).first);
+        await tester.tap(find.text(store.subject(id)['name']).first);
+        await tester.pumpAndSettle();
+        await tester.tap(find.text('Flashcards').last);
+        await tester.pumpAndSettle();
+        expect(find.text('No flashcards available'), findsOneWidget);
+        expect(
+          find.text('There are no flashcards for this subject.'),
+          findsOneWidget,
+        );
+        expect(tester.takeException(), isNull);
+      }
+      await tester.tap(find.text('Flashcards').first);
+      await tester.pumpAndSettle();
+      expect(find.text('No flashcards available'), findsNWidgets(2));
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('Missing and empty topic decks do not show completion controls', (
+    tester,
+  ) async {
+    for (final topic in [
+      {'id': 'empty', 'cards': []},
+      {'id': 'null', 'cards': null},
+      {'id': 'missing'},
+    ]) {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Scaffold(
+            body: FlashcardDeck(
+              key: ValueKey(topic['id']),
+              topic: topic,
+              store: store,
+              color: purple,
+            ),
+          ),
+        ),
+      );
+      expect(find.text('No flashcards available'), findsOneWidget);
+      expect(find.text('Study all cards'), findsNothing);
+      expect(find.text('Reveal answer'), findsNothing);
+      expect(tester.takeException(), isNull);
+    }
+  });
+
   testWidgets('Challenge questions reveal their worked solutions', (
     tester,
   ) async {
     await launch(tester);
-    await tester.tap(find.text('Find your next discovery…'));
+    await tester.tap(find.text('Search subjects, topics and papers'));
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField), 'circuits');
     await tester.pumpAndSettle();
@@ -252,7 +337,7 @@ void main() {
     await launch(tester, size: const Size(390, 844));
     await tester.tap(find.text('Focus'));
     await tester.pumpAndSettle();
-    expect(find.text('Your focus space'), findsOneWidget);
+    expect(find.text('Pomodoro'), findsOneWidget);
     await tester.ensureVisible(find.text('Start / continue'));
     await tester.tap(find.text('Start / continue'));
     await tester.pump();

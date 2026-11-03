@@ -109,7 +109,7 @@ def enrich(topics, subjects, documents):
 NEW_TOPICS = []
 def pack(subject, title, notes, practice, challenges, cards, keywords, visual='essay', formula='Point → Evidence → Explanation'):
     assert len(notes) >= 3 and len(practice) == 6 and len(challenges) == 2 and len(cards) >= 4
-    NEW_TOPICS.append(dict(subject=subject,title=title,division='Classroom',
+    NEW_TOPICS.append(dict(subject=subject,title=title,group='Classroom',
         id=subject+'-'+re.sub('[^a-z0-9]+','-',title.lower()).strip('-'),
         notes=[dict(heading=h,body=b) for h,b in notes],
         practice=[dict(question=q,answer=a) for q,a in practice],

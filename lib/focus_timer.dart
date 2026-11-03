@@ -70,12 +70,12 @@ class FocusScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Your focus space',
+                  'Pomodoro',
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.w800),
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'Choose one small task. Focus, rest, then come back refreshed.',
+                  'Choose a focus session or break below.',
                   style: TextStyle(color: muted, height: 1.6),
                 ),
                 const SizedBox(height: 26),
@@ -108,9 +108,7 @@ class FocusScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        session.isBreak
-                            ? 'TIME TO RECHARGE'
-                            : 'ONE TASK. YOUR FULL ATTENTION.',
+                        session.isBreak ? 'BREAK' : 'FOCUS SESSION',
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           color: Color(0xFFC9C1F5),
@@ -155,7 +153,7 @@ class FocusScreen extends StatelessWidget {
                         session.seconds == 0
                             ? (session.isBreak
                                 ? 'Break complete. Ready for your next small step?'
-                                : 'Well done. Choose a break above.')
+                                : 'Focus session complete. Choose a break above.')
                             : session.isBreak
                             ? 'Stretch, look away from the screen, or get some water.'
                             : 'You can visit other study screens while this timer runs.',

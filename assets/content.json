@@ -7886,7 +7886,7 @@
     {
       "subject": "english",
       "title": "Comprehension & summary",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-comprehension-summary",
       "notes": [
         {
@@ -8013,7 +8013,7 @@
     {
       "subject": "english",
       "title": "Language & editing",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-language-editing",
       "notes": [
         {
@@ -8140,7 +8140,7 @@
     {
       "subject": "english",
       "title": "Visual literacy & persuasion",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-visual-literacy-persuasion",
       "notes": [
         {
@@ -8267,7 +8267,7 @@
     {
       "subject": "english",
       "title": "Poetry: voice, imagery & argument",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-poetry-voice-imagery-argument",
       "notes": [
         {
@@ -8396,7 +8396,7 @@
     {
       "subject": "english",
       "title": "A Thousand Splendid Suns: character & theme",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-a-thousand-splendid-suns-character-theme",
       "notes": [
         {
@@ -8523,7 +8523,7 @@
     {
       "subject": "english",
       "title": "Macbeth: ambition, choices & consequences",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-macbeth-ambition-choices-consequences",
       "notes": [
         {
@@ -8649,7 +8649,7 @@
     {
       "subject": "english",
       "title": "Transactional writing: purpose & register",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-transactional-writing-purpose-register",
       "notes": [
         {
@@ -8776,7 +8776,7 @@
     {
       "subject": "english",
       "title": "Prepared speaking, reading & recital",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "english-prepared-speaking-reading-recital",
       "notes": [
         {
@@ -8905,7 +8905,7 @@
     {
       "subject": "re",
       "title": "Eucharist, miracles & evaluating sources",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "re-eucharist-miracles-evaluating-sources",
       "notes": [
         {
@@ -9031,7 +9031,7 @@
     {
       "subject": "re",
       "title": "Saints, virtue & reflective research",
-      "division": "Classroom",
+      "group": "Classroom",
       "id": "re-saints-virtue-reflective-research",
       "notes": [
         {

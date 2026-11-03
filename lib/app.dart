@@ -369,13 +369,6 @@ class _StudyShellState extends State<StudyShell> {
                                         runSpacing: 6,
                                         children: [
                                           const Text(
-                                            'Made for curious minds.',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              color: muted,
-                                            ),
-                                          ),
-                                          const Text(
                                             'For Rosa · Grade 10',
                                             style: TextStyle(
                                               fontSize: 12,
@@ -596,38 +589,6 @@ class _StudyShellState extends State<StudyShell> {
                 ),
             ],
           ),
-          const SizedBox(height: 18),
-          Container(
-            padding: const EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: const Color(0xFFFFF5DF),
-              borderRadius: BorderRadius.circular(14),
-            ),
-            child: const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Icon(
-                  Icons.wb_sunny_outlined,
-                  color: Color(0xFFC48A2E),
-                  size: 23,
-                ),
-                SizedBox(height: 9),
-                Text(
-                  'A little every day\ngoes a long way.',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 13,
-                    height: 1.5,
-                  ),
-                ),
-                SizedBox(height: 5),
-                Text(
-                  'You’ve got this.',
-                  style: TextStyle(fontSize: 11, color: muted),
-                ),
-              ],
-            ),
-          ),
           const SizedBox(height: 22),
           const Row(
             children: [
@@ -713,7 +674,7 @@ class _StudyShellState extends State<StudyShell> {
                     SizedBox(width: 10),
                     Expanded(
                       child: Text(
-                        'Find your next discovery…',
+                        'Search subjects, topics and papers',
                         style: TextStyle(fontSize: 12, color: muted),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -737,31 +698,22 @@ class _StudyShellState extends State<StudyShell> {
         children: [
           Row(
             children: [
-              const Pill(
-                text: 'A FRESH PAGE. A NEW POSSIBILITY.',
-                color: purple,
+              const Expanded(
+                child: Text(
+                  'AMDG',
+                  style: TextStyle(
+                    fontSize: 29,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -.9,
+                  ),
+                ),
               ),
-              const Spacer(),
               if (bounds.maxWidth > 550)
                 Text(
                   dateLabel(),
                   style: const TextStyle(color: muted, fontSize: 12),
                 ),
             ],
-          ),
-          const SizedBox(height: 17),
-          const Text(
-            'AMDG',
-            style: TextStyle(
-              fontSize: 29,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -.9,
-            ),
-          ),
-          const SizedBox(height: 8),
-          const Text(
-            'A little practice, a big lightbulb moment. Let’s make it happen.',
-            style: TextStyle(color: muted, fontSize: 14, height: 1.6),
           ),
           const SizedBox(height: 26),
           Row(
@@ -773,17 +725,11 @@ class _StudyShellState extends State<StudyShell> {
                   children: [
                     hero(),
                     const SizedBox(height: 28),
-                    sectionTitle(
-                      'Your subjects',
-                      'A world of ideas to explore',
-                    ),
+                    sectionTitle('Your subjects', ''),
                     const SizedBox(height: 16),
                     subjectGrid(),
                     const SizedBox(height: 28),
-                    sectionTitle(
-                      'Make it your kind of study',
-                      'One topic. Four ways to learn.',
-                    ),
+                    sectionTitle('Study tools', ''),
                     const SizedBox(height: 15),
                     studyModes(),
                     const SizedBox(height: 26),
@@ -837,7 +783,7 @@ class _StudyShellState extends State<StudyShell> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  'Take For Rosa with you',
+                  'Install the app',
                   style: TextStyle(fontSize: 19, fontWeight: FontWeight.w700),
                 ),
                 const SizedBox(height: 8),
@@ -865,12 +811,12 @@ class _StudyShellState extends State<StudyShell> {
         const Icon(Icons.timer_outlined, color: purple),
         const SizedBox(height: 12),
         const Text(
-          'A moment to focus',
+          'Pomodoro timer',
           style: TextStyle(fontWeight: FontWeight.w700),
         ),
         const SizedBox(height: 8),
         const Text(
-          'Give one task your attention, then take a proper break.',
+          '25-minute focus sessions with short and long breaks.',
           style: TextStyle(color: muted, height: 1.6),
         ),
         const SizedBox(height: 14),
@@ -881,79 +827,10 @@ class _StudyShellState extends State<StudyShell> {
       ],
     ),
   );
-  Widget hero() => Container(
-    clipBehavior: Clip.antiAlias,
-    decoration: BoxDecoration(
-      color: const Color(0xFFEEEAFB),
-      borderRadius: BorderRadius.circular(22),
-    ),
-    child: LayoutBuilder(
-      builder:
-          (context, b) => Padding(
-            padding: const EdgeInsets.all(28),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        'BIG DREAMS, SMALL STEPS',
-                        style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.w800,
-                          color: purple,
-                          letterSpacing: 1.9,
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      const Text(
-                        'Less overwhelm.\nMore aha moments.',
-                        style: TextStyle(
-                          fontSize: 29,
-                          height: 1.16,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: -.8,
-                        ),
-                      ),
-                      const SizedBox(height: 13),
-                      const Text(
-                        'Your papers, practice and revision.\nAll together, all at your pace.',
-                        style: TextStyle(
-                          color: muted,
-                          height: 1.6,
-                          fontSize: 12,
-                        ),
-                      ),
-                      const SizedBox(height: 22),
-                      FilledButton(
-                        onPressed: () => go('My subjects'),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Flexible(
-                              child: Text(
-                                'Let’s get learning',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: 13),
-                            Icon(Icons.arrow_forward_rounded, size: 16),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                if (b.maxWidth > 560)
-                  const SizedBox(width: 235, height: 210, child: StudyArt()),
-              ],
-            ),
-          ),
-    ),
+  Widget hero() => FilledButton.icon(
+    onPressed: () => go('My subjects'),
+    icon: const Icon(Icons.arrow_forward_rounded, size: 17),
+    label: const Text('Open subjects'),
   );
   Widget sectionTitle(String title, String sub) => Row(
     crossAxisAlignment: CrossAxisAlignment.end,
@@ -970,8 +847,10 @@ class _StudyShellState extends State<StudyShell> {
                 letterSpacing: -.4,
               ),
             ),
-            const SizedBox(height: 5),
-            Text(sub, style: const TextStyle(fontSize: 12, color: muted)),
+            if (sub.isNotEmpty) ...[
+              const SizedBox(height: 5),
+              Text(sub, style: const TextStyle(fontSize: 12, color: muted)),
+            ],
           ],
         ),
       ),
@@ -1061,7 +940,7 @@ class _StudyShellState extends State<StudyShell> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: LinearProgressIndicator(
-                  value: done / ts.length,
+                  value: ts.isEmpty ? 0 : done / ts.length,
                   minHeight: 4,
                   color: subjectColor(s),
                   backgroundColor: subjectLight(s),
@@ -1070,7 +949,7 @@ class _StudyShellState extends State<StudyShell> {
               const SizedBox(height: 8),
               Text(
                 done == 0
-                    ? 'Ready when you are'
+                    ? '0 of ${ts.length} topics revised'
                     : '$done of ${ts.length} topics revised',
                 style: const TextStyle(fontSize: 10, color: muted),
               ),
@@ -1152,9 +1031,7 @@ class _StudyShellState extends State<StudyShell> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  previous == null
-                      ? 'Start with one small win'
-                      : 'Pick up where you left off',
+                  previous == null ? 'Choose a topic' : 'Continue studying',
                   style: const TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: 13,
@@ -1162,8 +1039,7 @@ class _StudyShellState extends State<StudyShell> {
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  previous?['title'] ??
-                      'Choose a topic. Try a question. Flip a card.',
+                  previous?['title'] ?? 'Select a subject to choose a topic.',
                   style: const TextStyle(fontSize: 12, color: muted),
                 ),
               ],
@@ -1191,7 +1067,7 @@ class _StudyShellState extends State<StudyShell> {
             children: [
               Expanded(
                 child: Text(
-                  'Your learning journey',
+                  'Progress',
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
                 ),
               ),
@@ -1208,7 +1084,7 @@ class _StudyShellState extends State<StudyShell> {
                 children: [
                   SizedBox.expand(
                     child: CircularProgressIndicator(
-                      value: n / total,
+                      value: total == 0 ? 0 : n / total,
                       strokeWidth: 9,
                       strokeCap: StrokeCap.round,
                       color: purple,
@@ -1236,13 +1112,6 @@ class _StudyShellState extends State<StudyShell> {
             ),
           ),
           const SizedBox(height: 23),
-          Text(
-            n == 0
-                ? 'Every expert was once a beginner.'
-                : 'Look at you go. Keep the momentum.',
-            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 8),
           Text(
             '$total topics to explore. Mark notes as revised when you feel confident.',
             style: const TextStyle(fontSize: 11, color: muted, height: 1.7),
@@ -1275,23 +1144,13 @@ class _StudyShellState extends State<StudyShell> {
         Icon(Icons.spa_outlined, color: Color(0xFF30836A)),
         SizedBox(height: 13),
         Text(
-          'A smarter study habit',
+          'Study tip',
           style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
         ),
         SizedBox(height: 9),
         Text(
           'Close your notes and explain an idea out loud. Then check what you missed.',
           style: TextStyle(fontSize: 12, height: 1.8, color: muted),
-        ),
-        SizedBox(height: 13),
-        Text(
-          'RECALL > RE-READ',
-          style: TextStyle(
-            fontSize: 9,
-            fontWeight: FontWeight.w800,
-            letterSpacing: 1.4,
-            color: Color(0xFF30836A),
-          ),
         ),
       ],
     ),
@@ -1310,10 +1169,7 @@ class _StudyShellState extends State<StudyShell> {
   Widget subjectsPage() => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      pageHeading(
-        'Your subjects. Endless possibilities.',
-        'Find your subject, choose a topic, and take the next step.',
-      ),
+      pageHeading('Subjects', 'Choose a subject and topic.'),
       const SizedBox(height: 25),
       subjectGrid(),
       const SizedBox(height: 28),
@@ -1332,11 +1188,13 @@ class _StudyShellState extends State<StudyShell> {
           height: 1.25,
         ),
       ),
-      const SizedBox(height: 9),
-      Text(
-        subtitle,
-        style: const TextStyle(color: muted, fontSize: 13, height: 1.7),
-      ),
+      if (subtitle.isNotEmpty) ...[
+        const SizedBox(height: 9),
+        Text(
+          subtitle,
+          style: const TextStyle(color: muted, fontSize: 13, height: 1.7),
+        ),
+      ],
     ],
   );
   Widget subjectPage(Json s) => Column(
@@ -1354,7 +1212,7 @@ class _StudyShellState extends State<StudyShell> {
           children: [
             Icon(subjectIcon(s['id']), color: subjectColor(s), size: 44),
             const SizedBox(width: 18),
-            Expanded(child: pageHeading(s['name'], s['subtitle'])),
+            Expanded(child: pageHeading(s['name'], '')),
           ],
         ),
       ),
@@ -1379,10 +1237,10 @@ class _StudyShellState extends State<StudyShell> {
       else ...[
         pageHeading(
           subjectTab == 1
-              ? 'Practice, one idea at a time.'
+              ? 'Topic questions'
               : subjectTab == 2
-              ? 'Make the ideas click.'
-              : 'A little recall goes a long way.',
+              ? 'Revision notes'
+              : 'Flashcards',
           subjectTab == 1
               ? 'Original exam pages, matching memos, and extra questions with worked answers.'
               : subjectTab == 2
@@ -1390,7 +1248,10 @@ class _StudyShellState extends State<StudyShell> {
               : 'Choose a topic to flip, recall, and track what you remember.',
         ),
         const SizedBox(height: 23),
-        topicList(store.subjectTopics(s['id']), mode: subjectTab),
+        if (subjectTab == 3)
+          subjectFlashcards(s['id'])
+        else
+          topicList(store.subjectTopics(s['id']), mode: subjectTab),
       ],
     ],
   );
@@ -1435,7 +1296,7 @@ class _StudyShellState extends State<StudyShell> {
   );
   Widget topicList(List<Json> ts, {int mode = 1}) => Column(
     children: [
-      for (final group in ts.map((t) => t['group'] as String).toSet()) ...[
+      for (final group in ts.map(topicGroup).toSet()) ...[
         Align(
           alignment: Alignment.centerLeft,
           child: Padding(
@@ -1451,7 +1312,7 @@ class _StudyShellState extends State<StudyShell> {
             ),
           ),
         ),
-        for (final t in ts.where((t) => t['group'] == group))
+        for (final t in ts.where((t) => topicGroup(t) == group))
           Padding(
             padding: const EdgeInsets.only(bottom: 11),
             child: topicRow(t, mode),
@@ -1518,7 +1379,7 @@ class _StudyShellState extends State<StudyShell> {
                     const SizedBox(height: 5),
                     Text(
                       mode == 3
-                          ? '${(t['cards'] as List).length} cards · recall at your pace'
+                          ? '${(t['cards'] as List?)?.length ?? 0} cards'
                           : mode == 2
                           ? '${t['minutes']} min read · visual revision'
                           : '${(t['sources'] as List).length} exam selections · ${(t['practice'] as List).length} extra questions',
@@ -1852,19 +1713,14 @@ class _StudyShellState extends State<StudyShell> {
               text: (s['name'] as String).toUpperCase(),
               color: subjectColor(s),
             ),
-            Pill(text: (t['group'] as String).toUpperCase(), color: muted),
+            Pill(text: topicGroup(t).toUpperCase(), color: muted),
           ],
         ),
         const SizedBox(height: 14),
         Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: pageHeading(
-                t['title'],
-                'Explore it. Practise it. Make it stick.',
-              ),
-            ),
+            Expanded(child: pageHeading(t['title'], '')),
             IconButton(
               tooltip:
                   store.saved.contains('t:${t['id']}')
@@ -2030,7 +1886,7 @@ class _StudyShellState extends State<StudyShell> {
         ),
       TextButton(
         onPressed: () => setState(() => topicTab = 1),
-        child: const Text('Ready for something new? Try further practice →'),
+        child: const Text('Further practice →'),
       ),
     ],
   );
@@ -2046,7 +1902,7 @@ class _StudyShellState extends State<StudyShell> {
       ),
       const SizedBox(height: 13),
       Text(
-        challenge ? 'Take your thinking a little further.' : 'Your turn to try',
+        challenge ? 'Concept challenges' : 'Practice questions',
         style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
       ),
       const SizedBox(height: 8),
@@ -2194,7 +2050,7 @@ class _StudyShellState extends State<StudyShell> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'A little exam wisdom',
+              'Exam tip',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 9),
@@ -2397,13 +2253,21 @@ class _StudyShellState extends State<StudyShell> {
     ),
   );
 
+  Widget subjectFlashcards(String id) {
+    final topics = store.subjectFlashcardTopics(id);
+    return topics.isEmpty
+        ? empty(
+          'No flashcards available',
+          'There are no flashcards for this subject.',
+          Icons.style_outlined,
+        )
+        : topicList(topics, mode: 3);
+  }
+
   Widget flashcardsPage() => Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      pageHeading(
-        'Small cards. Big confidence.',
-        'Choose a subject and practise recalling what you know.',
-      ),
+      pageHeading('Flashcards', 'Choose a subject and topic to review cards.'),
       const SizedBox(height: 25),
       for (final s in store.subjects) ...[
         Text(
@@ -2415,7 +2279,7 @@ class _StudyShellState extends State<StudyShell> {
           ),
         ),
         const SizedBox(height: 12),
-        topicList(store.subjectTopics(s['id']), mode: 3),
+        subjectFlashcards(s['id']),
         const SizedBox(height: 20),
       ],
     ],
@@ -2433,18 +2297,18 @@ class _StudyShellState extends State<StudyShell> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         pageHeading(
-          'A little shelf of your own.',
+          'Saved',
           'Your bookmarked topics and papers, ready when you need them.',
         ),
         const SizedBox(height: 24),
         if (ts.isEmpty && ps.isEmpty)
           empty(
-            'Your shelf is ready.',
+            'No saved items',
             'Tap the bookmark on a topic or paper to keep it here.',
             Icons.bookmark_border_rounded,
           ),
         if (ts.isNotEmpty) ...[
-          sectionTitle('Saved topics', 'Pick up a favourite'),
+          sectionTitle('Saved topics', ''),
           const SizedBox(height: 15),
           topicList(ts),
         ],
@@ -2626,7 +2490,7 @@ class _StudyShellState extends State<StudyShell> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx),
-              child: const Text('Back to learning'),
+              child: const Text('Close'),
             ),
           ],
         ),
@@ -2741,7 +2605,7 @@ class _SearchLibraryState extends State<SearchLibrary> {
                 children: [
                   const Expanded(
                     child: Text(
-                      'What are you curious about?',
+                      'Search library',
                       style: TextStyle(
                         fontWeight: FontWeight.w700,
                         fontSize: 18,
@@ -2847,7 +2711,7 @@ class FlashcardDeck extends StatefulWidget {
 class _FlashcardDeckState extends State<FlashcardDeck> {
   int index = 0;
   bool flipped = false, reviewOnly = false, finished = false;
-  List<Json> get cards => List<Json>.from(widget.topic['cards']);
+  List<Json> get cards => List<Json>.from(widget.topic['cards'] ?? []);
   List<int> get deck =>
       List.generate(cards.length, (i) => i)
           .where(
@@ -2890,6 +2754,32 @@ class _FlashcardDeckState extends State<FlashcardDeck> {
   Widget build(BuildContext context) {
     final currentDeck = deck;
     final count = cards.length;
+    if (count == 0) {
+      return Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(28),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: const Column(
+          children: [
+            Icon(Icons.style_outlined, color: muted, size: 36),
+            SizedBox(height: 16),
+            Text(
+              'No flashcards available',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 8),
+            Text(
+              'There are no flashcards for this topic.',
+              textAlign: TextAlign.center,
+            ),
+          ],
+        ),
+      );
+    }
     final remembered =
         List.generate(count, (i) => i)
             .where(
@@ -2909,9 +2799,7 @@ class _FlashcardDeckState extends State<FlashcardDeck> {
             Icon(Icons.celebration_outlined, color: widget.color, size: 45),
             const SizedBox(height: 18),
             Text(
-              currentDeck.isEmpty
-                  ? 'All caught up!'
-                  : 'A little more confident.',
+              currentDeck.isEmpty ? 'No cards to revisit' : 'Review complete',
               style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 12),

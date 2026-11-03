@@ -40,6 +40,10 @@ class StudyStore extends ChangeNotifier {
   Json paper(String id) => papers.firstWhere((p) => p['id'] == id);
   List<Json> subjectTopics(String id) =>
       topics.where((t) => t['subject'] == id).toList();
+  List<Json> subjectFlashcardTopics(String id) =>
+      subjectTopics(
+        id,
+      ).where((t) => (t['cards'] as List?)?.isNotEmpty ?? false).toList();
   List<Json> subjectPapers(String id) =>
       papers
           .where((p) => p['subject'] == id && p['kind'] != 'unavailable')
@@ -95,6 +99,8 @@ const ink = Color(0xFF25233D);
 const muted = Color(0xFF737185);
 const purple = Color(0xFF6654D9);
 const canvas = Color(0xFFF8F8FC);
+String topicGroup(Json topic) =>
+    (topic['group'] ?? topic['division'] ?? 'Topics') as String;
 Color subjectColor(Json s) => Color(int.parse('FF${s['color']}', radix: 16));
 Color subjectLight(Json s) => Color(int.parse('FF${s['light']}', radix: 16));
 IconData subjectIcon(String id) => switch (id) {

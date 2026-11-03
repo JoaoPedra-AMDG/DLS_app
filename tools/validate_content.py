@@ -47,6 +47,7 @@ assert set(originals)=={f'{n}.pdf' for n in range(1,45)}
 assert len(originals)==44
 ids=set()
 for t in data['topics']:
+ assert isinstance(t.get('group'),str) and t['group'].strip(), f'Missing topic group: {t["title"]}'
  assert t['id'] not in ids
  ids.add(t['id'])
  assert len(t['practice'])>=6 and len(t['notes'])>=3 and len(t['cards'])>=15 and len(t['challenges'])>=2
