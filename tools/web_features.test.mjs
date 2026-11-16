@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
+import { attachReaderGestures } from '../web/reader-gestures.mjs';
 
 test('For Rosa manifest declares a stable, standalone installable app', () => {
   const manifest = JSON.parse(fs.readFileSync('web/manifest.json', 'utf8'));
@@ -86,4 +87,117 @@ test('Offline reader navigation can reuse its cached shell despite query paramet
   worker.offline();
   assert.equal(await (await worker.request(`${worker.scope}reader.html?file=paper.pdf&page=4`)).text(), 'reader shell');
   assert.equal(await worker.request('https://other.test/file.pdf'), undefined, 'Other origins must not be intercepted');
+});
+
+function gestureHarness({ width = 360, contentWidth = 360, left = 0 } = {}) {
+  const listeners = {}, moves = [], zooms = [];
+  let zoom = 1, renders = 0, scrollLeft = left, scrollTop = 0;
+  const viewport = {
+    clientWidth: width, scrollWidth: contentWidth,
+    get scrollLeft() { return scrollLeft; },
+    set scrollLeft(value) { scrollLeft = Math.max(0, Math.min(contentWidth - width, value)); },
+    get scrollTop() { return scrollTop; },
+    set scrollTop(value) { scrollTop = Math.max(0, value); },
+    addEventListener(name, listener) { listeners[name] = listener; },
+    setPointerCapture() {},
+  };
+  attachReaderGestures(viewport, {
+    getZoom: () => zoom,
+    setZoom(value, x, y) { zoom = Math.max(1, Math.min(4, value)); zooms.push({ zoom, x, y }); },
+    move(amount) { moves.push(amount); },
+    render() { renders++; },
+  });
+  const pointer = (type, x, y, id = 1, extra = {}) => listeners[type]({ pointerId: id, clientX: x, clientY: y, button: 0, ...extra });
+  return { viewport, moves, zooms, pointer, listeners, get zoom() { return zoom; }, get renders() { return renders; } };
+}
+
+test('Reader exposes only Back and Download, with accessible page text', () => {
+  const html = fs.readFileSync('web/reader.html', 'utf8');
+  assert.equal((html.match(/<a\s/g) || []).length, 2);
+  assert(!/<button|<input|<form|<details/.test(html));
+  assert(html.includes('← Back'));
+  assert(html.includes('id="download" download'));
+  assert(html.includes('id="page-text"'));
+  assert(html.includes('touch-action:none'));
+});
+
+test('Horizontal swipes turn pages; taps, small movements and vertical reading do not', () => {
+  const reader = gestureHarness();
+  reader.pointer('pointerdown', 280, 200);
+  reader.pointer('pointermove', 140, 205);
+  reader.pointer('pointerup', 140, 205);
+  reader.pointer('pointerdown', 80, 200);
+  reader.pointer('pointerup', 220, 205);
+  assert.deepEqual(reader.moves, [1, -1]);
+  reader.pointer('pointerdown', 120, 250);
+  reader.pointer('pointerup', 120, 250);
+  reader.pointer('pointerdown', 120, 250);
+  reader.pointer('pointerup', 140, 250);
+  reader.pointer('pointerdown', 120, 250);
+  reader.pointer('pointermove', 150, 100);
+  reader.pointer('pointerup', 150, 100);
+  assert.equal(reader.viewport.scrollTop, 150);
+  assert.deepEqual(reader.moves, [1, -1]);
+});
+
+test('Zoomed page drags pan first, with page swipes only from an existing edge', () => {
+  const reader = gestureHarness({ contentWidth: 900, left: 120 });
+  reader.pointer('pointerdown', 250, 250);
+  reader.pointer('pointermove', 100, 150);
+  reader.pointer('pointerup', 100, 150);
+  assert.equal(reader.viewport.scrollLeft, 270);
+  assert.equal(reader.viewport.scrollTop, 100);
+  assert.deepEqual(reader.moves, []);
+  reader.viewport.scrollLeft = 540;
+  reader.pointer('pointerdown', 250, 250);
+  reader.pointer('pointerup', 100, 250);
+  reader.viewport.scrollLeft = 0;
+  reader.pointer('pointerdown', 100, 250);
+  reader.pointer('pointerup', 250, 250);
+  assert.deepEqual(reader.moves, [1, -1]);
+});
+
+test('Two-finger pinch zooms in and out without accidentally changing pages', () => {
+  const reader = gestureHarness();
+  reader.pointer('pointerdown', 100, 250, 1);
+  reader.pointer('pointerdown', 200, 250, 2);
+  reader.pointer('pointermove', 300, 250, 2);
+  assert.equal(reader.zoom, 2);
+  assert.deepEqual(reader.zooms[0], { zoom: 2, x: 150, y: 250 });
+  reader.pointer('pointermove', 200, 250, 2);
+  assert.equal(reader.zoom, 1);
+  reader.pointer('pointerup', 100, 250, 1);
+  reader.pointer('pointermove', 20, 250, 2);
+  reader.pointer('pointerup', 20, 250, 2);
+  assert.deepEqual(reader.moves, []);
+  assert.equal(reader.renders, 1, 'Render sharply after releasing the last finger');
+});
+
+test('Cancelled touches and lost capture cannot turn a page or poison the next gesture', () => {
+  const reader = gestureHarness();
+  for (const cancelled of ['pointercancel', 'lostpointercapture']) {
+    reader.pointer('pointerdown', 280, 200);
+    reader.pointer('pointermove', 100, 200);
+    reader.pointer(cancelled, 100, 200);
+    reader.pointer('pointerup', 100, 200);
+  }
+  assert.deepEqual(reader.moves, []);
+  reader.pointer('pointerdown', 280, 200);
+  reader.pointer('pointerup', 100, 200);
+  assert.deepEqual(reader.moves, [1]);
+});
+
+test('Trackpad pinch zooms and debounces rendering; normal wheel scrolling is preserved', async () => {
+  const reader = gestureHarness();
+  let prevented = 0;
+  const wheel = { ctrlKey: true, deltaY: -50, clientX: 160, clientY: 300, preventDefault() { prevented++; } };
+  reader.listeners.wheel({ ...wheel, ctrlKey: false });
+  assert.equal(reader.zooms.length, 0);
+  reader.listeners.wheel(wheel);
+  reader.listeners.wheel(wheel);
+  assert.equal(prevented, 2);
+  assert(reader.zoom > 2);
+  await new Promise(resolve => setTimeout(resolve, 160));
+  assert.equal(reader.renders, 1);
+  assert.deepEqual(reader.moves, []);
 });
