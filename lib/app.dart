@@ -801,20 +801,10 @@ class _StudyShellState extends State<StudyShell> {
               ),
               if (right) ...[
                 const SizedBox(width: 25),
-                SizedBox(
-                  width: 258,
-                  child: Column(
-                    children: [
-                      progressPanel(),
-                      const SizedBox(height: 20),
-                      tipPanel(),
-                    ],
-                  ),
-                ),
+                SizedBox(width: 258, child: tipPanel()),
               ],
             ],
           ),
-          if (!right) ...[const SizedBox(height: 24), progressPanel()],
           const SizedBox(height: 28),
           panel(
             child: Column(
@@ -1056,85 +1046,6 @@ class _StudyShellState extends State<StudyShell> {
                 () =>
                     previous == null ? go('My subjects') : openTopic(previous),
             icon: const Icon(Icons.arrow_forward_rounded, color: purple),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget progressPanel() {
-    final n = store.completed.length, total = store.topics.length;
-    return panel(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Row(
-            children: [
-              Expanded(
-                child: Text(
-                  'Progress',
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
-                ),
-              ),
-              Icon(Icons.route_outlined, size: 19, color: purple),
-            ],
-          ),
-          const SizedBox(height: 24),
-          Center(
-            child: SizedBox(
-              width: 124,
-              height: 124,
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  SizedBox.expand(
-                    child: CircularProgressIndicator(
-                      value: total == 0 ? 0 : n / total,
-                      strokeWidth: 9,
-                      strokeCap: StrokeCap.round,
-                      color: purple,
-                      backgroundColor: const Color(0xFFEFECFA),
-                    ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        '$n',
-                        style: const TextStyle(
-                          fontSize: 34,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                      const Text(
-                        'topics revised',
-                        style: TextStyle(fontSize: 10, color: muted),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 23),
-          Text(
-            '$total topics to explore. Mark notes as revised when you feel confident.',
-            style: const TextStyle(fontSize: 11, color: muted, height: 1.7),
-          ),
-          const SizedBox(height: 18),
-          const Divider(height: 1),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              const Icon(Icons.style_outlined, size: 18, color: purple),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Text(
-                  '${store.known.length} cards remembered',
-                  style: const TextStyle(fontSize: 11, color: muted),
-                ),
-              ),
-            ],
           ),
         ],
       ),
