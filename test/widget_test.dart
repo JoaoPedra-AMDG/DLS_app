@@ -54,6 +54,14 @@ void main() {
     await tester.tap(find.text('Subjects'));
     await tester.pumpAndSettle();
     expect(find.text(store.subject('life')['name']), findsWidgets);
+    for (final mode in [
+      'Past papers',
+      'Topic questions',
+      'Revision notes',
+      'Flashcards',
+    ]) {
+      expect(find.text(mode), findsNothing);
+    }
     await tester.tap(find.text('Home'));
     await tester.pumpAndSettle();
     await tester.drag(
@@ -286,7 +294,7 @@ void main() {
     tester,
   ) async {
     await launch(tester);
-    await tester.tap(find.text('Past papers').first);
+    await tester.tap(find.text('Files').first);
     await tester.pumpAndSettle();
     await tester.tap(find.text('All resources'));
     await tester.pumpAndSettle();
@@ -592,6 +600,102 @@ void main() {
     );
     expect(find.text('Read PDF'), findsOneWidget);
     expect(find.text('Download DOCX'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets(
+    'Files combines exam resources and readable Classroom documents',
+    (tester) async {
+      await launch(tester, size: const Size(390, 844));
+      await tester.tap(find.text('Files'));
+      await tester.pumpAndSettle();
+      expect(find.text('Open PDF'), findsWidgets);
+      await tester.enterText(
+        find.byKey(const ValueKey('files-search')),
+        'Eucharistic',
+      );
+      await tester.pumpAndSettle();
+      expect(
+        find.text('Eucharistic Miracles Assignment Grade 10 2026'),
+        findsOneWidget,
+      );
+      expect(find.text('Download DOCX'), findsOneWidget);
+      await tester.ensureVisible(find.text('Read PDF'));
+      await tester.tap(find.text('Read PDF'));
+      await tester.pumpAndSettle();
+      expect(find.byType(PdfReaderScreen), findsOneWidget);
+      await tester.tap(find.text('Back'));
+      await tester.pumpAndSettle();
+      await tester.ensureVisible(find.text('All files'));
+      await tester.tap(find.text('All files'));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('Past papers').last);
+      await tester.pumpAndSettle();
+      expect(
+        find.text('No files match. Try another search or filter.'),
+        findsOneWidget,
+      );
+      await tester.enterText(
+        find.byKey(const ValueKey('files-search')),
+        'Section A',
+      );
+      await tester.pumpAndSettle();
+      expect(
+        find.text('November Section A Answer Booklet · 2022'),
+        findsOneWidget,
+      );
+      expect(find.text('November Section A study memo - 2022'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('Files includes school links, shared subjects and later pages', (
+    tester,
+  ) async {
+    final demo = Map<String, dynamic>.from(store.data);
+    demo['classroom'] = [
+      ...store.documents,
+      for (var index = 1; index <= 26; index++)
+        {
+          'id': 'shared-fixture-$index',
+          'subject': 'life',
+          'subjects': ['life', 'sports'],
+          'title': 'Shared class note ${index.toString().padLeft(2, '0')}',
+          'kind': 'notes',
+          'format': 'PDF',
+          'availability': 'school',
+          'sourceUrl': 'https://drive.google.com/',
+          'sections': ['Shared notes'],
+        },
+    ];
+    store = StudyStore(demo, store.prefs);
+    await launch(tester, size: const Size(390, 844));
+    await tester.tap(find.text('Files'));
+    await tester.pumpAndSettle();
+    await tester.enterText(
+      find.byKey(const ValueKey('files-search')),
+      'Shared class note',
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('All').last);
+    await tester.pumpAndSettle();
+    await tester.tap(find.text(store.subject('sports')['name']).last);
+    await tester.pumpAndSettle();
+    expect(find.text('Shared class note 01'), findsOneWidget);
+    expect(find.text('Shared class note 25'), findsNothing);
+    expect(find.text('Open school document'), findsNWidgets(24));
+    await tester.ensureVisible(find.text('Show more files'));
+    await tester.tap(find.text('Show more files'));
+    await tester.pumpAndSettle();
+    expect(find.text('Shared class note 26'), findsOneWidget);
+    await tester.ensureVisible(find.text('Files available in For Rosa'));
+    await tester.tap(find.text('Files available in For Rosa'));
+    await tester.pumpAndSettle();
+    expect(find.text('Open school document'), findsNothing);
+    expect(
+      find.text('No files match. Try another search or filter.'),
+      findsOneWidget,
+    );
     expect(tester.takeException(), isNull);
   });
 

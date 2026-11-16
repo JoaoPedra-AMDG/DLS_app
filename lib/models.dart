@@ -21,6 +21,12 @@ class StudyStore extends ChangeNotifier {
   List<Json> get papers => List<Json>.from(data['papers']);
   List<Json> get topics => List<Json>.from(data['topics']);
   List<Json> get documents => List<Json>.from(data['classroom'] ?? []);
+  List<Json> get libraryFiles => [
+    for (final paper in papers.where((p) => p['kind'] != 'unavailable'))
+      {...paper, 'librarySource': 'Past papers'},
+    for (final document in documents)
+      {...document, 'librarySource': 'Classroom'},
+  ];
   List<Json> subjectDocuments(String id) =>
       documents
           .where(

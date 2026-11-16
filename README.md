@@ -11,10 +11,10 @@ A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages 
 - Papers named by subject, paper, session and year, with matching supplied memos. An unknown year is explicitly labelled.
 - Topic packs link to original exam pages, memos and relevant Classroom material. Original diagrams, equations and reading passages stay intact in the PDFs.
 - Six further-practice questions and two concept challenges per topic, worked answers, revision notes and at least 15 flashcards per topic. Concept challenges ask learners to predict, explain, evaluate and test misconceptions.
-- A searchable Classroom library supports original downloads, PDF viewing copies and clearly labelled school links. A school link requires the relevant Google account and has no offline copy in For Rosa.
+- Files combines the past papers, memos and all catalogued Classroom documents, with search, source/subject/year/resource filters and pagination. Original downloads, PDF viewing copies and clearly labelled school links remain available. A school link requires the relevant Google account and has no offline copy in For Rosa.
 - Wave amplitude and frequency controls, wavelength/period readouts, graph comparisons, adjustable circuit resistance and normal-distribution spread, and reset/pause controls.
 - Search, year/subject/resource filters, bookmarks, revision completion and card-recall ratings.
-- A simple AMDG home screen with study tools; subject cards live in Subjects. Search only appears after an upward swipe that starts while already at the top of the study area; ordinary scrolling elsewhere does not reveal it. Swipe down to hide it. Mouse-wheel scrolling follows the same top-only rule. Search resets when navigating to another section; Ctrl/Cmd+K opens it for keyboard users. The phone's Files tab opens the paper and memo library.
+- A simple AMDG home screen with study tools; Subjects contains the subject cards without duplicate study-mode blocks below them. Search only appears after an upward swipe that starts while already at the top of the study area; ordinary scrolling elsewhere does not reveal it. Swipe down to hide it. Mouse-wheel scrolling follows the same top-only rule. Search resets when navigating to another section; Ctrl/Cmd+K opens it for keyboard users. Files opens the combined document library on phone and desktop.
 - Responsive phone, tablet and desktop layouts; reduced-motion support for lesson animations.
 - Device-local progress. No learner accounts, backend, tracking or cross-device synchronization.
 

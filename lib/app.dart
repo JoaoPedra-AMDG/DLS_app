@@ -118,6 +118,9 @@ class _StudyShellState extends State<StudyShell> {
   int subjectTab = 0, topicTab = 0;
   String year = 'All years', kind = 'All resources', division = 'All';
   String classroomQuery = '', classroomKind = 'All types';
+  String filesQuery = '', filesSource = 'All files';
+  bool filesLocalOnly = false;
+  int filesLimit = 24;
   bool classroomLocalOnly = false;
   bool searchVisible = false;
   bool searchSwipeFromTop = false;
@@ -136,6 +139,10 @@ class _StudyShellState extends State<StudyShell> {
     setState(() {
       searchVisible = false;
       nav = target;
+      filesQuery = '';
+      filesSource = 'All files';
+      filesLocalOnly = false;
+      filesLimit = 24;
       classroomQuery = '';
       classroomKind = 'All types';
       classroomLocalOnly = false;
@@ -330,7 +337,7 @@ class _StudyShellState extends State<StudyShell> {
                                   ? 0
                                   : nav == 'Saved'
                                   ? 3
-                                  : nav == 'Past papers'
+                                  : nav == 'Files'
                                   ? 2
                                   : 1,
                           onDestinationSelected:
@@ -338,7 +345,7 @@ class _StudyShellState extends State<StudyShell> {
                                 [
                                   'Overview',
                                   'My subjects',
-                                  'Past papers',
+                                  'Files',
                                   'Saved',
                                 ][i],
                               ),
@@ -410,8 +417,8 @@ class _StudyShellState extends State<StudyShell> {
                                             dashboard()
                                           else if (nav == 'My subjects')
                                             subjectsPage()
-                                          else if (nav == 'Past papers')
-                                            allPapers()
+                                          else if (nav == 'Files')
+                                            filesPage()
                                           else if (nav == 'Classroom files')
                                             classroomLibrary()
                                           else if (nav == 'Flashcards')
@@ -539,7 +546,7 @@ class _StudyShellState extends State<StudyShell> {
           for (final (name, icon) in [
             ('Overview', Icons.grid_view_rounded),
             ('My subjects', Icons.auto_stories_outlined),
-            ('Past papers', Icons.description_outlined),
+            ('Files', Icons.folder_copy_outlined),
             ('Classroom files', Icons.folder_copy_outlined),
             ('Flashcards', Icons.style_outlined),
             ('Saved', Icons.bookmark_border_rounded),
@@ -1088,8 +1095,6 @@ class _StudyShellState extends State<StudyShell> {
       pageHeading('Subjects', 'Choose a subject and topic.'),
       const SizedBox(height: 25),
       subjectGrid(),
-      const SizedBox(height: 28),
-      studyModes(),
     ],
   );
   Widget pageHeading(String title, String subtitle) => Column(
@@ -1326,17 +1331,140 @@ class _StudyShellState extends State<StudyShell> {
     );
   }
 
-  Widget allPapers() => Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      pageHeading(
-        'The past-paper library',
-        'Exam papers and memos, organised by subject, paper and year.',
-      ),
-      const SizedBox(height: 24),
-      paperLibrary(),
-    ],
-  );
+  Widget filesPage() {
+    const resourceKinds = {
+      'All resources': null,
+      'Papers': 'paper',
+      'Memos': 'memo',
+      'Question booklets': 'supplement',
+      'Notes': 'notes',
+      'Slides': 'slides',
+      'Worksheets': 'worksheet',
+      'Scopes': 'scope',
+      'Rubrics': 'rubric',
+      'Plans': 'plan',
+    };
+    final files =
+        store.libraryFiles..sort((a, b) {
+          final byYear = (b['year'] ?? 0).compareTo(a['year'] ?? 0) as int;
+          return byYear != 0
+              ? byYear
+              : (a['title'] as String).toLowerCase().compareTo(
+                (b['title'] as String).toLowerCase(),
+              );
+        });
+    final years =
+        files
+            .map((file) => file['year']?.toString() ?? 'Year not stated')
+            .toSet()
+            .toList();
+    final words = filesQuery
+        .trim()
+        .toLowerCase()
+        .split(RegExp(r'\s+'))
+        .where((word) => word.isNotEmpty);
+    final selected =
+        files.where((file) {
+          final subjects = List<String>.from(
+            file['subjects'] ?? [file['subject']],
+          );
+          final searchable =
+              '${file['title']} ${file['year'] ?? ''} ${file['kind']} ${file['format'] ?? 'PDF'} ${file['sections'] ?? ''} ${subjects.map((id) => store.subject(id)['name']).join(' ')}'
+                  .toLowerCase();
+          return (filesSource == 'All files' ||
+                  file['librarySource'] == filesSource) &&
+              (year == 'All years' ||
+                  (file['year']?.toString() ?? 'Year not stated') == year) &&
+              (kind == 'All resources' ||
+                  file['kind'] == resourceKinds[kind]) &&
+              (division == 'All' || subjects.contains(division)) &&
+              (!filesLocalOnly || file['availability'] != 'school') &&
+              words.every(searchable.contains);
+        }).toList();
+    void filter(VoidCallback change) => setState(() {
+      change();
+      filesLimit = 24;
+    });
+    final classroomCount =
+        selected.where((file) => file['librarySource'] == 'Classroom').length;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        pageHeading('Files', 'Past papers, memos and Classroom documents.'),
+        const SizedBox(height: 20),
+        TextField(
+          key: const ValueKey('files-search'),
+          decoration: const InputDecoration(
+            labelText: 'Search files',
+            prefixIcon: Icon(Icons.search),
+          ),
+          onChanged: (value) => filter(() => filesQuery = value),
+        ),
+        const SizedBox(height: 16),
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          children: [
+            dropdown('Source', filesSource, [
+              'All files',
+              'Past papers',
+              'Classroom',
+            ], (value) => filter(() => filesSource = value)),
+            dropdown(
+              'Resource',
+              kind,
+              resourceKinds.keys.toList(),
+              (value) => filter(() => kind = value),
+            ),
+            dropdown(
+              'Subject',
+              division,
+              ['All', ...store.subjects.map((s) => s['id'] as String)],
+              (value) => filter(() => division = value),
+              labels: {for (final s in store.subjects) s['id']: s['name']},
+            ),
+            dropdown('Year', year, [
+              'All years',
+              ...years,
+            ], (value) => filter(() => year = value)),
+          ],
+        ),
+        const SizedBox(height: 16),
+        FilterChip(
+          label: const Text('Files available in For Rosa'),
+          selected: filesLocalOnly,
+          onSelected: (value) => filter(() => filesLocalOnly = value),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          '${selected.length} files · ${selected.length - classroomCount} past-paper resources · $classroomCount Classroom files',
+          style: const TextStyle(color: muted, fontSize: 12),
+        ),
+        const SizedBox(height: 8),
+        const Text(
+          'School links open with your school account.',
+          style: TextStyle(color: muted, fontSize: 12),
+        ),
+        const SizedBox(height: 18),
+        if (selected.isEmpty)
+          const Text('No files match. Try another search or filter.'),
+        for (final file in selected.take(filesLimit))
+          if (file['librarySource'] == 'Classroom')
+            classroomRow(file)
+          else
+            Padding(
+              padding: const EdgeInsets.only(bottom: 14),
+              child: paperRow(file),
+            ),
+        if (selected.length > filesLimit)
+          OutlinedButton(
+            onPressed: () => setState(() => filesLimit += 24),
+            child: const Text('Show more files'),
+          ),
+      ],
+    );
+  }
+
   Widget paperLibrary({Json? subject}) {
     final ps =
         (subject == null ? store.papers : store.subjectPapers(subject['id']))
@@ -2314,7 +2442,7 @@ class _StudyShellState extends State<StudyShell> {
           },
           onPaper: (p) {
             Navigator.pop(ctx);
-            go('Past papers');
+            go('Files');
             openPaper(p);
           },
           onSubject: (s) {
