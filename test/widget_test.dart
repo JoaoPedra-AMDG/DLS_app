@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -102,6 +103,67 @@ void main() {
     await tester.sendKeyUpEvent(LogicalKeyboardKey.controlLeft);
     await tester.pumpAndSettle();
     expect(find.text('Search library'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Search only reveals when an upward gesture begins at the top', (
+    tester,
+  ) async {
+    await launch(tester, size: const Size(360, 800));
+    final surface = find.byKey(const ValueKey('study-scroll-surface'));
+    final position =
+        tester
+            .state<ScrollableState>(
+              find
+                  .descendant(of: surface, matching: find.byType(Scrollable))
+                  .first,
+            )
+            .position;
+    position.jumpTo(180);
+    await tester.pumpAndSettle();
+    await tester.drag(surface, const Offset(0, -100));
+    await tester.pumpAndSettle();
+    expect(position.pixels, greaterThan(180));
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+
+    // Reaching the top during a gesture does not count as starting there.
+    position.jumpTo(100);
+    await tester.pumpAndSettle();
+    final gesture = await tester.startGesture(tester.getCenter(surface));
+    await gesture.moveBy(const Offset(0, 180));
+    await tester.pump();
+    await gesture.moveBy(const Offset(0, -70));
+    await gesture.up();
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+
+    position.jumpTo(position.minScrollExtent);
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    await revealSearch(tester);
+
+    await tester.tap(find.text('Home'));
+    await tester.pumpAndSettle();
+    position.jumpTo(180);
+    await tester.pumpAndSettle();
+    await tester.sendEventToBinding(
+      PointerScrollEvent(
+        position: tester.getCenter(surface),
+        scrollDelta: const Offset(0, 80),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    position.jumpTo(position.minScrollExtent);
+    await tester.pumpAndSettle();
+    await tester.sendEventToBinding(
+      PointerScrollEvent(
+        position: tester.getCenter(surface),
+        scrollDelta: const Offset(0, 80),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
 

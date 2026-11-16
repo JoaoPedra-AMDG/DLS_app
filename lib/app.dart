@@ -121,6 +121,7 @@ class _StudyShellState extends State<StudyShell> {
   String classroomQuery = '', classroomKind = 'All types';
   bool classroomLocalOnly = false;
   bool searchVisible = false;
+  bool searchSwipeFromTop = false;
   Offset? searchSwipeStart;
   int? searchPointer;
   int classroomLimit = 24;
@@ -258,19 +259,28 @@ class _StudyShellState extends State<StudyShell> {
     if (searchVisible != value) setState(() => searchVisible = value);
   }
 
+  bool get atScrollTop =>
+      scroll.hasClients &&
+      scroll.position.pixels <= scroll.position.minScrollExtent + 1;
+
   Widget swipeSearchSurface({required Widget child}) => Listener(
     key: const ValueKey('study-scroll-surface'),
     behavior: HitTestBehavior.translucent,
     onPointerDown: (event) {
       searchPointer = event.pointer;
       searchSwipeStart = event.position;
+      searchSwipeFromTop = atScrollTop;
     },
     onPointerMove: (event) {
       if (searchPointer != event.pointer || searchSwipeStart == null) return;
       final movement = event.position - searchSwipeStart!;
       if (movement.dy.abs() >= 32 &&
           movement.dy.abs() > movement.dx.abs() * 1.25) {
-        showSearchBar(movement.dy < 0);
+        if (movement.dy > 0) {
+          showSearchBar(false);
+        } else if (searchSwipeFromTop) {
+          showSearchBar(true);
+        }
         searchSwipeStart = event.position;
       }
     },
@@ -283,7 +293,11 @@ class _StudyShellState extends State<StudyShell> {
     onPointerSignal: (event) {
       if (event is PointerScrollEvent &&
           event.scrollDelta.dy.abs() > event.scrollDelta.dx.abs()) {
-        showSearchBar(event.scrollDelta.dy > 0);
+        if (event.scrollDelta.dy < 0) {
+          showSearchBar(false);
+        } else if (atScrollTop) {
+          showSearchBar(true);
+        }
       }
     },
     child: child,
