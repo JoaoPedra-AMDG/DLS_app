@@ -1,6 +1,8 @@
 import 'dart:math' as math;
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'pdf_reader_screen.dart';
 import 'platform_actions.dart' as platform;
 import 'models.dart';
@@ -118,6 +120,9 @@ class _StudyShellState extends State<StudyShell> {
   String year = 'All years', kind = 'All resources', division = 'All';
   String classroomQuery = '', classroomKind = 'All types';
   bool classroomLocalOnly = false;
+  bool searchVisible = false;
+  Offset? searchSwipeStart;
+  int? searchPointer;
   int classroomLimit = 24;
   final scroll = ScrollController();
   final focusSession = FocusSession();
@@ -131,6 +136,7 @@ class _StudyShellState extends State<StudyShell> {
 
   void go(String target) {
     setState(() {
+      searchVisible = false;
       nav = target;
       classroomQuery = '';
       classroomKind = 'All types';
@@ -153,6 +159,7 @@ class _StudyShellState extends State<StudyShell> {
 
   void openSubject(String id, {int tab = 0}) {
     setState(() {
+      searchVisible = false;
       subjectId = id;
       topic = null;
       subjectTab = tab;
@@ -171,6 +178,7 @@ class _StudyShellState extends State<StudyShell> {
   void openTopic(Json t, {int tab = 0}) {
     store.rememberTopic(t['id']);
     setState(() {
+      searchVisible = false;
       topic = t;
       subjectId = t['subject'];
       topicTab = tab;
@@ -245,6 +253,41 @@ class _StudyShellState extends State<StudyShell> {
 
   void notice(String text) =>
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(text)));
+
+  void showSearchBar(bool value) {
+    if (searchVisible != value) setState(() => searchVisible = value);
+  }
+
+  Widget swipeSearchSurface({required Widget child}) => Listener(
+    key: const ValueKey('study-scroll-surface'),
+    behavior: HitTestBehavior.translucent,
+    onPointerDown: (event) {
+      searchPointer = event.pointer;
+      searchSwipeStart = event.position;
+    },
+    onPointerMove: (event) {
+      if (searchPointer != event.pointer || searchSwipeStart == null) return;
+      final movement = event.position - searchSwipeStart!;
+      if (movement.dy.abs() >= 32 &&
+          movement.dy.abs() > movement.dx.abs() * 1.25) {
+        showSearchBar(movement.dy < 0);
+        searchSwipeStart = event.position;
+      }
+    },
+    onPointerUp: (event) {
+      if (event.pointer == searchPointer) searchSwipeStart = null;
+    },
+    onPointerCancel: (event) {
+      if (event.pointer == searchPointer) searchSwipeStart = null;
+    },
+    onPointerSignal: (event) {
+      if (event is PointerScrollEvent &&
+          event.scrollDelta.dy.abs() > event.scrollDelta.dx.abs()) {
+        showSearchBar(event.scrollDelta.dy > 0);
+      }
+    },
+    child: child,
+  );
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
     animation: store,
@@ -252,153 +295,166 @@ class _StudyShellState extends State<StudyShell> {
         (context, _) => LayoutBuilder(
           builder: (context, constraints) {
             final wide = constraints.maxWidth >= 1050;
-            return Scaffold(
-              drawer:
-                  wide
-                      ? null
-                      : Drawer(
-                        backgroundColor: Colors.white,
-                        child: SafeArea(child: sidebar(drawer: true)),
-                      ),
-              bottomNavigationBar:
-                  wide
-                      ? null
-                      : NavigationBar(
-                        selectedIndex:
-                            nav == 'Overview'
-                                ? 0
-                                : nav == 'Pomodoro'
-                                ? 4
-                                : nav == 'Saved'
-                                ? 3
-                                : nav == 'Past papers'
-                                ? 2
-                                : 1,
-                        onDestinationSelected:
-                            (i) => go(
-                              [
-                                'Overview',
-                                'My subjects',
-                                'Past papers',
-                                'Saved',
-                                'Pomodoro',
-                              ][i],
-                            ),
-                        destinations: const [
-                          NavigationDestination(
-                            icon: Icon(Icons.grid_view_rounded),
-                            label: 'Home',
-                          ),
-                          NavigationDestination(
-                            icon: Icon(Icons.auto_stories_outlined),
-                            label: 'Subjects',
-                          ),
-                          NavigationDestination(
-                            icon: Icon(Icons.description_outlined),
-                            label: 'Papers',
-                          ),
-                          NavigationDestination(
-                            icon: Icon(Icons.bookmark_border_rounded),
-                            label: 'Saved',
-                          ),
-                          NavigationDestination(
-                            icon: Icon(Icons.timer_outlined),
-                            label: 'Focus',
-                          ),
-                        ],
-                      ),
-              body: SafeArea(
-                child: Row(
-                  children: [
-                    if (wide) SizedBox(width: 224, child: sidebar()),
-                    Expanded(
-                      child: Column(
-                        children: [
-                          header(wide),
-                          Expanded(
-                            child: SingleChildScrollView(
-                              controller: scroll,
-                              padding: EdgeInsets.fromLTRB(
-                                wide ? 38 : 20,
-                                24,
-                                wide ? 38 : 20,
-                                40,
+            return CallbackShortcuts(
+              bindings: {
+                const SingleActivator(LogicalKeyboardKey.keyK, control: true):
+                    search,
+                const SingleActivator(LogicalKeyboardKey.keyK, meta: true):
+                    search,
+              },
+              child: Scaffold(
+                drawer:
+                    wide
+                        ? null
+                        : Drawer(
+                          backgroundColor: Colors.white,
+                          child: SafeArea(child: sidebar(drawer: true)),
+                        ),
+                bottomNavigationBar:
+                    wide
+                        ? null
+                        : NavigationBar(
+                          selectedIndex:
+                              nav == 'Overview'
+                                  ? 0
+                                  : nav == 'Pomodoro'
+                                  ? 4
+                                  : nav == 'Saved'
+                                  ? 3
+                                  : nav == 'Past papers'
+                                  ? 2
+                                  : 1,
+                          onDestinationSelected:
+                              (i) => go(
+                                [
+                                  'Overview',
+                                  'My subjects',
+                                  'Past papers',
+                                  'Saved',
+                                  'Pomodoro',
+                                ][i],
                               ),
-                              child: Center(
-                                child: ConstrainedBox(
-                                  constraints: const BoxConstraints(
-                                    maxWidth: 1320,
+                          destinations: const [
+                            NavigationDestination(
+                              icon: Icon(Icons.grid_view_rounded),
+                              label: 'Home',
+                            ),
+                            NavigationDestination(
+                              icon: Icon(Icons.auto_stories_outlined),
+                              label: 'Subjects',
+                            ),
+                            NavigationDestination(
+                              icon: Icon(Icons.description_outlined),
+                              label: 'Files',
+                            ),
+                            NavigationDestination(
+                              icon: Icon(Icons.bookmark_border_rounded),
+                              label: 'Saved',
+                            ),
+                            NavigationDestination(
+                              icon: Icon(Icons.timer_outlined),
+                              label: 'Focus',
+                            ),
+                          ],
+                        ),
+                body: SafeArea(
+                  child: Row(
+                    children: [
+                      if (wide) SizedBox(width: 224, child: sidebar()),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            header(wide),
+                            Expanded(
+                              child: swipeSearchSurface(
+                                child: SingleChildScrollView(
+                                  controller: scroll,
+                                  padding: EdgeInsets.fromLTRB(
+                                    wide ? 38 : 20,
+                                    24,
+                                    wide ? 38 : 20,
+                                    40,
                                   ),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      if (store.persistenceError != null)
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                            bottom: 16,
-                                          ),
-                                          child: Text(
-                                            store.persistenceError!,
-                                            style: const TextStyle(
-                                              color: Colors.deepOrange,
-                                            ),
-                                          ),
-                                        ),
-                                      if (topic != null)
-                                        topicPage(topic!)
-                                      else if (subjectId != null)
-                                        subjectPage(store.subject(subjectId!))
-                                      else if (nav == 'Overview')
-                                        dashboard()
-                                      else if (nav == 'My subjects')
-                                        subjectsPage()
-                                      else if (nav == 'Past papers')
-                                        allPapers()
-                                      else if (nav == 'Classroom files')
-                                        classroomLibrary()
-                                      else if (nav == 'Flashcards')
-                                        flashcardsPage()
-                                      else if (nav == 'Pomodoro')
-                                        FocusScreen(session: focusSession)
-                                      else
-                                        savedPage(),
-                                      const SizedBox(height: 34),
-                                      Wrap(
-                                        spacing: 12,
-                                        runSpacing: 6,
+                                  child: Center(
+                                    child: ConstrainedBox(
+                                      constraints: const BoxConstraints(
+                                        maxWidth: 1320,
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          const Text(
-                                            'For Rosa · Grade 10',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              color: muted,
-                                            ),
-                                          ),
-                                          InkWell(
-                                            onTap: showAbout,
-                                            child: const Text(
-                                              'About this library',
-                                              style: TextStyle(
-                                                fontSize: 12,
-                                                color: purple,
-                                                decoration:
-                                                    TextDecoration.underline,
+                                          if (store.persistenceError != null)
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                bottom: 16,
+                                              ),
+                                              child: Text(
+                                                store.persistenceError!,
+                                                style: const TextStyle(
+                                                  color: Colors.deepOrange,
+                                                ),
                                               ),
                                             ),
+                                          if (topic != null)
+                                            topicPage(topic!)
+                                          else if (subjectId != null)
+                                            subjectPage(
+                                              store.subject(subjectId!),
+                                            )
+                                          else if (nav == 'Overview')
+                                            dashboard()
+                                          else if (nav == 'My subjects')
+                                            subjectsPage()
+                                          else if (nav == 'Past papers')
+                                            allPapers()
+                                          else if (nav == 'Classroom files')
+                                            classroomLibrary()
+                                          else if (nav == 'Flashcards')
+                                            flashcardsPage()
+                                          else if (nav == 'Pomodoro')
+                                            FocusScreen(session: focusSession)
+                                          else
+                                            savedPage(),
+                                          const SizedBox(height: 34),
+                                          Wrap(
+                                            spacing: 12,
+                                            runSpacing: 6,
+                                            children: [
+                                              const Text(
+                                                'For Rosa · Grade 10',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  color: muted,
+                                                ),
+                                              ),
+                                              InkWell(
+                                                onTap: showAbout,
+                                                child: const Text(
+                                                  'About this library',
+                                                  style: TextStyle(
+                                                    fontSize: 12,
+                                                    color: purple,
+                                                    decoration:
+                                                        TextDecoration
+                                                            .underline,
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ],
                                       ),
-                                    ],
+                                    ),
                                   ),
                                 ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             );
@@ -539,56 +595,58 @@ class _StudyShellState extends State<StudyShell> {
                 ),
               ),
             ),
-          const SizedBox(height: 28),
-          const Padding(
-            padding: EdgeInsets.only(left: 13, bottom: 12),
-            child: Text(
-              'MY SUBJECTS',
-              style: TextStyle(
-                fontSize: 9,
-                color: muted,
-                fontWeight: FontWeight.w700,
-                letterSpacing: 1.5,
+          if (nav != 'Overview') ...[
+            const SizedBox(height: 28),
+            const Padding(
+              padding: EdgeInsets.only(left: 13, bottom: 12),
+              child: Text(
+                'MY SUBJECTS',
+                style: TextStyle(
+                  fontSize: 9,
+                  color: muted,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.5,
+                ),
               ),
             ),
-          ),
-          ListView(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.zero,
-            children: [
-              for (final s in store.subjects)
-                ListTile(
-                  dense: true,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 13),
-                  minLeadingWidth: 9,
-                  leading: Container(
-                    width: 8,
-                    height: 8,
-                    decoration: BoxDecoration(
-                      color: subjectColor(s),
-                      shape: BoxShape.circle,
+            ListView(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: EdgeInsets.zero,
+              children: [
+                for (final s in store.subjects)
+                  ListTile(
+                    dense: true,
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 13),
+                    minLeadingWidth: 9,
+                    leading: Container(
+                      width: 8,
+                      height: 8,
+                      decoration: BoxDecoration(
+                        color: subjectColor(s),
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                  ),
-                  title: Text(
-                    s['name'],
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight:
-                          subjectId == s['id']
-                              ? FontWeight.w700
-                              : FontWeight.w400,
+                    title: Text(
+                      s['name'],
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight:
+                            subjectId == s['id']
+                                ? FontWeight.w700
+                                : FontWeight.w400,
+                      ),
                     ),
+                    onTap: () {
+                      if (drawer) {
+                        Navigator.pop(context);
+                      }
+                      openSubject(s['id']);
+                    },
                   ),
-                  onTap: () {
-                    if (drawer) {
-                      Navigator.pop(context);
-                    }
-                    openSubject(s['id']);
-                  },
-                ),
-            ],
-          ),
+              ],
+            ),
+          ],
           const SizedBox(height: 22),
           const Row(
             children: [
@@ -651,41 +709,50 @@ class _StudyShellState extends State<StudyShell> {
           ),
           const Spacer(),
         ],
-        Expanded(
-          flex: wide ? 0 : 1,
-          child: SizedBox(
-            width: wide ? 310 : null,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(12),
-              onTap: search,
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 14,
-                  vertical: 12,
-                ),
-                decoration: BoxDecoration(
-                  color: canvas,
+        if (searchVisible)
+          Expanded(
+            flex: wide ? 0 : 1,
+            child: SizedBox(
+              width: wide ? 310 : null,
+              child: Semantics(
+                container: true,
+                button: true,
+                label: 'Search subjects, topics and papers',
+                onTap: search,
+                excludeSemantics: true,
+                child: InkWell(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: const Color(0xFFEEEDF4)),
-                ),
-                child: const Row(
-                  children: [
-                    Icon(Icons.search_rounded, color: muted, size: 19),
-                    SizedBox(width: 10),
-                    Expanded(
-                      child: Text(
-                        'Search subjects, topics and papers',
-                        style: TextStyle(fontSize: 12, color: muted),
-                        overflow: TextOverflow.ellipsis,
-                      ),
+                  onTap: search,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 14,
+                      vertical: 12,
                     ),
-                  ],
+                    decoration: BoxDecoration(
+                      color: canvas,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: const Color(0xFFEEEDF4)),
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(Icons.search_rounded, color: muted, size: 19),
+                        SizedBox(width: 10),
+                        Expanded(
+                          child: Text(
+                            'Search subjects, topics and papers',
+                            style: TextStyle(fontSize: 12, color: muted),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        const SizedBox(width: 18),
+        if (!searchVisible && !wide) const Spacer(),
+        if (searchVisible) const SizedBox(width: 18),
         const Pill(text: 'GRADE 10', color: purple),
       ],
     ),
@@ -723,12 +790,6 @@ class _StudyShellState extends State<StudyShell> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    hero(),
-                    const SizedBox(height: 28),
-                    sectionTitle('Your subjects', ''),
-                    const SizedBox(height: 16),
-                    subjectGrid(),
-                    const SizedBox(height: 28),
                     sectionTitle('Study tools', ''),
                     const SizedBox(height: 15),
                     studyModes(),
@@ -827,11 +888,6 @@ class _StudyShellState extends State<StudyShell> {
       ],
     ),
   );
-  Widget hero() => FilledButton.icon(
-    onPressed: () => go('My subjects'),
-    icon: const Icon(Icons.arrow_forward_rounded, size: 17),
-    label: const Text('Open subjects'),
-  );
   Widget sectionTitle(String title, String sub) => Row(
     crossAxisAlignment: CrossAxisAlignment.end,
     children: [
@@ -854,11 +910,6 @@ class _StudyShellState extends State<StudyShell> {
           ],
         ),
       ),
-      if (title == 'Your subjects')
-        TextButton(
-          onPressed: () => go('My subjects'),
-          child: const Text('View all →', style: TextStyle(fontSize: 11)),
-        ),
     ],
   );
   Widget subjectGrid() => LayoutBuilder(

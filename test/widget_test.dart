@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:dls_study/app.dart';
@@ -28,11 +29,88 @@ void main() {
     await tester.pumpAndSettle();
   }
 
+  Future<void> revealSearch(WidgetTester tester) async {
+    await tester.drag(
+      find.byKey(const ValueKey('study-scroll-surface')),
+      const Offset(0, -100),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsOneWidget);
+  }
+
+  testWidgets('Home stays clear and search follows swipe direction', (
+    tester,
+  ) async {
+    await launch(tester, size: const Size(360, 800));
+    expect(find.text('AMDG'), findsOneWidget);
+    expect(find.text('Your subjects'), findsNothing);
+    expect(find.text('Open subjects'), findsNothing);
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    for (final subject in store.subjects) {
+      expect(find.text(subject['name']), findsNothing);
+    }
+    expect(find.text('Files'), findsOneWidget);
+    expect(find.text('Papers'), findsNothing);
+    await tester.tap(find.text('Subjects'));
+    await tester.pumpAndSettle();
+    expect(find.text(store.subject('life')['name']), findsWidgets);
+    await tester.tap(find.text('Home'));
+    await tester.pumpAndSettle();
+    await tester.drag(
+      find.byKey(const ValueKey('study-scroll-surface')),
+      const Offset(80, 0),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    await revealSearch(tester);
+    final semantics = tester.ensureSemantics();
+    await tester.pump();
+    try {
+      expect(
+        find.bySemanticsLabel('Search subjects, topics and papers'),
+        findsOneWidget,
+      );
+    } finally {
+      semantics.dispose();
+    }
+    await tester.tap(find.text('Search subjects, topics and papers'));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'history of life');
+    await tester.pumpAndSettle();
+    expect(find.text('History of life on Earth'), findsOneWidget);
+    await tester.tap(find.byTooltip('Close search'));
+    await tester.pumpAndSettle();
+    await tester.drag(
+      find.byKey(const ValueKey('study-scroll-surface')),
+      const Offset(0, 100),
+    );
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    await revealSearch(tester);
+    await tester.tap(find.text('Files'));
+    await tester.pumpAndSettle();
+    expect(find.text('Search subjects, topics and papers'), findsNothing);
+    expect(find.text('Open PDF'), findsWidgets);
+    expect(tester.takeException(), isNull);
+  });
+
+  testWidgets('Keyboard users can still open hidden search', (tester) async {
+    await launch(tester);
+    await tester.sendKeyEvent(LogicalKeyboardKey.tab);
+    await tester.sendKeyDownEvent(LogicalKeyboardKey.controlLeft);
+    await tester.sendKeyEvent(LogicalKeyboardKey.keyK);
+    await tester.sendKeyUpEvent(LogicalKeyboardKey.controlLeft);
+    await tester.pumpAndSettle();
+    expect(find.text('Search library'), findsOneWidget);
+    expect(tester.takeException(), isNull);
+  });
+
   testWidgets(
     'Learner finds a topic, reveals a worked answer and bookmarks it',
     (tester) async {
       await launch(tester);
-      expect(find.text('Your subjects'), findsOneWidget);
+      expect(find.text('Your subjects'), findsNothing);
+      await revealSearch(tester);
       await tester.tap(find.text('Search subjects, topics and papers'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), 'mitosis');
@@ -58,6 +136,7 @@ void main() {
     'History of life is discoverable by its class title and previous name',
     (tester) async {
       await launch(tester);
+      await revealSearch(tester);
       await tester.tap(find.text('Search subjects, topics and papers'));
       await tester.pumpAndSettle();
       for (final query in [
@@ -91,6 +170,7 @@ void main() {
     'Revision completion and flashcard ratings survive store reload',
     (tester) async {
       await launch(tester);
+      await revealSearch(tester);
       await tester.tap(find.text('Search subjects, topics and papers'));
       await tester.pumpAndSettle();
       await tester.enterText(find.byType(TextField), 'circuits');
@@ -131,7 +211,7 @@ void main() {
     await launch(tester, size: const Size(360, 800));
     expect(find.text('Home'), findsOneWidget);
     expect(tester.takeException(), isNull);
-    await tester.tap(find.text('Papers'));
+    await tester.tap(find.text('Files'));
     await tester.pumpAndSettle();
     await tester.tap(find.text('All resources'));
     await tester.pumpAndSettle();
@@ -229,6 +309,8 @@ void main() {
     tester,
   ) async {
     await launch(tester);
+    await tester.tap(find.text('My subjects').first);
+    await tester.pumpAndSettle();
     for (final id in ['english', 're']) {
       await tester.ensureVisible(find.text(store.subject(id)['name']).first);
       await tester.tap(find.text(store.subject(id)['name']).first);
@@ -263,6 +345,8 @@ void main() {
       ];
       store = StudyStore(data, store.prefs);
       await launch(tester);
+      await tester.tap(find.text('My subjects').first);
+      await tester.pumpAndSettle();
       for (final id in ['english', 're']) {
         await tester.ensureVisible(find.text(store.subject(id)['name']).first);
         await tester.tap(find.text(store.subject(id)['name']).first);
@@ -314,6 +398,7 @@ void main() {
     tester,
   ) async {
     await launch(tester);
+    await revealSearch(tester);
     await tester.tap(find.text('Search subjects, topics and papers'));
     await tester.pumpAndSettle();
     await tester.enterText(find.byType(TextField), 'circuits');
