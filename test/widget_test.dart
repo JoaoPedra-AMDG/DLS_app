@@ -9,7 +9,6 @@ import 'package:dls_study/app.dart';
 import 'package:dls_study/models.dart';
 import 'package:dls_study/visuals.dart';
 import 'package:dls_study/pdf_reader_screen.dart';
-import 'package:dls_study/focus_timer.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -544,52 +543,6 @@ void main() {
     expect(find.text('iPhone or iPad · Safari'), findsOneWidget);
     expect(tester.takeException(), isNull);
   });
-
-  testWidgets('Pomodoro survives navigation and supports pauses and breaks', (
-    tester,
-  ) async {
-    await launch(tester, size: const Size(390, 844));
-    await tester.tap(find.text('Focus'));
-    await tester.pumpAndSettle();
-    expect(find.text('Pomodoro'), findsOneWidget);
-    await tester.ensureVisible(find.text('Start / continue'));
-    await tester.tap(find.text('Start / continue'));
-    await tester.pump();
-    expect(find.text('Pause'), findsOneWidget);
-    await tester.tap(find.text('Home'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Focus'));
-    await tester.pumpAndSettle();
-    expect(find.text('Pause'), findsOneWidget);
-    await tester.ensureVisible(find.text('Pause'));
-    await tester.tap(find.text('Pause'));
-    await tester.pump();
-    await tester.ensureVisible(find.text('Short break · 5 min'));
-    await tester.tap(find.text('Short break · 5 min'));
-    await tester.pump();
-    expect(find.text('05:00'), findsOneWidget);
-    expect(tester.takeException(), isNull);
-  });
-
-  testWidgets(
-    'Pomodoro deadline catches up and counts a completed session once',
-    (tester) async {
-      var now = DateTime(2026, 11, 3, 10);
-      final session = FocusSession(clock: () => now);
-      addTearDown(session.dispose);
-      session.toggle();
-      now = now.add(const Duration(minutes: 24, seconds: 59));
-      await tester.pump(const Duration(seconds: 1));
-      expect(session.seconds, 1);
-      now = now.add(const Duration(seconds: 2));
-      await tester.pump(const Duration(seconds: 1));
-      expect(session.seconds, 0);
-      expect(session.running, isFalse);
-      expect(session.completed, 1);
-      await tester.pump(const Duration(seconds: 5));
-      expect(session.completed, 1);
-    },
-  );
 
   testWidgets(
     'Wave frequency and amplitude are independent and reset together',

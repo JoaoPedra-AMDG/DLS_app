@@ -12,7 +12,6 @@ A colourful Flutter study companion for Grade 10, with a shareable GitHub Pages 
 - Topic packs link to original exam pages, memos and relevant Classroom material. Original diagrams, equations and reading passages stay intact in the PDFs.
 - Six further-practice questions and two concept challenges per topic, worked answers, revision notes and at least 15 flashcards per topic. Concept challenges ask learners to predict, explain, evaluate and test misconceptions.
 - A searchable Classroom library supports original downloads, PDF viewing copies and clearly labelled school links. A school link requires the relevant Google account and has no offline copy in For Rosa.
-- A dedicated Pomodoro screen offers 25-minute focus, 5-minute short breaks and 15-minute long breaks. Timers survive navigation within the app, pause, reset and catch up after a sleeping device resumes.
 - Wave amplitude and frequency controls, wavelength/period readouts, graph comparisons, adjustable circuit resistance and normal-distribution spread, and reset/pause controls.
 - Search, year/subject/resource filters, bookmarks, revision completion and card-recall ratings.
 - A simple AMDG home screen with study tools; subject cards live in Subjects. Search only appears after an upward swipe that starts while already at the top of the study area; ordinary scrolling elsewhere does not reveal it. Swipe down to hide it. Mouse-wheel scrolling follows the same top-only rule. Search resets when navigating to another section; Ctrl/Cmd+K opens it for keyboard users. The phone's Files tab opens the paper and memo library.
@@ -65,14 +64,13 @@ The 2022 Life Sciences Section A answer booklet has a generated 50-mark study me
 
 ## Privacy and persistence
 
-Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. A PDF needs a successful initial online load before it can be cached. The focus timer runs while For Rosa remains open; closing the app ends it. It is not a background notification service.
+Bookmarks and progress use `shared_preferences` on the learner's device. Clearing browser/site data removes this information. Nothing is uploaded or shared between devices. A PDF needs a successful initial online load before it can be cached.
 
 Classroom imports require a separate publication decision: public GitHub Pages does not protect downloaded teaching-file copies behind a school login. Account details, passwords, grades, comments and personal submissions must stay out of the repository. Private source collection and review files are kept under ignored `tmp/`. A school link preserves the original provider’s access controls. Importing every posted file has not been completed; the source audit must distinguish verified downloads from school links.
 
 ## Project layout
 
 - `lib/app.dart`: dashboard, subject/topic views, search, file library, paper filters and cards.
-- `lib/focus_timer.dart`: persistent in-session Pomodoro state and its dedicated screen.
 - `lib/pdf_reader_screen.dart` and `web/reader*`: continuous PDF reading, background page loading, downloads and pinch zoom.
 - `lib/models.dart`: catalogue access and local persistence.
 - `lib/visuals.dart`: local vector art and animated learning sketches.

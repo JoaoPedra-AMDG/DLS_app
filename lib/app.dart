@@ -7,7 +7,6 @@ import 'pdf_reader_screen.dart';
 import 'platform_actions.dart' as platform;
 import 'models.dart';
 import 'visuals.dart';
-import 'focus_timer.dart';
 
 void main() => runApp(const DlsApp());
 
@@ -126,11 +125,9 @@ class _StudyShellState extends State<StudyShell> {
   int? searchPointer;
   int classroomLimit = 24;
   final scroll = ScrollController();
-  final focusSession = FocusSession();
   StudyStore get store => widget.store;
   @override
   void dispose() {
-    focusSession.dispose();
     scroll.dispose();
     super.dispose();
   }
@@ -331,8 +328,6 @@ class _StudyShellState extends State<StudyShell> {
                           selectedIndex:
                               nav == 'Overview'
                                   ? 0
-                                  : nav == 'Pomodoro'
-                                  ? 4
                                   : nav == 'Saved'
                                   ? 3
                                   : nav == 'Past papers'
@@ -345,7 +340,6 @@ class _StudyShellState extends State<StudyShell> {
                                   'My subjects',
                                   'Past papers',
                                   'Saved',
-                                  'Pomodoro',
                                 ][i],
                               ),
                           destinations: const [
@@ -364,10 +358,6 @@ class _StudyShellState extends State<StudyShell> {
                             NavigationDestination(
                               icon: Icon(Icons.bookmark_border_rounded),
                               label: 'Saved',
-                            ),
-                            NavigationDestination(
-                              icon: Icon(Icons.timer_outlined),
-                              label: 'Focus',
                             ),
                           ],
                         ),
@@ -426,8 +416,6 @@ class _StudyShellState extends State<StudyShell> {
                                             classroomLibrary()
                                           else if (nav == 'Flashcards')
                                             flashcardsPage()
-                                          else if (nav == 'Pomodoro')
-                                            FocusScreen(session: focusSession)
                                           else
                                             savedPage(),
                                           const SizedBox(height: 34),
@@ -554,7 +542,6 @@ class _StudyShellState extends State<StudyShell> {
             ('Past papers', Icons.description_outlined),
             ('Classroom files', Icons.folder_copy_outlined),
             ('Flashcards', Icons.style_outlined),
-            ('Pomodoro', Icons.timer_outlined),
             ('Saved', Icons.bookmark_border_rounded),
           ])
             Padding(
@@ -820,8 +807,6 @@ class _StudyShellState extends State<StudyShell> {
                     children: [
                       progressPanel(),
                       const SizedBox(height: 20),
-                      focusShortcut(),
-                      const SizedBox(height: 20),
                       tipPanel(),
                     ],
                   ),
@@ -829,29 +814,7 @@ class _StudyShellState extends State<StudyShell> {
               ],
             ],
           ),
-          if (!right) ...[
-            const SizedBox(height: 24),
-            LayoutBuilder(
-              builder:
-                  (context, b) =>
-                      b.maxWidth > 620
-                          ? Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Expanded(child: progressPanel()),
-                              const SizedBox(width: 18),
-                              Expanded(child: focusShortcut()),
-                            ],
-                          )
-                          : Column(
-                            children: [
-                              progressPanel(),
-                              const SizedBox(height: 18),
-                              focusShortcut(),
-                            ],
-                          ),
-            ),
-          ],
+          if (!right) ...[const SizedBox(height: 24), progressPanel()],
           const SizedBox(height: 28),
           panel(
             child: Column(
@@ -878,29 +841,6 @@ class _StudyShellState extends State<StudyShell> {
         ],
       );
     },
-  );
-  Widget focusShortcut() => panel(
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Icon(Icons.timer_outlined, color: purple),
-        const SizedBox(height: 12),
-        const Text(
-          'Pomodoro timer',
-          style: TextStyle(fontWeight: FontWeight.w700),
-        ),
-        const SizedBox(height: 8),
-        const Text(
-          '25-minute focus sessions with short and long breaks.',
-          style: TextStyle(color: muted, height: 1.6),
-        ),
-        const SizedBox(height: 14),
-        OutlinedButton(
-          onPressed: () => go('Pomodoro'),
-          child: const Text('Open Pomodoro'),
-        ),
-      ],
-    ),
   );
   Widget sectionTitle(String title, String sub) => Row(
     crossAxisAlignment: CrossAxisAlignment.end,
