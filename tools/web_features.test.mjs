@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
-import { attachReaderGestures } from '../web/reader-gestures.mjs';
+import { attachReaderGestures } from '../web/reader-touch.mjs';
+import { createPageQueue, nearbyPages } from '../web/reader-page-queue.mjs';
 
 test('For Rosa manifest declares a stable, standalone installable app', () => {
   const manifest = JSON.parse(fs.readFileSync('web/manifest.json', 'utf8'));
@@ -91,7 +92,8 @@ test('Offline reader navigation can reuse its cached shell despite query paramet
 
 function gestureHarness({ width = 360, contentWidth = 360, left = 0 } = {}) {
   const listeners = {}, moves = [], zooms = [];
-  let zoom = 1, renders = 0, scrollLeft = left, scrollTop = 0;
+  let zoom = 1, renders = 0, scrollLeft = left, scrollTop = 0, frameId = 0;
+  const frames = new Map();
   const viewport = {
     clientWidth: width, scrollWidth: contentWidth,
     get scrollLeft() { return scrollLeft; },
@@ -106,9 +108,13 @@ function gestureHarness({ width = 360, contentWidth = 360, left = 0 } = {}) {
     setZoom(value, x, y) { zoom = Math.max(1, Math.min(4, value)); zooms.push({ zoom, x, y }); },
     move(amount) { moves.push(amount); },
     render() { renders++; },
+    requestFrame(callback) { frames.set(++frameId, callback); return frameId; },
+    cancelFrame(id) { frames.delete(id); },
   });
   const pointer = (type, x, y, id = 1, extra = {}) => listeners[type]({ pointerId: id, clientX: x, clientY: y, button: 0, ...extra });
-  return { viewport, moves, zooms, pointer, listeners, get zoom() { return zoom; }, get renders() { return renders; } };
+  return { viewport, moves, zooms, pointer, listeners, frames,
+    frame(time) { const pending = [...frames.values()]; frames.clear(); pending.forEach(callback => callback(time)); },
+    get zoom() { return zoom; }, get renders() { return renders; } };
 }
 
 test('Reader exposes only Back and Download, with accessible page text', () => {
@@ -121,14 +127,14 @@ test('Reader exposes only Back and Download, with accessible page text', () => {
   assert(html.includes('touch-action:none'));
 });
 
-test('Horizontal swipes turn pages; taps, small movements and vertical reading do not', () => {
+test('Vertical drags scroll the document and horizontal drags never turn pages', () => {
   const reader = gestureHarness();
   reader.pointer('pointerdown', 280, 200);
   reader.pointer('pointermove', 140, 205);
   reader.pointer('pointerup', 140, 205);
   reader.pointer('pointerdown', 80, 200);
   reader.pointer('pointerup', 220, 205);
-  assert.deepEqual(reader.moves, [1, -1]);
+  assert.deepEqual(reader.moves, []);
   reader.pointer('pointerdown', 120, 250);
   reader.pointer('pointerup', 120, 250);
   reader.pointer('pointerdown', 120, 250);
@@ -137,10 +143,14 @@ test('Horizontal swipes turn pages; taps, small movements and vertical reading d
   reader.pointer('pointermove', 150, 100);
   reader.pointer('pointerup', 150, 100);
   assert.equal(reader.viewport.scrollTop, 150);
-  assert.deepEqual(reader.moves, [1, -1]);
+  assert.deepEqual(reader.moves, []);
+  reader.pointer('pointerdown', 120, 100);
+  reader.pointer('pointermove', 120, 200);
+  reader.pointer('pointerup', 120, 200);
+  assert.equal(reader.viewport.scrollTop, 50, 'The same document scrolls back up');
 });
 
-test('Zoomed page drags pan first, with page swipes only from an existing edge', () => {
+test('Zoomed document drags pan without jumping pages even at an edge', () => {
   const reader = gestureHarness({ contentWidth: 900, left: 120 });
   reader.pointer('pointerdown', 250, 250);
   reader.pointer('pointermove', 100, 150);
@@ -154,7 +164,7 @@ test('Zoomed page drags pan first, with page swipes only from an existing edge',
   reader.viewport.scrollLeft = 0;
   reader.pointer('pointerdown', 100, 250);
   reader.pointer('pointerup', 250, 250);
-  assert.deepEqual(reader.moves, [1, -1]);
+  assert.deepEqual(reader.moves, []);
 });
 
 test('Two-finger pinch zooms in and out without accidentally changing pages', () => {
@@ -184,7 +194,23 @@ test('Cancelled touches and lost capture cannot turn a page or poison the next g
   assert.deepEqual(reader.moves, []);
   reader.pointer('pointerdown', 280, 200);
   reader.pointer('pointerup', 100, 200);
-  assert.deepEqual(reader.moves, [1]);
+  assert.deepEqual(reader.moves, []);
+});
+
+test('Touch flicks keep scrolling and a new touch stops momentum', () => {
+  const reader = gestureHarness();
+  reader.pointer('pointerdown', 150, 400, 1, { pointerType: 'touch', timeStamp: 0 });
+  reader.pointer('pointermove', 150, 300, 1, { pointerType: 'touch', timeStamp: 30 });
+  reader.pointer('pointerup', 150, 300, 1, { pointerType: 'touch', timeStamp: 35 });
+  const releasedAt = reader.viewport.scrollTop;
+  reader.frame(51);
+  assert(reader.viewport.scrollTop > releasedAt, 'The document coasts after a flick');
+  reader.pointer('pointerdown', 150, 300, 1, { pointerType: 'touch', timeStamp: 60 });
+  const stoppedAt = reader.viewport.scrollTop;
+  reader.frame(76);
+  assert.equal(reader.viewport.scrollTop, stoppedAt);
+  reader.pointer('pointercancel', 150, 100, 1, { pointerType: 'touch', timeStamp: 80 });
+  assert.equal(reader.frames.size, 0, 'Cancelled touches do not start momentum');
 });
 
 test('Trackpad pinch zooms and debounces rendering; normal wheel scrolling is preserved', async () => {
@@ -200,4 +226,91 @@ test('Trackpad pinch zooms and debounces rendering; normal wheel scrolling is pr
   await new Promise(resolve => setTimeout(resolve, 160));
   assert.equal(reader.renders, 1);
   assert.deepEqual(reader.moves, []);
+});
+
+const flushPages = () => new Promise(resolve => setImmediate(resolve));
+
+test('Continuous reader buffers visible pages, ahead and behind, including document ends', () => {
+  assert.deepEqual(nearbyPages(1, 24), [1, 2, 3]);
+  assert.deepEqual(nearbyPages(10, 24), [10, 11, 9, 12]);
+  assert.deepEqual(nearbyPages(24, 24), [24, 23]);
+  assert.deepEqual(nearbyPages(1, 1), [1]);
+  const landscape = nearbyPages(3, 24, 1, 5);
+  assert.deepEqual(landscape, [3, 1, 2, 4, 5, 6, 7], 'All visible short pages load before the buffer');
+});
+
+test('Background loading prioritises the reading page, limits concurrency and frees distant pages', async () => {
+  const started = [], released = [], pending = new Map();
+  const queue = createPageQueue({
+    load(key) { started.push(key); return new Promise(resolve => pending.set(key, resolve)); },
+    release(key) { released.push(key); },
+  });
+  queue.setWanted(nearbyPages(4, 24));
+  await flushPages();
+  assert.deepEqual(started, [4, 5], 'Reading page and next page start first');
+  pending.get(5)();
+  await flushPages();
+  assert.deepEqual(started, [4, 5, 3], 'Only two pages render at once');
+  pending.get(4)();
+  await flushPages();
+  assert.deepEqual(started, [4, 5, 3, 6]);
+  pending.get(3)(); pending.get(6)();
+  await flushPages();
+  queue.setWanted(nearbyPages(5, 24));
+  await flushPages();
+  assert.deepEqual(released, [3], 'Only the distant canvas is released; the page space remains');
+  assert.deepEqual(started, [4, 5, 3, 6, 7], 'Already buffered pages are reused while scrolling');
+  pending.get(7)();
+  await flushPages();
+});
+
+test('A fast scroll cancels stale pages and loads the new reading position', async () => {
+  const started = [], released = [], pending = new Map();
+  const queue = createPageQueue({
+    load(key, signal) { started.push(key); return new Promise(resolve => pending.set(key, { resolve, signal })); },
+    release(key) { released.push(key); },
+  });
+  queue.setWanted(['1:0', '2:0', '3:0']);
+  await flushPages();
+  queue.setWanted(['18:0', '19:0', '17:0']);
+  assert(pending.get('1:0').signal.aborted);
+  assert(pending.get('2:0').signal.aborted);
+  pending.get('1:0').resolve(); pending.get('2:0').resolve();
+  await flushPages();
+  assert.deepEqual(started, ['1:0', '2:0', '18:0', '19:0']);
+  assert.deepEqual(released, ['1:0', '2:0']);
+  pending.get('18:0').resolve(); pending.get('19:0').resolve();
+  await flushPages();
+  pending.get('17:0').resolve();
+  await flushPages();
+});
+
+test('Zoom replaces old page renders and rendering failures can retry on a later visit', async () => {
+  const started = [], released = [], errors = [], pending = new Map();
+  const queue = createPageQueue({
+    concurrency: 1,
+    load(key, signal) { started.push(key); return new Promise((resolve, reject) => pending.set(key, { resolve, reject, signal })); },
+    release(key) { released.push(key); },
+    onError(key) { errors.push(key); },
+  });
+  queue.setWanted(['5:0']);
+  await flushPages();
+  queue.setWanted(['5:1']);
+  assert(pending.get('5:0').signal.aborted);
+  pending.get('5:0').resolve();
+  await flushPages();
+  assert.deepEqual(started, ['5:0', '5:1']);
+  pending.get('5:1').reject(Error('Temporary rendering failure'));
+  await flushPages();
+  queue.setWanted(['5:1']);
+  await flushPages();
+  assert.equal(started.length, 2, 'Failures must not create an infinite retry loop');
+  assert.deepEqual(errors, ['5:1']);
+  assert.deepEqual(released, ['5:0', '5:1']);
+  queue.setWanted([]);
+  queue.setWanted(['5:1']);
+  await flushPages();
+  assert.equal(started.length, 3);
+  pending.get('5:1').resolve();
+  await flushPages();
 });

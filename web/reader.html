@@ -13,8 +13,8 @@
     a:focus-visible,#viewport:focus-visible{outline:3px solid #b5a7ff;outline-offset:-3px}
     #status{padding:8px 12px;margin:0;text-align:center;color:#625b76;flex-shrink:0;font-size:12px}
     #viewport{position:relative;overflow:auto;flex:1;min-height:0;touch-action:none;overscroll-behavior:contain;user-select:none;cursor:grab}
-    #viewport:active{cursor:grabbing}#surface{width:max-content;min-width:100%;min-height:100%;display:grid;justify-items:center;align-content:start;padding:0 0 16px}
-    #page{box-shadow:0 3px 18px #25233d20;background:white}canvas{display:block;max-width:none}
+    #viewport:active{cursor:grabbing}#surface{width:max-content;min-width:100%;min-height:100%;display:grid;justify-items:center;align-content:start;gap:16px;padding:0 0 16px;overflow-anchor:none}
+    .pdf-page{position:relative;box-shadow:0 3px 18px #25233d20;background:white;overflow:hidden;flex-shrink:0}.page-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:20px;color:#625b76;text-align:center}canvas{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:pre-wrap}
     [hidden]{display:none!important}
     @media(max-width:450px){header{gap:6px;padding:9px}a.action{padding:9px;font-size:12px}}
@@ -23,9 +23,9 @@
 <body>
   <header id="standalone-header"><a class="action" href="./">← Back</a><strong id="title">For Rosa · PDF</strong><a class="action" id="download" download>↓ Download</a></header>
   <p id="status" role="status" aria-live="polite">Opening your paper…</p>
-  <p id="instructions" class="sr-only">Swipe left for the next page or right for the previous page. Pinch to zoom and drag to move around the page. When zoomed in, swipe from the edge to turn pages. With a keyboard, use left and right arrows to turn pages, plus or minus to zoom, and zero to fit the page width.</p>
-  <main id="viewport" tabindex="0" aria-label="PDF viewer" aria-describedby="instructions"><div id="surface"><div id="page"><canvas id="canvas" aria-label="Original PDF page"></canvas></div></div></main>
+  <p id="instructions" class="sr-only">Scroll up and down to read all pages. Nearby pages load as you read. Pinch to zoom and drag to move around the document. With a keyboard, use up and down arrows or Page Up and Page Down to scroll, plus or minus to zoom, and zero to fit the page width.</p>
+  <main id="viewport" tabindex="0" aria-label="PDF viewer" aria-describedby="instructions"><div id="surface"></div></main>
   <section class="sr-only" aria-label="Current PDF page text"><p id="page-text"></p></section>
-  <script type="module" src="reader.mjs"></script>
+  <script type="module" src="reader-continuous.mjs"></script>
 </body>
 </html>

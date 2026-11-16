@@ -72,7 +72,7 @@ Classroom imports require a separate publication decision: public GitHub Pages d
 
 - `lib/app.dart`: dashboard, subject/topic views, search, file library, paper filters and cards.
 - `lib/focus_timer.dart`: persistent in-session Pomodoro state and its dedicated screen.
-- `lib/pdf_reader_screen.dart` and `web/reader*`: PDF viewing, downloads, swipe navigation and pinch zoom.
+- `lib/pdf_reader_screen.dart` and `web/reader*`: continuous PDF reading, background page loading, downloads and pinch zoom.
 - `lib/models.dart`: catalogue access and local persistence.
 - `lib/visuals.dart`: local vector art and animated learning sketches.
 - `assets/content.json`: generated learning library.
@@ -86,6 +86,6 @@ The app is independent of Canvas and Save My Exams. Exam PDFs and their embedded
 
 Open the public site in a normal browser and tap **Install For Rosa** at the bottom of the home page. Supporting browsers offer a native install prompt. Otherwise, the app gives Android/Chrome, iPhone/iPad Safari, and desktop instructions. In Safari use Share → Add to Home Screen; in Chrome or Edge use Install app or the browser’s install option.
 
-The web manifest uses the name For Rosa and standalone display mode. The service worker saves the app shell and learning content for offline use after its first successful download. Teaching files are cached on demand. Cache storage depends on the browser; download a separate copy when needed. The PDF reader has only Back and Download controls. Swipe left/right to turn pages, pinch to zoom (up to 4×), and drag to pan a zoomed page. When zoomed, start at the appropriate horizontal edge to swipe to the next/previous page; changing pages resets to fitted width. A trackpad pinch also zooms. Keyboard readers can use left/right arrows or Page Up/Down to change pages, +/− to zoom and 0 to fit width. The current page text remains available to screen readers. Mozilla PDF.js 4.10.38 is bundled locally with its licence in `web/vendor/pdfjs/LICENSE`.
+The web manifest uses the name For Rosa and standalone display mode. The service worker saves the app shell and learning content for offline use after its first successful download. Teaching files are cached on demand. Cache storage depends on the browser; download a separate copy when needed. The PDF reader has only Back and Download controls. All pages form one continuous vertical document: scroll up/down to read, pinch to zoom (up to 4×), and drag to pan. The current page and other visible pages load first, with pages ahead and behind rendered in the background. Distant canvases are released while retaining their page spaces, keeping long papers usable on phones. Zoom stays consistent throughout the document, and topic references open at the linked page. A trackpad pinch also zooms. Keyboard readers can use up/down arrows or Page Up/Down to scroll, +/− to zoom and 0 to fit width. The current page text remains available to screen readers. Mozilla PDF.js 4.10.38 is bundled locally with its licence in `web/vendor/pdfjs/LICENSE`.
 
 Every push to main regenerates the content, validates sources, runs web and Flutter tests, builds and stamps a new app-shell revision, and deploys GitHub Pages. Existing open pages show a reload notice when a new app-shell version is downloaded. Student bookmarks and card ratings remain stored separately on their device.
